@@ -1,0 +1,313 @@
+{
+  "generated": "2026-06-24",
+  "topics": [
+    {
+      "id": 0,
+      "label": "General Great Lakes Discussion",
+      "keywords": [
+        "lake ontario",
+        "winds",
+        "lake erie",
+        "lakes"
+      ],
+      "count": 33659
+    },
+    {
+      "id": 1,
+      "label": "Wildlife & Conservation",
+      "keywords": [
+        "birds",
+        "lakes",
+        "wildlife",
+        "lake ontario"
+      ],
+      "count": 2389
+    },
+    {
+      "id": 4,
+      "label": "Fisheries & Invasive Species",
+      "keywords": [
+        "fish",
+        "fishing",
+        "whitefish",
+        "lake erie"
+      ],
+      "count": 1889
+    },
+    {
+      "id": 5,
+      "label": "Severe Weather & Navigation Safety",
+      "keywords": [
+        "lake superior",
+        "lake",
+        "mi",
+        "storm"
+      ],
+      "count": 1708
+    },
+    {
+      "id": 10,
+      "label": "Oil Pipeline & Energy Infrastructure",
+      "keywords": [
+        "great lakes",
+        "lakes",
+        "river",
+        "oil"
+      ],
+      "count": 1001
+    },
+    {
+      "id": 13,
+      "label": "Geology & Shoreline Fossils",
+      "keywords": [
+        "rocks",
+        "lake superior",
+        "lake",
+        "shores lake"
+      ],
+      "count": 828
+    },
+    {
+      "id": 15,
+      "label": "Offshore Wind Energy",
+      "keywords": [
+        "great lakes",
+        "lakes region",
+        "lakes",
+        "lakes states"
+      ],
+      "count": 804
+    },
+    {
+      "id": 18,
+      "label": "Data Centers & AI Water Consumption",
+      "keywords": [
+        "great lakes",
+        "lakes region",
+        "lakes states",
+        "lakes"
+      ],
+      "count": 708
+    },
+    {
+      "id": 19,
+      "label": "Great Lakes Borders & Governance",
+      "keywords": [
+        "chicago lake",
+        "border",
+        "chicago",
+        "miles away"
+      ],
+      "count": 685
+    },
+    {
+      "id": 26,
+      "label": "Algal Blooms & Invasive Plants",
+      "keywords": [
+        "lake erie",
+        "lakes",
+        "erie",
+        "lake"
+      ],
+      "count": 471
+    },
+    {
+      "id": 27,
+      "label": "Squall & Storm Warnings",
+      "keywords": [
+        "great lakes",
+        "winds",
+        "lakes",
+        "st lawrence"
+      ],
+      "count": 454
+    },
+    {
+      "id": 28,
+      "label": "EPA & Environmental Regulation",
+      "keywords": [
+        "great lakes",
+        "lakes",
+        "lakes region",
+        "congress"
+      ],
+      "count": 424
+    },
+    {
+      "id": 29,
+      "label": "Indigenous Communities & Water Rights",
+      "keywords": [
+        "huron",
+        "indigenous",
+        "lake huron",
+        "lakes region"
+      ],
+      "count": 421
+    },
+    {
+      "id": 31,
+      "label": "Dunes & Shoreline Parks",
+      "keywords": [
+        "park lake",
+        "state park",
+        "michigan lake",
+        "michigan shoreline"
+      ],
+      "count": 372
+    },
+    {
+      "id": 32,
+      "label": "NOAA & Scientific Research Funding",
+      "keywords": [
+        "lakes water",
+        "lakes",
+        "great lakes",
+        "lakes region"
+      ],
+      "count": 352
+    },
+    {
+      "id": 33,
+      "label": "Sea Lamprey & Parasitic Species",
+      "keywords": [
+        "fish",
+        "lakes",
+        "fishing",
+        "great lakes"
+      ],
+      "count": 327
+    },
+    {
+      "id": 35,
+      "label": "Environmental Advocacy",
+      "keywords": [
+        "lake huron",
+        "lake erie",
+        "lake superior",
+        "lake michigan"
+      ],
+      "count": 321
+    },
+    {
+      "id": 36,
+      "label": "Great Lakes Shipping & Trade",
+      "keywords": [
+        "lake ontario",
+        "great lakes",
+        "lakes st",
+        "erie lake"
+      ],
+      "count": 308
+    },
+    {
+      "id": 39,
+      "label": "Cloud Cover & Weather Patterns",
+      "keywords": [
+        "lake superior",
+        "lake",
+        "lake michigan",
+        "near lake"
+      ],
+      "count": 298
+    },
+    {
+      "id": 41,
+      "label": "Lake-Effect Weather",
+      "keywords": [
+        "weather",
+        "windy",
+        "winds",
+        "lakesuperior"
+      ],
+      "count": 285
+    },
+    {
+      "id": 43,
+      "label": "Mining & Nuclear Waste",
+      "keywords": [
+        "lake superior",
+        "park lake",
+        "lake",
+        "lakes"
+      ],
+      "count": 281
+    },
+    {
+      "id": 45,
+      "label": "PFAS & Chemical Contamination",
+      "keywords": [
+        "lakes",
+        "great lakes",
+        "lakes basin",
+        "lakes st"
+      ],
+      "count": 257
+    },
+    {
+      "id": 46,
+      "label": "Microplastics",
+      "keywords": [
+        "pollution",
+        "great lakes",
+        "lakes",
+        "lakes www"
+      ],
+      "count": 254
+    },
+    {
+      "id": 48,
+      "label": "Marine Weather Warnings",
+      "keywords": [
+        "lake michigan",
+        "michigan",
+        "lake erie",
+        "grand"
+      ],
+      "count": 246
+    },
+    {
+      "id": 49,
+      "label": "Ice Cover Tracking",
+      "keywords": [
+        "beach",
+        "july",
+        "august",
+        "june"
+      ],
+      "count": 241
+    },
+    {
+      "id": 50,
+      "label": "Wildfire Smoke & Air Quality",
+      "keywords": [
+        "lake ontario",
+        "ontario",
+        "pollution",
+        "lakes region"
+      ],
+      "count": 230
+    },
+    {
+      "id": 53,
+      "label": "Climate Change & Seasonal Shifts",
+      "keywords": [
+        "climate change",
+        "climate",
+        "snow",
+        "lakes new"
+      ],
+      "count": 202
+    },
+    {
+      "id": 59,
+      "label": "Coast Guard & Maritime Safety",
+      "keywords": [
+        "coast guard",
+        "lake michigan",
+        "lake",
+        "lake erie"
+      ],
+      "count": 171
+    }
+  ]
+}

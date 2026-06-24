@@ -1,0 +1,379 @@
+{
+  "generated": "2026-06-01",
+  "topics": [
+    {
+      "id": 0,
+      "label": "General Great Lakes Discussion",
+      "keywords": [
+        "great lakes",
+        "lake michigan",
+        "lakes",
+        "lake huron"
+      ],
+      "count": 1236
+    },
+    {
+      "id": 1,
+      "label": "Great Lakes Regional Overview",
+      "keywords": [
+        "lakes water",
+        "lakes states",
+        "lakes",
+        "great lakes"
+      ],
+      "count": 583
+    },
+    {
+      "id": 2,
+      "label": "Invasive Species",
+      "keywords": [
+        "zebra mussels",
+        "whitefish",
+        "lamprey",
+        "mussels"
+      ],
+      "count": 226
+    },
+    {
+      "id": 3,
+      "label": "Waterfront & Tourism",
+      "keywords": [
+        "lake",
+        "waterfront",
+        "tourists",
+        "lake michigan"
+      ],
+      "count": 197
+    },
+    {
+      "id": 4,
+      "label": "Swimming & Recreation",
+      "keywords": [
+        "swim",
+        "swam",
+        "swimmers",
+        "people swimming"
+      ],
+      "count": 193
+    },
+    {
+      "id": 5,
+      "label": "Beaches & Shorelines",
+      "keywords": [
+        "beach",
+        "beaches",
+        "nice beach",
+        "shore"
+      ],
+      "count": 193
+    },
+    {
+      "id": 6,
+      "label": "Water Temperature",
+      "keywords": [
+        "cold water",
+        "water temp",
+        "water temperature",
+        "warm water"
+      ],
+      "count": 191
+    },
+    {
+      "id": 7,
+      "label": "Climate Change & Seasonal Shifts",
+      "keywords": [
+        "climate change",
+        "climate",
+        "winters",
+        "warming"
+      ],
+      "count": 159
+    },
+    {
+      "id": 8,
+      "label": "Ice Cover & Ice Fishing",
+      "keywords": [
+        "ice fishing",
+        "lakes",
+        "lake ontario",
+        "ice cover"
+      ],
+      "count": 153
+    },
+    {
+      "id": 9,
+      "label": "PFAS & Chemical Contamination",
+      "keywords": [
+        "pfas",
+        "pollutants",
+        "contamination",
+        "chemicals"
+      ],
+      "count": 149
+    },
+    {
+      "id": 10,
+      "label": "Data Centers & Water Consumption",
+      "keywords": [
+        "data centers",
+        "data center",
+        "water usage",
+        "water use"
+      ],
+      "count": 145
+    },
+    {
+      "id": 11,
+      "label": "Sport Fishing",
+      "keywords": [
+        "fishing",
+        "fish lake",
+        "lake trout",
+        "lakes"
+      ],
+      "count": 111
+    },
+    {
+      "id": 12,
+      "label": "Fisheries Management",
+      "keywords": [
+        "fishery",
+        "fisheries",
+        "fishing",
+        "people fishing"
+      ],
+      "count": 107
+    },
+    {
+      "id": 13,
+      "label": "EPA & Environmental Regulation",
+      "keywords": [
+        "epa",
+        "pollution",
+        "environmental",
+        "fossil fuels"
+      ],
+      "count": 94
+    },
+    {
+      "id": 14,
+      "label": "Drinking Water Safety",
+      "keywords": [
+        "bottled water",
+        "drinking water",
+        "clean water",
+        "water use"
+      ],
+      "count": 92
+    },
+    {
+      "id": 15,
+      "label": "Offshore Wind Energy",
+      "keywords": [
+        "wind turbines",
+        "offshore wind",
+        "turbines",
+        "wind"
+      ],
+      "count": 80
+    },
+    {
+      "id": 16,
+      "label": "Mining & Industrial Pollution",
+      "keywords": [
+        "mining",
+        "copper",
+        "fossil fuels",
+        "pollution"
+      ],
+      "count": 77
+    },
+    {
+      "id": 17,
+      "label": "Lake Water Levels",
+      "keywords": [
+        "lake levels",
+        "lakes",
+        "water levels",
+        "great lakes"
+      ],
+      "count": 70
+    },
+    {
+      "id": 18,
+      "label": "Midwest Climate Patterns",
+      "keywords": [
+        "climate change",
+        "climate",
+        "like michigan",
+        "midwest"
+      ],
+      "count": 63
+    },
+    {
+      "id": 19,
+      "label": "Environmental Advocacy",
+      "keywords": [
+        "environmentalists",
+        "environmental",
+        "pollution",
+        "climate change"
+      ],
+      "count": 57
+    },
+    {
+      "id": 20,
+      "label": "Wildlife & Conservation",
+      "keywords": [
+        "wildlife",
+        "conservation",
+        "endangered",
+        "ecological"
+      ],
+      "count": 51
+    },
+    {
+      "id": 21,
+      "label": "Lake Erie Ecology",
+      "keywords": [
+        "shark",
+        "lakes",
+        "great lakes",
+        "lake erie"
+      ],
+      "count": 47
+    },
+    {
+      "id": 22,
+      "label": "Lake Superior — North Shore",
+      "keywords": [
+        "duluth",
+        "lake superior",
+        "lake",
+        "north shore"
+      ],
+      "count": 47
+    },
+    {
+      "id": 23,
+      "label": "Lake Huron Debris & Incidents",
+      "keywords": [
+        "lake huron",
+        "debris",
+        "shot",
+        "lake"
+      ],
+      "count": 44
+    },
+    {
+      "id": 24,
+      "label": "Kayaking & Boating",
+      "keywords": [
+        "kayaking",
+        "kayaks",
+        "kayak",
+        "boating"
+      ],
+      "count": 41
+    },
+    {
+      "id": 25,
+      "label": "Insects & Camping",
+      "keywords": [
+        "bugs",
+        "fly",
+        "spray",
+        "camping"
+      ],
+      "count": 39
+    },
+    {
+      "id": 26,
+      "label": "Lake Ontario — Toronto Area",
+      "keywords": [
+        "lake ontario",
+        "toronto",
+        "erie",
+        "lake erie"
+      ],
+      "count": 38
+    },
+    {
+      "id": 27,
+      "label": "Water Safety & Accidents",
+      "keywords": [
+        "victims",
+        "boat",
+        "police",
+        "accident"
+      ],
+      "count": 37
+    },
+    {
+      "id": 28,
+      "label": "Scenic Views & Aesthetics",
+      "keywords": [
+        "blue water",
+        "blue",
+        "lakes",
+        "sunset"
+      ],
+      "count": 37
+    },
+    {
+      "id": 29,
+      "label": "Algal Blooms",
+      "keywords": [
+        "algae blooms",
+        "algae",
+        "blooms",
+        "lake"
+      ],
+      "count": 35
+    },
+    {
+      "id": 30,
+      "label": "Lake Michigan Overview",
+      "keywords": [
+        "lake michigan",
+        "lakes",
+        "lakes rivers",
+        "lake superior"
+      ],
+      "count": 35
+    },
+    {
+      "id": 31,
+      "label": "Lakeside Living",
+      "keywords": [
+        "seeing lake",
+        "lake near",
+        "lake",
+        "great lake"
+      ],
+      "count": 34
+    },
+    {
+      "id": 32,
+      "label": "Water Privatization (Nestlé)",
+      "keywords": [
+        "nestle water",
+        "nestle",
+        "michigan water",
+        "bottled water"
+      ],
+      "count": 33
+    },
+    {
+      "id": 33,
+      "label": "Recreational Boating",
+      "keywords": [
+        "boat",
+        "boating",
+        "boats",
+        "boat lake"
+      ],
+      "count": 30
+    }
+  ]
+}
