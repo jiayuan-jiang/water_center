@@ -1,12 +1,14 @@
 """
-Compute monthly trend data for all Reddit BERTopic topics and write to docs/data/.
+Compute monthly trend data for BERTopic topics and write to docs/data/.
 
-Output: docs/data/reddit_topic_trends.json
-
-Run from repo root:
+Usage (Reddit, default):
     python build_trend_data.py
+
+Usage (Bluesky):
+    python build_trend_data.py --platform bluesky
 """
 
+import argparse
 import json
 import numpy as np
 import pandas as pd
@@ -14,11 +16,9 @@ from datetime import datetime
 from pathlib import Path
 from statsmodels.nonparametric.smoothers_lowess import lowess
 
-DOCS_CSV  = Path("data/topics/documents_with_topics.csv")
-OUT_PATH  = Path("docs/data/reddit_topic_trends.json")
 LOESS_FRAC = 0.35
 
-TOPIC_LABELS = {
+REDDIT_TOPIC_LABELS = {
     0:  "General Great Lakes Discussion",
     1:  "Great Lakes Regional Overview",
     2:  "Invasive Species",
@@ -55,23 +55,71 @@ TOPIC_LABELS = {
     33: "Recreational Boating",
 }
 
+BLUESKY_TOPIC_LABELS = {
+    0:  "General Great Lakes Discussion",
+    1:  "Wildlife & Conservation",
+    4:  "Fisheries & Invasive Species",
+    5:  "Severe Weather & Navigation Safety",
+    10: "Oil Pipeline & Energy Infrastructure",
+    13: "Geology & Shoreline Fossils",
+    15: "Offshore Wind Energy",
+    18: "Data Centers & AI Water Consumption",
+    19: "Great Lakes Borders & Governance",
+    26: "Algal Blooms & Invasive Plants",
+    27: "Squall & Storm Warnings",
+    28: "EPA & Environmental Regulation",
+    29: "Indigenous Communities & Water Rights",
+    31: "Dunes & Shoreline Parks",
+    32: "NOAA & Scientific Research Funding",
+    33: "Sea Lamprey & Parasitic Species",
+    35: "Environmental Advocacy",
+    36: "Great Lakes Shipping & Trade",
+    39: "Cloud Cover & Weather Patterns",
+    41: "Lake-Effect Weather",
+    43: "Mining & Nuclear Waste",
+    45: "PFAS & Chemical Contamination",
+    46: "Microplastics",
+    48: "Marine Weather Warnings",
+    49: "Ice Cover Tracking",
+    50: "Wildfire Smoke & Air Quality",
+    53: "Climate Change & Seasonal Shifts",
+    59: "Coast Guard & Maritime Safety",
+}
+
+PLATFORM_CONFIG = {
+    "reddit": {
+        "labels":      REDDIT_TOPIC_LABELS,
+        "docs_csv":    "data/topics/documents_with_topics.csv",
+        "out_path":    "docs/data/reddit_topic_trends.json",
+        "source":      "Reddit via Arctic Shift API",
+    },
+    "bluesky": {
+        "labels":      BLUESKY_TOPIC_LABELS,
+        "docs_csv":    "data/topics_bluesky/documents_with_topics.csv",
+        "out_path":    "docs/data/bluesky_topic_trends.json",
+        "source":      "Bluesky via atproto searchPosts API",
+    },
+}
+
 
 def r(v, decimals=4):
-    """Round float or list of floats for compact JSON."""
     if isinstance(v, (list, np.ndarray)):
         return [round(float(x), decimals) for x in v]
     return round(float(v), decimals)
 
 
-def main():
-    df = pd.read_csv(DOCS_CSV, parse_dates=["created_dt"])
+def build(platform: str):
+    cfg = PLATFORM_CONFIG[platform]
+    docs_csv = Path(cfg["docs_csv"])
+    out_path = Path(cfg["out_path"])
+    topic_labels = cfg["labels"]
+
+    df = pd.read_csv(docs_csv, parse_dates=["created_dt"])
     df["month"] = df["created_dt"].dt.to_period("M")
 
-    # full month index spanning the whole corpus
     all_months = pd.period_range(df["month"].min(), df["month"].max(), freq="M")
     month_strs = [str(m) for m in all_months]
 
-    # monthly total (outlier -1 excluded)
     total_per_month = (
         df[df["topic"] >= 0]
         .groupby("month").size()
@@ -79,55 +127,60 @@ def main():
     )
 
     topics_out = []
-    for tid, label in sorted(TOPIC_LABELS.items()):
-        topic_docs = df[df["topic"] == tid]
+    for tid, label in sorted(topic_labels.items()):
         count_per_month = (
-            topic_docs.groupby("month").size()
+            df[df["topic"] == tid].groupby("month").size()
             .reindex(all_months, fill_value=0)
         )
 
-        counts  = count_per_month.values.astype(int)
-        totals  = total_per_month.values.astype(int)
-        share   = np.where(totals > 0, counts / totals, 0.0)
-
-        x_num   = np.arange(len(all_months))
-        smoothed = lowess(share, x_num, frac=LOESS_FRAC, return_sorted=False)
-        smoothed = np.clip(smoothed, 0, None)
-
-        active = int((counts > 0).sum())
+        counts   = count_per_month.values.astype(int)
+        totals   = total_per_month.values.astype(int)
+        share    = np.where(totals > 0, counts / totals, 0.0)
+        x_num    = np.arange(len(all_months))
+        smoothed = np.clip(lowess(share, x_num, frac=LOESS_FRAC, return_sorted=False), 0, None)
 
         topics_out.append({
-            "topic_id":     tid,
-            "label":        label,
-            "total_docs":   int(counts.sum()),
-            "active_months": active,
+            "topic_id":      tid,
+            "label":         label,
+            "total_docs":    int(counts.sum()),
+            "active_months": int((counts > 0).sum()),
             "monthly": {
-                "count":  counts.tolist(),
-                "total":  totals.tolist(),
-                "share":  r(share),
-                "loess":  r(smoothed),
+                "count": counts.tolist(),
+                "total": totals.tolist(),
+                "share": r(share),
+                "loess": r(smoothed),
             },
         })
 
     payload = {
         "meta": {
-            "source":       "Reddit via Arctic Shift API",
-            "platform":     "reddit",
-            "corpus_file":  "data/topics/documents_with_topics.csv",
-            "date_range":   {"start": month_strs[0], "end": month_strs[-1]},
-            "total_corpus_docs": int(df[df["topic"] >= 0]["topic"].count()),
+            "source":               cfg["source"],
+            "platform":             platform,
+            "corpus_file":          cfg["docs_csv"],
+            "date_range":           {"start": month_strs[0], "end": month_strs[-1]},
+            "total_corpus_docs":    int(df[df["topic"] >= 0]["topic"].count()),
             "outlier_docs_excluded": int((df["topic"] == -1).sum()),
-            "loess_frac":   LOESS_FRAC,
-            "normalization": "share = topic_docs_per_month / total_non_outlier_corpus_docs_per_month",
-            "generated":    datetime.now().isoformat()[:10],
+            "loess_frac":           LOESS_FRAC,
+            "normalization":        "share = topic_docs_per_month / total_non_outlier_corpus_docs_per_month",
+            "generated":            datetime.now().isoformat()[:10],
         },
-        "months":  month_strs,
-        "topics":  topics_out,
+        "months": month_strs,
+        "topics": topics_out,
     }
 
-    OUT_PATH.write_text(json.dumps(payload, ensure_ascii=False, indent=2))
-    size_kb = OUT_PATH.stat().st_size / 1024
-    print(f"Written: {OUT_PATH}  ({size_kb:.1f} KB, {len(topics_out)} topics, {len(month_strs)} months)")
+    out_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2))
+    size_kb = out_path.stat().st_size / 1024
+    print(f"Written: {out_path}  ({size_kb:.1f} KB, {len(topics_out)} topics, {len(month_strs)} months)")
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--platform", choices=["reddit", "bluesky", "all"], default="reddit")
+    args = parser.parse_args()
+
+    platforms = ["reddit", "bluesky"] if args.platform == "all" else [args.platform]
+    for p in platforms:
+        build(p)
 
 
 if __name__ == "__main__":

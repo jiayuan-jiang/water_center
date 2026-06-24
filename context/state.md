@@ -1,5 +1,5 @@
 # Project State Snapshot
-_Last updated: 2026-06-24_
+_Last updated: 2026-06-24 (temporal trend data generation)_
 
 ---
 
@@ -33,11 +33,8 @@ _Last updated: 2026-06-24_
 | `data/topics_bluesky/documents_with_topics.csv` | 125,226 rows | Each doc with assigned topic |
 
 Outlier rate: 53,826 / 125,226 = 43% (similar to Reddit's 44%)
-28 valid topics labeled (in `build_docs_data.py` `BLUESKY_TOPIC_LABELS`) → `docs/data/bluesky/`
-34 noise/off-topic topics excluded (sports, politics, fiction, African Great Lakes false positives, etc.)
-Topic 0 is anomalously large (33,659 docs = 27%) — catch-all general discussion; labeled and kept
-Topic 18 = "Data Centers & AI Water Consumption" — 634 posts, key weak signal (confirmed cross-platform with Reddit T10)
-Notable Bluesky-only signals: microplastics (T46), wildfire smoke (T50), Indigenous water rights (T29), nuclear waste (T43)
+Notable noise topics: 9 (music), 11 (bsky artifacts), 16 (books), 34 (dogs)
+Topic 0 is anomalously large (33,659 docs = 27%) — catch-all general discussion
 
 ---
 
@@ -79,15 +76,20 @@ Human-labeled in `build_docs_data.py`:
 
 ---
 
-## Trend Data (Reddit)
+## Trend Data
 
 | File | Contents |
 |------|----------|
 | `docs/data/reddit_topic_trends.json` | 34 topics × 41 months; arrays: count, total, share, loess |
-| `docs/data/reddit_topic_trends.md` | Schema reference + rendering spec (bar + LOESS) |
-| `build_trend_data.py` | Generator script; re-run to refresh |
+| `docs/data/bluesky_topic_trends.json` | 28 labeled topics × 42 months; same schema |
+| `docs/data/reddit_topic_trends.md` | Schema reference + rendering spec (bar + LOESS), applies to both files |
+| `build_trend_data.py` | Generator; `--platform reddit\|bluesky\|all` |
 
-Key observation from T10 (Data Centers): zero activity 2023-06 through 2025-07, sudden emergence 2025-08, peak 2025-12 (64 docs, 42% of monthly corpus). Narrative interpretation pending stakeholder feedback from Manja.
+Key observations (Data Centers topic):
+- Reddit T10: zero activity 2023-06 through 2025-07, sudden emergence 2025-08, peak 2025-12 (64 docs)
+- Bluesky T18: gradual growth from 2024-01, sustained high activity from 2025-08 onward (708 docs total, 30 active months)
+
+Narrative interpretation pending stakeholder feedback from Manja.
 
 ---
 
@@ -103,15 +105,14 @@ Key observation from T10 (Data Centers): zero activity 2023-06 through 2025-07, 
 - [x] Bluesky scraping — 258,069 raw posts via atproto searchPosts (12 queries × 42 months)
 - [x] Bluesky preprocessing — 125,226 corpus docs → `corpus_bluesky.jsonl`
 - [x] Bluesky BERTopic — 62 topics → `data/topics_bluesky/`
-- [x] Topic browser rewritten in React 18 + Vite 5 (`frontend/`) — 3-level nav (Platform Select → Topic List → Topic Detail), breadcrumb, platform-aware cards
+- [x] Topic browser rewritten in React 18 + Vite 5 (`frontend/`) — builds to `docs/`; multi-platform toggle, breadcrumb nav, platform-aware comment cards
 - [x] Reddit temporal trend data — `docs/data/reddit_topic_trends.json` (all 34 topics, LOESS-smoothed, schema documented)
-- [x] Bluesky topic labeling — 28 valid topics labeled, 34 noise topics excluded; `docs/data/bluesky/` generated
-- [x] Reddit ↔ Bluesky label alignment — 3 labels unified (Climate Change, Wildlife, EPA); deliberate differences documented
 
 ### In Progress
-_(none)_
+- [ ] Bluesky topic labeling (62 topics identified, need human labels)
 
 ### Blocked / Pending Decision
+- Bluesky topic labeling: noise topics (music, books, dogs, bsky artifacts) need identification and exclusion
 - Temporal trend narrative: data ready, interpretation pending feedback from Manja
 - GDELT: not yet started, scoped in task-queue
 - LinkedIn: ruled out (no archive, ToS barriers)

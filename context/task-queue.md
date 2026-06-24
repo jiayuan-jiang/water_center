@@ -1,5 +1,5 @@
 # Task Queue
-_Last updated: 2026-06-24_
+_Last updated: 2026-06-24 (temporal trend data generation done)_
 
 Format: `- [ ] Task title — [spec](../spec/filename.md)`
 
@@ -14,6 +14,11 @@ _(none)_
 ## Pending
 
 ### Data Expansion
+
+- [ ] **Bluesky topic labeling** — [spec](../spec/bluesky-data.md)
+  - 62 topics in `data/topics_bluesky/topic_summary.csv`
+  - Confirmed noise: topic 9 (music), 11 (bsky artifacts), 16 (books), 34 (dogs)
+  - Next: label remaining topics, then run `build_docs_data.py` for Bluesky browser
 
 - [ ] **GDELT news media scraping** — [spec](../spec/gdelt-scrape.md)
   - Free full-text search API, covers 1979–present
@@ -95,3 +100,4 @@ _Full spec: [spec/reddit-further-analysis.md](../spec/reddit-further-analysis.md
 - [x] Bluesky preprocessing (`preprocess_bluesky.py`) — 125,226 corpus docs
 - [x] Bluesky BERTopic (`topic_model.py --corpus ... --out-dir ...`) — 62 topics
 - [x] Reddit temporal trend data generation (`build_trend_data.py`) — `docs/data/reddit_topic_trends.json`, 34 topics × 41 months, LOESS frac=0.35
+- [x] Bluesky temporal trend data generation (`build_trend_data.py --platform bluesky`) — `docs/data/bluesky_topic_trends.json`, 28 labeled topics × 42 months, LOESS frac=0.35
