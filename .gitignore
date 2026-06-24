@@ -22,6 +22,7 @@ __pycache__/
 
 # Node
 node_modules/
+frontend/dist/
 
 # Claude Code internal state
 .claude/worktrees/

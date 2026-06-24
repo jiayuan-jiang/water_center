@@ -1,11 +1,10 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
-import { createReadStream, existsSync } from 'fs'
+import { createReadStream, existsSync, cpSync } from 'fs'
 import { lookup } from 'mime-types'
 
-// Serves ../docs/data/* at /data/* during `vite dev`
-// so the dev server can read real data without moving files.
+// Dev: serves ../docs/data/* at /data/*
 function serveDocsData() {
   const docsDir = path.resolve(import.meta.dirname, '../docs')
   return {
@@ -22,11 +21,23 @@ function serveDocsData() {
   }
 }
 
+// Build: copies ../docs/data/ → dist/data/
+function copyDocsData() {
+  const src  = path.resolve(import.meta.dirname, '../docs/data')
+  const dest = path.resolve(import.meta.dirname, 'dist/data')
+  return {
+    name: 'copy-docs-data',
+    closeBundle() {
+      cpSync(src, dest, { recursive: true })
+    },
+  }
+}
+
 export default defineConfig({
-  plugins: [react(), serveDocsData()],
+  plugins: [react(), serveDocsData(), copyDocsData()],
   base: './',
   build: {
-    outDir: '../docs',
-    emptyOutDir: false,
+    outDir: 'dist',
+    emptyOutDir: true,
   },
 })
