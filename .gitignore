@@ -11,6 +11,9 @@ Meet Manja*
 *.pdf
 *.docx
 
+# credentials
+.env
+
 # Python
 __pycache__/
 *.pyc

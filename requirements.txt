@@ -1,5 +1,6 @@
 # Data collection
 requests>=2.31.0
+atproto>=0.0.60
 
 # NLP & Topic Modeling
 bertopic>=0.16.0
