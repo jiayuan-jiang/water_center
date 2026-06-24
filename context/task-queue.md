@@ -1,5 +1,5 @@
 # Task Queue
-_Last updated: 2026-06-24 (further analysis tasks added)_
+_Last updated: 2026-06-24_
 
 Format: `- [ ] Task title — [spec](../spec/filename.md)`
 
@@ -15,14 +15,6 @@ _(none)_
 
 ### Data Expansion
 
-- [ ] **Wait for leobalduf reply** — [spec](../spec/bluesky-data.md)
-  - Email sent 2026-06-24 to leonhard.balduf@tu-darmstadt.de
-  - If no reply in 2 weeks, de-prioritize (official API confirmed sufficient)
-
-- [ ] **Bluesky fallback scraper** (if leobalduf doesn't respond in 2 weeks) — [spec](../spec/bluesky-data.md)
-  - Use `atproto` SDK + `searchPosts` endpoint
-  - Covers only last 30–90 days; treat as supplementary, not historical
-
 - [ ] **GDELT news media scraping** — [spec](../spec/gdelt-scrape.md)
   - Free full-text search API, covers 1979–present
   - Keywords: same as Reddit (lake names + environmental terms)
@@ -36,9 +28,15 @@ _(none)_
 
 _Full spec: [spec/reddit-further-analysis.md](../spec/reddit-further-analysis.md)_
 
-- [ ] **Temporal trend interpretation** ⭐ — [spec](../spec/reddit-further-analysis.md#analysis-1--temporal-trend-interpretation-high-priority)
-  - Normalize monthly doc counts per topic; rank by 2024–2026 growth slope
-  - Output: `data/analysis/topic_trends.csv`
+- [ ] **Temporal trend interpretation — narrative** ⭐ — [spec](../spec/reddit-further-analysis.md#analysis-1--temporal-trend-interpretation-high-priority)
+  - Data generation complete: `docs/data/reddit_topic_trends.json` (34 topics × 41 months, LOESS-smoothed)
+  - Rendering spec written: `docs/data/reddit_topic_trends.md`
+  - **Blocked:** narrative interpretation pending feedback from Manja on which topics to highlight
+
+- [ ] **Temporal trend — frontend rendering**
+  - Render `reddit_topic_trends.json` as bar + LOESS chart in topic browser
+  - Rendering spec: `docs/data/reddit_topic_trends.md`
+  - No spec file yet; defer until narrative direction confirmed
 
 - [ ] **Outlier cluster (-1) sub-clustering** ⭐ — [spec](../spec/reddit-further-analysis.md#analysis-2--outlier-cluster--1-sub-clustering-high-priority)
   - Re-run BERTopic on 3,717 noise docs with looser params (min_cluster_size=10)
@@ -86,10 +84,14 @@ _Full spec: [spec/reddit-further-analysis.md](../spec/reddit-further-analysis.md
 - [x] BERTopic topic modeling (`topic_model.py`) — 34 topics
 - [x] Word cloud visualizations (`wordcloud_viz.py`)
 - [x] Topic browser JSON build (`build_docs_data.py`)
-- [x] Static topic browser (`docs/index.html`)
+- [x] Static topic browser (`docs/index.html`) → rewritten as React app (`frontend/`)
 - [x] Progress report (`progress_report.pdf`)
 - [x] Platform feasibility research (LinkedIn → ruled out; Twitter/X → ruled out; Bluesky → limited; GDELT → promising)
 - [x] Bluesky archive research (no Arctic Shift equivalent; leobalduf Firehose logs are best available option)
 - [x] Email sent to leobalduf (Leonhard Balduf, TU Darmstadt) — 2026-06-24
 - [x] Bluesky API live test — since/until params work, 2023 data accessible, auth required
 - [x] Context management system created (CLAUDE.md, context/, spec/, memory/)
+- [x] Bluesky scraping (`scrape_bluesky.py`) — 258,069 raw posts, 12 queries × 42 months
+- [x] Bluesky preprocessing (`preprocess_bluesky.py`) — 125,226 corpus docs
+- [x] Bluesky BERTopic (`topic_model.py --corpus ... --out-dir ...`) — 62 topics
+- [x] Reddit temporal trend data generation (`build_trend_data.py`) — `docs/data/reddit_topic_trends.json`, 34 topics × 41 months, LOESS frac=0.35

@@ -1,9 +1,10 @@
 """
-Guided BERTopic analysis on cleaned Great Lakes Reddit corpus.
-Input:  data/corpus.jsonl
-Output: data/topics/  (topic table, representative docs, visualizations)
+Guided BERTopic analysis on cleaned Great Lakes corpus.
+Input:  data/corpus.jsonl  (or --corpus path)
+Output: data/topics/       (or --out-dir path)
 """
 
+import argparse
 import json
 import pandas as pd
 from pathlib import Path
@@ -16,10 +17,15 @@ from umap import UMAP
 from hdbscan import HDBSCAN
 from sklearn.feature_extraction.text import CountVectorizer
 
+parser = argparse.ArgumentParser()
+parser.add_argument("--corpus",  default="data/corpus.jsonl")
+parser.add_argument("--out-dir", default="data/topics")
+args = parser.parse_args()
+
 # ── Paths ────────────────────────────────────────────────────────────────────
-CORPUS_FILE = Path("data/corpus.jsonl")
-OUT_DIR     = Path("data/topics")
-OUT_DIR.mkdir(exist_ok=True)
+CORPUS_FILE = Path(args.corpus)
+OUT_DIR     = Path(args.out_dir)
+OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # ── Seed topics (Guided BERTopic) ────────────────────────────────────────────
 SEED_TOPICS = [
@@ -60,8 +66,14 @@ umap_model = UMAP(
     random_state=42,
 )
 
+# scale clustering params with corpus size to suppress noise micro-clusters
+n_docs = len(docs)
+min_cluster_size = max(30, n_docs // 800)
+min_df           = max(5,  n_docs // 6000)
+print(f"min_cluster_size={min_cluster_size}  min_df={min_df}")
+
 hdbscan_model = HDBSCAN(
-    min_cluster_size=30,
+    min_cluster_size=min_cluster_size,
     min_samples=10,
     metric="euclidean",
     cluster_selection_method="eom",
@@ -71,7 +83,7 @@ hdbscan_model = HDBSCAN(
 vectorizer = CountVectorizer(
     ngram_range=(1, 2),
     stop_words="english",
-    min_df=5,
+    min_df=min_df,
 )
 
 representation_model = KeyBERTInspired()

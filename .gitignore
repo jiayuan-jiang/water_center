@@ -19,3 +19,12 @@ __pycache__/
 *.pyc
 *.pyo
 **/.DS_Store
+
+# Node
+node_modules/
+
+# Claude Code internal state
+.claude/worktrees/
+
+# Playwright MCP logs
+.playwright-mcp/
