@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
 import CommentCard from './CommentCard'
+import TrendChart from './TrendChart'
 
 export default function DetailPanel({ topic, platform }) {
-  const [data, setData] = useState(null)
+  const [data, setData]           = useState(null)
+  const [trendData, setTrendData] = useState(null)
 
   useEffect(() => {
     setData(null)
@@ -11,6 +13,17 @@ export default function DetailPanel({ topic, platform }) {
       .then(r => r.json())
       .then(setData)
   }, [topic.id, platform])
+
+  useEffect(() => {
+    setTrendData(null)
+    const file = platform === 'bluesky'
+      ? 'data/bluesky_topic_trends.json'
+      : 'data/reddit_topic_trends.json'
+    fetch(file)
+      .then(r => r.json())
+      .then(setTrendData)
+      .catch(() => {})
+  }, [platform])
 
   const unit = platform === 'bluesky' ? 'posts' : 'comments'
 
@@ -27,6 +40,7 @@ export default function DetailPanel({ topic, platform }) {
           {data ? `${data.comments.length} representative ${unit} · sorted by score` : ''}
         </span>
       </div>
+      <TrendChart trendData={trendData} topicId={topic.id} />
       <div id="comment-list">
         {!data
           ? <div style={{ padding: '18px', color: '#666', fontSize: '0.85rem' }}>Loading…</div>
