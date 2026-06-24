@@ -1,0 +1,18 @@
+# data files (too large for git)
+data/
+
+# meeting recordings and transcripts
+*.wav
+*.wav-文本/
+1777901197234*
+Meet Manja*
+
+# documents
+*.pdf
+*.docx
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
