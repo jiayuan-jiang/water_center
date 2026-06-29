@@ -90,7 +90,7 @@ BLUESKY_TOPIC_LABELS = {
     31: "Dunes & Shoreline Parks",
     32: "NOAA & Scientific Research Funding",
     33: "Sea Lamprey & Parasitic Species",
-    35: "Environmental Advocacy",
+    35: "UFO/UAP Sightings Over Great Lakes",
     36: "Great Lakes Shipping & Trade",
     39: "Cloud Cover & Weather Patterns",
     41: "Lake-Effect Weather",

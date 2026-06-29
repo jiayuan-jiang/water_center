@@ -1,11 +1,11 @@
 # data files (too large for git)
 data/
+!frontend/public/data/
+!frontend/public/data/**
 
-# meeting recordings and transcripts
+# meeting recordings, transcripts, and notes
 *.wav
-*.wav-文本/
-1777901197234*
-Meet Manja*
+meetings/
 
 # documents
 *.pdf

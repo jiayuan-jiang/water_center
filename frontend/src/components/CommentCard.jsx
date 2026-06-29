@@ -1,13 +1,15 @@
-export default function CommentCard({ comment: c, platform }) {
+export default function CommentCard({ comment: c, platform, highlighted }) {
   const isBluesky = platform === 'bluesky'
 
-  // Reddit JSON files use `subreddit`; Bluesky uses `source`
   const sourceLabel = isBluesky
     ? 'Bluesky'
     : `r/${c.source || c.subreddit}`
 
   return (
-    <div className="comment">
+    <div
+      id={`comment-${c.id}`}
+      className={`comment${highlighted ? ' comment--highlighted' : ''}`}
+    >
       <div className="comment-meta">
         <span className={isBluesky ? 'source-bluesky' : 'sub'}>{sourceLabel}</span>
         <span className="score">↑ {c.score}</span>

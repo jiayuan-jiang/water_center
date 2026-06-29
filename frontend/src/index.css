@@ -202,6 +202,172 @@ header p  { font-size: 0.85rem; margin-top: 6px; color: var(--header-subtitle); 
 .comment-meta .score { margin-left: 10px; }
 .comment-text { font-size: 0.88rem; line-height: 1.65; color: #222; }
 
+/* ── Comment highlighted ── */
+.comment--highlighted {
+  border-left: 3px solid var(--um-maize);
+  padding-left: 15px;
+}
+
+/* ── Comment section header ── */
+.comment-section-header {
+  background: #f2f5f9;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border-light);
+  padding: 8px 18px;
+  font-size: 0.78rem;
+  font-family: "Courier New", monospace;
+  color: var(--um-blue);
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.comment-section-title { flex-shrink: 0; }
+
+/* ── Subtopic filter bar ── */
+.subtopic-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  font-weight: normal;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.filter-pill {
+  background: var(--white);
+  border: 1px solid var(--kw-border);
+  border-radius: 12px;
+  padding: 2px 10px;
+  font-size: 0.75rem;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--kw-text);
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s;
+}
+.filter-pill:hover { background: var(--hover-bg); border-color: var(--um-blue); }
+.filter-pill--active {
+  background: var(--um-blue);
+  color: var(--white);
+  border-color: var(--um-blue);
+}
+
+/* ── Subtopic section ── */
+.subtopic-section {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.section-header {
+  background: #f2f5f9;
+  border-bottom: 1px solid var(--border-light);
+  padding: 8px 18px;
+  font-size: 0.78rem;
+  font-family: "Courier New", monospace;
+  color: var(--um-blue);
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.subtopic-list { padding: 12px 18px; display: flex; flex-direction: column; gap: 12px; }
+
+/* ── Subtopic card ── */
+.subtopic-card {
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--border);
+  border-radius: 3px;
+  padding: 12px 14px;
+  background: var(--white);
+  transition: border-left-color 0.15s;
+}
+.subtopic-card--active {
+  border-left-color: var(--um-blue);
+  background: var(--hover-bg);
+}
+.subtopic-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+.subtopic-label {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: var(--um-blue);
+  flex: 1;
+  min-width: 0;
+}
+.attitude-badge {
+  background: var(--kw-bg);
+  border: 1px solid var(--kw-border);
+  border-radius: 10px;
+  padding: 1px 9px;
+  font-size: 0.73rem;
+  color: var(--kw-text);
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-family: "Courier New", monospace;
+}
+.subtopic-summary {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: #222;
+  margin-bottom: 10px;
+}
+.subtopic-quotes { margin-bottom: 10px; }
+.subtopic-quote {
+  border-left: 2px solid var(--kw-border);
+  padding: 4px 10px;
+  margin: 5px 0;
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  font-style: italic;
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.quote-text { flex: 1; }
+.quote-cite { font-style: normal; flex-shrink: 0; }
+
+/* ── Citation link ── */
+.cite-link {
+  background: none;
+  border: none;
+  color: var(--link-blue);
+  cursor: pointer;
+  font-size: 0.8em;
+  padding: 0 2px;
+  text-decoration: underline;
+  font-family: "Courier New", monospace;
+}
+.cite-link:hover { color: var(--um-blue); }
+
+/* ── Subtopic filter button (inside card) ── */
+.subtopic-filter-btn {
+  background: var(--kw-bg);
+  border: 1px solid var(--kw-border);
+  border-radius: 3px;
+  padding: 4px 12px;
+  font-size: 0.78rem;
+  color: var(--kw-text);
+  cursor: pointer;
+  font-family: Georgia, "Times New Roman", serif;
+  transition: background 0.12s;
+}
+.subtopic-filter-btn:hover { background: var(--hover-bg); border-color: var(--um-blue); }
+.subtopic-filter-btn--active {
+  background: var(--um-blue);
+  color: var(--white);
+  border-color: var(--um-blue);
+}
+
+/* ── Loading state ── */
+.loading-state { padding: 18px; color: #666; font-size: 0.85rem; }
+
 /* ── Breadcrumb ── */
 .breadcrumb {
   font-size: 0.82rem;

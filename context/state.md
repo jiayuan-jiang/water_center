@@ -1,5 +1,5 @@
 # Project State Snapshot
-_Last updated: 2026-06-24 (temporal trend data generation)_
+_Last updated: 2026-06-29 (sub-topic analysis)_
 
 ---
 
@@ -76,6 +76,22 @@ Human-labeled in `build_docs_data.py`:
 
 ---
 
+## Sub-topic Data
+
+| File | Contents |
+|------|----------|
+| `data/subtopics/overview.json` | Reddit: 25 topics with NMF sub-topics, keywords, repr_docs |
+| `data/subtopics/topic_{N:02d}.csv` | Per-topic doc assignments with `subtopic` + `subtopic_score` |
+| `data/subtopics_bluesky/overview.json` | Bluesky: 28 labeled topics, same schema |
+| `data/subtopics_bluesky/topic_{N:02d}.csv` | Per-topic Bluesky doc assignments |
+| `subtopic_model.py` | Generator; `--platform reddit\|bluesky` |
+| `spec/subtopic-analysis.md` | Method, parameters, quality review |
+
+`auto_k` formula: `max(2, min(6, n_docs // 80))` — one sub-topic per ~80 docs.
+`imbalanced_split: true` when largest/smallest sub-topic ratio > 5× (flagged, not removed).
+
+---
+
 ## Trend Data
 
 | File | Contents |
@@ -108,11 +124,15 @@ Narrative interpretation pending stakeholder feedback from Manja.
 - [x] Topic browser rewritten in React 18 + Vite 5 (`frontend/`) — builds to `docs/`; multi-platform toggle, breadcrumb nav, platform-aware comment cards
 - [x] Reddit temporal trend data — `docs/data/reddit_topic_trends.json` (all 34 topics, LOESS-smoothed, schema documented)
 
+### Done (continued)
+- [x] Sub-topic analysis — NMF on TF-IDF; Reddit 25 topics + Bluesky 28 topics → `data/subtopics*/overview.json`
+- [x] Bluesky Topic 35 label corrected: "Environmental Advocacy" → "UFO/UAP Sightings Over Great Lakes"
+- [x] Grounded summary generation — Gemini 2.5 Flash; Reddit 58 + Bluesky 120 subtopics → `data/subtopics*/grounded_summary.json`; spec: `spec/grounded-summary.md`
+
 ### In Progress
-- [ ] Bluesky topic labeling (62 topics identified, need human labels)
+_(none)_
 
 ### Blocked / Pending Decision
-- Bluesky topic labeling: noise topics (music, books, dogs, bsky artifacts) need identification and exclusion
 - Temporal trend narrative: data ready, interpretation pending feedback from Manja
 - GDELT: not yet started, scoped in task-queue
 - LinkedIn: ruled out (no archive, ToS barriers)
