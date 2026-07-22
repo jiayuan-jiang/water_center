@@ -1,5 +1,5 @@
 # Project State Snapshot
-_Last updated: 2026-06-29 (sub-topic analysis)_
+_Last updated: 2026-07-22 (outlier emerging-issues analysis)_
 
 ---
 
@@ -109,6 +109,38 @@ Narrative interpretation pending stakeholder feedback from Manja.
 
 ---
 
+## Outlier Emerging-Issues Analysis
+
+Spec: `spec/outlier-emerging-issues.md` — operationalizes the meeting definition of
+"emerging issue" as relevance × novelty × recency scoring on outlier micro-clusters.
+
+| File | Contents |
+|------|----------|
+| `outlier_analysis.py` | Stage 1+2: re-cluster topic -1 docs (HDBSCAN 10/5), score clusters |
+| `outlier_candidates.py` | Stage 3: Gemini grounded candidate list (Greta-compatible md table) |
+| `data/analysis/outlier_subclusters_reddit.csv` | 78 micro-clusters with scores |
+| `data/analysis/outlier_overview_reddit.json` | 66 relevance-passing clusters + repr docs |
+
+Bluesky run (2026-07-22, same params as Reddit):
+- Input filters (bluesky only): expanded bot blocklist (+5 handles, +regex for
+  *.nws-bot.us / *.weather.im / "bot" substring, −3,421 docs), African Great Lakes
+  disambiguation (−107), normalized-text dedup incl. same-author near-dups (−539)
+- 49,759 docs → 741 micro-clusters, residual 52%, 431 pass relevance ≥ 0.3
+- Top signals: Saugeen First Nation beach land return, Great Lakes Cheese wastewater
+  (Ischua Creek), FirstEnergy bribery × Lake Erie offshore wind, Muskegon Lake AOC
+  delisting, research-vessel "black goo"
+- Known residue: viral factoid repost clusters (salt mines, Superior Shoal) survive
+  dedup because they are paraphrases — left for LLM/human triage
+
+Reddit pilot results (2026-07-22):
+- 3,717 outlier docs → 78 micro-clusters, residual noise 41%
+- Relevance gate (≥0.3) passes 66/78; rejected clusters are genuine noise (traffic, weddings, scenery)
+- Top candidate: combined sewer overflow / stormwater (15 docs, first seen 2025-04, 93% recent)
+- Other notables: golf course water use, cruise ship pollution, Lake Erie odor events
+- Borderline: cluster 63 "light pollution" at relevance 0.295 just misses the 0.3 gate — mixed with night photos; revisit threshold if needed
+
+---
+
 ## Work Status
 
 ### Done
@@ -130,7 +162,7 @@ Narrative interpretation pending stakeholder feedback from Manja.
 - [x] Grounded summary generation — Gemini 2.5 Flash; Reddit 58 + Bluesky 120 subtopics → `data/subtopics*/grounded_summary.json`; spec: `spec/grounded-summary.md`
 
 ### In Progress
-_(none)_
+- [ ] Outlier → emerging issues — Reddit Stage 1+2 done; Stage 3 (Gemini candidate list) blocked on GEMINI_API_KEY; Bluesky run pending review of Reddit pilot
 
 ### Blocked / Pending Decision
 - Temporal trend narrative: data ready, interpretation pending feedback from Manja

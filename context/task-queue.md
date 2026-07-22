@@ -1,5 +1,5 @@
 # Task Queue
-_Last updated: 2026-06-29_
+_Last updated: 2026-07-22_
 
 Format: `- [ ] Task title — [spec](../spec/filename.md)`
 
@@ -7,7 +7,14 @@ Format: `- [ ] Task title — [spec](../spec/filename.md)`
 
 ## In Progress
 
-_(none)_
+- [ ] **Outlier / emerging issues extraction** — [spec](../spec/outlier-emerging-issues.md)
+  - [x] Stage 1+2 Reddit: micro-clustering + relevance/novelty/recency scoring → `data/analysis/outlier_subclusters_reddit.csv`, `outlier_overview_reddit.json`
+  - [ ] Stage 3 Reddit: grounded candidate list (`outlier_candidates.py`) — needs `GEMINI_API_KEY`
+  - [x] Bluesky run — expanded bot/africa/dedup filters, 431 passing clusters → `outlier_review_bluesky.md`
+  - [x] Frontend outlier browser — platform → mode (Topics | Outlier Signals) → cluster detail; `build_outlier_data.py` → `frontend/public/data/outliers/`
+  - [ ] Stage 3 grounded summaries for all 497 clusters (`outlier_candidates.py --platform all`) — **needs GEMINI_API_KEY export**, then rerun `build_outlier_data.py` + `npm run build`
+  - [ ] Deploy (commit + push → Vercel) after grounded summaries land
+  - [ ] Team review on the website (E/K/N triage)
 
 ---
 
@@ -24,10 +31,7 @@ _(none)_
   - Output: `data/subtopics/grounded_summary.json`, `data/subtopics_bluesky/grounded_summary.json`
   - Model: Gemini 2.5 Flash via `grounded_summary.py`
 
-- [ ] **Outlier / weak signal analysis** — links to existing spec below ⭐
-  - Low-attention but on-topic posts may contain the earliest emerging signals
-  - See also: **Outlier cluster (-1) sub-clustering** under Analysis section
-  - Approach: analyze BERTopic outlier docs + surface low-engagement but topically relevant posts
+- [x] **Outlier / weak signal analysis** — moved to In Progress with dedicated [spec](../spec/outlier-emerging-issues.md)
 
 ---
 
@@ -75,9 +79,7 @@ _Full spec: [spec/reddit-further-analysis.md](../spec/reddit-further-analysis.md
   - Rendering spec: `docs/data/reddit_topic_trends.md`
   - No spec file yet; defer until narrative direction confirmed
 
-- [ ] **Outlier cluster (-1) sub-clustering** ⭐ — [spec](../spec/reddit-further-analysis.md#analysis-2--outlier-cluster--1-sub-clustering-high-priority)
-  - Re-run BERTopic on 3,717 noise docs with looser params (min_cluster_size=10)
-  - May reveal hidden weak signals too small for original model
+- [x] **Outlier cluster (-1) sub-clustering** ⭐ — superseded by [spec/outlier-emerging-issues.md](../spec/outlier-emerging-issues.md), see In Progress
 
 - [ ] **Sentiment analysis per topic** — [spec](../spec/reddit-further-analysis.md#analysis-3--sentiment-analysis-per-topic-medium-priority)
   - Model: `cardiffnlp/twitter-roberta-base-sentiment`

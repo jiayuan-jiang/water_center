@@ -365,6 +365,99 @@ header p  { font-size: 0.85rem; margin-top: 6px; color: var(--header-subtitle); 
   border-color: var(--um-blue);
 }
 
+/* ── Mode select ── */
+.mode-select-note {
+  margin: 28px auto 0;
+  max-width: 560px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ── Outlier table ── */
+.outlier-table td.num-cell {
+  width: 70px;
+  text-align: right;
+  color: #444;
+  font-family: "Courier New", monospace;
+  font-size: 0.82rem;
+}
+.outlier-table td.range-cell {
+  width: 150px;
+  white-space: nowrap;
+  color: var(--text-muted);
+  font-family: "Courier New", monospace;
+  font-size: 0.78rem;
+}
+.water-badge {
+  display: inline-block;
+  margin-left: 8px;
+  border-radius: 10px;
+  padding: 0 8px;
+  font-size: 0.72rem;
+  font-family: "Courier New", monospace;
+  vertical-align: 1px;
+}
+.water-badge--yes {
+  background: var(--kw-bg);
+  border: 1px solid var(--kw-border);
+  color: var(--kw-text);
+}
+.water-badge--no {
+  background: #faf0ee;
+  border: 1px solid #e5c5bd;
+  color: #8a4a3a;
+}
+
+/* ── Outlier detail ── */
+.outlier-scores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 18px;
+  border-bottom: 1px solid var(--border-light);
+  background: #f2f5f9;
+}
+.outlier-score {
+  background: var(--white);
+  border: 1px solid var(--kw-border);
+  border-radius: 3px;
+  padding: 1px 9px;
+  font-size: 0.75rem;
+  color: var(--kw-text);
+  font-family: "Courier New", monospace;
+}
+.month-bars-wrap {
+  padding: 12px 18px 8px;
+  border-bottom: 1px solid var(--border);
+}
+.month-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 44px;
+}
+.month-bar {
+  flex: 1;
+  max-width: 22px;
+  background: var(--um-blue);
+  opacity: 0.75;
+  border-radius: 1px 1px 0 0;
+  min-height: 2px;
+}
+.month-bars-range {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-family: "Courier New", monospace;
+  margin-top: 4px;
+}
+.outlier-summary { border-bottom: 1px solid var(--border); }
+.outlier-summary-text { padding: 12px 18px 0; }
+.outlier-quotes { padding: 0 18px 12px; }
+
 /* ── Loading state ── */
 .loading-state { padding: 18px; color: #666; font-size: 0.85rem; }
 

@@ -33,6 +33,9 @@ Deepen the signal extracted from the existing 34-topic BERTopic model to support
 
 ## Analysis 2 — Outlier Cluster (-1) Sub-clustering (HIGH PRIORITY)
 
+> **Superseded by [spec/outlier-emerging-issues.md](outlier-emerging-issues.md)** — extends this
+> analysis with relevance/novelty/recency scoring and a grounded candidate list.
+
 **What:** Re-cluster the 3,717 documents currently labeled as noise (topic -1) to find hidden emerging topics too small for the original model.
 
 **How:**
