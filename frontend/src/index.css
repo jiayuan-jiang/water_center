@@ -586,6 +586,19 @@ h2.section {
 .network-slider-label input[type="range"] { accent-color: var(--um-blue); }
 .network-stat { color: var(--text-muted); }
 .network-hint { color: var(--text-dim); margin-left: auto; }
+.network-zoom-btns { display: flex; gap: 4px; }
+.network-zoom-btn {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  width: 22px;
+  height: 22px;
+  line-height: 1;
+  color: var(--um-blue);
+  cursor: pointer;
+  font-family: "Courier New", monospace;
+}
+.network-zoom-btn:hover { background: var(--hover-bg); border-color: var(--um-blue); }
 
 .network-canvas { position: relative; }
 .network-svg {
@@ -636,6 +649,18 @@ h2.section {
   padding: 10px 14px;
 }
 .network-side-header .label { color: var(--white); }
+.network-side-header-actions { display: flex; align-items: center; gap: 10px; }
+.network-open-btn {
+  background: none;
+  border: 1px solid var(--header-subtitle);
+  border-radius: 3px;
+  color: var(--white);
+  font-family: "Courier New", monospace;
+  font-size: 0.75rem;
+  padding: 3px 8px;
+  cursor: pointer;
+}
+.network-open-btn:hover { background: rgba(255, 255, 255, 0.15); }
 .network-close-btn {
   background: none;
   border: none;

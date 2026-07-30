@@ -1,5 +1,5 @@
 # Project State Snapshot
-_Last updated: 2026-07-22 (outlier emerging-issues analysis)_
+_Last updated: 2026-07-30 (topic similarity network)_
 
 ---
 
@@ -141,6 +141,30 @@ Reddit pilot results (2026-07-22):
 
 ---
 
+## Topic Similarity Networks
+
+`topic_similarity_network.py` — re-embeds each topic/outlier-cluster's actual assigned
+docs (sampled up to 80/node) with `all-MiniLM-L6-v2`, mean-pools into a centroid,
+computes pairwise cosine similarity, keeps edges >= threshold (default 0.6, no node
+filtering — full node sets kept per Manja/team review need to see everything).
+
+| Combo | Nodes | Edges (>=0.6) | Output |
+|-------|-------|---------------|--------|
+| Reddit topics | 34 | 86 | `frontend/public/data/network/reddit/topics.json` |
+| Reddit outliers | 66 | 760 | `frontend/public/data/network/reddit/outliers.json` |
+| Bluesky topics | 28 | 92 | `frontend/public/data/network/bluesky/topics.json` |
+| Bluesky outliers | 431 | 13,942 | `frontend/public/data/network/bluesky/outliers.json` |
+
+Bluesky outliers is dense by design (431 nodes) — frontend ships a live "min
+similarity" slider (0.6-0.95) so the graph can be decluttered interactively without
+re-fetching data. Rendered via a new "Similarity Network" tab embedded alongside the
+existing List tab on both the Topics and Outlier Signals pages
+(`frontend/src/components/NetworkGraph.jsx`, uses `d3-force` for one-shot layout +
+plain SVG for rendering, no animation loop). Re-run `python topic_similarity_network.py
+--all` after any topic/outlier re-labeling to refresh.
+
+---
+
 ## Work Status
 
 ### Done
@@ -155,14 +179,22 @@ Reddit pilot results (2026-07-22):
 - [x] Bluesky BERTopic — 62 topics → `data/topics_bluesky/`
 - [x] Topic browser rewritten in React 18 + Vite 5 (`frontend/`) — builds to `docs/`; multi-platform toggle, breadcrumb nav, platform-aware comment cards
 - [x] Reddit temporal trend data — `docs/data/reddit_topic_trends.json` (all 34 topics, LOESS-smoothed, schema documented)
+- [x] Topic similarity networks (both platforms x topics/outliers) — `topic_similarity_network.py` + frontend "Similarity Network" tab, see section above
 
 ### Done (continued)
 - [x] Sub-topic analysis — NMF on TF-IDF; Reddit 25 topics + Bluesky 28 topics → `data/subtopics*/overview.json`
 - [x] Bluesky Topic 35 label corrected: "Environmental Advocacy" → "UFO/UAP Sightings Over Great Lakes"
 - [x] Grounded summary generation — Gemini 2.5 Flash; Reddit 58 + Bluesky 120 subtopics → `data/subtopics*/grounded_summary.json`; spec: `spec/grounded-summary.md`
 
+### Done (outlier emerging-issues, 2026-07-22)
+- [x] Stage 1+2 both platforms — Reddit 66 + Bluesky 431 passing clusters
+- [x] Stage 3 grounded summaries — OpenAI gpt-4o-mini (not Gemini; key in `.env`), 497/497, 0 errors
+- [x] Frontend outlier browser — platform → mode (Topics | Outlier Signals) → cluster detail
+  with scores, monthly bars, grounded summary + cite-jump, full doc list
+- [x] `build_outlier_data.py` → `frontend/public/data/outliers/`; deployed via commit ff950dd
+
 ### In Progress
-- [ ] Outlier → emerging issues — Reddit Stage 1+2 done; Stage 3 (Gemini candidate list) blocked on GEMINI_API_KEY; Bluesky run pending review of Reddit pilot
+- [ ] Team review of 497 outlier clusters on the website (E/K/N triage)
 
 ### Blocked / Pending Decision
 - Temporal trend narrative: data ready, interpretation pending feedback from Manja

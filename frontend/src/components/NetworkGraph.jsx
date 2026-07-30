@@ -47,7 +47,10 @@ function maxCountOf(nodes) {
   return Math.max(1, ...nodes.map(n => n.count))
 }
 
-export default function NetworkGraph({ data, onSelectNode }) {
+const ZOOM_MIN = 0.4
+const ZOOM_MAX = 3
+
+export default function NetworkGraph({ data, onSelectNode, onOpenDetail }) {
   const [threshold, setThreshold] = useState(data.threshold)
   const [hovered, setHovered] = useState(null)
   const [selected, setSelected] = useState(null)
@@ -96,21 +99,31 @@ export default function NetworkGraph({ data, onSelectNode }) {
       .sort((a, b) => b.weight - a.weight)
   }, [selected, visibleEdges, nodeById])
 
+  const zoomBy = factor => {
+    setView(v => ({ ...v, scale: Math.max(ZOOM_MIN, Math.min(ZOOM_MAX, v.scale * factor)) }))
+  }
+
   const handleWheel = e => {
+    // Only hijack the wheel for zoom on an explicit gesture (ctrl/cmd + wheel,
+    // which is also what trackpad pinch-to-zoom sends) — otherwise let the
+    // event pass through so the page scrolls normally underneath the graph.
+    if (!(e.ctrlKey || e.metaKey)) return
     e.preventDefault()
-    const delta = e.deltaY > 0 ? 0.9 : 1.1
-    setView(v => ({ ...v, scale: Math.max(0.4, Math.min(3, v.scale * delta)) }))
+    zoomBy(e.deltaY > 0 ? 0.9 : 1.1)
   }
 
   const handlePointerDown = e => {
-    dragRef.current = { startX: e.clientX, startY: e.clientY, origX: view.x, origY: view.y }
+    dragRef.current = { startX: e.clientX, startY: e.clientY, origX: view.x, origY: view.y, moved: false }
   }
   const handlePointerMove = e => {
     if (!dragRef.current) return
     const { startX, startY, origX, origY } = dragRef.current
+    if (Math.abs(e.clientX - startX) > 2 || Math.abs(e.clientY - startY) > 2) dragRef.current.moved = true
     setView(v => ({ ...v, x: origX + (e.clientX - startX), y: origY + (e.clientY - startY) }))
   }
   const handlePointerUp = () => { dragRef.current = null }
+
+  const handleNodeOpen = (n, opts) => onOpenDetail?.(n, opts)
 
   if (!laidOutNodes.length) {
     return <p className="loading-state">No similarity data available for this set yet.</p>
@@ -133,7 +146,15 @@ export default function NetworkGraph({ data, onSelectNode }) {
         <span className="network-stat">
           {laidOutNodes.length} nodes · {visibleEdges.length} edges shown
         </span>
-        <span className="network-hint">scroll to zoom · drag to pan</span>
+        <div className="network-zoom-btns">
+          <button className="network-zoom-btn" onClick={() => zoomBy(1.2)} title="Zoom in">+</button>
+          <button className="network-zoom-btn" onClick={() => zoomBy(1 / 1.2)} title="Zoom out">−</button>
+          <button className="network-zoom-btn" onClick={() => setView({ x: 0, y: 0, scale: 1 })} title="Reset view">⤢</button>
+        </div>
+        <span className="network-hint">
+          drag to pan · ctrl/⌘+scroll or pinch to zoom · double-click a node to open it
+          {onOpenDetail && ' (ctrl/⌘+double-click for a new tab)'}
+        </span>
       </div>
 
       <div className="network-canvas">
@@ -179,6 +200,10 @@ export default function NetworkGraph({ data, onSelectNode }) {
                       setSelected(n)
                       onSelectNode?.(n)
                     }}
+                    onDoubleClick={e => {
+                      e.stopPropagation()
+                      handleNodeOpen(n, { newTab: e.ctrlKey || e.metaKey })
+                    }}
                     style={{ cursor: 'pointer' }}
                   >
                     <circle
@@ -210,7 +235,18 @@ export default function NetworkGraph({ data, onSelectNode }) {
         <div className="network-side-panel">
           <div className="network-side-header">
             <span className="label">{selected.label}</span>
-            <button className="network-close-btn" onClick={() => setSelected(null)}>×</button>
+            <div className="network-side-header-actions">
+              {onOpenDetail && (
+                <>
+                  <button className="network-open-btn"
+                          onClick={() => handleNodeOpen(selected, {})}>Open detail →</button>
+                  <button className="network-open-btn"
+                          onClick={() => handleNodeOpen(selected, { newTab: true })}
+                          title="Open in a new tab">↗</button>
+                </>
+              )}
+              <button className="network-close-btn" onClick={() => setSelected(null)}>×</button>
+            </div>
           </div>
           <div className="network-side-meta">{selected.count} docs</div>
           <div className="keywords">

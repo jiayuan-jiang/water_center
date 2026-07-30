@@ -1,5 +1,5 @@
 # Task Queue
-_Last updated: 2026-07-22_
+_Last updated: 2026-07-30_
 
 Format: `- [ ] Task title — [spec](../spec/filename.md)`
 
@@ -12,8 +12,8 @@ Format: `- [ ] Task title — [spec](../spec/filename.md)`
   - [ ] Stage 3 Reddit: grounded candidate list (`outlier_candidates.py`) — needs `GEMINI_API_KEY`
   - [x] Bluesky run — expanded bot/africa/dedup filters, 431 passing clusters → `outlier_review_bluesky.md`
   - [x] Frontend outlier browser — platform → mode (Topics | Outlier Signals) → cluster detail; `build_outlier_data.py` → `frontend/public/data/outliers/`
-  - [ ] Stage 3 grounded summaries for all 497 clusters (`outlier_candidates.py --platform all`) — **needs GEMINI_API_KEY export**, then rerun `build_outlier_data.py` + `npm run build`
-  - [ ] Deploy (commit + push → Vercel) after grounded summaries land
+  - [x] Stage 3 grounded summaries — all 497 clusters via OpenAI gpt-4o-mini (0 errors, 9 flagged off-topic); switched from Gemini to OpenAI (`OPENAI_API_KEY` in `.env`)
+  - [x] Deploy — commit ff950dd pushed, Vercel auto-deploy
   - [ ] Team review on the website (E/K/N triage)
 
 ---
@@ -93,9 +93,11 @@ _Full spec: [spec/reddit-further-analysis.md](../spec/reddit-further-analysis.md
   - Rank topics by mean comment score; surface top-scored examples
   - Output: `data/analysis/topic_engagement.csv`
 
-- [ ] **Topic semantic similarity network** — [spec](../spec/reddit-further-analysis.md#analysis-6--topic-semantic-similarity-network-low-priority)
-  - Cosine similarity on BERTopic centroid embeddings → network/dendrogram
-  - Helps group related topics for the report
+- [x] **Topic semantic similarity network** — [spec](../spec/reddit-further-analysis.md#analysis-6--topic-semantic-similarity-network-low-priority)
+  - Extended beyond original scope: both platforms x topics/outliers = 4 graphs
+  - `topic_similarity_network.py` → `frontend/public/data/network/{platform}/{topics|outliers}.json`
+  - Rendered as interactive "Similarity Network" tab (force-directed, d3-force) alongside
+    List tab on Topics and Outlier Signals pages
 
 - [ ] **STEEP categorization** — [spec](../spec/reddit-further-analysis.md#analysis-7--steep-categorization-low-priority-report-prep)
   - Map 34 topics to Social/Technological/Economic/Environmental/Political tags

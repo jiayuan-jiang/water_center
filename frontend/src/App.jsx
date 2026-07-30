@@ -21,6 +21,12 @@ function ViewTabs({ view, onChange }) {
   )
 }
 
+function detailUrl(platform, mode, id) {
+  const url = new URL(window.location.href)
+  url.search = new URLSearchParams({ platform, mode, item: String(id) }).toString()
+  return url.toString()
+}
+
 export default function App() {
   const [platform, setPlatform]             = useState(null)   // null = landing page
   const [mode, setMode]                     = useState(null)   // null = mode selection
@@ -31,6 +37,7 @@ export default function App() {
   const [outlierMeta, setOutlierMeta]       = useState(null)
   const [currentCluster, setCurrentCluster] = useState(null)
   const [network, setNetwork]               = useState(null)
+  const [pendingItem, setPendingItem]       = useState(null)   // deep-linked item id awaiting its list to load
 
   const resetAll = () => {
     setPlatform(null)
@@ -80,6 +87,45 @@ export default function App() {
       .then(setNetwork)
       .catch(() => setNetwork(null))
   }, [platform, mode, view])
+
+  // ── Deep link: ?platform=bluesky&mode=outliers&item=28 opens straight to a node's detail ──
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const p = params.get('platform')
+    const m = params.get('mode')
+    const item = params.get('item')
+    if (p && m) {
+      setPlatform(p)
+      setMode(m)
+      setView('list')
+      if (item) setPendingItem(item)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (!pendingItem) return
+    if (mode === 'topics' && topics.length) {
+      const t = topics.find(x => String(x.id) === pendingItem)
+      if (t) { setCurrentTopic(t); setPendingItem(null) }
+    } else if (mode === 'outliers' && outlierMeta?.clusters?.length) {
+      const c = outlierMeta.clusters.find(x => String(x.id) === pendingItem)
+      if (c) { setCurrentCluster(c); setPendingItem(null) }
+    }
+  }, [pendingItem, mode, topics, outlierMeta])
+
+  const openNetworkDetail = (node, { newTab } = {}) => {
+    if (newTab) {
+      window.open(detailUrl(platform, mode, node.id), '_blank', 'noopener')
+      return
+    }
+    if (mode === 'topics') {
+      const t = topics.find(x => x.id === node.id)
+      if (t) setCurrentTopic(t)
+    } else if (mode === 'outliers') {
+      const c = outlierMeta?.clusters.find(x => x.id === node.id)
+      if (c) setCurrentCluster(c)
+    }
+  }
 
   // ── Landing: platform selection ───────────────────────────────────────────
   if (!platform) {
@@ -139,7 +185,7 @@ export default function App() {
               <ViewTabs view={view} onChange={setView} />
               {view === 'network' ? (
                 network ? (
-                  <NetworkGraph data={network} onSelectNode={() => {}} />
+                  <NetworkGraph data={network} onOpenDetail={openNetworkDetail} />
                 ) : (
                   <p className="loading-state">Loading similarity network…</p>
                 )
