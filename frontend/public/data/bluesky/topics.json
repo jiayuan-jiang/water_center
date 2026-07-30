@@ -41,6 +41,13 @@
           "anger": 3.3,
           "disgust": 2.5
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "This topic primarily focuses on the physical attributes and natural dynamics of the Great Lakes, emphasizing ecosystems and water conditions.",
+        "human_confirmed": false
       }
     },
     {
@@ -83,6 +90,13 @@
           "anger": 3.7,
           "disgust": 3.3
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "The core driving force of this topic is the conservation of wildlife and ecosystems within the Great Lakes region.",
+        "human_confirmed": false
       }
     },
     {
@@ -125,6 +139,14 @@
           "anger": 3.4,
           "disgust": 5.9
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental",
+          "Economic"
+        ],
+        "rationale": "While the issue touches on job impacts for fisheries, the core driving force revolves around the ecological balance and the response to invasive species in the Great Lakes.",
+        "human_confirmed": false
       }
     },
     {
@@ -154,6 +176,14 @@
           "anger": 0.0,
           "disgust": 0.0
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental",
+          "Political"
+        ],
+        "rationale": "The core driving force is the impact of severe weather on ecosystems and navigation safety, along with the need for regulatory measures to ensure safe navigation during storm events.",
+        "human_confirmed": false
       }
     },
     {
@@ -196,6 +226,14 @@
           "anger": 15.4,
           "disgust": 5.0
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental",
+          "Political"
+        ],
+        "rationale": "The core driving forces are related to the environmental impact of the oil pipeline on ecosystems and water quality, along with the political aspect of governance and regulation surrounding energy infrastructure.",
+        "human_confirmed": false
       }
     },
     {
@@ -238,6 +276,13 @@
           "anger": 3.3,
           "disgust": 5.3
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "This topic primarily relates to ecosystems and geological features of the Great Lakes, making Environmental the most relevant category.",
+        "human_confirmed": false
       }
     },
     {
@@ -280,6 +325,14 @@
           "anger": 9.8,
           "disgust": 2.9
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental",
+          "Economic"
+        ],
+        "rationale": "These tags reflect the core focus on harnessing wind energy for sustainable environmental benefits while addressing economic impacts related to energy production and job creation in the region.",
+        "human_confirmed": false
       }
     },
     {
@@ -322,6 +375,14 @@
           "anger": 13.0,
           "disgust": 5.2
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental",
+          "Technological"
+        ],
+        "rationale": "The primary focus is on the environmental impact of water consumption by data centers and AI, while technology drives the operation of these data centers.",
+        "human_confirmed": false
       }
     },
     {
@@ -364,6 +425,13 @@
           "anger": 6.6,
           "disgust": 5.8
         }
+      },
+      "steep": {
+        "tags": [
+          "Political"
+        ],
+        "rationale": "This topic primarily deals with governance and border issues related to the Great Lakes, which falls under the political category rather than social, technological, economic, or environmental aspects.",
+        "human_confirmed": false
       }
     },
     {
@@ -406,6 +474,13 @@
           "anger": 4.7,
           "disgust": 10.4
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "This item focuses primarily on the impact of algal blooms and invasive plants on ecosystems, driven by pollution in the Great Lakes.",
+        "human_confirmed": false
       }
     },
     {
@@ -435,6 +510,14 @@
           "anger": 0.0,
           "disgust": 0.2
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental",
+          "Technological"
+        ],
+        "rationale": "These tags reflect the core focus on weather-related phenomena impacting ecosystems and the role of technology in storm warning systems.",
+        "human_confirmed": false
       }
     },
     {
@@ -477,6 +560,14 @@
           "anger": 9.7,
           "disgust": 3.3
         }
+      },
+      "steep": {
+        "tags": [
+          "Political",
+          "Environmental"
+        ],
+        "rationale": "The core driving force is the intersection of policy and regulation related to environmental issues in the Great Lakes region.",
+        "human_confirmed": false
       }
     },
     {
@@ -519,6 +610,14 @@
           "anger": 5.0,
           "disgust": 1.9
         }
+      },
+      "steep": {
+        "tags": [
+          "Social",
+          "Political"
+        ],
+        "rationale": "These tags were chosen because the issue primarily concerns community behavior and public attitudes towards Indigenous rights and governance related to water rights.",
+        "human_confirmed": false
       }
     },
     {
@@ -561,6 +660,13 @@
           "anger": 1.9,
           "disgust": 0.8
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "The core driving force relates to the ecosystems and natural landscapes of dunes and shorelines.",
+        "human_confirmed": false
       }
     },
     {
@@ -603,6 +709,14 @@
           "anger": 7.1,
           "disgust": 6.0
         }
+      },
+      "steep": {
+        "tags": [
+          "Political",
+          "Environmental"
+        ],
+        "rationale": "The focus on NOAA and scientific research funding primarily involves policy decisions regarding resource allocation for environmental studies in the Great Lakes region.",
+        "human_confirmed": false
       }
     },
     {
@@ -645,6 +759,13 @@
           "anger": 8.6,
           "disgust": 7.6
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "Environmental is the primary category because the focus is on the impact of invasive species on ecosystems within the Great Lakes.",
+        "human_confirmed": false
       }
     },
     {
@@ -687,6 +808,14 @@
           "anger": 4.0,
           "disgust": 1.6
         }
+      },
+      "steep": {
+        "tags": [
+          "Social",
+          "Political"
+        ],
+        "rationale": "The topic primarily concerns public attitudes and reports of sightings, alongside potential regulatory and governance implications regarding aerial phenomena.",
+        "human_confirmed": false
       }
     },
     {
@@ -729,6 +858,14 @@
           "anger": 2.9,
           "disgust": 2.6
         }
+      },
+      "steep": {
+        "tags": [
+          "Economic",
+          "Political"
+        ],
+        "rationale": "These tags focus on the economic aspects of shipping and trade through the Great Lakes, as well as the political regulations governing these waterways.",
+        "human_confirmed": false
       }
     },
     {
@@ -771,6 +908,13 @@
           "anger": 1.0,
           "disgust": 9.4
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "This topic primarily relates to ecosystems and climate as it focuses on cloud cover and its impact on weather patterns affecting the Great Lakes region.",
+        "human_confirmed": false
       }
     },
     {
@@ -813,6 +957,13 @@
           "anger": 11.6,
           "disgust": 0.7
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "This topic primarily relates to the effects of ecosystems and climate on weather patterns specific to the Great Lakes region.",
+        "human_confirmed": false
       }
     },
     {
@@ -855,6 +1006,14 @@
           "anger": 26.7,
           "disgust": 6.4
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental",
+          "Political"
+        ],
+        "rationale": "The core issue revolves around the environmental impacts of mining and nuclear waste on the Great Lakes, necessitating protective policies and regulations.",
+        "human_confirmed": false
       }
     },
     {
@@ -897,6 +1056,13 @@
           "anger": 3.5,
           "disgust": 19.5
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "This topic primarily concerns the contamination of freshwater ecosystems and the implications for water quality, making Environmental the core driving force.",
+        "human_confirmed": false
       }
     },
     {
@@ -939,6 +1105,13 @@
           "anger": 1.6,
           "disgust": 9.4
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "The core driving force of the issue is the pollution caused by microplastics in the ecosystems of the Great Lakes.",
+        "human_confirmed": false
       }
     },
     {
@@ -968,6 +1141,14 @@
           "anger": 0.0,
           "disgust": 0.0
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental",
+          "Political"
+        ],
+        "rationale": "While the item relates to weather warnings and safety, the core driving forces are environmental factors affecting water conditions and the political aspect of governance regarding public safety regulations.",
+        "human_confirmed": false
       }
     },
     {
@@ -997,6 +1178,13 @@
           "anger": 0.0,
           "disgust": 0.0
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "The core driving force of ice cover tracking is related to environmental factors such as ecosystems and climate changes affecting ice patterns.",
+        "human_confirmed": false
       }
     },
     {
@@ -1039,6 +1227,13 @@
           "anger": 5.7,
           "disgust": 19.1
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "This topic primarily relates to the impacts of wildfire smoke on air quality and pollution in the Great Lakes region, making it primarily an environmental issue.",
+        "human_confirmed": false
       }
     },
     {
@@ -1081,6 +1276,13 @@
           "anger": 6.4,
           "disgust": 2.5
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "This topic primarily concerns the impact of climate change on ecosystems and weather patterns in the Great Lakes region.",
+        "human_confirmed": false
       }
     },
     {
@@ -1123,6 +1325,14 @@
           "anger": 1.2,
           "disgust": 1.2
         }
+      },
+      "steep": {
+        "tags": [
+          "Social",
+          "Political"
+        ],
+        "rationale": "The focus on Coast Guard and maritime safety primarily relates to public attitudes towards safety and governance surrounding maritime regulations.",
+        "human_confirmed": false
       }
     }
   ]

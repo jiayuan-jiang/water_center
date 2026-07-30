@@ -1,5 +1,23 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { forceSimulation, forceLink, forceManyBody, forceCenter, forceCollide } from 'd3-force'
+import { STEEP_CATEGORIES, STEEP_COLORS, SteepBadges } from '../steep'
+import { EmotionBadge } from '../emotions'
+
+const VERDICT_LABELS = {
+  genuine_debate: 'Genuine debate',
+  one_sided_consensus: 'One-sided',
+  heterogeneous_not_contentious: 'Heterogeneous',
+  insufficient_data: 'Insufficient data',
+}
+
+function ControversyBadge({ controversy }) {
+  if (!controversy || controversy.score == null) return null
+  return (
+    <span className="verdict-tag">
+      controversy {controversy.score.toFixed(2)} — {VERDICT_LABELS[controversy.verdict] ?? controversy.verdict}
+    </span>
+  )
+}
 
 const WIDTH = 900
 const HEIGHT = 620
@@ -50,7 +68,20 @@ function maxCountOf(nodes) {
 const ZOOM_MIN = 0.4
 const ZOOM_MAX = 3
 
-export default function NetworkGraph({ data, onSelectNode, onOpenDetail }) {
+function SteepLegend() {
+  return (
+    <div className="steep-legend">
+      {STEEP_CATEGORIES.map(cat => (
+        <span key={cat} className="steep-legend-item">
+          <span className="steep-dot" style={{ background: STEEP_COLORS[cat] }} />
+          {cat}
+        </span>
+      ))}
+    </div>
+  )
+}
+
+export default function NetworkGraph({ data, onSelectNode, onOpenDetail, steepById }) {
   const [threshold, setThreshold] = useState(data.threshold)
   const [hovered, setHovered] = useState(null)
   const [selected, setSelected] = useState(null)
@@ -157,6 +188,13 @@ export default function NetworkGraph({ data, onSelectNode, onOpenDetail }) {
         </span>
       </div>
 
+      {steepById && (
+        <div className="network-toolbar network-toolbar--legend">
+          <span className="network-legend-label">STEEP (ring color = primary tag):</span>
+          <SteepLegend />
+        </div>
+      )}
+
       <div className="network-canvas">
         <svg
           ref={svgRef}
@@ -190,6 +228,8 @@ export default function NetworkGraph({ data, onSelectNode, onOpenDetail }) {
               {laidOutNodes.map(n => {
                 const dim = selected && !neighborIds.has(n.id)
                 const isSelected = selected?.id === n.id
+                const r = radiusScale(n.count, maxCount)
+                const primaryTag = steepById?.get(n.id)?.tags?.[0]
                 return (
                   <g
                     key={n.id}
@@ -206,8 +246,17 @@ export default function NetworkGraph({ data, onSelectNode, onOpenDetail }) {
                     }}
                     style={{ cursor: 'pointer' }}
                   >
+                    {primaryTag && (
+                      <circle
+                        r={r + 3}
+                        fill="none"
+                        stroke={STEEP_COLORS[primaryTag]}
+                        strokeOpacity={dim ? 0.15 : 0.9}
+                        strokeWidth={2}
+                      />
+                    )}
                     <circle
-                      r={radiusScale(n.count, maxCount)}
+                      r={r}
                       fill={isSelected ? 'var(--um-maize)' : 'var(--um-blue)'}
                       fillOpacity={dim ? 0.15 : 0.85}
                       stroke={isSelected ? 'var(--um-blue)' : 'none'}
@@ -223,7 +272,12 @@ export default function NetworkGraph({ data, onSelectNode, onOpenDetail }) {
         {hovered && (
           <div className="network-tooltip">
             <div className="network-tooltip-label">{hovered.label}</div>
-            <div className="network-tooltip-meta">{hovered.count} docs</div>
+            <div className="network-tooltip-meta">
+              {hovered.count} docs
+              <EmotionBadge emotion={hovered.emotion?.dominant} />
+            </div>
+            <ControversyBadge controversy={hovered.controversy} />
+            <SteepBadges steep={steepById?.get(hovered.id)} />
             <div className="keywords">
               {hovered.keywords.slice(0, 5).map(k => <span key={k} className="kw">{k}</span>)}
             </div>
@@ -248,7 +302,12 @@ export default function NetworkGraph({ data, onSelectNode, onOpenDetail }) {
               <button className="network-close-btn" onClick={() => setSelected(null)}>×</button>
             </div>
           </div>
-          <div className="network-side-meta">{selected.count} docs</div>
+          <div className="network-side-meta">
+            {selected.count} docs
+            <EmotionBadge emotion={selected.emotion?.dominant} />
+          </div>
+          <ControversyBadge controversy={selected.controversy} />
+          <SteepBadges steep={steepById?.get(selected.id)} />
           <div className="keywords">
             {selected.keywords.map(k => <span key={k} className="kw">{k}</span>)}
           </div>

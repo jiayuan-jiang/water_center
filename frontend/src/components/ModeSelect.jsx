@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import SteepTrendMini from './SteepTrendMini'
 
 const PLATFORM_LABEL = { reddit: 'Reddit', bluesky: 'Bluesky' }
 
@@ -43,6 +44,7 @@ export default function ModeSelect({ platform, onSelect }) {
         Outlier signals are small clusters recovered from documents the main topic
         model could not assign — potential emerging issues, not yet audited.
       </p>
+      <SteepTrendMini platform={platform} />
     </div>
   )
 }

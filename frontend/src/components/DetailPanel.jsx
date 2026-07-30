@@ -2,6 +2,8 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import CommentCard from './CommentCard'
 import TrendChart from './TrendChart'
 import SubtopicPanel from './SubtopicPanel'
+import EmotionPieChart from './EmotionPieChart'
+import { SteepBadges } from '../steep'
 
 export default function DetailPanel({ topic, platform }) {
   const [data, setData]                       = useState(null)
@@ -101,9 +103,13 @@ export default function DetailPanel({ topic, platform }) {
       <div id="detail-header">
         <div>
           <h2>{topic.label}</h2>
+          <SteepBadges steep={topic.steep} />
           <div className="detail-keywords">
             {topic.keywords.map(k => <span key={k} className="kw">{k}</span>)}
           </div>
+          {topic.steep?.rationale && (
+            <p className="steep-rationale steep-rationale--on-header">{topic.steep.rationale}</p>
+          )}
         </div>
         <span className="detail-count">
           {data ? `${data.comments.length} representative ${unit} · sorted by score` : ''}
@@ -111,6 +117,8 @@ export default function DetailPanel({ topic, platform }) {
       </div>
 
       <TrendChart trendData={trendData} topicId={topic.id} />
+
+      <EmotionPieChart pct={data?.emotion?.pct} title="Emotion breakdown" />
 
       {subtopicData && (
         <SubtopicPanel

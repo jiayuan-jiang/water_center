@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import Header from './components/Header'
 import MetaBar from './components/MetaBar'
 import TopicTable from './components/TopicTable'
@@ -113,6 +113,11 @@ export default function App() {
     }
   }, [pendingItem, mode, topics, outlierMeta])
 
+  const steepById = useMemo(() => {
+    const items = mode === 'topics' ? topics : (outlierMeta?.clusters ?? [])
+    return new Map(items.map(item => [item.id, item.steep]))
+  }, [mode, topics, outlierMeta])
+
   const openNetworkDetail = (node, { newTab } = {}) => {
     if (newTab) {
       window.open(detailUrl(platform, mode, node.id), '_blank', 'noopener')
@@ -185,7 +190,7 @@ export default function App() {
               <ViewTabs view={view} onChange={setView} />
               {view === 'network' ? (
                 network ? (
-                  <NetworkGraph data={network} onOpenDetail={openNetworkDetail} />
+                  <NetworkGraph data={network} onOpenDetail={openNetworkDetail} steepById={steepById} />
                 ) : (
                   <p className="loading-state">Loading similarity network…</p>
                 )
@@ -228,7 +233,7 @@ export default function App() {
         <ViewTabs view={view} onChange={setView} />
         {view === 'network' ? (
           network ? (
-            <NetworkGraph data={network} onSelectNode={() => {}} />
+            <NetworkGraph data={network} onSelectNode={() => {}} steepById={steepById} />
           ) : (
             <p className="loading-state">Loading similarity network…</p>
           )

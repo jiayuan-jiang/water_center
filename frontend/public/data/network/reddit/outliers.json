@@ -16,7 +16,19 @@
         "stormwater",
         "overflow"
       ],
-      "count": 15
+      "count": 15,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 86.7,
+          "fear": 0.0,
+          "joy": 0.0,
+          "surprise": 0.0,
+          "sadness": 0.0,
+          "anger": 0.0,
+          "disgust": 13.3
+        }
+      }
     },
     {
       "id": 3,
@@ -29,7 +41,19 @@
         "golf course",
         "water"
       ],
-      "count": 21
+      "count": 21,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 47.6,
+          "fear": 4.8,
+          "joy": 0.0,
+          "surprise": 14.3,
+          "sadness": 0.0,
+          "anger": 9.5,
+          "disgust": 23.8
+        }
+      }
     },
     {
       "id": 60,
@@ -42,7 +66,19 @@
         "isle royale",
         "royale"
       ],
-      "count": 19
+      "count": 19,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 78.9,
+          "fear": 0.0,
+          "joy": 10.5,
+          "surprise": 0.0,
+          "sadness": 10.5,
+          "anger": 0.0,
+          "disgust": 0.0
+        }
+      }
     },
     {
       "id": 29,
@@ -55,7 +91,19 @@
         "sewer",
         "sewage lake"
       ],
-      "count": 34
+      "count": 34,
+      "emotion": {
+        "dominant": "disgust",
+        "pct": {
+          "neutral": 38.2,
+          "fear": 2.9,
+          "joy": 2.9,
+          "surprise": 5.9,
+          "sadness": 0.0,
+          "anger": 11.8,
+          "disgust": 38.2
+        }
+      }
     },
     {
       "id": 8,
@@ -68,7 +116,19 @@
         "lake st",
         "lake"
       ],
-      "count": 11
+      "count": 11,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 81.8,
+          "fear": 0.0,
+          "joy": 0.0,
+          "surprise": 9.1,
+          "sadness": 9.1,
+          "anger": 0.0,
+          "disgust": 0.0
+        }
+      }
     },
     {
       "id": 11,
@@ -81,7 +141,19 @@
         "lake",
         "lake erie"
       ],
-      "count": 38
+      "count": 38,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 50.0,
+          "fear": 13.2,
+          "joy": 0.0,
+          "surprise": 21.1,
+          "sadness": 0.0,
+          "anger": 5.3,
+          "disgust": 10.5
+        }
+      }
     },
     {
       "id": 17,
@@ -94,7 +166,19 @@
         "don like",
         "smells"
       ],
-      "count": 10
+      "count": 10,
+      "emotion": {
+        "dominant": "disgust",
+        "pct": {
+          "neutral": 10.0,
+          "fear": 0.0,
+          "joy": 0.0,
+          "surprise": 0.0,
+          "sadness": 0.0,
+          "anger": 0.0,
+          "disgust": 90.0
+        }
+      }
     },
     {
       "id": 69,
@@ -107,7 +191,19 @@
         "look",
         "beaches like"
       ],
-      "count": 13
+      "count": 13,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 69.2,
+          "fear": 0.0,
+          "joy": 0.0,
+          "surprise": 0.0,
+          "sadness": 0.0,
+          "anger": 23.1,
+          "disgust": 7.7
+        }
+      }
     },
     {
       "id": 7,
@@ -120,7 +216,19 @@
         "pollution",
         "polluting"
       ],
-      "count": 11
+      "count": 11,
+      "emotion": {
+        "dominant": "disgust",
+        "pct": {
+          "neutral": 36.4,
+          "fear": 9.1,
+          "joy": 0.0,
+          "surprise": 9.1,
+          "sadness": 0.0,
+          "anger": 0.0,
+          "disgust": 45.5
+        }
+      }
     },
     {
       "id": 9,
@@ -133,7 +241,19 @@
         "michigan huron",
         "huron lake"
       ],
-      "count": 25
+      "count": 25,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 80.0,
+          "fear": 0.0,
+          "joy": 0.0,
+          "surprise": 12.0,
+          "sadness": 0.0,
+          "anger": 4.0,
+          "disgust": 4.0
+        }
+      }
     },
     {
       "id": 4,
@@ -146,7 +266,19 @@
         "said gives",
         "lake said"
       ],
-      "count": 32
+      "count": 32,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 37.5,
+          "fear": 12.5,
+          "joy": 9.4,
+          "surprise": 3.1,
+          "sadness": 25.0,
+          "anger": 3.1,
+          "disgust": 9.4
+        }
+      }
     },
     {
       "id": 32,
@@ -159,7 +291,19 @@
         "water",
         "better"
       ],
-      "count": 32
+      "count": 32,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 53.1,
+          "fear": 3.1,
+          "joy": 0.0,
+          "surprise": 3.1,
+          "sadness": 3.1,
+          "anger": 3.1,
+          "disgust": 34.4
+        }
+      }
     },
     {
       "id": 35,
@@ -172,7 +316,19 @@
         "deep",
         "water"
       ],
-      "count": 46
+      "count": 46,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 76.1,
+          "fear": 2.2,
+          "joy": 2.2,
+          "surprise": 17.4,
+          "sadness": 0.0,
+          "anger": 2.2,
+          "disgust": 0.0
+        }
+      }
     },
     {
       "id": 57,
@@ -185,7 +341,19 @@
         "remember",
         "day"
       ],
-      "count": 42
+      "count": 42,
+      "emotion": {
+        "dominant": "surprise",
+        "pct": {
+          "neutral": 23.8,
+          "fear": 14.3,
+          "joy": 4.8,
+          "surprise": 31.0,
+          "sadness": 2.4,
+          "anger": 4.8,
+          "disgust": 19.0
+        }
+      }
     },
     {
       "id": 12,
@@ -198,7 +366,19 @@
         "pictures",
         "harbor"
       ],
-      "count": 15
+      "count": 15,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 73.3,
+          "fear": 6.7,
+          "joy": 0.0,
+          "surprise": 13.3,
+          "sadness": 0.0,
+          "anger": 0.0,
+          "disgust": 6.7
+        }
+      }
     },
     {
       "id": 23,
@@ -211,7 +391,19 @@
         "thought",
         "prehistoric"
       ],
-      "count": 11
+      "count": 11,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 45.5,
+          "fear": 9.1,
+          "joy": 0.0,
+          "surprise": 18.2,
+          "sadness": 0.0,
+          "anger": 0.0,
+          "disgust": 27.3
+        }
+      }
     },
     {
       "id": 56,
@@ -224,7 +416,19 @@
         "polar",
         "jumped"
       ],
-      "count": 31
+      "count": 31,
+      "emotion": {
+        "dominant": "fear",
+        "pct": {
+          "neutral": 29.0,
+          "fear": 35.5,
+          "joy": 3.2,
+          "surprise": 19.4,
+          "sadness": 3.2,
+          "anger": 0.0,
+          "disgust": 9.7
+        }
+      }
     },
     {
       "id": 49,
@@ -237,7 +441,19 @@
         "answer",
         "breeze"
       ],
-      "count": 11
+      "count": 11,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 63.6,
+          "fear": 0.0,
+          "joy": 18.2,
+          "surprise": 18.2,
+          "sadness": 0.0,
+          "anger": 0.0,
+          "disgust": 0.0
+        }
+      }
     },
     {
       "id": 53,
@@ -250,7 +466,19 @@
         "ruined",
         "liberal"
       ],
-      "count": 17
+      "count": 17,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 41.2,
+          "fear": 0.0,
+          "joy": 0.0,
+          "surprise": 11.8,
+          "sadness": 5.9,
+          "anger": 17.6,
+          "disgust": 23.5
+        }
+      }
     },
     {
       "id": 24,
@@ -263,7 +491,19 @@
         "fast",
         "long"
       ],
-      "count": 13
+      "count": 13,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 76.9,
+          "fear": 7.7,
+          "joy": 0.0,
+          "surprise": 0.0,
+          "sadness": 7.7,
+          "anger": 7.7,
+          "disgust": 0.0
+        }
+      }
     },
     {
       "id": 39,
@@ -276,7 +516,19 @@
         "going",
         "climate"
       ],
-      "count": 20
+      "count": 20,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 55.0,
+          "fear": 5.0,
+          "joy": 0.0,
+          "surprise": 5.0,
+          "sadness": 0.0,
+          "anger": 10.0,
+          "disgust": 25.0
+        }
+      }
     },
     {
       "id": 13,
@@ -289,7 +541,19 @@
         "death life",
         "book"
       ],
-      "count": 23
+      "count": 23,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 87.0,
+          "fear": 0.0,
+          "joy": 4.3,
+          "surprise": 4.3,
+          "sadness": 0.0,
+          "anger": 0.0,
+          "disgust": 4.3
+        }
+      }
     },
     {
       "id": 25,
@@ -302,7 +566,19 @@
         "help",
         "guys"
       ],
-      "count": 30
+      "count": 30,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 36.7,
+          "fear": 0.0,
+          "joy": 6.7,
+          "surprise": 13.3,
+          "sadness": 6.7,
+          "anger": 13.3,
+          "disgust": 23.3
+        }
+      }
     },
     {
       "id": 21,
@@ -315,7 +591,19 @@
         "ashtabula",
         "geneva state"
       ],
-      "count": 11
+      "count": 11,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 45.5,
+          "fear": 0.0,
+          "joy": 36.4,
+          "surprise": 9.1,
+          "sadness": 0.0,
+          "anger": 0.0,
+          "disgust": 9.1
+        }
+      }
     },
     {
       "id": 16,
@@ -328,7 +616,19 @@
         "like",
         "probably"
       ],
-      "count": 25
+      "count": 25,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 56.0,
+          "fear": 4.0,
+          "joy": 0.0,
+          "surprise": 24.0,
+          "sadness": 4.0,
+          "anger": 4.0,
+          "disgust": 8.0
+        }
+      }
     },
     {
       "id": 42,
@@ -341,7 +641,19 @@
         "sunset",
         "sunlight"
       ],
-      "count": 11
+      "count": 11,
+      "emotion": {
+        "dominant": "joy",
+        "pct": {
+          "neutral": 9.1,
+          "fear": 0.0,
+          "joy": 63.6,
+          "surprise": 9.1,
+          "sadness": 9.1,
+          "anger": 0.0,
+          "disgust": 9.1
+        }
+      }
     },
     {
       "id": 43,
@@ -354,7 +666,19 @@
         "ocean",
         "lake"
       ],
-      "count": 34
+      "count": 34,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 26.5,
+          "fear": 20.6,
+          "joy": 23.5,
+          "surprise": 5.9,
+          "sadness": 8.8,
+          "anger": 2.9,
+          "disgust": 11.8
+        }
+      }
     },
     {
       "id": 19,
@@ -367,7 +691,19 @@
         "lakes",
         "great lakes"
       ],
-      "count": 27
+      "count": 27,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 66.7,
+          "fear": 7.4,
+          "joy": 0.0,
+          "surprise": 0.0,
+          "sadness": 3.7,
+          "anger": 7.4,
+          "disgust": 14.8
+        }
+      }
     },
     {
       "id": 70,
@@ -380,7 +716,19 @@
         "park",
         "beaches"
       ],
-      "count": 32
+      "count": 32,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 84.4,
+          "fear": 0.0,
+          "joy": 9.4,
+          "surprise": 6.2,
+          "sadness": 0.0,
+          "anger": 0.0,
+          "disgust": 0.0
+        }
+      }
     },
     {
       "id": 76,
@@ -393,7 +741,19 @@
         "beautiful",
         "north"
       ],
-      "count": 151
+      "count": 151,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 55.6,
+          "fear": 1.3,
+          "joy": 29.8,
+          "surprise": 6.0,
+          "sadness": 4.6,
+          "anger": 0.7,
+          "disgust": 2.0
+        }
+      }
     },
     {
       "id": 37,
@@ -406,7 +766,19 @@
         "german",
         "lake superior"
       ],
-      "count": 12
+      "count": 12,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 33.3,
+          "fear": 16.7,
+          "joy": 16.7,
+          "surprise": 25.0,
+          "sadness": 0.0,
+          "anger": 0.0,
+          "disgust": 8.3
+        }
+      }
     },
     {
       "id": 44,
@@ -419,7 +791,19 @@
         "swimming",
         "bay"
       ],
-      "count": 172
+      "count": 172,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 53.5,
+          "fear": 7.6,
+          "joy": 0.6,
+          "surprise": 3.5,
+          "sadness": 2.9,
+          "anger": 2.9,
+          "disgust": 29.1
+        }
+      }
     },
     {
       "id": 26,
@@ -432,7 +816,19 @@
         "need",
         "safe"
       ],
-      "count": 13
+      "count": 13,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 38.5,
+          "fear": 7.7,
+          "joy": 0.0,
+          "surprise": 7.7,
+          "sadness": 23.1,
+          "anger": 15.4,
+          "disgust": 7.7
+        }
+      }
     },
     {
       "id": 48,
@@ -445,7 +841,19 @@
         "salt",
         "pump"
       ],
-      "count": 59
+      "count": 59,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 55.9,
+          "fear": 5.1,
+          "joy": 1.7,
+          "surprise": 6.8,
+          "sadness": 3.4,
+          "anger": 5.1,
+          "disgust": 22.0
+        }
+      }
     },
     {
       "id": 54,
@@ -458,7 +866,19 @@
         "nuclear power",
         "plants"
       ],
-      "count": 30
+      "count": 30,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 70.0,
+          "fear": 0.0,
+          "joy": 0.0,
+          "surprise": 0.0,
+          "sadness": 0.0,
+          "anger": 10.0,
+          "disgust": 20.0
+        }
+      }
     },
     {
       "id": 20,
@@ -471,7 +891,19 @@
         "vermont",
         "great lake"
       ],
-      "count": 17
+      "count": 17,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 88.2,
+          "fear": 0.0,
+          "joy": 0.0,
+          "surprise": 5.9,
+          "sadness": 5.9,
+          "anger": 0.0,
+          "disgust": 0.0
+        }
+      }
     },
     {
       "id": 15,
@@ -484,7 +916,19 @@
         "road",
         "portage"
       ],
-      "count": 17
+      "count": 17,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 82.4,
+          "fear": 0.0,
+          "joy": 5.9,
+          "surprise": 11.8,
+          "sadness": 0.0,
+          "anger": 0.0,
+          "disgust": 0.0
+        }
+      }
     },
     {
       "id": 71,
@@ -497,7 +941,19 @@
         "cliff",
         "rocks"
       ],
-      "count": 12
+      "count": 12,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 66.7,
+          "fear": 8.3,
+          "joy": 0.0,
+          "surprise": 0.0,
+          "sadness": 8.3,
+          "anger": 0.0,
+          "disgust": 16.7
+        }
+      }
     },
     {
       "id": 40,
@@ -510,7 +966,19 @@
         "dependent",
         "don want"
       ],
-      "count": 19
+      "count": 19,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 47.4,
+          "fear": 10.5,
+          "joy": 0.0,
+          "surprise": 10.5,
+          "sadness": 5.3,
+          "anger": 26.3,
+          "disgust": 0.0
+        }
+      }
     },
     {
       "id": 45,
@@ -523,7 +991,19 @@
         "ohio",
         "lakes"
       ],
-      "count": 13
+      "count": 13,
+      "emotion": {
+        "dominant": "surprise",
+        "pct": {
+          "neutral": 38.5,
+          "fear": 0.0,
+          "joy": 0.0,
+          "surprise": 61.5,
+          "sadness": 0.0,
+          "anger": 0.0,
+          "disgust": 0.0
+        }
+      }
     },
     {
       "id": 64,
@@ -536,7 +1016,19 @@
         "mackinaw bridge",
         "lake"
       ],
-      "count": 13
+      "count": 13,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 61.5,
+          "fear": 0.0,
+          "joy": 0.0,
+          "surprise": 38.5,
+          "sadness": 0.0,
+          "anger": 0.0,
+          "disgust": 0.0
+        }
+      }
     },
     {
       "id": 30,
@@ -549,7 +1041,19 @@
         "beautiful",
         "lake michigan"
       ],
-      "count": 23
+      "count": 23,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 43.5,
+          "fear": 17.4,
+          "joy": 21.7,
+          "surprise": 4.3,
+          "sadness": 4.3,
+          "anger": 4.3,
+          "disgust": 4.3
+        }
+      }
     },
     {
       "id": 77,
@@ -562,7 +1066,19 @@
         "great",
         "park"
       ],
-      "count": 25
+      "count": 25,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 64.0,
+          "fear": 4.0,
+          "joy": 20.0,
+          "surprise": 12.0,
+          "sadness": 0.0,
+          "anger": 0.0,
+          "disgust": 0.0
+        }
+      }
     },
     {
       "id": 51,
@@ -575,7 +1091,19 @@
         "jobs",
         "great lakes"
       ],
-      "count": 12
+      "count": 12,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 33.3,
+          "fear": 8.3,
+          "joy": 0.0,
+          "surprise": 16.7,
+          "sadness": 16.7,
+          "anger": 16.7,
+          "disgust": 8.3
+        }
+      }
     },
     {
       "id": 18,
@@ -588,7 +1116,19 @@
         "fishing",
         "lakes"
       ],
-      "count": 58
+      "count": 58,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 62.1,
+          "fear": 6.9,
+          "joy": 3.4,
+          "surprise": 5.2,
+          "sadness": 1.7,
+          "anger": 5.2,
+          "disgust": 15.5
+        }
+      }
     },
     {
       "id": 36,
@@ -601,7 +1141,19 @@
         "ve",
         "gl"
       ],
-      "count": 18
+      "count": 18,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 38.9,
+          "fear": 33.3,
+          "joy": 0.0,
+          "surprise": 5.6,
+          "sadness": 0.0,
+          "anger": 5.6,
+          "disgust": 16.7
+        }
+      }
     },
     {
       "id": 27,
@@ -614,7 +1166,19 @@
         "algal",
         "algal blooms"
       ],
-      "count": 13
+      "count": 13,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 61.5,
+          "fear": 0.0,
+          "joy": 0.0,
+          "surprise": 0.0,
+          "sadness": 0.0,
+          "anger": 7.7,
+          "disgust": 30.8
+        }
+      }
     },
     {
       "id": 72,
@@ -627,7 +1191,19 @@
         "sandy",
         "michigan"
       ],
-      "count": 31
+      "count": 31,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 41.9,
+          "fear": 0.0,
+          "joy": 35.5,
+          "surprise": 12.9,
+          "sadness": 3.2,
+          "anger": 0.0,
+          "disgust": 6.5
+        }
+      }
     },
     {
       "id": 47,
@@ -640,7 +1216,19 @@
         "used",
         "lake michigan"
       ],
-      "count": 14
+      "count": 14,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 85.7,
+          "fear": 7.1,
+          "joy": 0.0,
+          "surprise": 7.1,
+          "sadness": 0.0,
+          "anger": 0.0,
+          "disgust": 0.0
+        }
+      }
     },
     {
       "id": 10,
@@ -653,7 +1241,19 @@
         "year",
         "average"
       ],
-      "count": 16
+      "count": 16,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 75.0,
+          "fear": 0.0,
+          "joy": 0.0,
+          "surprise": 25.0,
+          "sadness": 0.0,
+          "anger": 0.0,
+          "disgust": 0.0
+        }
+      }
     },
     {
       "id": 50,
@@ -666,7 +1266,19 @@
         "beach",
         "wetsuit"
       ],
-      "count": 38
+      "count": 38,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 60.5,
+          "fear": 21.1,
+          "joy": 2.6,
+          "surprise": 7.9,
+          "sadness": 0.0,
+          "anger": 0.0,
+          "disgust": 7.9
+        }
+      }
     },
     {
       "id": 34,
@@ -679,7 +1291,19 @@
         "proven",
         "noticed"
       ],
-      "count": 15
+      "count": 15,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 53.3,
+          "fear": 0.0,
+          "joy": 0.0,
+          "surprise": 6.7,
+          "sadness": 0.0,
+          "anger": 6.7,
+          "disgust": 33.3
+        }
+      }
     },
     {
       "id": 22,
@@ -692,7 +1316,19 @@
         "rivers",
         "water"
       ],
-      "count": 21
+      "count": 21,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 28.6,
+          "fear": 19.0,
+          "joy": 0.0,
+          "surprise": 19.0,
+          "sadness": 4.8,
+          "anger": 4.8,
+          "disgust": 23.8
+        }
+      }
     },
     {
       "id": 55,
@@ -705,7 +1341,19 @@
         "climate",
         "don"
       ],
-      "count": 66
+      "count": 66,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 56.1,
+          "fear": 1.5,
+          "joy": 0.0,
+          "surprise": 4.5,
+          "sadness": 1.5,
+          "anger": 21.2,
+          "disgust": 15.2
+        }
+      }
     },
     {
       "id": 65,
@@ -718,7 +1366,19 @@
         "list",
         "nope"
       ],
-      "count": 10
+      "count": 10,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 70.0,
+          "fear": 0.0,
+          "joy": 20.0,
+          "surprise": 0.0,
+          "sadness": 0.0,
+          "anger": 10.0,
+          "disgust": 0.0
+        }
+      }
     },
     {
       "id": 66,
@@ -731,7 +1391,19 @@
         "great lakes",
         "lake erie"
       ],
-      "count": 25
+      "count": 25,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 44.0,
+          "fear": 16.0,
+          "joy": 24.0,
+          "surprise": 8.0,
+          "sadness": 4.0,
+          "anger": 0.0,
+          "disgust": 4.0
+        }
+      }
     },
     {
       "id": 46,
@@ -744,7 +1416,19 @@
         "illinois",
         "lakes"
       ],
-      "count": 118
+      "count": 118,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 67.8,
+          "fear": 3.4,
+          "joy": 1.7,
+          "surprise": 4.2,
+          "sadness": 4.2,
+          "anger": 11.9,
+          "disgust": 6.8
+        }
+      }
     },
     {
       "id": 31,
@@ -757,7 +1441,19 @@
         "time",
         "year"
       ],
-      "count": 25
+      "count": 25,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 60.0,
+          "fear": 4.0,
+          "joy": 12.0,
+          "surprise": 4.0,
+          "sadness": 0.0,
+          "anger": 0.0,
+          "disgust": 20.0
+        }
+      }
     },
     {
       "id": 58,
@@ -770,7 +1466,19 @@
         "people",
         "great"
       ],
-      "count": 29
+      "count": 29,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 62.1,
+          "fear": 0.0,
+          "joy": 3.4,
+          "surprise": 27.6,
+          "sadness": 0.0,
+          "anger": 3.4,
+          "disgust": 3.4
+        }
+      }
     },
     {
       "id": 59,
@@ -783,7 +1491,19 @@
         "michigan",
         "lake michigan"
       ],
-      "count": 78
+      "count": 78,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 69.2,
+          "fear": 6.4,
+          "joy": 0.0,
+          "surprise": 12.8,
+          "sadness": 3.8,
+          "anger": 0.0,
+          "disgust": 7.7
+        }
+      }
     },
     {
       "id": 52,
@@ -796,7 +1516,19 @@
         "great lakes",
         "people"
       ],
-      "count": 51
+      "count": 51,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 45.1,
+          "fear": 2.0,
+          "joy": 2.0,
+          "surprise": 5.9,
+          "sadness": 2.0,
+          "anger": 25.5,
+          "disgust": 17.6
+        }
+      }
     },
     {
       "id": 68,
@@ -809,7 +1541,19 @@
         "mn",
         "love"
       ],
-      "count": 14
+      "count": 14,
+      "emotion": {
+        "dominant": "surprise",
+        "pct": {
+          "neutral": 28.6,
+          "fear": 0.0,
+          "joy": 28.6,
+          "surprise": 35.7,
+          "sadness": 7.1,
+          "anger": 0.0,
+          "disgust": 0.0
+        }
+      }
     },
     {
       "id": 1,
@@ -822,7 +1566,19 @@
         "things",
         "people"
       ],
-      "count": 10
+      "count": 10,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 50.0,
+          "fear": 0.0,
+          "joy": 20.0,
+          "surprise": 0.0,
+          "sadness": 0.0,
+          "anger": 20.0,
+          "disgust": 10.0
+        }
+      }
     },
     {
       "id": 5,
@@ -835,7 +1591,19 @@
         "left",
         "bag"
       ],
-      "count": 12
+      "count": 12,
+      "emotion": {
+        "dominant": "disgust",
+        "pct": {
+          "neutral": 16.7,
+          "fear": 0.0,
+          "joy": 0.0,
+          "surprise": 0.0,
+          "sadness": 0.0,
+          "anger": 8.3,
+          "disgust": 75.0
+        }
+      }
     },
     {
       "id": 33,
@@ -848,7 +1616,19 @@
         "superior like",
         "spots"
       ],
-      "count": 10
+      "count": 10,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 50.0,
+          "fear": 10.0,
+          "joy": 0.0,
+          "surprise": 10.0,
+          "sadness": 10.0,
+          "anger": 20.0,
+          "disgust": 0.0
+        }
+      }
     },
     {
       "id": 38,
@@ -861,7 +1641,19 @@
         "farming",
         "canada"
       ],
-      "count": 11
+      "count": 11,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 63.6,
+          "fear": 0.0,
+          "joy": 9.1,
+          "surprise": 18.2,
+          "sadness": 0.0,
+          "anger": 0.0,
+          "disgust": 9.1
+        }
+      }
     }
   ],
   "edges": [

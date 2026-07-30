@@ -112,6 +112,52 @@ docs_df    = pd.read_csv(DOCS_CSV)
 corpus     = {json.loads(l)["id"]: json.loads(l)
               for l in CORPUS.open()}
 
+# LLM-judged controversy score per topic — see spec/controversy-score.md
+CONTROVERSY_CKPT = Path(f"data/analysis/.controversy_llm_checkpoint_{args.platform}.json")
+controversy_by_topic = {}
+if CONTROVERSY_CKPT.exists():
+    for tid_str, gen in json.loads(CONTROVERSY_CKPT.read_text()).items():
+        if "error" in gen:
+            continue
+        controversy_by_topic[int(tid_str)] = {
+            "score":     gen.get("controversy_score"),
+            "verdict":   gen.get("verdict"),
+            "reasoning": gen.get("reasoning"),
+            "quotes":    gen.get("supporting_quotes", []),
+        }
+
+# Emotion breakdown per topic — see sentiment_analysis.py
+SENTIMENT_CSV = Path(f"data/analysis/sentiment_by_topic_{args.platform}.csv")
+emotion_by_topic = {}
+EMOTION_KEYS = ["neutral", "fear", "joy", "surprise", "sadness", "anger", "disgust"]
+if SENTIMENT_CSV.exists():
+    for _, r in pd.read_csv(SENTIMENT_CSV).iterrows():
+        emotion_by_topic[int(r["topic"])] = {
+            "dominant": r["dominant_emotion"],
+            "pct": {k: (0.0 if pd.isna(r.get(f"pct_emotion_{k}")) else float(r[f"pct_emotion_{k}"]))
+                    for k in EMOTION_KEYS},
+        }
+
+# Per-comment sentiment + emotion — see sentiment_analysis.py
+SENTIMENT_DOCS_CSV = Path(f"data/analysis/sentiment_docs_{args.platform}.csv")
+emotion_by_doc = {}
+if SENTIMENT_DOCS_CSV.exists():
+    for r in pd.read_csv(SENTIMENT_DOCS_CSV).itertuples():
+        emotion_by_doc[str(r.id)] = {"sentiment": r.sentiment, "emotion": r.emotion}
+
+# STEEP tags per topic — see steep_tag.py, spec/reddit-further-analysis.md#analysis-7
+STEEP_CSV = Path("data/analysis/topic_steep.csv")
+steep_by_topic = {}
+if STEEP_CSV.exists():
+    for r in pd.read_csv(STEEP_CSV).itertuples():
+        if r.platform != args.platform:
+            continue
+        steep_by_topic[int(r.topic_id)] = {
+            "tags": [t for t in str(r.steep_tags).split("; ") if t and t != "nan"],
+            "rationale": r.rationale,
+            "human_confirmed": not pd.isna(r.human_confirmed) and str(r.human_confirmed).strip() != "",
+        }
+
 # for Bluesky: only keep labeled (valid signal) topics
 if args.platform == "bluesky":
     topic_info = topic_info[topic_info["Topic"].isin(TOPIC_LABELS)].copy()
@@ -128,10 +174,13 @@ for _, row in topic_info.sort_values("Count", ascending=False).iterrows():
     keywords = [k.strip() for k in parts if k.strip()]
 
     topics_index.append({
-        "id":       tid,
-        "label":    TOPIC_LABELS.get(tid, f"Topic {tid}"),
-        "keywords": keywords,
-        "count":    int(row["Count"]),
+        "id":          tid,
+        "label":       TOPIC_LABELS.get(tid, f"Topic {tid}"),
+        "keywords":    keywords,
+        "count":       int(row["Count"]),
+        "controversy": controversy_by_topic.get(tid),
+        "emotion":     emotion_by_topic.get(tid),
+        "steep":       steep_by_topic.get(tid),
     })
 
 (OUT_DIR / "topics.json").write_text(
@@ -163,19 +212,23 @@ for entry in topics_index:
             url     = f"https://www.reddit.com/r/{sub}/comments/{post_id}/_/{cid}/" if post_id and cid else ""
             source  = sub
 
+        doc_emo = emotion_by_doc.get(cid, {})
         comments.append({
-            "id":     cid,
-            "source": source,
-            "score":  int(row.get("score", 0)),
-            "date":   datetime.fromtimestamp(
-                          float(row["created_utc"])
-                      ).strftime("%Y-%m-%d") if pd.notna(row.get("created_utc")) else "",
-            "text":   str(row.get("text", "")),
-            "url":    url,
+            "id":        cid,
+            "source":    source,
+            "score":     int(row.get("score", 0)),
+            "date":      datetime.fromtimestamp(
+                             float(row["created_utc"])
+                         ).strftime("%Y-%m-%d") if pd.notna(row.get("created_utc")) else "",
+            "text":      str(row.get("text", "")),
+            "url":       url,
+            "sentiment": doc_emo.get("sentiment"),
+            "emotion":   doc_emo.get("emotion"),
         })
 
     out = {"topic_id": tid, "label": entry["label"],
-           "keywords": entry["keywords"], "comments": comments}
+           "keywords": entry["keywords"], "controversy": entry["controversy"],
+           "emotion": entry["emotion"], "steep": entry["steep"], "comments": comments}
     path = TOPICS_DIR / f"t{tid}.json"
     path.write_text(json.dumps(out, ensure_ascii=False))
     kb = path.stat().st_size / 1024

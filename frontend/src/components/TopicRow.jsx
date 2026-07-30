@@ -1,4 +1,5 @@
 import { EmotionBadge } from '../emotions'
+import { SteepBadges } from '../steep'
 
 const VERDICT_LABELS = {
   genuine_debate: 'Genuine debate',
@@ -14,6 +15,7 @@ export default function TopicRow({ topic, index, isActive, onSelect }) {
       <td>{index}</td>
       <td>
         <div className="label">{topic.label}</div>
+        <SteepBadges steep={topic.steep} />
         <div className="keywords">
           {topic.keywords.map(k => (
             <span key={k} className="kw">{k}</span>

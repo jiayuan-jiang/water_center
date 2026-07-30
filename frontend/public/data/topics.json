@@ -41,6 +41,14 @@
           "anger": 3.2,
           "disgust": 6.9
         }
+      },
+      "steep": {
+        "tags": [
+          "Social",
+          "Environmental"
+        ],
+        "rationale": "The discussion primarily reflects community behavior and public attitudes towards the Great Lakes and their ecosystems.",
+        "human_confirmed": false
       }
     },
     {
@@ -83,6 +91,13 @@
           "anger": 9.4,
           "disgust": 13.7
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "This item primarily focuses on the lakes and their water systems, which are key environmental features of the Great Lakes region.",
+        "human_confirmed": false
       }
     },
     {
@@ -125,6 +140,13 @@
           "anger": 4.4,
           "disgust": 19.5
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "The core driving force is the impact of invasive species on ecosystems and water quality in the Great Lakes, which substantially affects native species and fisheries.",
+        "human_confirmed": false
       }
     },
     {
@@ -167,6 +189,14 @@
           "anger": 8.6,
           "disgust": 11.7
         }
+      },
+      "steep": {
+        "tags": [
+          "Economic",
+          "Social"
+        ],
+        "rationale": "Economic factors such as tourism and housing significantly influence community behavior and public attitudes towards waterfront areas.",
+        "human_confirmed": false
       }
     },
     {
@@ -209,6 +239,14 @@
           "anger": 6.2,
           "disgust": 7.8
         }
+      },
+      "steep": {
+        "tags": [
+          "Social",
+          "Environmental"
+        ],
+        "rationale": "The core driving forces relate to community behavior and public attitudes towards swimming as recreational activity, along with environmental considerations such as water quality and safety.",
+        "human_confirmed": false
       }
     },
     {
@@ -251,6 +289,13 @@
           "anger": 2.1,
           "disgust": 4.7
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "The core driving force of this topic focuses on natural features and ecosystem considerations related to beaches and shorelines, rather than social or economic aspects.",
+        "human_confirmed": false
       }
     },
     {
@@ -293,6 +338,13 @@
           "anger": 2.6,
           "disgust": 4.2
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "The core driving force of this topic is related to ecosystems and water quality impacted by water temperature changes.",
+        "human_confirmed": false
       }
     },
     {
@@ -335,6 +387,13 @@
           "anger": 8.2,
           "disgust": 10.7
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "The core driving force of this topic is the impact of climate change on weather patterns and seasonal shifts, primarily focusing on environmental factors.",
+        "human_confirmed": false
       }
     },
     {
@@ -377,6 +436,14 @@
           "anger": 3.3,
           "disgust": 8.5
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental",
+          "Social"
+        ],
+        "rationale": "Environmental is chosen due to the focus on ice cover and its impact on ecosystems, while Social highlights the community behavior related to ice fishing.",
+        "human_confirmed": false
       }
     },
     {
@@ -419,6 +486,13 @@
           "anger": 2.7,
           "disgust": 28.9
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "The core driving force of this issue revolves around the impact of PFAS and chemical contamination on ecosystems and water quality.",
+        "human_confirmed": false
       }
     },
     {
@@ -461,6 +535,14 @@
           "anger": 6.2,
           "disgust": 13.1
         }
+      },
+      "steep": {
+        "tags": [
+          "Technological",
+          "Environmental"
+        ],
+        "rationale": "These tags highlight the intersection of new technologies used in data centers and their significant impact on water consumption and environmental ecosystems.",
+        "human_confirmed": false
       }
     },
     {
@@ -503,6 +585,14 @@
           "anger": 0.9,
           "disgust": 12.6
         }
+      },
+      "steep": {
+        "tags": [
+          "Economic",
+          "Environmental"
+        ],
+        "rationale": "The core driving forces of sport fishing primarily involve the economic impact on local industries and the environmental considerations regarding fish populations and aquatic ecosystems.",
+        "human_confirmed": false
       }
     },
     {
@@ -545,6 +635,14 @@
           "anger": 8.4,
           "disgust": 16.8
         }
+      },
+      "steep": {
+        "tags": [
+          "Economic",
+          "Environmental"
+        ],
+        "rationale": "Economic is key due to the impact on jobs and industry related to fisheries, while Environmental addresses the ecosystem and species management necessary for sustainable fishing practices.",
+        "human_confirmed": false
       }
     },
     {
@@ -587,6 +685,14 @@
           "anger": 13.8,
           "disgust": 14.9
         }
+      },
+      "steep": {
+        "tags": [
+          "Political",
+          "Environmental"
+        ],
+        "rationale": "The core driving force is the regulatory aspect of the EPA and its impact on environmental protection and pollution control.",
+        "human_confirmed": false
       }
     },
     {
@@ -629,6 +735,14 @@
           "anger": 5.4,
           "disgust": 18.5
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental",
+          "Social"
+        ],
+        "rationale": "These tags reflect the core concerns about the safety of drinking water and public attitudes towards water quality and access, while not focusing heavily on technology, economics, or political aspects.",
+        "human_confirmed": false
       }
     },
     {
@@ -671,6 +785,14 @@
           "anger": 1.2,
           "disgust": 10.0
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental",
+          "Economic"
+        ],
+        "rationale": "The core driving forces are the environmental benefits of renewable energy and the economic aspects related to job creation and industry development in the offshore wind sector.",
+        "human_confirmed": false
       }
     },
     {
@@ -713,6 +835,14 @@
           "anger": 7.8,
           "disgust": 16.9
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental",
+          "Economic"
+        ],
+        "rationale": "Mining and industrial pollution are primarily driven by economic activities associated with resource extraction, while their impact on ecosystems and water quality indicates a significant environmental concern.",
+        "human_confirmed": false
       }
     },
     {
@@ -755,6 +885,13 @@
           "anger": 0.0,
           "disgust": 8.6
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "The issue primarily concerns the ecosystems and physical characteristics of the Great Lakes influenced by water levels, rather than social attitudes, technological innovations, economic factors, or political governance.",
+        "human_confirmed": false
       }
     },
     {
@@ -797,6 +934,13 @@
           "anger": 4.8,
           "disgust": 15.9
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "This topic strongly focuses on climate change and weather patterns, which are primarily environmental issues.",
+        "human_confirmed": false
       }
     },
     {
@@ -839,6 +983,13 @@
           "anger": 24.6,
           "disgust": 21.1
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "This topic primarily focuses on issues related to the environment, including pollution and climate change, which are central to environmental advocacy.",
+        "human_confirmed": false
       }
     },
     {
@@ -881,6 +1032,13 @@
           "anger": 0.0,
           "disgust": 15.7
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "The core driving force of this topic revolves around ecosystems and species conservation, which is fundamentally an environmental issue.",
+        "human_confirmed": false
       }
     },
     {
@@ -923,6 +1081,13 @@
           "anger": 0.0,
           "disgust": 8.5
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "The core driving force of this topic is focused on the ecology and ecosystem dynamics of Lake Erie and the Great Lakes, which falls primarily under the Environmental category.",
+        "human_confirmed": false
       }
     },
     {
@@ -965,6 +1130,13 @@
           "anger": 0.0,
           "disgust": 0.0
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "This topic primarily focuses on the natural features and recreational opportunities of Lake Superior, which falls under environmental considerations.",
+        "human_confirmed": false
       }
     },
     {
@@ -1007,6 +1179,13 @@
           "anger": 4.5,
           "disgust": 6.8
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "The primary concern in this topic revolves around debris in Lake Huron and incidents related to the environment of the lake.",
+        "human_confirmed": false
       }
     },
     {
@@ -1049,6 +1228,14 @@
           "anger": 2.4,
           "disgust": 4.9
         }
+      },
+      "steep": {
+        "tags": [
+          "Social",
+          "Environmental"
+        ],
+        "rationale": "These tags reflect the community behavior and public attitudes towards recreational activities in natural waterways, as well as the environmental aspects related to ecosystems and water quality in lakes.",
+        "human_confirmed": false
       }
     },
     {
@@ -1091,6 +1278,13 @@
           "anger": 7.7,
           "disgust": 35.9
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "The core driving force revolves around the impact of insects on the camping experience, which is directly related to the environmental conditions of the area.",
+        "human_confirmed": false
       }
     },
     {
@@ -1133,6 +1327,13 @@
           "anger": 0.0,
           "disgust": 0.0
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "The core issue revolves around the characteristics and health of Lake Ontario and its relationship to the surrounding ecosystems.",
+        "human_confirmed": false
       }
     },
     {
@@ -1175,6 +1376,14 @@
           "anger": 10.8,
           "disgust": 13.5
         }
+      },
+      "steep": {
+        "tags": [
+          "Social",
+          "Political"
+        ],
+        "rationale": "These tags reflect the public safety concerns related to water accidents and the governance and regulatory aspects necessary for preventing such incidents.",
+        "human_confirmed": false
       }
     },
     {
@@ -1217,6 +1426,14 @@
           "anger": 0.0,
           "disgust": 10.8
         }
+      },
+      "steep": {
+        "tags": [
+          "Social",
+          "Environmental"
+        ],
+        "rationale": "The focus on scenic views and aesthetics primarily relates to social attitudes towards natural beauty and environmental appreciation.",
+        "human_confirmed": false
       }
     },
     {
@@ -1259,6 +1476,13 @@
           "anger": 2.9,
           "disgust": 25.7
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "The core driving force behind algal blooms is primarily related to the health of ecosystems and water quality, making 'Environmental' the most relevant category.",
+        "human_confirmed": false
       }
     },
     {
@@ -1301,6 +1525,13 @@
           "anger": 0.0,
           "disgust": 5.7
         }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "This topic primarily focuses on the physical characteristics and ecological aspects of Lake Michigan and its relation to other Great Lakes.",
+        "human_confirmed": false
       }
     },
     {
@@ -1343,6 +1574,14 @@
           "anger": 0.0,
           "disgust": 0.0
         }
+      },
+      "steep": {
+        "tags": [
+          "Social",
+          "Environmental"
+        ],
+        "rationale": "These tags highlight the community behavior and public attitudes towards lakeside living as well as the environmental aspects related to the ecosystem and water quality of the Great Lakes.",
+        "human_confirmed": false
       }
     },
     {
@@ -1385,6 +1624,14 @@
           "anger": 12.1,
           "disgust": 24.2
         }
+      },
+      "steep": {
+        "tags": [
+          "Economic",
+          "Environmental"
+        ],
+        "rationale": "The core driving force revolves around the economic implications of water privatization for both the industry and local communities, coupled with significant environmental concerns regarding water resources and sustainability.",
+        "human_confirmed": false
       }
     },
     {
@@ -1427,6 +1674,14 @@
           "anger": 0.0,
           "disgust": 3.3
         }
+      },
+      "steep": {
+        "tags": [
+          "Social",
+          "Environmental"
+        ],
+        "rationale": "Recreational boating primarily reflects public attitudes and community behavior related to leisure activities, while also impacting ecosystems and water quality in the Great Lakes.",
+        "human_confirmed": false
       }
     }
   ]

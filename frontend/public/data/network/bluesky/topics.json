@@ -14,7 +14,38 @@
         "lake erie",
         "lakes"
       ],
-      "count": 33659
+      "count": 33659,
+      "controversy": {
+        "score": 0.1,
+        "verdict": "one_sided_consensus",
+        "reasoning": "The comments overwhelmingly express negative sentiment towards the Great Lakes, with no one advocating for their beauty or positive aspects. Although there are positive comments, they do not argue against the negative sentiments but rather express personal joy or appreciation, leading to a consensus on dissatisfaction with the lakes' reputation or current state.",
+        "quotes": [
+          {
+            "id": "3llmbixazl22y",
+            "quote": "The Night Chicago Died might be the most insipid fucking song ever composed."
+          },
+          {
+            "id": "3ljy6ffyhtk2s",
+            "quote": "I live in Cleveland; Lake Erie is OUR lake. That bastard better not fuck with us."
+          },
+          {
+            "id": "3lljvaydl4k2a",
+            "quote": "There are some of us old enough to remember seeing Lake Erie on fire due to the toxic sludge dumped into it."
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 49.9,
+          "fear": 17.5,
+          "joy": 12.9,
+          "surprise": 7.4,
+          "sadness": 6.5,
+          "anger": 3.3,
+          "disgust": 2.5
+        }
+      }
     },
     {
       "id": 1,
@@ -25,7 +56,38 @@
         "wildlife",
         "lake ontario"
       ],
-      "count": 2389
+      "count": 2389,
+      "controversy": {
+        "score": 0,
+        "verdict": "one_sided_consensus",
+        "reasoning": "The comments predominantly express negative sentiments regarding the impact of avian flu on bird populations in the Great Lakes region with no evident opposing viewpoints. While a couple of positive comments exist, they do not address or counter the prevailing concerns about wildlife decline.",
+        "quotes": [
+          {
+            "id": "3li72lhnskk2q",
+            "quote": "Losing any of our birds is disastrous."
+          },
+          {
+            "id": "3lhzh6d6hqs2x",
+            "quote": "Great Lakes farms have become a hot spot for bird flu, killing millions of birds."
+          },
+          {
+            "id": "3lhlr2bjzo22w",
+            "quote": "birds all over the Great Lakes region are dropping like flies."
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "fear",
+        "pct": {
+          "neutral": 28.1,
+          "fear": 40.3,
+          "joy": 14.6,
+          "surprise": 5.4,
+          "sadness": 4.7,
+          "anger": 3.7,
+          "disgust": 3.3
+        }
+      }
     },
     {
       "id": 4,
@@ -36,7 +98,38 @@
         "whitefish",
         "lake erie"
       ],
-      "count": 1889
+      "count": 1889,
+      "controversy": {
+        "score": 0.2,
+        "verdict": "one_sided_consensus",
+        "reasoning": "Most comments express strong negative sentiment about invasive species like zebra and quagga mussels and Asian carp, with no opposing viewpoints presented. Positive comments focus on fish-related events and activities, not on invasive species or fisheries issues.",
+        "quotes": [
+          {
+            "id": "3ls7yk32vwk2l",
+            "quote": "I detest zebra mussels with a passion"
+          },
+          {
+            "id": "3m2mugldg7k2y",
+            "quote": "Quagga's are worse then zebra's"
+          },
+          {
+            "id": "3mgqcpux52c2v",
+            "quote": "Asian carp, zebra mussels, damn eels... They are a danger to all the great lakes"
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 48.7,
+          "fear": 23.7,
+          "joy": 9.8,
+          "surprise": 5.6,
+          "sadness": 3.0,
+          "anger": 3.4,
+          "disgust": 5.9
+        }
+      }
     },
     {
       "id": 5,
@@ -47,7 +140,25 @@
         "mi",
         "storm"
       ],
-      "count": 1708
+      "count": 1708,
+      "controversy": {
+        "score": 0,
+        "verdict": "insufficient_data",
+        "reasoning": "Only 0 non-neutral comments available.",
+        "quotes": []
+      },
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 99.7,
+          "fear": 0.2,
+          "joy": 0.0,
+          "surprise": 0.1,
+          "sadness": 0.0,
+          "anger": 0.0,
+          "disgust": 0.0
+        }
+      }
     },
     {
       "id": 10,
@@ -58,7 +169,38 @@
         "river",
         "oil"
       ],
-      "count": 1001
+      "count": 1001,
+      "controversy": {
+        "score": 0.9,
+        "verdict": "genuine_debate",
+        "reasoning": "The comments reflect strong opposition to oil pipelines like Enbridge's Line 5, with numerous users arguing about the risks and dangers they pose to the Great Lakes. While there are some positive comments, they don't directly debate the negative opinions. The strong emotions and specific concerns indicate an active dispute on pipeline safety and environmental impacts, particularly with comments such as [3moxafeipjk2f] and [3lsbxyzro7k2q] opposing the pipeline, juxtaposed with plans for new infrastructure mentioned in [3lgjqvpvz322u].",
+        "quotes": [
+          {
+            "id": "3moxafeipjk2f",
+            "quote": "repeatedly trying to poison the great lakes"
+          },
+          {
+            "id": "3lsbxyzro7k2q",
+            "quote": "No Line 5! It does not benefit Michigan"
+          },
+          {
+            "id": "3lgjqvpvz322u",
+            "quote": "He's got big plans for a pipeline from the Great Lakes to the Southwest."
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "fear",
+        "pct": {
+          "neutral": 36.0,
+          "fear": 36.7,
+          "joy": 1.9,
+          "surprise": 2.7,
+          "sadness": 2.4,
+          "anger": 15.4,
+          "disgust": 5.0
+        }
+      }
     },
     {
       "id": 13,
@@ -69,7 +211,38 @@
         "lake",
         "shores lake"
       ],
-      "count": 828
+      "count": 828,
+      "controversy": {
+        "score": 0,
+        "verdict": "one_sided_consensus",
+        "reasoning": "The comments overwhelmingly express a personal fondness for hunting agates and appreciating the beauty of the Great Lakes, with no opposing views or disagreements present. Both negative and positive comments reflect on personal experiences rather than conflicting opinions.",
+        "quotes": [
+          {
+            "id": "3lujadvkdoc2c",
+            "quote": "I find hunting agates at Lake Superior is very good for me."
+          },
+          {
+            "id": "3mfl6yonnsk2b",
+            "quote": "All those Lake Superior agates are otherworldly beautiful!"
+          },
+          {
+            "id": "3m457xfmjm22w",
+            "quote": "Had an amazing couple hours hunting agates today."
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 38.8,
+          "fear": 19.1,
+          "joy": 19.3,
+          "surprise": 11.0,
+          "sadness": 3.3,
+          "anger": 3.3,
+          "disgust": 5.3
+        }
+      }
     },
     {
       "id": 15,
@@ -80,7 +253,38 @@
         "lakes",
         "lakes states"
       ],
-      "count": 804
+      "count": 804,
+      "controversy": {
+        "score": 0.8,
+        "verdict": "genuine_debate",
+        "reasoning": "There is clear disagreement regarding offshore wind energy, with passionate negative comments expressing concerns about its impact on the Great Lakes and utility reliability, while several positive comments support the development of renewable energy initiatives. This indicates an active debate about the merits and risks associated with offshore wind energy.",
+        "quotes": [
+          {
+            "id": "3mac3gamn3s27",
+            "quote": "Extremely disappointed in Gov. Whitmer's short-sighted championing of this project."
+          },
+          {
+            "id": "3luzpgvxg3k2d",
+            "quote": "I love the wind turbines"
+          },
+          {
+            "id": "3luzuapv6q22i",
+            "quote": "I think windmills are very aesthetically pleasing"
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 53.0,
+          "fear": 17.4,
+          "joy": 4.5,
+          "surprise": 7.2,
+          "sadness": 5.2,
+          "anger": 9.8,
+          "disgust": 2.9
+        }
+      }
     },
     {
       "id": 18,
@@ -91,7 +295,38 @@
         "lakes states",
         "lakes"
       ],
-      "count": 708
+      "count": 708,
+      "controversy": {
+        "score": 0.2,
+        "verdict": "one_sided_consensus",
+        "reasoning": "The comments predominantly express strong opposition to data centers and AI's water consumption without any clear counterarguments or support for the other side, indicating an overall consensus against the issue rather than a substantive debate. For instance, comments like [3lwzoipk3722d] state extreme opposition, while the positive comments do not present a counterargument but rather celebrate AI developments or express excitement about research, as seen in [3k4fn5rf7xj25].",
+        "quotes": [
+          {
+            "id": "3lwzoipk3722d",
+            "quote": "going to have to pry the Great Lakes from my cold, dead hands"
+          },
+          {
+            "id": "3mehzeo4rg22o",
+            "quote": "I hate these data centers more than I've ever hated anything."
+          },
+          {
+            "id": "3k4fn5rf7xj25",
+            "quote": "I have accepted an associate scientist role at CIGLR... focusing on #MachineLearning applications in the Great Lakes!"
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 50.4,
+          "fear": 16.5,
+          "joy": 4.0,
+          "surprise": 7.9,
+          "sadness": 3.0,
+          "anger": 13.0,
+          "disgust": 5.2
+        }
+      }
     },
     {
       "id": 19,
@@ -102,7 +337,38 @@
         "chicago",
         "miles away"
       ],
-      "count": 685
+      "count": 685,
+      "controversy": {
+        "score": 0.9,
+        "verdict": "genuine_debate",
+        "reasoning": "The comments exhibit a clear disagreement about the definition and implications of borders related to the Great Lakes, particularly addressing the assertion that Lake Michigan serves as a border with Canada. Negative comments question the accuracy of this claim and criticize related law enforcement measures, while positive comments offer differing views on cross-border relations and the geography of the lakes, such as [3m2kzbzd27k2p], which expresses anger at CBP, and [3m2ahhbkfcs2q], which clarifies the definition of 'external boundary'.",
+        "quotes": [
+          {
+            "id": "3m2kzbzd27k2p",
+            "quote": "It made me physically ill, and furious."
+          },
+          {
+            "id": "3m2ahhbkfcs2q",
+            "quote": "it's within 100 miles of an 'external boundary', which includes coasts of any kind."
+          },
+          {
+            "id": "3mdo2jtfkes2h",
+            "quote": "quit letting them tell you s*** that's not true"
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 71.4,
+          "fear": 3.9,
+          "joy": 1.9,
+          "surprise": 8.9,
+          "sadness": 1.5,
+          "anger": 6.6,
+          "disgust": 5.8
+        }
+      }
     },
     {
       "id": 26,
@@ -113,7 +379,38 @@
         "erie",
         "lake"
       ],
-      "count": 471
+      "count": 471,
+      "controversy": {
+        "score": 0.1,
+        "verdict": "one_sided_consensus",
+        "reasoning": "The comments predominantly express negative sentiments towards algal blooms and their impact on the Great Lakes, with no comments presenting a contrary view or defense of the situation. For example, multiple users lament the algae's effects on water quality and swimming conditions, indicating unanimous concern rather than debate.",
+        "quotes": [
+          {
+            "id": "3movwbujizs2f",
+            "quote": "I hate when the federal government oversteps and steals our algae."
+          },
+          {
+            "id": "3lso7dobjys2b",
+            "quote": "I was appalled at the algae, and that got worse when I realized it was one of the Great Lakes."
+          },
+          {
+            "id": "3mna6g2gtlf2t",
+            "quote": "Lake Erie contains a dangerous mixture of toxic algae blooms... that threaten drinking water and wildlife."
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 38.4,
+          "fear": 35.5,
+          "joy": 3.6,
+          "surprise": 3.0,
+          "sadness": 4.5,
+          "anger": 4.7,
+          "disgust": 10.4
+        }
+      }
     },
     {
       "id": 27,
@@ -124,7 +421,25 @@
         "lakes",
         "st lawrence"
       ],
-      "count": 454
+      "count": 454,
+      "controversy": {
+        "score": 0,
+        "verdict": "insufficient_data",
+        "reasoning": "Only 2 non-neutral comments available.",
+        "quotes": []
+      },
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 92.3,
+          "fear": 7.5,
+          "joy": 0.0,
+          "surprise": 0.0,
+          "sadness": 0.0,
+          "anger": 0.0,
+          "disgust": 0.2
+        }
+      }
     },
     {
       "id": 28,
@@ -135,7 +450,38 @@
         "lakes region",
         "congress"
       ],
-      "count": 424
+      "count": 424,
+      "controversy": {
+        "score": 0.7,
+        "verdict": "genuine_debate",
+        "reasoning": "The comments reflect a substantive disagreement regarding environmental regulation, specifically about the effectiveness and future of the EPA under different political leadership. For example, commenter [3m7tpp7wzpx2q] criticizes a bill as harmful to water quality, while comments like [3krh474rqcs2v] express support for new legislation aimed at improving the Great Lakes.",
+        "quotes": [
+          {
+            "id": "3m7tpp7wzpx2q",
+            "quote": "This bill lets polluters dodge rules that keep the Chicago River and Lake Michigan clean."
+          },
+          {
+            "id": "3krh474rqcs2v",
+            "quote": "Another step forward for the GLRI Act of 2024!"
+          },
+          {
+            "id": "3mkxgdbxlts2p",
+            "quote": "Under Trump the EPA basically has no power to do anything."
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 56.8,
+          "fear": 21.2,
+          "joy": 5.7,
+          "surprise": 0.7,
+          "sadness": 2.6,
+          "anger": 9.7,
+          "disgust": 3.3
+        }
+      }
     },
     {
       "id": 29,
@@ -146,7 +492,38 @@
         "lake huron",
         "lakes region"
       ],
-      "count": 421
+      "count": 421,
+      "controversy": {
+        "score": 0.1,
+        "verdict": "one_sided_consensus",
+        "reasoning": "While there are many comments expressing frustration about representation and the history of Indigenous peoples in relation to water rights, the discourse mainly reflects agreement on the issues rather than active debates. The positive comments celebrate Indigenous culture and initiatives, but they do not present opposing views.",
+        "quotes": [
+          {
+            "id": "3mjwhsxrvfc2m",
+            "quote": "the Ojibwe nation in the Great Lakes region is not going to sit down either, to allow their tribal lands to be desecrated."
+          },
+          {
+            "id": "3lkyw46mfi22y",
+            "quote": "so grateful to have been able to share our work with the Great Lakes Inter-Tribal Council."
+          },
+          {
+            "id": "3lkwdmgkcx22e",
+            "quote": "I was honored to stand alongside the Fond du Lac Band of Lake Superior Chippewa."
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 65.1,
+          "fear": 14.7,
+          "joy": 9.5,
+          "surprise": 3.1,
+          "sadness": 0.7,
+          "anger": 5.0,
+          "disgust": 1.9
+        }
+      }
     },
     {
       "id": 31,
@@ -157,7 +534,38 @@
         "michigan lake",
         "michigan shoreline"
       ],
-      "count": 372
+      "count": 372,
+      "controversy": {
+        "score": 0.1,
+        "verdict": "one_sided_consensus",
+        "reasoning": "The overwhelming sentiment in the comments is negative regarding environmental degradation and government actions related to the dunes, with only a small number of positive comments praising the beauty of specific parks. There isn't an active debate, as no one is defending the negative impacts discussed, such as pollution or deforestation.",
+        "quotes": [
+          {
+            "id": "3m5cvrd4soc2u",
+            "quote": "the government is trying to smite Lake Michigan"
+          },
+          {
+            "id": "3kqlt3e63uk23",
+            "quote": "our destructive hubris"
+          },
+          {
+            "id": "3ki3juu2qxp2k",
+            "quote": "Half the beach is already trying to crawl into the parking lot"
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 41.7,
+          "fear": 26.9,
+          "joy": 15.3,
+          "surprise": 6.5,
+          "sadness": 7.0,
+          "anger": 1.9,
+          "disgust": 0.8
+        }
+      }
     },
     {
       "id": 32,
@@ -168,7 +576,38 @@
         "great lakes",
         "lakes region"
       ],
-      "count": 352
+      "count": 352,
+      "controversy": {
+        "score": 0,
+        "verdict": "one_sided_consensus",
+        "reasoning": "The comments overwhelmingly express concern about the negative impact of budget cuts to NOAA and its implications for the Great Lakes, with no representation of an opposing view. Positive comments acknowledge NOAA\u2019s past contributions but do not contest the negative tone of criticisms regarding current funding issues.",
+        "quotes": [
+          {
+            "id": "3loo7raxww22k",
+            "quote": "tRump (Stinking DoodyHead) decimated the NOAA Great Lakes lab because he hates America."
+          },
+          {
+            "id": "3lojrbcblts2c",
+            "quote": "his unconstrained staff & budget cuts have Great Lakes scientists concerned\u2014they\u2019ve lost the ability to protect the public from toxic algal blooms that can kill animals & sicken humans."
+          },
+          {
+            "id": "3ljbeq2g5ys2r",
+            "quote": "Thank you to NOAA staff for years of service to protecting our greatest of lakes."
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "fear",
+        "pct": {
+          "neutral": 27.6,
+          "fear": 35.2,
+          "joy": 1.4,
+          "surprise": 2.8,
+          "sadness": 19.9,
+          "anger": 7.1,
+          "disgust": 6.0
+        }
+      }
     },
     {
       "id": 33,
@@ -179,7 +618,38 @@
         "fishing",
         "great lakes"
       ],
-      "count": 327
+      "count": 327,
+      "controversy": {
+        "score": 0.2,
+        "verdict": "one_sided_consensus",
+        "reasoning": "While there are some positive comments about potential uses for sea lampreys, the overwhelming majority of comments express strong negative sentiments regarding their impact on the Great Lakes ecosystem and fisheries. No one is actively arguing in favor of the lamprey invasion or its management, indicating a general consensus against them.",
+        "quotes": [
+          {
+            "id": "3m66r3lmy5c2j",
+            "quote": "Sea lampreys are really bad invasive species in the Great Lakes."
+          },
+          {
+            "id": "3lipnodghns2g",
+            "quote": "Lampreys...are a deadly invasive species that threatens to devastate the $7bn Great Lakes fishing industry."
+          },
+          {
+            "id": "3loj3s3qvvk2t",
+            "quote": "The idiots also fired all the people who keep invasive lampreys from literally eating all the fish in the Great Lakes."
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 40.1,
+          "fear": 25.7,
+          "joy": 6.7,
+          "surprise": 5.5,
+          "sadness": 5.8,
+          "anger": 8.6,
+          "disgust": 7.6
+        }
+      }
     },
     {
       "id": 35,
@@ -190,7 +660,38 @@
         "lake superior",
         "lake michigan"
       ],
-      "count": 321
+      "count": 321,
+      "controversy": {
+        "score": 0,
+        "verdict": "one_sided_consensus",
+        "reasoning": "The comments largely express negative sentiment toward incidents and actions related to the Great Lakes, such as balloon releases and military actions, while positive comments are largely nostalgic or anecdotal without engaging in any disagreement. For example, [3m6n377gzj227] highlights military failures, while [3ldjfejv3xk2z] shares a personal UFO sighting without challenging prevailing views.",
+        "quotes": [
+          {
+            "id": "3m6n377gzj227",
+            "quote": "the last time we tried to build our own military aerospace sector, we cancelled the project"
+          },
+          {
+            "id": "3mdzk4kedyy2d",
+            "quote": "flooding streets and Lake Erie and causing two deaths"
+          },
+          {
+            "id": "3ldjfejv3xk2z",
+            "quote": "I both saw a silver orb in the sky over Lake Michigan"
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "fear",
+        "pct": {
+          "neutral": 36.8,
+          "fear": 39.3,
+          "joy": 2.5,
+          "surprise": 12.5,
+          "sadness": 3.4,
+          "anger": 4.0,
+          "disgust": 1.6
+        }
+      }
     },
     {
       "id": 36,
@@ -201,7 +702,38 @@
         "lakes st",
         "erie lake"
       ],
-      "count": 308
+      "count": 308,
+      "controversy": {
+        "score": 0.9,
+        "verdict": "genuine_debate",
+        "reasoning": "The comments reflect a strong disagreement about the implications of the St. Lawrence Seaway and Great Lakes shipping, where some commenters oppose the idea of oil tankers and American shipping due to environmental concerns, while others highlight economic benefits and historical significance. For instance, [3m2mpaj7f6c2u] and [3lcivilt6jc2u] express strong opposition, while [3mgxl4uv7qc2d] and [3mnut4et2os2l] focus on positive economic impacts.",
+        "quotes": [
+          {
+            "id": "3m2mpaj7f6c2u",
+            "quote": "Ontario residents will NEVER accept oil tankers on the Great Lakes."
+          },
+          {
+            "id": "3lcivilt6jc2u",
+            "quote": "the St Lawrence Seaway... has wreaked havoc on the Great Lakes."
+          },
+          {
+            "id": "3mgxl4uv7qc2d",
+            "quote": "Investments like this help build the next generation of green shipping corridors."
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 63.3,
+          "fear": 12.3,
+          "joy": 4.9,
+          "surprise": 10.1,
+          "sadness": 3.9,
+          "anger": 2.9,
+          "disgust": 2.6
+        }
+      }
     },
     {
       "id": 39,
@@ -212,7 +744,38 @@
         "lake michigan",
         "near lake"
       ],
-      "count": 298
+      "count": 298,
+      "controversy": {
+        "score": 0.1,
+        "verdict": "one_sided_consensus",
+        "reasoning": "While there is a wide range of emotional responses to cloud cover and weather patterns surrounding the Great Lakes, the comments predominantly reflect negative or positive experiences with no substantive debate or arguments on opposing sides. For instance, comments like [3lyuw56s2n62g] and [3m3xgottjik2s] express joy about cloud patterns without counter-arguments.",
+        "quotes": [
+          {
+            "id": "3lyuw56s2n62g",
+            "quote": "the clouds have been looking SO cool by me recently"
+          },
+          {
+            "id": "3m3xgottjik2s",
+            "quote": "I love the texture of the clouds over the Great Lakes"
+          },
+          {
+            "id": "3mgn2jduyrc2y",
+            "quote": "I blame Lake Michigan. Every lake."
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 48.0,
+          "fear": 28.9,
+          "joy": 3.4,
+          "surprise": 6.0,
+          "sadness": 3.4,
+          "anger": 1.0,
+          "disgust": 9.4
+        }
+      }
     },
     {
       "id": 41,
@@ -223,7 +786,38 @@
         "winds",
         "lakesuperior"
       ],
-      "count": 285
+      "count": 285,
+      "controversy": {
+        "score": 0,
+        "verdict": "one_sided_consensus",
+        "reasoning": "The comments present a clear consensus regarding negative weather conditions, with all negative comments expressing concern about harsh weather impacts, while positive comments reflect enjoyment of favorable weather. There is no indication of disagreement or opposing viewpoints in the discussion.",
+        "quotes": [
+          {
+            "id": "3lpmr4entl227",
+            "quote": "the windy conditions are worst in the Twin Ports region"
+          },
+          {
+            "id": "3ltcx25xpjc2a",
+            "quote": "it's a great weather day to end the extended holiday weekend"
+          },
+          {
+            "id": "3mgbhfqqyrs2l",
+            "quote": "the worst of it will likely be in the Twin Ports and along Lake Superior"
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "joy",
+        "pct": {
+          "neutral": 26.7,
+          "fear": 24.9,
+          "joy": 33.0,
+          "surprise": 0.0,
+          "sadness": 3.2,
+          "anger": 11.6,
+          "disgust": 0.7
+        }
+      }
     },
     {
       "id": 43,
@@ -234,7 +828,38 @@
         "lake",
         "lakes"
       ],
-      "count": 281
+      "count": 281,
+      "controversy": {
+        "score": 0,
+        "verdict": "one_sided_consensus",
+        "reasoning": "The comments overwhelmingly reflect a negative sentiment towards mining activities near Lake Superior, with no one articulating a supportive view for the mining project. Instead, they uniformly express concern and opposition, indicating a strong emotional response against the proposed activities rather than a genuine debate with opposing positions.",
+        "quotes": [
+          {
+            "id": "3mjmtixsrt22n",
+            "quote": "They\u2019re going to destroy some of the most pristine land in this country"
+          },
+          {
+            "id": "3mcy5wfvgb224",
+            "quote": "Mining in northern Minnesota... can contaminate EVERYBODY's fresh water."
+          },
+          {
+            "id": "3ldoujx76es2u",
+            "quote": "There will be no Copperwood mining around the Great Lakes."
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 32.7,
+          "fear": 27.4,
+          "joy": 2.5,
+          "surprise": 1.1,
+          "sadness": 3.2,
+          "anger": 26.7,
+          "disgust": 6.4
+        }
+      }
     },
     {
       "id": 45,
@@ -245,7 +870,38 @@
         "lakes basin",
         "lakes st"
       ],
-      "count": 257
+      "count": 257,
+      "controversy": {
+        "score": 0.2,
+        "verdict": "one_sided_consensus",
+        "reasoning": "While there are a variety of comments discussing the issues surrounding PFAS contamination, the overall sentiment is overwhelmingly negative towards the companies involved, and no opposing viewpoint is articulated. Comments like [3mkx53wwhik2v] express a strong desire for accountability without counterarguments.",
+        "quotes": [
+          {
+            "id": "3mkx53wwhik2v",
+            "quote": "3M Corp knew they were poisoning our fresh water"
+          },
+          {
+            "id": "3lf4fzzyt2c25",
+            "quote": "Nobody asked for this but here are some instances of Minnesota companies polluting our water"
+          },
+          {
+            "id": "3mli75hjxxc2z",
+            "quote": "PFAS the fervor chemicals lurking in all Great Lakes"
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "fear",
+        "pct": {
+          "neutral": 34.6,
+          "fear": 36.2,
+          "joy": 1.6,
+          "surprise": 2.7,
+          "sadness": 1.9,
+          "anger": 3.5,
+          "disgust": 19.5
+        }
+      }
     },
     {
       "id": 46,
@@ -256,7 +912,38 @@
         "lakes",
         "lakes www"
       ],
-      "count": 254
+      "count": 254,
+      "controversy": {
+        "score": 0,
+        "verdict": "one_sided_consensus",
+        "reasoning": "The comments overwhelmingly express a negative view on microplastics in the Great Lakes, with no substantial opposing views or debate evident. Even the positive comments are centered around addressing the issue rather than disputing its existence or impact.",
+        "quotes": [
+          {
+            "id": "3mn5jv32uec2p",
+            "quote": "More than a half-century of plastic... have despoiled the Great Lakes"
+          },
+          {
+            "id": "3mn6fjz3pmk2u",
+            "quote": "Great waste in the Great Lakes: How plastic pollution is clogging our waters"
+          },
+          {
+            "id": "3memokpfpm22k",
+            "quote": "What a wonderful team of scientists!"
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 41.3,
+          "fear": 37.4,
+          "joy": 6.3,
+          "surprise": 0.8,
+          "sadness": 3.1,
+          "anger": 1.6,
+          "disgust": 9.4
+        }
+      }
     },
     {
       "id": 48,
@@ -267,7 +954,25 @@
         "lake erie",
         "grand"
       ],
-      "count": 246
+      "count": 246,
+      "controversy": {
+        "score": 0,
+        "verdict": "insufficient_data",
+        "reasoning": "Only 1 non-neutral comments available.",
+        "quotes": []
+      },
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 92.7,
+          "fear": 7.3,
+          "joy": 0.0,
+          "surprise": 0.0,
+          "sadness": 0.0,
+          "anger": 0.0,
+          "disgust": 0.0
+        }
+      }
     },
     {
       "id": 49,
@@ -278,7 +983,25 @@
         "august",
         "june"
       ],
-      "count": 241
+      "count": 241,
+      "controversy": {
+        "score": 0,
+        "verdict": "insufficient_data",
+        "reasoning": "Only 0 non-neutral comments available.",
+        "quotes": []
+      },
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 92.1,
+          "fear": 7.9,
+          "joy": 0.0,
+          "surprise": 0.0,
+          "sadness": 0.0,
+          "anger": 0.0,
+          "disgust": 0.0
+        }
+      }
     },
     {
       "id": 50,
@@ -289,7 +1012,38 @@
         "pollution",
         "lakes region"
       ],
-      "count": 230
+      "count": 230,
+      "controversy": {
+        "score": 0.1,
+        "verdict": "one_sided_consensus",
+        "reasoning": "The comments reflect a predominantly negative sentiment towards wildfire smoke and air quality issues affecting the Great Lakes region, with no apparent support for a differing opinion. Most comments express frustration and concern about the effects of smoke from wildfires, indicating a consensus around the negative impacts without any opposing viewpoints.",
+        "quotes": [
+          {
+            "id": "3lyo7uaqxa224",
+            "quote": "Worse near Lake Michigan, not only in Chicago but also in IN and MI."
+          },
+          {
+            "id": "3lqfujx6h5s23",
+            "quote": "Unhealthy air quality in the region today, what with all the wildfires north and to the west."
+          },
+          {
+            "id": "3lr4g2jm2dc2z",
+            "quote": "the smoke from the Canadian fires is fucking killing me now."
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 34.8,
+          "fear": 29.6,
+          "joy": 0.4,
+          "surprise": 4.3,
+          "sadness": 6.1,
+          "anger": 5.7,
+          "disgust": 19.1
+        }
+      }
     },
     {
       "id": 53,
@@ -300,7 +1054,38 @@
         "snow",
         "lakes new"
       ],
-      "count": 202
+      "count": 202,
+      "controversy": {
+        "score": 0.3,
+        "verdict": "one_sided_consensus",
+        "reasoning": "The comments predominantly express concerns about climate change and its effects in the Great Lakes region, with no significant opposing viewpoints presented. Most comments agree on the negative impacts of climate change, as seen in statements like 'climate change is fucking real' [3lfectnto222f] and 'climate change has shrunk ice coverage' [3mf3xvr6efs2f].",
+        "quotes": [
+          {
+            "id": "3lfectnto222f",
+            "quote": "climate change is fucking real"
+          },
+          {
+            "id": "3mf3xvr6efs2f",
+            "quote": "climate change has shrunk ice coverage"
+          },
+          {
+            "id": "3kctgkghfrw27",
+            "quote": "the winter would be shorter, and the rest of the year would be much hotter"
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 59.4,
+          "fear": 13.4,
+          "joy": 4.0,
+          "surprise": 5.9,
+          "sadness": 8.4,
+          "anger": 6.4,
+          "disgust": 2.5
+        }
+      }
     },
     {
       "id": 59,
@@ -311,7 +1096,38 @@
         "lake",
         "lake erie"
       ],
-      "count": 171
+      "count": 171,
+      "controversy": {
+        "score": 0,
+        "verdict": "one_sided_consensus",
+        "reasoning": "The comments primarily reflect negative sentiments regarding past disasters and positive sentiments about successful rescues, with no active debate or disagreement present in the discourse. For example, multiple comments recount tragic plane crashes while others highlight successful Coast Guard interventions, indicating a consensus on both issues without opposition.",
+        "quotes": [
+          {
+            "id": "3lx4mflcwt22r",
+            "quote": "16 of 18 skydivers perished in 40\u00b0 water after a devastating air traffic control error."
+          },
+          {
+            "id": "3mf7qe46aak2p",
+            "quote": "Thanks to the swift and courageous actions of Officers Mercer and Galewood, a life was saved."
+          },
+          {
+            "id": "3lynaq2ds2s2m",
+            "quote": "Well done pilot and USCG Great Lakes group"
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "fear",
+        "pct": {
+          "neutral": 25.7,
+          "fear": 42.1,
+          "joy": 3.5,
+          "surprise": 3.5,
+          "sadness": 22.8,
+          "anger": 1.2,
+          "disgust": 1.2
+        }
+      }
     }
   ],
   "edges": [

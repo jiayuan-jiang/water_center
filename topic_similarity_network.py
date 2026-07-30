@@ -50,7 +50,8 @@ OUT_DIR = Path("frontend/public/data/network")
 
 def load_topic_nodes(platform):
     meta = json.loads(TOPICS_JSON[platform].read_text())
-    nodes = [{"id": t["id"], "label": t["label"], "keywords": t["keywords"], "count": t["count"]}
+    nodes = [{"id": t["id"], "label": t["label"], "keywords": t["keywords"], "count": t["count"],
+              "controversy": t.get("controversy"), "emotion": t.get("emotion")}
               for t in meta["topics"]]
     docs = pd.read_csv(DOCS_WITH_TOPICS[platform])
     node_ids = {n["id"] for n in nodes}
@@ -61,7 +62,10 @@ def load_topic_nodes(platform):
 
 def load_outlier_nodes(platform):
     meta = json.loads(OUTLIER_CLUSTERS_JSON[platform].read_text())
-    nodes = [{"id": c["id"], "label": c["label"], "keywords": c["keywords"], "count": c["n_docs"]}
+    # No LLM controversy score exists for outlier clusters (only run on labeled
+    # topics) — emotion is available since outlier_emotion.py covers all clusters.
+    nodes = [{"id": c["id"], "label": c["label"], "keywords": c["keywords"], "count": c["n_docs"],
+              "emotion": c.get("emotion")}
               for c in meta["clusters"]]
     docs = pd.read_csv(OUTLIER_DOCS_CSV[platform])
     node_ids = {n["id"] for n in nodes}

@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import CommentCard from './CommentCard'
+import EmotionPieChart from './EmotionPieChart'
+import { SteepBadges } from '../steep'
 
 // Render summary text, turning [id] tokens into clickable buttons
 function SummaryWithLinks({ text, onCiteClick }) {
@@ -92,9 +94,13 @@ export default function OutlierDetail({ cluster, platform }) {
       <div id="detail-header">
         <div>
           <h2>{cluster.label}</h2>
+          <SteepBadges steep={cluster.steep} />
           <div className="detail-keywords">
             {cluster.keywords.map(k => <span key={k} className="kw">{k}</span>)}
           </div>
+          {cluster.steep?.rationale && (
+            <p className="steep-rationale steep-rationale--on-header">{cluster.steep.rationale}</p>
+          )}
         </div>
         <span className="detail-count">
           {cluster.n_docs} {unit} · unreviewed candidate
@@ -112,6 +118,8 @@ export default function OutlierDetail({ cluster, platform }) {
       </div>
 
       <MonthlyBars counts={cluster.monthly_counts} />
+
+      <EmotionPieChart pct={cluster.emotion?.pct} title="Emotion breakdown" />
 
       {cluster.summary && (
         <div className="outlier-summary">

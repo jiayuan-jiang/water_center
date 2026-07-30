@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import { EmotionBadge } from '../emotions'
+import { SteepBadges, SteepFilterBar, filterBySteep } from '../steep'
 
 function WaterBadge({ value }) {
   if (value === true) return <span className="water-badge water-badge--yes">water ✓</span>
@@ -29,6 +30,7 @@ function SortHeader({ label, field, sort, onSort }) {
 
 export default function OutlierTable({ clusters, onSelect }) {
   const [sort, setSort] = useState({ field: null, dir: 'desc' })
+  const [steepActive, setSteepActive] = useState(new Set())
 
   const handleSort = field => {
     setSort(prev =>
@@ -38,19 +40,35 @@ export default function OutlierTable({ clusters, onSelect }) {
     )
   }
 
+  const toggleSteep = cat => {
+    setSteepActive(prev => {
+      if (cat === null) return new Set()
+      const next = new Set(prev)
+      next.has(cat) ? next.delete(cat) : next.add(cat)
+      return next
+    })
+  }
+
+  const filtered = useMemo(
+    () => filterBySteep(clusters, c => c.steep, steepActive),
+    [clusters, steepActive]
+  )
+
   const sorted = useMemo(() => {
-    if (!sort.field) return clusters
+    if (!sort.field) return filtered
     const getValue = SORT_FIELDS[sort.field]
-    const withOrder = clusters.map((c, i) => ({ c, i }))
+    const withOrder = filtered.map((c, i) => ({ c, i }))
     withOrder.sort((a, b) => {
       const diff = getValue(a.c) - getValue(b.c)
       if (diff !== 0) return sort.dir === 'asc' ? diff : -diff
       return a.i - b.i
     })
     return withOrder.map(({ c }) => c)
-  }, [clusters, sort])
+  }, [filtered, sort])
 
   return (
+    <>
+    <SteepFilterBar items={clusters} getSteep={c => c.steep} active={steepActive} onToggle={toggleSteep} />
     <table className="topic-table outlier-table">
       <thead>
         <tr>
@@ -70,6 +88,7 @@ export default function OutlierTable({ clusters, onSelect }) {
             <td>
               <span className="label">{c.label}</span>
               <WaterBadge value={c.water_related} />
+              <SteepBadges steep={c.steep} />
               <div className="keywords">
                 {c.keywords.slice(0, 6).map(k => <span key={k} className="kw">{k}</span>)}
               </div>
@@ -83,5 +102,6 @@ export default function OutlierTable({ clusters, onSelect }) {
         ))}
       </tbody>
     </table>
+    </>
   )
 }

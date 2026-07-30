@@ -1,3 +1,5 @@
+import { EmotionBadge } from '../emotions'
+
 export default function CommentCard({ comment: c, platform, highlighted }) {
   const isBluesky = platform === 'bluesky'
 
@@ -24,6 +26,7 @@ export default function CommentCard({ comment: c, platform, highlighted }) {
             ↗ source
           </a>
         )}
+        {c.emotion && <span className="comment-emotion"><EmotionBadge emotion={c.emotion} /></span>}
       </div>
       <div className="comment-text">{c.text}</div>
     </div>

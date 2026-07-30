@@ -30,6 +30,35 @@ def build_platform(platform: str):
     ckpt_path = Path(f"data/analysis/.candidates_checkpoint_{platform}.json")
     grounded = json.loads(ckpt_path.read_text()) if ckpt_path.exists() else {}
 
+    emotion_path = Path(f"data/analysis/outlier_emotion_{platform}.csv")
+    emotion_by_cluster = {}
+    EMOTION_KEYS = ["neutral", "fear", "joy", "surprise", "sadness", "anger", "disgust"]
+    if emotion_path.exists():
+        for _, r in pd.read_csv(emotion_path).iterrows():
+            emotion_by_cluster[int(r["cluster"])] = {
+                "dominant": r["dominant_emotion"],
+                "pct": {k: (0.0 if pd.isna(r.get(f"pct_emotion_{k}")) else float(r[f"pct_emotion_{k}"]))
+                        for k in EMOTION_KEYS},
+            }
+
+    doc_emotion_path = Path(f"data/analysis/outlier_doc_emotion_{platform}.csv")
+    emotion_by_doc = {}
+    if doc_emotion_path.exists():
+        for _, r in pd.read_csv(doc_emotion_path).iterrows():
+            emotion_by_doc[str(r["id"])] = r["emotion"]
+
+    steep_path = Path("data/analysis/outlier_steep.csv")
+    steep_by_cluster = {}
+    if steep_path.exists():
+        for _, r in pd.read_csv(steep_path).iterrows():
+            if r["platform"] != platform:
+                continue
+            steep_by_cluster[int(r["cluster_id"])] = {
+                "tags": [t for t in str(r["steep_tags"]).split("; ") if t and t != "nan"],
+                "rationale": r["rationale"],
+                "human_confirmed": not pd.isna(r["human_confirmed"]) and str(r["human_confirmed"]).strip() != "",
+            }
+
     out_dir = OUT_ROOT / platform
     out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -58,12 +87,15 @@ def build_platform(platform: str):
             "first_month": c["first_month"],
             "last_month": c["last_month"],
             "monthly_counts": c["monthly_counts"],
+            "emotion": emotion_by_cluster.get(cid),
+            "steep": steep_by_cluster.get(cid),
         })
 
         sub = docs[docs["cluster"] == cid].sort_values("score", ascending=False)
         cluster_docs = [
             {"id": str(r["id"]), source_col: str(r[source_col]),
-             "score": int(r["score"]), "date": r["date"], "text": str(r["text"])}
+             "score": int(r["score"]), "date": r["date"], "text": str(r["text"]),
+             "emotion": emotion_by_doc.get(str(r["id"]))}
             for _, r in sub.iterrows()
         ]
         (out_dir / f"c{cid}.json").write_text(json.dumps(

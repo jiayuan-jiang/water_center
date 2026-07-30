@@ -7,6 +7,9 @@ data/
 *.wav
 meetings/
 
+# personal notes (untracked, not project docs)
+notes/
+
 # documents
 *.pdf
 *.docx
