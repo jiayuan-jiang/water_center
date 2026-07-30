@@ -16,9 +16,11 @@ function SortHeader({ label, field, sort, onSort }) {
   const active = sort.field === field
   return (
     <th className="sortable-th" onClick={() => onSort(field)}>
-      {label}
-      <span className={`sort-arrow${active ? ' sort-arrow--active' : ''}`}>
-        {active ? (sort.dir === 'asc' ? '▲' : '▼') : '↕'}
+      <span className="th-label">
+        {label}
+        <span className={`sort-arrow${active ? ' sort-arrow--active' : ''}`}>
+          {active ? (sort.dir === 'asc' ? '▲' : '▼') : '↕'}
+        </span>
       </span>
     </th>
   )

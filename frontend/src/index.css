@@ -378,8 +378,14 @@ header p  { font-size: 0.85rem; margin-top: 6px; color: var(--header-subtitle); 
 .outlier-table th.sortable-th {
   cursor: pointer;
   user-select: none;
+  white-space: nowrap;
 }
 .outlier-table th.sortable-th:hover { background: #013a63; }
+.th-label {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
 .sort-arrow {
   display: inline-block;
   margin-left: 5px;
