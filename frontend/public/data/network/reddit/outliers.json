@@ -1,0 +1,4669 @@
+{
+  "platform": "reddit",
+  "set": "outliers",
+  "threshold": 0.6,
+  "embedding_model": "all-MiniLM-L6-v2",
+  "generated": "2026-07-30",
+  "nodes": [
+    {
+      "id": 28,
+      "label": "Sewer overflow management challenges",
+      "keywords": [
+        "sewers",
+        "sewer",
+        "combined",
+        "sanitary",
+        "stormwater",
+        "overflow"
+      ],
+      "count": 15
+    },
+    {
+      "id": 3,
+      "label": "Water Use of Golf Courses in Great Lakes",
+      "keywords": [
+        "golf",
+        "courses",
+        "golf courses",
+        "course",
+        "golf course",
+        "water"
+      ],
+      "count": 21
+    },
+    {
+      "id": 60,
+      "label": "Impact of tourism on remote lakes",
+      "keywords": [
+        "island",
+        "islands",
+        "isle",
+        "lake",
+        "isle royale",
+        "royale"
+      ],
+      "count": 19
+    },
+    {
+      "id": 29,
+      "label": "Wastewater Overflow Issues in Great Lakes",
+      "keywords": [
+        "sewage",
+        "water",
+        "ontario",
+        "lake",
+        "sewer",
+        "sewage lake"
+      ],
+      "count": 34
+    },
+    {
+      "id": 8,
+      "label": "Recognition of Lake St. Clair's status",
+      "keywords": [
+        "st clair",
+        "clair",
+        "st",
+        "lakes",
+        "lake st",
+        "lake"
+      ],
+      "count": 11
+    },
+    {
+      "id": 11,
+      "label": "Increased awareness of rip currents in Lake Erie",
+      "keywords": [
+        "currents",
+        "rip",
+        "rip currents",
+        "erie",
+        "lake",
+        "lake erie"
+      ],
+      "count": 38
+    },
+    {
+      "id": 17,
+      "label": "Deteriorating odors in Lake Erie",
+      "keywords": [
+        "smell",
+        "lake erie",
+        "erie",
+        "smell lake",
+        "don like",
+        "smells"
+      ],
+      "count": 10
+    },
+    {
+      "id": 69,
+      "label": "Misconceptions about Great Lakes beaches",
+      "keywords": [
+        "beaches",
+        "sand",
+        "beach",
+        "water",
+        "look",
+        "beaches like"
+      ],
+      "count": 13
+    },
+    {
+      "id": 7,
+      "label": "Pollution from inland cruise ships",
+      "keywords": [
+        "cruise",
+        "ships",
+        "cruise ships",
+        "fuel",
+        "pollution",
+        "polluting"
+      ],
+      "count": 11
+    },
+    {
+      "id": 9,
+      "label": "Misunderstanding of Lake Michigan-Huron Hydrology",
+      "keywords": [
+        "lake",
+        "huron",
+        "michigan",
+        "lake michigan",
+        "michigan huron",
+        "huron lake"
+      ],
+      "count": 25
+    },
+    {
+      "id": 4,
+      "label": "Dangers of Great Lakes during winter",
+      "keywords": [
+        "dead",
+        "gives dead",
+        "gives",
+        "lake",
+        "said gives",
+        "lake said"
+      ],
+      "count": 32
+    },
+    {
+      "id": 32,
+      "label": "Poor water quality management in Midwest",
+      "keywords": [
+        "ohio",
+        "indiana",
+        "states",
+        "state",
+        "water",
+        "better"
+      ],
+      "count": 32
+    },
+    {
+      "id": 35,
+      "label": "Understanding Lake Superior's Water Volume",
+      "keywords": [
+        "superior",
+        "lake superior",
+        "lake",
+        "depth",
+        "deep",
+        "water"
+      ],
+      "count": 46
+    },
+    {
+      "id": 57,
+      "label": "Impact of ice on Great Lakes shorelines",
+      "keywords": [
+        "ice",
+        "beach",
+        "shore",
+        "waves",
+        "remember",
+        "day"
+      ],
+      "count": 42
+    },
+    {
+      "id": 12,
+      "label": "Safety risks of small boats in Great Lakes",
+      "keywords": [
+        "island",
+        "boat",
+        "bay",
+        "water",
+        "pictures",
+        "harbor"
+      ],
+      "count": 15
+    },
+    {
+      "id": 23,
+      "label": "Repercussions of Drained Lake Events",
+      "keywords": [
+        "lake",
+        "drained lake",
+        "drained",
+        "crazy",
+        "thought",
+        "prehistoric"
+      ],
+      "count": 11
+    },
+    {
+      "id": 56,
+      "label": "Increased polar plunge activities in Great Lakes",
+      "keywords": [
+        "ice",
+        "lake",
+        "fell",
+        "frozen",
+        "polar",
+        "jumped"
+      ],
+      "count": 31
+    },
+    {
+      "id": 49,
+      "label": "Impact of Winds on Beach Recreation",
+      "keywords": [
+        "beach",
+        "winds",
+        "wind",
+        "water",
+        "answer",
+        "breeze"
+      ],
+      "count": 11
+    },
+    {
+      "id": 53,
+      "label": "Political influences on water resources",
+      "keywords": [
+        "water",
+        "republicans",
+        "democrats",
+        "trump",
+        "ruined",
+        "liberal"
+      ],
+      "count": 17
+    },
+    {
+      "id": 24,
+      "label": "Increasing foot and vehicle traffic at lakesides",
+      "keywords": [
+        "walk",
+        "lake",
+        "pier",
+        "miles",
+        "fast",
+        "long"
+      ],
+      "count": 13
+    },
+    {
+      "id": 39,
+      "label": "Impact of Climate Change on Great Lakes Ecosystems",
+      "keywords": [
+        "lakes",
+        "happen",
+        "results",
+        "interesting",
+        "going",
+        "climate"
+      ],
+      "count": 20
+    },
+    {
+      "id": 13,
+      "label": "Impact of Literature on Great Lakes Awareness",
+      "keywords": [
+        "lakes",
+        "great lakes",
+        "great",
+        "death",
+        "death life",
+        "book"
+      ],
+      "count": 23
+    },
+    {
+      "id": 25,
+      "label": "Pollution and Lake Erie Catch Fire Concern",
+      "keywords": [
+        "lake",
+        "erie",
+        "catch",
+        "lake erie",
+        "help",
+        "guys"
+      ],
+      "count": 30
+    },
+    {
+      "id": 21,
+      "label": "Impact of tourism on Lake Geneva ecology",
+      "keywords": [
+        "geneva",
+        "lake geneva",
+        "geneva lake",
+        "lake",
+        "ashtabula",
+        "geneva state"
+      ],
+      "count": 11
+    },
+    {
+      "id": 16,
+      "label": "Misunderstanding Great Lakes Navigation",
+      "keywords": [
+        "lake",
+        "boat",
+        "boats",
+        "center",
+        "like",
+        "probably"
+      ],
+      "count": 25
+    },
+    {
+      "id": 42,
+      "label": "Neglecting Michigan's Waterfront Aesthetics",
+      "keywords": [
+        "sunsets",
+        "love",
+        "michigan",
+        "watching",
+        "sunset",
+        "sunlight"
+      ],
+      "count": 11
+    },
+    {
+      "id": 43,
+      "label": "Perceptions of Great Lakes vs. Ocean",
+      "keywords": [
+        "great",
+        "lakes",
+        "great lakes",
+        "feel",
+        "ocean",
+        "lake"
+      ],
+      "count": 34
+    },
+    {
+      "id": 19,
+      "label": "Invasive Asian Carp Threatening Great Lakes",
+      "keywords": [
+        "carp",
+        "asian",
+        "asian carp",
+        "fish",
+        "lakes",
+        "great lakes"
+      ],
+      "count": 27
+    },
+    {
+      "id": 70,
+      "label": "Disappearing winter ice on Lake Erie",
+      "keywords": [
+        "cleveland",
+        "erie",
+        "lake erie",
+        "lake",
+        "park",
+        "beaches"
+      ],
+      "count": 32
+    },
+    {
+      "id": 76,
+      "label": "Access to pristine lakes and parks",
+      "keywords": [
+        "lake",
+        "beach",
+        "nice",
+        "park",
+        "beautiful",
+        "north"
+      ],
+      "count": 151
+    },
+    {
+      "id": 37,
+      "label": "Inappropriate naming trends for lakes",
+      "keywords": [
+        "lake",
+        "best",
+        "dem",
+        "word",
+        "german",
+        "lake superior"
+      ],
+      "count": 12
+    },
+    {
+      "id": 44,
+      "label": "Emerging Water Quality Concerns for Swimming",
+      "keywords": [
+        "swim",
+        "beach",
+        "water",
+        "beaches",
+        "swimming",
+        "bay"
+      ],
+      "count": 172
+    },
+    {
+      "id": 26,
+      "label": "Lack of awareness about water dangers",
+      "keywords": [
+        "water",
+        "signs",
+        "people",
+        "dangerous",
+        "need",
+        "safe"
+      ],
+      "count": 13
+    },
+    {
+      "id": 48,
+      "label": "Concerns about water pumping practices",
+      "keywords": [
+        "water",
+        "pumping",
+        "just",
+        "dam",
+        "salt",
+        "pump"
+      ],
+      "count": 59
+    },
+    {
+      "id": 54,
+      "label": "Nuclear power and water usage concerns",
+      "keywords": [
+        "nuclear",
+        "power",
+        "water",
+        "gas",
+        "nuclear power",
+        "plants"
+      ],
+      "count": 30
+    },
+    {
+      "id": 20,
+      "label": "Misunderstanding Great Lakes Hydrology",
+      "keywords": [
+        "river",
+        "great",
+        "lakes",
+        "great lakes",
+        "vermont",
+        "great lake"
+      ],
+      "count": 17
+    },
+    {
+      "id": 15,
+      "label": "Potential impacts of river access on Great Lakes",
+      "keywords": [
+        "river",
+        "pic",
+        "shore",
+        "coast",
+        "road",
+        "portage"
+      ],
+      "count": 17
+    },
+    {
+      "id": 71,
+      "label": "Erosion of beach landscapes in Great Lakes",
+      "keywords": [
+        "beach",
+        "rock",
+        "hole",
+        "look",
+        "cliff",
+        "rocks"
+      ],
+      "count": 12
+    },
+    {
+      "id": 40,
+      "label": "Tribal dependence on Great Lakes ecosystems",
+      "keywords": [
+        "tribes",
+        "lakes",
+        "great",
+        "great lakes",
+        "dependent",
+        "don want"
+      ],
+      "count": 19
+    },
+    {
+      "id": 45,
+      "label": "Lack of Awareness About Great Lakes",
+      "keywords": [
+        "lake",
+        "like",
+        "lake michigan",
+        "michigan",
+        "ohio",
+        "lakes"
+      ],
+      "count": 13
+    },
+    {
+      "id": 64,
+      "label": "Misunderstanding distances around Great Lakes",
+      "keywords": [
+        "miles",
+        "looking",
+        "30 miles",
+        "shore",
+        "mackinaw bridge",
+        "lake"
+      ],
+      "count": 13
+    },
+    {
+      "id": 30,
+      "label": "Public perception of Great Lakes beauty",
+      "keywords": [
+        "superior",
+        "lake superior",
+        "lake",
+        "michigan",
+        "beautiful",
+        "lake michigan"
+      ],
+      "count": 23
+    },
+    {
+      "id": 77,
+      "label": "Lakes as recreational hotspots",
+      "keywords": [
+        "lake",
+        "creek",
+        "hard",
+        "lake michigan",
+        "great",
+        "park"
+      ],
+      "count": 25
+    },
+    {
+      "id": 51,
+      "label": "Funding cuts to Great Lakes programs",
+      "keywords": [
+        "cut",
+        "cutting",
+        "lakes",
+        "program",
+        "jobs",
+        "great lakes"
+      ],
+      "count": 12
+    },
+    {
+      "id": 18,
+      "label": "Impact of Invasive Species on Fish Populations",
+      "keywords": [
+        "fish",
+        "salmon",
+        "alewives",
+        "lake",
+        "fishing",
+        "lakes"
+      ],
+      "count": 58
+    },
+    {
+      "id": 36,
+      "label": "Growing Fear of Lake Superior's Hazards",
+      "keywords": [
+        "superior",
+        "lake superior",
+        "lake",
+        "terrifying",
+        "ve",
+        "gl"
+      ],
+      "count": 18
+    },
+    {
+      "id": 27,
+      "label": "Toxic algal blooms in Lake Erie",
+      "keywords": [
+        "lake erie",
+        "erie",
+        "blooms",
+        "lake",
+        "algal",
+        "algal blooms"
+      ],
+      "count": 13
+    },
+    {
+      "id": 72,
+      "label": "Decline of Sandy Beaches in Michigan",
+      "keywords": [
+        "beach",
+        "beaches",
+        "county",
+        "sandy beach",
+        "sandy",
+        "michigan"
+      ],
+      "count": 31
+    },
+    {
+      "id": 47,
+      "label": "Water usage impacts in municipalities",
+      "keywords": [
+        "water",
+        "lake",
+        "water lake",
+        "use",
+        "used",
+        "lake michigan"
+      ],
+      "count": 14
+    },
+    {
+      "id": 10,
+      "label": "Declining Ice Cover on Great Lakes",
+      "keywords": [
+        "ice",
+        "ice cover",
+        "cover",
+        "lakes",
+        "year",
+        "average"
+      ],
+      "count": 16
+    },
+    {
+      "id": 50,
+      "label": "Risks of Cold Water Surfing in Great Lakes",
+      "keywords": [
+        "surfing",
+        "surf",
+        "waves",
+        "lake",
+        "beach",
+        "wetsuit"
+      ],
+      "count": 38
+    },
+    {
+      "id": 34,
+      "label": "Toxicity in Great Lakes water",
+      "keywords": [
+        "green",
+        "lakes",
+        "water",
+        "lake",
+        "proven",
+        "noticed"
+      ],
+      "count": 15
+    },
+    {
+      "id": 22,
+      "label": "Health hazards of Great Lakes water",
+      "keywords": [
+        "lake",
+        "dead",
+        "just",
+        "thing",
+        "rivers",
+        "water"
+      ],
+      "count": 21
+    },
+    {
+      "id": 55,
+      "label": "Concerns over freshwater scarcity and pollution",
+      "keywords": [
+        "water",
+        "years",
+        "oil",
+        "think",
+        "climate",
+        "don"
+      ],
+      "count": 66
+    },
+    {
+      "id": 65,
+      "label": "Water quality concerns in Lake Erie",
+      "keywords": [
+        "erie",
+        "lake",
+        "pa",
+        "lake erie",
+        "list",
+        "nope"
+      ],
+      "count": 10
+    },
+    {
+      "id": 66,
+      "label": "Perception of Lake Erie and Ontario",
+      "keywords": [
+        "erie",
+        "ontario",
+        "great",
+        "lakes",
+        "great lakes",
+        "lake erie"
+      ],
+      "count": 25
+    },
+    {
+      "id": 46,
+      "label": "Impact of adjacent states on Great Lakes health",
+      "keywords": [
+        "michigan",
+        "water",
+        "lake michigan",
+        "lake",
+        "illinois",
+        "lakes"
+      ],
+      "count": 118
+    },
+    {
+      "id": 31,
+      "label": "Cold Lake Temperatures Impacting Recreation",
+      "keywords": [
+        "lake",
+        "cold",
+        "summer",
+        "june",
+        "time",
+        "year"
+      ],
+      "count": 25
+    },
+    {
+      "id": 58,
+      "label": "Misconceptions about Great Lakes size and significance",
+      "keywords": [
+        "michigan",
+        "lake",
+        "lakes",
+        "lake michigan",
+        "people",
+        "great"
+      ],
+      "count": 29
+    },
+    {
+      "id": 59,
+      "label": "Misunderstanding Great Lakes' Significance",
+      "keywords": [
+        "lake",
+        "lakes",
+        "great lakes",
+        "great",
+        "michigan",
+        "lake michigan"
+      ],
+      "count": 78
+    },
+    {
+      "id": 52,
+      "label": "Concerns over privatization of Great Lakes water",
+      "keywords": [
+        "trump",
+        "great",
+        "just",
+        "lakes",
+        "great lakes",
+        "people"
+      ],
+      "count": 51
+    },
+    {
+      "id": 68,
+      "label": "Growing Appreciation for Great Lakes Beauty",
+      "keywords": [
+        "lake",
+        "city",
+        "beautiful",
+        "big lake",
+        "mn",
+        "love"
+      ],
+      "count": 14
+    },
+    {
+      "id": 1,
+      "label": "Bikes as pollution in lakes",
+      "keywords": [
+        "bikes",
+        "bike",
+        "just",
+        "throwing",
+        "things",
+        "people"
+      ],
+      "count": 10
+    },
+    {
+      "id": 5,
+      "label": "Rising Plastic Pollution in Great Lakes",
+      "keywords": [
+        "trash",
+        "garbage",
+        "carry",
+        "plastic",
+        "left",
+        "bag"
+      ],
+      "count": 12
+    },
+    {
+      "id": 33,
+      "label": "Drowning risks in Lake Superior",
+      "keywords": [
+        "superior",
+        "lake superior",
+        "lake",
+        "jumping",
+        "superior like",
+        "spots"
+      ],
+      "count": 10
+    },
+    {
+      "id": 38,
+      "label": "Farming Viability Around Great Lakes",
+      "keywords": [
+        "ontario",
+        "farm",
+        "land",
+        "greenhouses",
+        "farming",
+        "canada"
+      ],
+      "count": 11
+    }
+  ],
+  "edges": [
+    {
+      "source": 28,
+      "target": 29,
+      "weight": 0.8007
+    },
+    {
+      "source": 28,
+      "target": 48,
+      "weight": 0.6094
+    },
+    {
+      "source": 3,
+      "target": 48,
+      "weight": 0.6101
+    },
+    {
+      "source": 60,
+      "target": 12,
+      "weight": 0.6886
+    },
+    {
+      "source": 60,
+      "target": 23,
+      "weight": 0.6276
+    },
+    {
+      "source": 60,
+      "target": 24,
+      "weight": 0.6467
+    },
+    {
+      "source": 60,
+      "target": 25,
+      "weight": 0.6143
+    },
+    {
+      "source": 60,
+      "target": 16,
+      "weight": 0.7362
+    },
+    {
+      "source": 60,
+      "target": 43,
+      "weight": 0.6922
+    },
+    {
+      "source": 60,
+      "target": 70,
+      "weight": 0.7673
+    },
+    {
+      "source": 60,
+      "target": 76,
+      "weight": 0.768
+    },
+    {
+      "source": 60,
+      "target": 44,
+      "weight": 0.6262
+    },
+    {
+      "source": 60,
+      "target": 20,
+      "weight": 0.6731
+    },
+    {
+      "source": 60,
+      "target": 15,
+      "weight": 0.661
+    },
+    {
+      "source": 60,
+      "target": 71,
+      "weight": 0.6599
+    },
+    {
+      "source": 60,
+      "target": 45,
+      "weight": 0.631
+    },
+    {
+      "source": 60,
+      "target": 64,
+      "weight": 0.6541
+    },
+    {
+      "source": 60,
+      "target": 30,
+      "weight": 0.6504
+    },
+    {
+      "source": 60,
+      "target": 77,
+      "weight": 0.7875
+    },
+    {
+      "source": 60,
+      "target": 36,
+      "weight": 0.6493
+    },
+    {
+      "source": 60,
+      "target": 72,
+      "weight": 0.7173
+    },
+    {
+      "source": 60,
+      "target": 50,
+      "weight": 0.6176
+    },
+    {
+      "source": 60,
+      "target": 22,
+      "weight": 0.6822
+    },
+    {
+      "source": 60,
+      "target": 65,
+      "weight": 0.7172
+    },
+    {
+      "source": 60,
+      "target": 66,
+      "weight": 0.6797
+    },
+    {
+      "source": 60,
+      "target": 31,
+      "weight": 0.7197
+    },
+    {
+      "source": 60,
+      "target": 58,
+      "weight": 0.6151
+    },
+    {
+      "source": 60,
+      "target": 59,
+      "weight": 0.6896
+    },
+    {
+      "source": 60,
+      "target": 68,
+      "weight": 0.6774
+    },
+    {
+      "source": 29,
+      "target": 32,
+      "weight": 0.6131
+    },
+    {
+      "source": 29,
+      "target": 23,
+      "weight": 0.6106
+    },
+    {
+      "source": 29,
+      "target": 39,
+      "weight": 0.6216
+    },
+    {
+      "source": 29,
+      "target": 25,
+      "weight": 0.6678
+    },
+    {
+      "source": 29,
+      "target": 44,
+      "weight": 0.6186
+    },
+    {
+      "source": 29,
+      "target": 48,
+      "weight": 0.7699
+    },
+    {
+      "source": 29,
+      "target": 51,
+      "weight": 0.6085
+    },
+    {
+      "source": 29,
+      "target": 27,
+      "weight": 0.7085
+    },
+    {
+      "source": 29,
+      "target": 47,
+      "weight": 0.7426
+    },
+    {
+      "source": 29,
+      "target": 34,
+      "weight": 0.7399
+    },
+    {
+      "source": 29,
+      "target": 55,
+      "weight": 0.6931
+    },
+    {
+      "source": 29,
+      "target": 46,
+      "weight": 0.699
+    },
+    {
+      "source": 29,
+      "target": 59,
+      "weight": 0.6085
+    },
+    {
+      "source": 29,
+      "target": 5,
+      "weight": 0.6184
+    },
+    {
+      "source": 29,
+      "target": 38,
+      "weight": 0.6175
+    },
+    {
+      "source": 8,
+      "target": 11,
+      "weight": 0.6086
+    },
+    {
+      "source": 8,
+      "target": 9,
+      "weight": 0.8192
+    },
+    {
+      "source": 8,
+      "target": 35,
+      "weight": 0.6982
+    },
+    {
+      "source": 8,
+      "target": 23,
+      "weight": 0.6008
+    },
+    {
+      "source": 8,
+      "target": 13,
+      "weight": 0.6039
+    },
+    {
+      "source": 8,
+      "target": 25,
+      "weight": 0.6339
+    },
+    {
+      "source": 8,
+      "target": 16,
+      "weight": 0.6039
+    },
+    {
+      "source": 8,
+      "target": 37,
+      "weight": 0.6114
+    },
+    {
+      "source": 8,
+      "target": 20,
+      "weight": 0.7958
+    },
+    {
+      "source": 8,
+      "target": 30,
+      "weight": 0.6262
+    },
+    {
+      "source": 8,
+      "target": 77,
+      "weight": 0.6858
+    },
+    {
+      "source": 8,
+      "target": 36,
+      "weight": 0.6482
+    },
+    {
+      "source": 8,
+      "target": 27,
+      "weight": 0.607
+    },
+    {
+      "source": 8,
+      "target": 47,
+      "weight": 0.6475
+    },
+    {
+      "source": 8,
+      "target": 10,
+      "weight": 0.6068
+    },
+    {
+      "source": 8,
+      "target": 34,
+      "weight": 0.617
+    },
+    {
+      "source": 8,
+      "target": 22,
+      "weight": 0.613
+    },
+    {
+      "source": 8,
+      "target": 65,
+      "weight": 0.667
+    },
+    {
+      "source": 8,
+      "target": 66,
+      "weight": 0.7589
+    },
+    {
+      "source": 8,
+      "target": 46,
+      "weight": 0.6345
+    },
+    {
+      "source": 8,
+      "target": 58,
+      "weight": 0.7556
+    },
+    {
+      "source": 8,
+      "target": 59,
+      "weight": 0.7575
+    },
+    {
+      "source": 11,
+      "target": 35,
+      "weight": 0.6374
+    },
+    {
+      "source": 11,
+      "target": 57,
+      "weight": 0.6485
+    },
+    {
+      "source": 11,
+      "target": 12,
+      "weight": 0.6773
+    },
+    {
+      "source": 11,
+      "target": 23,
+      "weight": 0.6659
+    },
+    {
+      "source": 11,
+      "target": 56,
+      "weight": 0.6112
+    },
+    {
+      "source": 11,
+      "target": 49,
+      "weight": 0.6055
+    },
+    {
+      "source": 11,
+      "target": 24,
+      "weight": 0.6037
+    },
+    {
+      "source": 11,
+      "target": 25,
+      "weight": 0.7443
+    },
+    {
+      "source": 11,
+      "target": 16,
+      "weight": 0.717
+    },
+    {
+      "source": 11,
+      "target": 43,
+      "weight": 0.6919
+    },
+    {
+      "source": 11,
+      "target": 44,
+      "weight": 0.7262
+    },
+    {
+      "source": 11,
+      "target": 26,
+      "weight": 0.6522
+    },
+    {
+      "source": 11,
+      "target": 20,
+      "weight": 0.6564
+    },
+    {
+      "source": 11,
+      "target": 45,
+      "weight": 0.6248
+    },
+    {
+      "source": 11,
+      "target": 64,
+      "weight": 0.6268
+    },
+    {
+      "source": 11,
+      "target": 77,
+      "weight": 0.6154
+    },
+    {
+      "source": 11,
+      "target": 18,
+      "weight": 0.6134
+    },
+    {
+      "source": 11,
+      "target": 36,
+      "weight": 0.6883
+    },
+    {
+      "source": 11,
+      "target": 27,
+      "weight": 0.6022
+    },
+    {
+      "source": 11,
+      "target": 72,
+      "weight": 0.6039
+    },
+    {
+      "source": 11,
+      "target": 50,
+      "weight": 0.7417
+    },
+    {
+      "source": 11,
+      "target": 34,
+      "weight": 0.6355
+    },
+    {
+      "source": 11,
+      "target": 22,
+      "weight": 0.7442
+    },
+    {
+      "source": 11,
+      "target": 65,
+      "weight": 0.7026
+    },
+    {
+      "source": 11,
+      "target": 66,
+      "weight": 0.6974
+    },
+    {
+      "source": 11,
+      "target": 31,
+      "weight": 0.6511
+    },
+    {
+      "source": 11,
+      "target": 58,
+      "weight": 0.6501
+    },
+    {
+      "source": 11,
+      "target": 59,
+      "weight": 0.7431
+    },
+    {
+      "source": 11,
+      "target": 33,
+      "weight": 0.6288
+    },
+    {
+      "source": 17,
+      "target": 25,
+      "weight": 0.638
+    },
+    {
+      "source": 17,
+      "target": 43,
+      "weight": 0.6859
+    },
+    {
+      "source": 17,
+      "target": 44,
+      "weight": 0.6653
+    },
+    {
+      "source": 17,
+      "target": 27,
+      "weight": 0.6065
+    },
+    {
+      "source": 17,
+      "target": 34,
+      "weight": 0.6477
+    },
+    {
+      "source": 17,
+      "target": 22,
+      "weight": 0.6195
+    },
+    {
+      "source": 17,
+      "target": 65,
+      "weight": 0.6055
+    },
+    {
+      "source": 69,
+      "target": 12,
+      "weight": 0.609
+    },
+    {
+      "source": 69,
+      "target": 49,
+      "weight": 0.7139
+    },
+    {
+      "source": 69,
+      "target": 16,
+      "weight": 0.6105
+    },
+    {
+      "source": 69,
+      "target": 44,
+      "weight": 0.7196
+    },
+    {
+      "source": 69,
+      "target": 71,
+      "weight": 0.7072
+    },
+    {
+      "source": 69,
+      "target": 72,
+      "weight": 0.6849
+    },
+    {
+      "source": 69,
+      "target": 50,
+      "weight": 0.6041
+    },
+    {
+      "source": 7,
+      "target": 12,
+      "weight": 0.6163
+    },
+    {
+      "source": 7,
+      "target": 44,
+      "weight": 0.6151
+    },
+    {
+      "source": 7,
+      "target": 55,
+      "weight": 0.6228
+    },
+    {
+      "source": 9,
+      "target": 35,
+      "weight": 0.7485
+    },
+    {
+      "source": 9,
+      "target": 37,
+      "weight": 0.6874
+    },
+    {
+      "source": 9,
+      "target": 20,
+      "weight": 0.7619
+    },
+    {
+      "source": 9,
+      "target": 45,
+      "weight": 0.6602
+    },
+    {
+      "source": 9,
+      "target": 30,
+      "weight": 0.7218
+    },
+    {
+      "source": 9,
+      "target": 77,
+      "weight": 0.7085
+    },
+    {
+      "source": 9,
+      "target": 36,
+      "weight": 0.6832
+    },
+    {
+      "source": 9,
+      "target": 47,
+      "weight": 0.691
+    },
+    {
+      "source": 9,
+      "target": 10,
+      "weight": 0.6042
+    },
+    {
+      "source": 9,
+      "target": 65,
+      "weight": 0.6276
+    },
+    {
+      "source": 9,
+      "target": 66,
+      "weight": 0.7432
+    },
+    {
+      "source": 9,
+      "target": 46,
+      "weight": 0.7056
+    },
+    {
+      "source": 9,
+      "target": 58,
+      "weight": 0.8538
+    },
+    {
+      "source": 9,
+      "target": 59,
+      "weight": 0.7981
+    },
+    {
+      "source": 4,
+      "target": 23,
+      "weight": 0.612
+    },
+    {
+      "source": 4,
+      "target": 25,
+      "weight": 0.6347
+    },
+    {
+      "source": 4,
+      "target": 36,
+      "weight": 0.6061
+    },
+    {
+      "source": 4,
+      "target": 22,
+      "weight": 0.7078
+    },
+    {
+      "source": 4,
+      "target": 59,
+      "weight": 0.6058
+    },
+    {
+      "source": 32,
+      "target": 39,
+      "weight": 0.6335
+    },
+    {
+      "source": 32,
+      "target": 25,
+      "weight": 0.694
+    },
+    {
+      "source": 32,
+      "target": 48,
+      "weight": 0.6489
+    },
+    {
+      "source": 32,
+      "target": 20,
+      "weight": 0.6779
+    },
+    {
+      "source": 32,
+      "target": 40,
+      "weight": 0.6764
+    },
+    {
+      "source": 32,
+      "target": 27,
+      "weight": 0.7142
+    },
+    {
+      "source": 32,
+      "target": 47,
+      "weight": 0.6584
+    },
+    {
+      "source": 32,
+      "target": 34,
+      "weight": 0.6953
+    },
+    {
+      "source": 32,
+      "target": 55,
+      "weight": 0.6538
+    },
+    {
+      "source": 32,
+      "target": 65,
+      "weight": 0.6222
+    },
+    {
+      "source": 32,
+      "target": 66,
+      "weight": 0.6187
+    },
+    {
+      "source": 32,
+      "target": 46,
+      "weight": 0.8104
+    },
+    {
+      "source": 32,
+      "target": 58,
+      "weight": 0.6443
+    },
+    {
+      "source": 32,
+      "target": 59,
+      "weight": 0.6269
+    },
+    {
+      "source": 32,
+      "target": 52,
+      "weight": 0.6106
+    },
+    {
+      "source": 32,
+      "target": 38,
+      "weight": 0.6575
+    },
+    {
+      "source": 35,
+      "target": 23,
+      "weight": 0.6798
+    },
+    {
+      "source": 35,
+      "target": 24,
+      "weight": 0.6123
+    },
+    {
+      "source": 35,
+      "target": 39,
+      "weight": 0.6775
+    },
+    {
+      "source": 35,
+      "target": 25,
+      "weight": 0.6471
+    },
+    {
+      "source": 35,
+      "target": 16,
+      "weight": 0.715
+    },
+    {
+      "source": 35,
+      "target": 43,
+      "weight": 0.6734
+    },
+    {
+      "source": 35,
+      "target": 37,
+      "weight": 0.6724
+    },
+    {
+      "source": 35,
+      "target": 48,
+      "weight": 0.6376
+    },
+    {
+      "source": 35,
+      "target": 20,
+      "weight": 0.7619
+    },
+    {
+      "source": 35,
+      "target": 45,
+      "weight": 0.6305
+    },
+    {
+      "source": 35,
+      "target": 64,
+      "weight": 0.6958
+    },
+    {
+      "source": 35,
+      "target": 30,
+      "weight": 0.712
+    },
+    {
+      "source": 35,
+      "target": 77,
+      "weight": 0.6862
+    },
+    {
+      "source": 35,
+      "target": 36,
+      "weight": 0.8149
+    },
+    {
+      "source": 35,
+      "target": 47,
+      "weight": 0.71
+    },
+    {
+      "source": 35,
+      "target": 10,
+      "weight": 0.6885
+    },
+    {
+      "source": 35,
+      "target": 34,
+      "weight": 0.6494
+    },
+    {
+      "source": 35,
+      "target": 22,
+      "weight": 0.7138
+    },
+    {
+      "source": 35,
+      "target": 65,
+      "weight": 0.6172
+    },
+    {
+      "source": 35,
+      "target": 66,
+      "weight": 0.7028
+    },
+    {
+      "source": 35,
+      "target": 46,
+      "weight": 0.6185
+    },
+    {
+      "source": 35,
+      "target": 58,
+      "weight": 0.7559
+    },
+    {
+      "source": 35,
+      "target": 59,
+      "weight": 0.7956
+    },
+    {
+      "source": 35,
+      "target": 33,
+      "weight": 0.6751
+    },
+    {
+      "source": 35,
+      "target": 38,
+      "weight": 0.6038
+    },
+    {
+      "source": 57,
+      "target": 12,
+      "weight": 0.6369
+    },
+    {
+      "source": 57,
+      "target": 23,
+      "weight": 0.7039
+    },
+    {
+      "source": 57,
+      "target": 56,
+      "weight": 0.835
+    },
+    {
+      "source": 57,
+      "target": 49,
+      "weight": 0.7443
+    },
+    {
+      "source": 57,
+      "target": 25,
+      "weight": 0.6106
+    },
+    {
+      "source": 57,
+      "target": 16,
+      "weight": 0.6439
+    },
+    {
+      "source": 57,
+      "target": 42,
+      "weight": 0.6136
+    },
+    {
+      "source": 57,
+      "target": 43,
+      "weight": 0.7401
+    },
+    {
+      "source": 57,
+      "target": 76,
+      "weight": 0.6561
+    },
+    {
+      "source": 57,
+      "target": 44,
+      "weight": 0.6461
+    },
+    {
+      "source": 57,
+      "target": 15,
+      "weight": 0.6129
+    },
+    {
+      "source": 57,
+      "target": 71,
+      "weight": 0.6972
+    },
+    {
+      "source": 57,
+      "target": 45,
+      "weight": 0.7034
+    },
+    {
+      "source": 57,
+      "target": 36,
+      "weight": 0.6264
+    },
+    {
+      "source": 57,
+      "target": 72,
+      "weight": 0.6962
+    },
+    {
+      "source": 57,
+      "target": 50,
+      "weight": 0.7158
+    },
+    {
+      "source": 57,
+      "target": 22,
+      "weight": 0.7077
+    },
+    {
+      "source": 57,
+      "target": 65,
+      "weight": 0.6256
+    },
+    {
+      "source": 57,
+      "target": 31,
+      "weight": 0.6791
+    },
+    {
+      "source": 57,
+      "target": 59,
+      "weight": 0.6223
+    },
+    {
+      "source": 12,
+      "target": 56,
+      "weight": 0.6129
+    },
+    {
+      "source": 12,
+      "target": 49,
+      "weight": 0.6508
+    },
+    {
+      "source": 12,
+      "target": 24,
+      "weight": 0.6997
+    },
+    {
+      "source": 12,
+      "target": 16,
+      "weight": 0.8173
+    },
+    {
+      "source": 12,
+      "target": 43,
+      "weight": 0.6312
+    },
+    {
+      "source": 12,
+      "target": 44,
+      "weight": 0.6999
+    },
+    {
+      "source": 12,
+      "target": 26,
+      "weight": 0.6227
+    },
+    {
+      "source": 12,
+      "target": 71,
+      "weight": 0.639
+    },
+    {
+      "source": 12,
+      "target": 64,
+      "weight": 0.6089
+    },
+    {
+      "source": 12,
+      "target": 72,
+      "weight": 0.6327
+    },
+    {
+      "source": 12,
+      "target": 50,
+      "weight": 0.7139
+    },
+    {
+      "source": 12,
+      "target": 22,
+      "weight": 0.6369
+    },
+    {
+      "source": 23,
+      "target": 56,
+      "weight": 0.6945
+    },
+    {
+      "source": 23,
+      "target": 24,
+      "weight": 0.6278
+    },
+    {
+      "source": 23,
+      "target": 39,
+      "weight": 0.6756
+    },
+    {
+      "source": 23,
+      "target": 25,
+      "weight": 0.7982
+    },
+    {
+      "source": 23,
+      "target": 16,
+      "weight": 0.7525
+    },
+    {
+      "source": 23,
+      "target": 43,
+      "weight": 0.6812
+    },
+    {
+      "source": 23,
+      "target": 19,
+      "weight": 0.6112
+    },
+    {
+      "source": 23,
+      "target": 37,
+      "weight": 0.6393
+    },
+    {
+      "source": 23,
+      "target": 44,
+      "weight": 0.6288
+    },
+    {
+      "source": 23,
+      "target": 48,
+      "weight": 0.6765
+    },
+    {
+      "source": 23,
+      "target": 20,
+      "weight": 0.7472
+    },
+    {
+      "source": 23,
+      "target": 15,
+      "weight": 0.6904
+    },
+    {
+      "source": 23,
+      "target": 71,
+      "weight": 0.6082
+    },
+    {
+      "source": 23,
+      "target": 40,
+      "weight": 0.6043
+    },
+    {
+      "source": 23,
+      "target": 45,
+      "weight": 0.7219
+    },
+    {
+      "source": 23,
+      "target": 64,
+      "weight": 0.7226
+    },
+    {
+      "source": 23,
+      "target": 30,
+      "weight": 0.6096
+    },
+    {
+      "source": 23,
+      "target": 77,
+      "weight": 0.6986
+    },
+    {
+      "source": 23,
+      "target": 18,
+      "weight": 0.6152
+    },
+    {
+      "source": 23,
+      "target": 36,
+      "weight": 0.7488
+    },
+    {
+      "source": 23,
+      "target": 47,
+      "weight": 0.6852
+    },
+    {
+      "source": 23,
+      "target": 10,
+      "weight": 0.6027
+    },
+    {
+      "source": 23,
+      "target": 34,
+      "weight": 0.7521
+    },
+    {
+      "source": 23,
+      "target": 22,
+      "weight": 0.8318
+    },
+    {
+      "source": 23,
+      "target": 65,
+      "weight": 0.6591
+    },
+    {
+      "source": 23,
+      "target": 66,
+      "weight": 0.6438
+    },
+    {
+      "source": 23,
+      "target": 46,
+      "weight": 0.6518
+    },
+    {
+      "source": 23,
+      "target": 31,
+      "weight": 0.6414
+    },
+    {
+      "source": 23,
+      "target": 58,
+      "weight": 0.6781
+    },
+    {
+      "source": 23,
+      "target": 59,
+      "weight": 0.8115
+    },
+    {
+      "source": 23,
+      "target": 68,
+      "weight": 0.6312
+    },
+    {
+      "source": 56,
+      "target": 25,
+      "weight": 0.6239
+    },
+    {
+      "source": 56,
+      "target": 16,
+      "weight": 0.682
+    },
+    {
+      "source": 56,
+      "target": 43,
+      "weight": 0.7117
+    },
+    {
+      "source": 56,
+      "target": 44,
+      "weight": 0.6654
+    },
+    {
+      "source": 56,
+      "target": 26,
+      "weight": 0.6579
+    },
+    {
+      "source": 56,
+      "target": 45,
+      "weight": 0.6506
+    },
+    {
+      "source": 56,
+      "target": 36,
+      "weight": 0.678
+    },
+    {
+      "source": 56,
+      "target": 50,
+      "weight": 0.7374
+    },
+    {
+      "source": 56,
+      "target": 22,
+      "weight": 0.7503
+    },
+    {
+      "source": 56,
+      "target": 31,
+      "weight": 0.6787
+    },
+    {
+      "source": 56,
+      "target": 59,
+      "weight": 0.6057
+    },
+    {
+      "source": 56,
+      "target": 33,
+      "weight": 0.6491
+    },
+    {
+      "source": 49,
+      "target": 16,
+      "weight": 0.6
+    },
+    {
+      "source": 49,
+      "target": 43,
+      "weight": 0.6446
+    },
+    {
+      "source": 49,
+      "target": 44,
+      "weight": 0.7234
+    },
+    {
+      "source": 49,
+      "target": 71,
+      "weight": 0.7228
+    },
+    {
+      "source": 49,
+      "target": 72,
+      "weight": 0.7585
+    },
+    {
+      "source": 49,
+      "target": 50,
+      "weight": 0.7566
+    },
+    {
+      "source": 49,
+      "target": 31,
+      "weight": 0.6665
+    },
+    {
+      "source": 53,
+      "target": 48,
+      "weight": 0.6832
+    },
+    {
+      "source": 53,
+      "target": 55,
+      "weight": 0.8028
+    },
+    {
+      "source": 53,
+      "target": 52,
+      "weight": 0.7569
+    },
+    {
+      "source": 24,
+      "target": 16,
+      "weight": 0.808
+    },
+    {
+      "source": 24,
+      "target": 43,
+      "weight": 0.654
+    },
+    {
+      "source": 24,
+      "target": 70,
+      "weight": 0.6187
+    },
+    {
+      "source": 24,
+      "target": 76,
+      "weight": 0.6707
+    },
+    {
+      "source": 24,
+      "target": 44,
+      "weight": 0.6258
+    },
+    {
+      "source": 24,
+      "target": 15,
+      "weight": 0.6021
+    },
+    {
+      "source": 24,
+      "target": 64,
+      "weight": 0.7463
+    },
+    {
+      "source": 24,
+      "target": 77,
+      "weight": 0.6676
+    },
+    {
+      "source": 24,
+      "target": 36,
+      "weight": 0.612
+    },
+    {
+      "source": 24,
+      "target": 72,
+      "weight": 0.653
+    },
+    {
+      "source": 24,
+      "target": 50,
+      "weight": 0.6586
+    },
+    {
+      "source": 24,
+      "target": 22,
+      "weight": 0.6592
+    },
+    {
+      "source": 24,
+      "target": 65,
+      "weight": 0.6313
+    },
+    {
+      "source": 24,
+      "target": 31,
+      "weight": 0.6757
+    },
+    {
+      "source": 24,
+      "target": 58,
+      "weight": 0.6072
+    },
+    {
+      "source": 24,
+      "target": 68,
+      "weight": 0.612
+    },
+    {
+      "source": 39,
+      "target": 25,
+      "weight": 0.7574
+    },
+    {
+      "source": 39,
+      "target": 16,
+      "weight": 0.6291
+    },
+    {
+      "source": 39,
+      "target": 43,
+      "weight": 0.6564
+    },
+    {
+      "source": 39,
+      "target": 19,
+      "weight": 0.6407
+    },
+    {
+      "source": 39,
+      "target": 44,
+      "weight": 0.6027
+    },
+    {
+      "source": 39,
+      "target": 48,
+      "weight": 0.635
+    },
+    {
+      "source": 39,
+      "target": 54,
+      "weight": 0.628
+    },
+    {
+      "source": 39,
+      "target": 20,
+      "weight": 0.6928
+    },
+    {
+      "source": 39,
+      "target": 40,
+      "weight": 0.7149
+    },
+    {
+      "source": 39,
+      "target": 77,
+      "weight": 0.6217
+    },
+    {
+      "source": 39,
+      "target": 51,
+      "weight": 0.6881
+    },
+    {
+      "source": 39,
+      "target": 18,
+      "weight": 0.6739
+    },
+    {
+      "source": 39,
+      "target": 36,
+      "weight": 0.6754
+    },
+    {
+      "source": 39,
+      "target": 27,
+      "weight": 0.7356
+    },
+    {
+      "source": 39,
+      "target": 47,
+      "weight": 0.7401
+    },
+    {
+      "source": 39,
+      "target": 10,
+      "weight": 0.6857
+    },
+    {
+      "source": 39,
+      "target": 34,
+      "weight": 0.8309
+    },
+    {
+      "source": 39,
+      "target": 22,
+      "weight": 0.6941
+    },
+    {
+      "source": 39,
+      "target": 55,
+      "weight": 0.6815
+    },
+    {
+      "source": 39,
+      "target": 65,
+      "weight": 0.601
+    },
+    {
+      "source": 39,
+      "target": 66,
+      "weight": 0.6472
+    },
+    {
+      "source": 39,
+      "target": 46,
+      "weight": 0.6941
+    },
+    {
+      "source": 39,
+      "target": 31,
+      "weight": 0.6685
+    },
+    {
+      "source": 39,
+      "target": 58,
+      "weight": 0.629
+    },
+    {
+      "source": 39,
+      "target": 59,
+      "weight": 0.7455
+    },
+    {
+      "source": 39,
+      "target": 52,
+      "weight": 0.6177
+    },
+    {
+      "source": 39,
+      "target": 38,
+      "weight": 0.757
+    },
+    {
+      "source": 13,
+      "target": 25,
+      "weight": 0.6421
+    },
+    {
+      "source": 13,
+      "target": 43,
+      "weight": 0.6701
+    },
+    {
+      "source": 13,
+      "target": 20,
+      "weight": 0.6847
+    },
+    {
+      "source": 13,
+      "target": 40,
+      "weight": 0.6403
+    },
+    {
+      "source": 13,
+      "target": 45,
+      "weight": 0.6103
+    },
+    {
+      "source": 13,
+      "target": 77,
+      "weight": 0.6591
+    },
+    {
+      "source": 13,
+      "target": 18,
+      "weight": 0.618
+    },
+    {
+      "source": 13,
+      "target": 36,
+      "weight": 0.6311
+    },
+    {
+      "source": 13,
+      "target": 34,
+      "weight": 0.6127
+    },
+    {
+      "source": 13,
+      "target": 22,
+      "weight": 0.7023
+    },
+    {
+      "source": 13,
+      "target": 65,
+      "weight": 0.607
+    },
+    {
+      "source": 13,
+      "target": 66,
+      "weight": 0.6586
+    },
+    {
+      "source": 13,
+      "target": 58,
+      "weight": 0.6307
+    },
+    {
+      "source": 13,
+      "target": 59,
+      "weight": 0.729
+    },
+    {
+      "source": 25,
+      "target": 16,
+      "weight": 0.7504
+    },
+    {
+      "source": 25,
+      "target": 43,
+      "weight": 0.746
+    },
+    {
+      "source": 25,
+      "target": 19,
+      "weight": 0.6939
+    },
+    {
+      "source": 25,
+      "target": 37,
+      "weight": 0.6244
+    },
+    {
+      "source": 25,
+      "target": 44,
+      "weight": 0.6861
+    },
+    {
+      "source": 25,
+      "target": 26,
+      "weight": 0.6221
+    },
+    {
+      "source": 25,
+      "target": 48,
+      "weight": 0.718
+    },
+    {
+      "source": 25,
+      "target": 20,
+      "weight": 0.7727
+    },
+    {
+      "source": 25,
+      "target": 40,
+      "weight": 0.7832
+    },
+    {
+      "source": 25,
+      "target": 45,
+      "weight": 0.7021
+    },
+    {
+      "source": 25,
+      "target": 64,
+      "weight": 0.6341
+    },
+    {
+      "source": 25,
+      "target": 30,
+      "weight": 0.6103
+    },
+    {
+      "source": 25,
+      "target": 77,
+      "weight": 0.6748
+    },
+    {
+      "source": 25,
+      "target": 51,
+      "weight": 0.6825
+    },
+    {
+      "source": 25,
+      "target": 18,
+      "weight": 0.714
+    },
+    {
+      "source": 25,
+      "target": 36,
+      "weight": 0.7559
+    },
+    {
+      "source": 25,
+      "target": 27,
+      "weight": 0.7818
+    },
+    {
+      "source": 25,
+      "target": 47,
+      "weight": 0.7268
+    },
+    {
+      "source": 25,
+      "target": 34,
+      "weight": 0.8126
+    },
+    {
+      "source": 25,
+      "target": 22,
+      "weight": 0.8367
+    },
+    {
+      "source": 25,
+      "target": 55,
+      "weight": 0.6789
+    },
+    {
+      "source": 25,
+      "target": 65,
+      "weight": 0.7304
+    },
+    {
+      "source": 25,
+      "target": 66,
+      "weight": 0.729
+    },
+    {
+      "source": 25,
+      "target": 46,
+      "weight": 0.7625
+    },
+    {
+      "source": 25,
+      "target": 31,
+      "weight": 0.6408
+    },
+    {
+      "source": 25,
+      "target": 58,
+      "weight": 0.7124
+    },
+    {
+      "source": 25,
+      "target": 59,
+      "weight": 0.8263
+    },
+    {
+      "source": 25,
+      "target": 52,
+      "weight": 0.7338
+    },
+    {
+      "source": 25,
+      "target": 68,
+      "weight": 0.6249
+    },
+    {
+      "source": 25,
+      "target": 38,
+      "weight": 0.6206
+    },
+    {
+      "source": 21,
+      "target": 43,
+      "weight": 0.6205
+    },
+    {
+      "source": 21,
+      "target": 76,
+      "weight": 0.658
+    },
+    {
+      "source": 21,
+      "target": 45,
+      "weight": 0.6145
+    },
+    {
+      "source": 21,
+      "target": 30,
+      "weight": 0.6329
+    },
+    {
+      "source": 21,
+      "target": 77,
+      "weight": 0.6529
+    },
+    {
+      "source": 21,
+      "target": 72,
+      "weight": 0.6324
+    },
+    {
+      "source": 21,
+      "target": 22,
+      "weight": 0.625
+    },
+    {
+      "source": 21,
+      "target": 65,
+      "weight": 0.6013
+    },
+    {
+      "source": 21,
+      "target": 31,
+      "weight": 0.6372
+    },
+    {
+      "source": 21,
+      "target": 68,
+      "weight": 0.6498
+    },
+    {
+      "source": 16,
+      "target": 43,
+      "weight": 0.7618
+    },
+    {
+      "source": 16,
+      "target": 19,
+      "weight": 0.6173
+    },
+    {
+      "source": 16,
+      "target": 70,
+      "weight": 0.6072
+    },
+    {
+      "source": 16,
+      "target": 76,
+      "weight": 0.63
+    },
+    {
+      "source": 16,
+      "target": 37,
+      "weight": 0.6642
+    },
+    {
+      "source": 16,
+      "target": 44,
+      "weight": 0.7194
+    },
+    {
+      "source": 16,
+      "target": 26,
+      "weight": 0.6179
+    },
+    {
+      "source": 16,
+      "target": 48,
+      "weight": 0.6499
+    },
+    {
+      "source": 16,
+      "target": 20,
+      "weight": 0.7237
+    },
+    {
+      "source": 16,
+      "target": 15,
+      "weight": 0.6358
+    },
+    {
+      "source": 16,
+      "target": 71,
+      "weight": 0.6434
+    },
+    {
+      "source": 16,
+      "target": 45,
+      "weight": 0.6752
+    },
+    {
+      "source": 16,
+      "target": 64,
+      "weight": 0.7339
+    },
+    {
+      "source": 16,
+      "target": 30,
+      "weight": 0.6447
+    },
+    {
+      "source": 16,
+      "target": 77,
+      "weight": 0.7263
+    },
+    {
+      "source": 16,
+      "target": 18,
+      "weight": 0.6678
+    },
+    {
+      "source": 16,
+      "target": 36,
+      "weight": 0.7574
+    },
+    {
+      "source": 16,
+      "target": 72,
+      "weight": 0.6632
+    },
+    {
+      "source": 16,
+      "target": 47,
+      "weight": 0.6647
+    },
+    {
+      "source": 16,
+      "target": 50,
+      "weight": 0.7249
+    },
+    {
+      "source": 16,
+      "target": 34,
+      "weight": 0.6777
+    },
+    {
+      "source": 16,
+      "target": 22,
+      "weight": 0.829
+    },
+    {
+      "source": 16,
+      "target": 65,
+      "weight": 0.7047
+    },
+    {
+      "source": 16,
+      "target": 66,
+      "weight": 0.682
+    },
+    {
+      "source": 16,
+      "target": 46,
+      "weight": 0.6159
+    },
+    {
+      "source": 16,
+      "target": 31,
+      "weight": 0.7189
+    },
+    {
+      "source": 16,
+      "target": 58,
+      "weight": 0.7046
+    },
+    {
+      "source": 16,
+      "target": 59,
+      "weight": 0.7398
+    },
+    {
+      "source": 16,
+      "target": 68,
+      "weight": 0.6394
+    },
+    {
+      "source": 16,
+      "target": 1,
+      "weight": 0.6226
+    },
+    {
+      "source": 16,
+      "target": 33,
+      "weight": 0.6348
+    },
+    {
+      "source": 42,
+      "target": 43,
+      "weight": 0.7542
+    },
+    {
+      "source": 42,
+      "target": 76,
+      "weight": 0.6655
+    },
+    {
+      "source": 42,
+      "target": 45,
+      "weight": 0.7566
+    },
+    {
+      "source": 42,
+      "target": 30,
+      "weight": 0.7662
+    },
+    {
+      "source": 42,
+      "target": 77,
+      "weight": 0.6493
+    },
+    {
+      "source": 42,
+      "target": 36,
+      "weight": 0.6273
+    },
+    {
+      "source": 42,
+      "target": 72,
+      "weight": 0.691
+    },
+    {
+      "source": 42,
+      "target": 10,
+      "weight": 0.6098
+    },
+    {
+      "source": 42,
+      "target": 65,
+      "weight": 0.7064
+    },
+    {
+      "source": 42,
+      "target": 66,
+      "weight": 0.7201
+    },
+    {
+      "source": 42,
+      "target": 46,
+      "weight": 0.6484
+    },
+    {
+      "source": 42,
+      "target": 31,
+      "weight": 0.7097
+    },
+    {
+      "source": 42,
+      "target": 58,
+      "weight": 0.7262
+    },
+    {
+      "source": 42,
+      "target": 59,
+      "weight": 0.6557
+    },
+    {
+      "source": 42,
+      "target": 68,
+      "weight": 0.7391
+    },
+    {
+      "source": 43,
+      "target": 70,
+      "weight": 0.6435
+    },
+    {
+      "source": 43,
+      "target": 76,
+      "weight": 0.7176
+    },
+    {
+      "source": 43,
+      "target": 37,
+      "weight": 0.657
+    },
+    {
+      "source": 43,
+      "target": 44,
+      "weight": 0.7181
+    },
+    {
+      "source": 43,
+      "target": 26,
+      "weight": 0.6039
+    },
+    {
+      "source": 43,
+      "target": 20,
+      "weight": 0.7481
+    },
+    {
+      "source": 43,
+      "target": 71,
+      "weight": 0.6011
+    },
+    {
+      "source": 43,
+      "target": 40,
+      "weight": 0.6578
+    },
+    {
+      "source": 43,
+      "target": 45,
+      "weight": 0.8371
+    },
+    {
+      "source": 43,
+      "target": 64,
+      "weight": 0.674
+    },
+    {
+      "source": 43,
+      "target": 30,
+      "weight": 0.799
+    },
+    {
+      "source": 43,
+      "target": 77,
+      "weight": 0.7745
+    },
+    {
+      "source": 43,
+      "target": 18,
+      "weight": 0.6762
+    },
+    {
+      "source": 43,
+      "target": 36,
+      "weight": 0.8093
+    },
+    {
+      "source": 43,
+      "target": 72,
+      "weight": 0.7566
+    },
+    {
+      "source": 43,
+      "target": 47,
+      "weight": 0.6239
+    },
+    {
+      "source": 43,
+      "target": 10,
+      "weight": 0.6022
+    },
+    {
+      "source": 43,
+      "target": 50,
+      "weight": 0.7042
+    },
+    {
+      "source": 43,
+      "target": 34,
+      "weight": 0.7182
+    },
+    {
+      "source": 43,
+      "target": 22,
+      "weight": 0.8381
+    },
+    {
+      "source": 43,
+      "target": 65,
+      "weight": 0.8009
+    },
+    {
+      "source": 43,
+      "target": 66,
+      "weight": 0.7636
+    },
+    {
+      "source": 43,
+      "target": 46,
+      "weight": 0.6303
+    },
+    {
+      "source": 43,
+      "target": 31,
+      "weight": 0.7895
+    },
+    {
+      "source": 43,
+      "target": 58,
+      "weight": 0.7669
+    },
+    {
+      "source": 43,
+      "target": 59,
+      "weight": 0.7864
+    },
+    {
+      "source": 43,
+      "target": 68,
+      "weight": 0.7682
+    },
+    {
+      "source": 43,
+      "target": 33,
+      "weight": 0.648
+    },
+    {
+      "source": 19,
+      "target": 20,
+      "weight": 0.6175
+    },
+    {
+      "source": 19,
+      "target": 40,
+      "weight": 0.6818
+    },
+    {
+      "source": 19,
+      "target": 51,
+      "weight": 0.6396
+    },
+    {
+      "source": 19,
+      "target": 18,
+      "weight": 0.809
+    },
+    {
+      "source": 19,
+      "target": 27,
+      "weight": 0.6336
+    },
+    {
+      "source": 19,
+      "target": 47,
+      "weight": 0.6197
+    },
+    {
+      "source": 19,
+      "target": 34,
+      "weight": 0.6753
+    },
+    {
+      "source": 19,
+      "target": 22,
+      "weight": 0.6208
+    },
+    {
+      "source": 19,
+      "target": 46,
+      "weight": 0.6503
+    },
+    {
+      "source": 19,
+      "target": 59,
+      "weight": 0.6312
+    },
+    {
+      "source": 19,
+      "target": 52,
+      "weight": 0.6657
+    },
+    {
+      "source": 70,
+      "target": 76,
+      "weight": 0.8476
+    },
+    {
+      "source": 70,
+      "target": 44,
+      "weight": 0.6139
+    },
+    {
+      "source": 70,
+      "target": 15,
+      "weight": 0.6617
+    },
+    {
+      "source": 70,
+      "target": 71,
+      "weight": 0.6649
+    },
+    {
+      "source": 70,
+      "target": 45,
+      "weight": 0.6528
+    },
+    {
+      "source": 70,
+      "target": 64,
+      "weight": 0.6354
+    },
+    {
+      "source": 70,
+      "target": 30,
+      "weight": 0.7109
+    },
+    {
+      "source": 70,
+      "target": 77,
+      "weight": 0.8249
+    },
+    {
+      "source": 70,
+      "target": 72,
+      "weight": 0.8296
+    },
+    {
+      "source": 70,
+      "target": 50,
+      "weight": 0.6098
+    },
+    {
+      "source": 70,
+      "target": 65,
+      "weight": 0.8033
+    },
+    {
+      "source": 70,
+      "target": 66,
+      "weight": 0.7217
+    },
+    {
+      "source": 70,
+      "target": 31,
+      "weight": 0.7127
+    },
+    {
+      "source": 70,
+      "target": 58,
+      "weight": 0.6317
+    },
+    {
+      "source": 70,
+      "target": 59,
+      "weight": 0.6378
+    },
+    {
+      "source": 70,
+      "target": 68,
+      "weight": 0.743
+    },
+    {
+      "source": 76,
+      "target": 44,
+      "weight": 0.6187
+    },
+    {
+      "source": 76,
+      "target": 20,
+      "weight": 0.6106
+    },
+    {
+      "source": 76,
+      "target": 15,
+      "weight": 0.7434
+    },
+    {
+      "source": 76,
+      "target": 71,
+      "weight": 0.6719
+    },
+    {
+      "source": 76,
+      "target": 45,
+      "weight": 0.7235
+    },
+    {
+      "source": 76,
+      "target": 64,
+      "weight": 0.7091
+    },
+    {
+      "source": 76,
+      "target": 30,
+      "weight": 0.7916
+    },
+    {
+      "source": 76,
+      "target": 77,
+      "weight": 0.8233
+    },
+    {
+      "source": 76,
+      "target": 36,
+      "weight": 0.6407
+    },
+    {
+      "source": 76,
+      "target": 72,
+      "weight": 0.8682
+    },
+    {
+      "source": 76,
+      "target": 50,
+      "weight": 0.6036
+    },
+    {
+      "source": 76,
+      "target": 22,
+      "weight": 0.6247
+    },
+    {
+      "source": 76,
+      "target": 65,
+      "weight": 0.749
+    },
+    {
+      "source": 76,
+      "target": 66,
+      "weight": 0.7032
+    },
+    {
+      "source": 76,
+      "target": 31,
+      "weight": 0.7571
+    },
+    {
+      "source": 76,
+      "target": 58,
+      "weight": 0.6288
+    },
+    {
+      "source": 76,
+      "target": 59,
+      "weight": 0.6287
+    },
+    {
+      "source": 76,
+      "target": 68,
+      "weight": 0.8521
+    },
+    {
+      "source": 37,
+      "target": 20,
+      "weight": 0.732
+    },
+    {
+      "source": 37,
+      "target": 45,
+      "weight": 0.6657
+    },
+    {
+      "source": 37,
+      "target": 64,
+      "weight": 0.6149
+    },
+    {
+      "source": 37,
+      "target": 30,
+      "weight": 0.6878
+    },
+    {
+      "source": 37,
+      "target": 77,
+      "weight": 0.7202
+    },
+    {
+      "source": 37,
+      "target": 36,
+      "weight": 0.6999
+    },
+    {
+      "source": 37,
+      "target": 47,
+      "weight": 0.6129
+    },
+    {
+      "source": 37,
+      "target": 34,
+      "weight": 0.6042
+    },
+    {
+      "source": 37,
+      "target": 22,
+      "weight": 0.6885
+    },
+    {
+      "source": 37,
+      "target": 65,
+      "weight": 0.6419
+    },
+    {
+      "source": 37,
+      "target": 66,
+      "weight": 0.647
+    },
+    {
+      "source": 37,
+      "target": 58,
+      "weight": 0.748
+    },
+    {
+      "source": 37,
+      "target": 59,
+      "weight": 0.725
+    },
+    {
+      "source": 37,
+      "target": 68,
+      "weight": 0.6459
+    },
+    {
+      "source": 44,
+      "target": 26,
+      "weight": 0.7559
+    },
+    {
+      "source": 44,
+      "target": 48,
+      "weight": 0.7032
+    },
+    {
+      "source": 44,
+      "target": 71,
+      "weight": 0.7437
+    },
+    {
+      "source": 44,
+      "target": 77,
+      "weight": 0.6431
+    },
+    {
+      "source": 44,
+      "target": 18,
+      "weight": 0.6789
+    },
+    {
+      "source": 44,
+      "target": 36,
+      "weight": 0.6887
+    },
+    {
+      "source": 44,
+      "target": 27,
+      "weight": 0.6308
+    },
+    {
+      "source": 44,
+      "target": 72,
+      "weight": 0.7678
+    },
+    {
+      "source": 44,
+      "target": 47,
+      "weight": 0.6375
+    },
+    {
+      "source": 44,
+      "target": 50,
+      "weight": 0.7758
+    },
+    {
+      "source": 44,
+      "target": 34,
+      "weight": 0.7423
+    },
+    {
+      "source": 44,
+      "target": 22,
+      "weight": 0.7689
+    },
+    {
+      "source": 44,
+      "target": 65,
+      "weight": 0.6482
+    },
+    {
+      "source": 44,
+      "target": 31,
+      "weight": 0.7218
+    },
+    {
+      "source": 44,
+      "target": 59,
+      "weight": 0.6626
+    },
+    {
+      "source": 44,
+      "target": 33,
+      "weight": 0.709
+    },
+    {
+      "source": 26,
+      "target": 48,
+      "weight": 0.6733
+    },
+    {
+      "source": 26,
+      "target": 50,
+      "weight": 0.6566
+    },
+    {
+      "source": 26,
+      "target": 34,
+      "weight": 0.6242
+    },
+    {
+      "source": 26,
+      "target": 22,
+      "weight": 0.6952
+    },
+    {
+      "source": 48,
+      "target": 54,
+      "weight": 0.6066
+    },
+    {
+      "source": 48,
+      "target": 20,
+      "weight": 0.6659
+    },
+    {
+      "source": 48,
+      "target": 36,
+      "weight": 0.6261
+    },
+    {
+      "source": 48,
+      "target": 27,
+      "weight": 0.6482
+    },
+    {
+      "source": 48,
+      "target": 47,
+      "weight": 0.8267
+    },
+    {
+      "source": 48,
+      "target": 34,
+      "weight": 0.765
+    },
+    {
+      "source": 48,
+      "target": 22,
+      "weight": 0.6976
+    },
+    {
+      "source": 48,
+      "target": 55,
+      "weight": 0.8027
+    },
+    {
+      "source": 48,
+      "target": 46,
+      "weight": 0.7138
+    },
+    {
+      "source": 48,
+      "target": 59,
+      "weight": 0.6275
+    },
+    {
+      "source": 48,
+      "target": 52,
+      "weight": 0.627
+    },
+    {
+      "source": 54,
+      "target": 51,
+      "weight": 0.6121
+    },
+    {
+      "source": 54,
+      "target": 47,
+      "weight": 0.66
+    },
+    {
+      "source": 54,
+      "target": 55,
+      "weight": 0.7601
+    },
+    {
+      "source": 54,
+      "target": 46,
+      "weight": 0.638
+    },
+    {
+      "source": 54,
+      "target": 38,
+      "weight": 0.6215
+    },
+    {
+      "source": 20,
+      "target": 15,
+      "weight": 0.6681
+    },
+    {
+      "source": 20,
+      "target": 40,
+      "weight": 0.7498
+    },
+    {
+      "source": 20,
+      "target": 45,
+      "weight": 0.7651
+    },
+    {
+      "source": 20,
+      "target": 64,
+      "weight": 0.7386
+    },
+    {
+      "source": 20,
+      "target": 30,
+      "weight": 0.734
+    },
+    {
+      "source": 20,
+      "target": 77,
+      "weight": 0.7774
+    },
+    {
+      "source": 20,
+      "target": 18,
+      "weight": 0.646
+    },
+    {
+      "source": 20,
+      "target": 36,
+      "weight": 0.7621
+    },
+    {
+      "source": 20,
+      "target": 27,
+      "weight": 0.6612
+    },
+    {
+      "source": 20,
+      "target": 72,
+      "weight": 0.6293
+    },
+    {
+      "source": 20,
+      "target": 47,
+      "weight": 0.7561
+    },
+    {
+      "source": 20,
+      "target": 10,
+      "weight": 0.6718
+    },
+    {
+      "source": 20,
+      "target": 34,
+      "weight": 0.7589
+    },
+    {
+      "source": 20,
+      "target": 22,
+      "weight": 0.7557
+    },
+    {
+      "source": 20,
+      "target": 65,
+      "weight": 0.7414
+    },
+    {
+      "source": 20,
+      "target": 66,
+      "weight": 0.8065
+    },
+    {
+      "source": 20,
+      "target": 46,
+      "weight": 0.7813
+    },
+    {
+      "source": 20,
+      "target": 31,
+      "weight": 0.6582
+    },
+    {
+      "source": 20,
+      "target": 58,
+      "weight": 0.8507
+    },
+    {
+      "source": 20,
+      "target": 59,
+      "weight": 0.8541
+    },
+    {
+      "source": 20,
+      "target": 52,
+      "weight": 0.6244
+    },
+    {
+      "source": 20,
+      "target": 68,
+      "weight": 0.7385
+    },
+    {
+      "source": 20,
+      "target": 38,
+      "weight": 0.6662
+    },
+    {
+      "source": 15,
+      "target": 71,
+      "weight": 0.7192
+    },
+    {
+      "source": 15,
+      "target": 45,
+      "weight": 0.6112
+    },
+    {
+      "source": 15,
+      "target": 64,
+      "weight": 0.7599
+    },
+    {
+      "source": 15,
+      "target": 30,
+      "weight": 0.6133
+    },
+    {
+      "source": 15,
+      "target": 77,
+      "weight": 0.6945
+    },
+    {
+      "source": 15,
+      "target": 72,
+      "weight": 0.7282
+    },
+    {
+      "source": 15,
+      "target": 22,
+      "weight": 0.6318
+    },
+    {
+      "source": 15,
+      "target": 65,
+      "weight": 0.6004
+    },
+    {
+      "source": 15,
+      "target": 59,
+      "weight": 0.6374
+    },
+    {
+      "source": 15,
+      "target": 68,
+      "weight": 0.6575
+    },
+    {
+      "source": 71,
+      "target": 64,
+      "weight": 0.6302
+    },
+    {
+      "source": 71,
+      "target": 77,
+      "weight": 0.6499
+    },
+    {
+      "source": 71,
+      "target": 72,
+      "weight": 0.8106
+    },
+    {
+      "source": 71,
+      "target": 50,
+      "weight": 0.6463
+    },
+    {
+      "source": 71,
+      "target": 22,
+      "weight": 0.6421
+    },
+    {
+      "source": 71,
+      "target": 31,
+      "weight": 0.6039
+    },
+    {
+      "source": 71,
+      "target": 59,
+      "weight": 0.6139
+    },
+    {
+      "source": 40,
+      "target": 45,
+      "weight": 0.6451
+    },
+    {
+      "source": 40,
+      "target": 51,
+      "weight": 0.6804
+    },
+    {
+      "source": 40,
+      "target": 18,
+      "weight": 0.67
+    },
+    {
+      "source": 40,
+      "target": 36,
+      "weight": 0.645
+    },
+    {
+      "source": 40,
+      "target": 27,
+      "weight": 0.6591
+    },
+    {
+      "source": 40,
+      "target": 47,
+      "weight": 0.6366
+    },
+    {
+      "source": 40,
+      "target": 34,
+      "weight": 0.6961
+    },
+    {
+      "source": 40,
+      "target": 22,
+      "weight": 0.6225
+    },
+    {
+      "source": 40,
+      "target": 55,
+      "weight": 0.6359
+    },
+    {
+      "source": 40,
+      "target": 65,
+      "weight": 0.6142
+    },
+    {
+      "source": 40,
+      "target": 66,
+      "weight": 0.6795
+    },
+    {
+      "source": 40,
+      "target": 46,
+      "weight": 0.7531
+    },
+    {
+      "source": 40,
+      "target": 58,
+      "weight": 0.6802
+    },
+    {
+      "source": 40,
+      "target": 59,
+      "weight": 0.7407
+    },
+    {
+      "source": 40,
+      "target": 52,
+      "weight": 0.699
+    },
+    {
+      "source": 40,
+      "target": 38,
+      "weight": 0.643
+    },
+    {
+      "source": 45,
+      "target": 64,
+      "weight": 0.7327
+    },
+    {
+      "source": 45,
+      "target": 30,
+      "weight": 0.7994
+    },
+    {
+      "source": 45,
+      "target": 77,
+      "weight": 0.7591
+    },
+    {
+      "source": 45,
+      "target": 36,
+      "weight": 0.7384
+    },
+    {
+      "source": 45,
+      "target": 72,
+      "weight": 0.7242
+    },
+    {
+      "source": 45,
+      "target": 47,
+      "weight": 0.6139
+    },
+    {
+      "source": 45,
+      "target": 34,
+      "weight": 0.643
+    },
+    {
+      "source": 45,
+      "target": 22,
+      "weight": 0.7701
+    },
+    {
+      "source": 45,
+      "target": 65,
+      "weight": 0.7708
+    },
+    {
+      "source": 45,
+      "target": 66,
+      "weight": 0.7659
+    },
+    {
+      "source": 45,
+      "target": 46,
+      "weight": 0.7033
+    },
+    {
+      "source": 45,
+      "target": 31,
+      "weight": 0.684
+    },
+    {
+      "source": 45,
+      "target": 58,
+      "weight": 0.8392
+    },
+    {
+      "source": 45,
+      "target": 59,
+      "weight": 0.828
+    },
+    {
+      "source": 45,
+      "target": 68,
+      "weight": 0.8295
+    },
+    {
+      "source": 64,
+      "target": 30,
+      "weight": 0.6997
+    },
+    {
+      "source": 64,
+      "target": 77,
+      "weight": 0.7154
+    },
+    {
+      "source": 64,
+      "target": 36,
+      "weight": 0.6803
+    },
+    {
+      "source": 64,
+      "target": 72,
+      "weight": 0.6754
+    },
+    {
+      "source": 64,
+      "target": 22,
+      "weight": 0.684
+    },
+    {
+      "source": 64,
+      "target": 65,
+      "weight": 0.7062
+    },
+    {
+      "source": 64,
+      "target": 66,
+      "weight": 0.7342
+    },
+    {
+      "source": 64,
+      "target": 46,
+      "weight": 0.6022
+    },
+    {
+      "source": 64,
+      "target": 31,
+      "weight": 0.6492
+    },
+    {
+      "source": 64,
+      "target": 58,
+      "weight": 0.7436
+    },
+    {
+      "source": 64,
+      "target": 59,
+      "weight": 0.717
+    },
+    {
+      "source": 64,
+      "target": 68,
+      "weight": 0.7087
+    },
+    {
+      "source": 30,
+      "target": 77,
+      "weight": 0.8477
+    },
+    {
+      "source": 30,
+      "target": 36,
+      "weight": 0.8572
+    },
+    {
+      "source": 30,
+      "target": 72,
+      "weight": 0.7436
+    },
+    {
+      "source": 30,
+      "target": 47,
+      "weight": 0.6581
+    },
+    {
+      "source": 30,
+      "target": 34,
+      "weight": 0.6113
+    },
+    {
+      "source": 30,
+      "target": 22,
+      "weight": 0.6968
+    },
+    {
+      "source": 30,
+      "target": 65,
+      "weight": 0.7927
+    },
+    {
+      "source": 30,
+      "target": 66,
+      "weight": 0.801
+    },
+    {
+      "source": 30,
+      "target": 46,
+      "weight": 0.6881
+    },
+    {
+      "source": 30,
+      "target": 31,
+      "weight": 0.745
+    },
+    {
+      "source": 30,
+      "target": 58,
+      "weight": 0.8177
+    },
+    {
+      "source": 30,
+      "target": 59,
+      "weight": 0.7812
+    },
+    {
+      "source": 30,
+      "target": 68,
+      "weight": 0.8309
+    },
+    {
+      "source": 30,
+      "target": 33,
+      "weight": 0.7275
+    },
+    {
+      "source": 77,
+      "target": 18,
+      "weight": 0.64
+    },
+    {
+      "source": 77,
+      "target": 36,
+      "weight": 0.7633
+    },
+    {
+      "source": 77,
+      "target": 72,
+      "weight": 0.7764
+    },
+    {
+      "source": 77,
+      "target": 47,
+      "weight": 0.7166
+    },
+    {
+      "source": 77,
+      "target": 10,
+      "weight": 0.6088
+    },
+    {
+      "source": 77,
+      "target": 50,
+      "weight": 0.6085
+    },
+    {
+      "source": 77,
+      "target": 34,
+      "weight": 0.6881
+    },
+    {
+      "source": 77,
+      "target": 22,
+      "weight": 0.7767
+    },
+    {
+      "source": 77,
+      "target": 65,
+      "weight": 0.833
+    },
+    {
+      "source": 77,
+      "target": 66,
+      "weight": 0.8105
+    },
+    {
+      "source": 77,
+      "target": 46,
+      "weight": 0.6774
+    },
+    {
+      "source": 77,
+      "target": 31,
+      "weight": 0.8026
+    },
+    {
+      "source": 77,
+      "target": 58,
+      "weight": 0.781
+    },
+    {
+      "source": 77,
+      "target": 59,
+      "weight": 0.8122
+    },
+    {
+      "source": 77,
+      "target": 68,
+      "weight": 0.8168
+    },
+    {
+      "source": 77,
+      "target": 38,
+      "weight": 0.6237
+    },
+    {
+      "source": 51,
+      "target": 27,
+      "weight": 0.6816
+    },
+    {
+      "source": 51,
+      "target": 47,
+      "weight": 0.6597
+    },
+    {
+      "source": 51,
+      "target": 34,
+      "weight": 0.6763
+    },
+    {
+      "source": 51,
+      "target": 55,
+      "weight": 0.715
+    },
+    {
+      "source": 51,
+      "target": 46,
+      "weight": 0.7135
+    },
+    {
+      "source": 51,
+      "target": 52,
+      "weight": 0.7408
+    },
+    {
+      "source": 51,
+      "target": 38,
+      "weight": 0.6628
+    },
+    {
+      "source": 18,
+      "target": 36,
+      "weight": 0.68
+    },
+    {
+      "source": 18,
+      "target": 27,
+      "weight": 0.6623
+    },
+    {
+      "source": 18,
+      "target": 47,
+      "weight": 0.6179
+    },
+    {
+      "source": 18,
+      "target": 34,
+      "weight": 0.7291
+    },
+    {
+      "source": 18,
+      "target": 22,
+      "weight": 0.7362
+    },
+    {
+      "source": 18,
+      "target": 66,
+      "weight": 0.6195
+    },
+    {
+      "source": 18,
+      "target": 46,
+      "weight": 0.6117
+    },
+    {
+      "source": 18,
+      "target": 31,
+      "weight": 0.6366
+    },
+    {
+      "source": 18,
+      "target": 58,
+      "weight": 0.6359
+    },
+    {
+      "source": 18,
+      "target": 59,
+      "weight": 0.7273
+    },
+    {
+      "source": 18,
+      "target": 33,
+      "weight": 0.6038
+    },
+    {
+      "source": 18,
+      "target": 38,
+      "weight": 0.6074
+    },
+    {
+      "source": 36,
+      "target": 72,
+      "weight": 0.6374
+    },
+    {
+      "source": 36,
+      "target": 47,
+      "weight": 0.7259
+    },
+    {
+      "source": 36,
+      "target": 10,
+      "weight": 0.6571
+    },
+    {
+      "source": 36,
+      "target": 50,
+      "weight": 0.678
+    },
+    {
+      "source": 36,
+      "target": 34,
+      "weight": 0.7247
+    },
+    {
+      "source": 36,
+      "target": 22,
+      "weight": 0.8334
+    },
+    {
+      "source": 36,
+      "target": 65,
+      "weight": 0.7126
+    },
+    {
+      "source": 36,
+      "target": 66,
+      "weight": 0.7446
+    },
+    {
+      "source": 36,
+      "target": 46,
+      "weight": 0.6626
+    },
+    {
+      "source": 36,
+      "target": 31,
+      "weight": 0.7126
+    },
+    {
+      "source": 36,
+      "target": 58,
+      "weight": 0.7815
+    },
+    {
+      "source": 36,
+      "target": 59,
+      "weight": 0.8432
+    },
+    {
+      "source": 36,
+      "target": 68,
+      "weight": 0.6851
+    },
+    {
+      "source": 36,
+      "target": 33,
+      "weight": 0.8065
+    },
+    {
+      "source": 27,
+      "target": 47,
+      "weight": 0.7016
+    },
+    {
+      "source": 27,
+      "target": 34,
+      "weight": 0.8066
+    },
+    {
+      "source": 27,
+      "target": 22,
+      "weight": 0.6462
+    },
+    {
+      "source": 27,
+      "target": 55,
+      "weight": 0.6515
+    },
+    {
+      "source": 27,
+      "target": 65,
+      "weight": 0.634
+    },
+    {
+      "source": 27,
+      "target": 66,
+      "weight": 0.6375
+    },
+    {
+      "source": 27,
+      "target": 46,
+      "weight": 0.7131
+    },
+    {
+      "source": 27,
+      "target": 59,
+      "weight": 0.7009
+    },
+    {
+      "source": 27,
+      "target": 52,
+      "weight": 0.6695
+    },
+    {
+      "source": 27,
+      "target": 38,
+      "weight": 0.7119
+    },
+    {
+      "source": 72,
+      "target": 50,
+      "weight": 0.7033
+    },
+    {
+      "source": 72,
+      "target": 22,
+      "weight": 0.6527
+    },
+    {
+      "source": 72,
+      "target": 65,
+      "weight": 0.733
+    },
+    {
+      "source": 72,
+      "target": 66,
+      "weight": 0.6594
+    },
+    {
+      "source": 72,
+      "target": 31,
+      "weight": 0.7508
+    },
+    {
+      "source": 72,
+      "target": 58,
+      "weight": 0.6689
+    },
+    {
+      "source": 72,
+      "target": 59,
+      "weight": 0.6594
+    },
+    {
+      "source": 72,
+      "target": 68,
+      "weight": 0.7694
+    },
+    {
+      "source": 47,
+      "target": 10,
+      "weight": 0.6396
+    },
+    {
+      "source": 47,
+      "target": 34,
+      "weight": 0.794
+    },
+    {
+      "source": 47,
+      "target": 22,
+      "weight": 0.7093
+    },
+    {
+      "source": 47,
+      "target": 55,
+      "weight": 0.7359
+    },
+    {
+      "source": 47,
+      "target": 65,
+      "weight": 0.6128
+    },
+    {
+      "source": 47,
+      "target": 66,
+      "weight": 0.6297
+    },
+    {
+      "source": 47,
+      "target": 46,
+      "weight": 0.8351
+    },
+    {
+      "source": 47,
+      "target": 31,
+      "weight": 0.6348
+    },
+    {
+      "source": 47,
+      "target": 58,
+      "weight": 0.7079
+    },
+    {
+      "source": 47,
+      "target": 59,
+      "weight": 0.7605
+    },
+    {
+      "source": 47,
+      "target": 52,
+      "weight": 0.6153
+    },
+    {
+      "source": 47,
+      "target": 68,
+      "weight": 0.6261
+    },
+    {
+      "source": 47,
+      "target": 38,
+      "weight": 0.7014
+    },
+    {
+      "source": 10,
+      "target": 34,
+      "weight": 0.6552
+    },
+    {
+      "source": 10,
+      "target": 65,
+      "weight": 0.6203
+    },
+    {
+      "source": 10,
+      "target": 66,
+      "weight": 0.6994
+    },
+    {
+      "source": 10,
+      "target": 31,
+      "weight": 0.7042
+    },
+    {
+      "source": 10,
+      "target": 58,
+      "weight": 0.6883
+    },
+    {
+      "source": 10,
+      "target": 59,
+      "weight": 0.7174
+    },
+    {
+      "source": 10,
+      "target": 38,
+      "weight": 0.6353
+    },
+    {
+      "source": 50,
+      "target": 22,
+      "weight": 0.6811
+    },
+    {
+      "source": 50,
+      "target": 65,
+      "weight": 0.6382
+    },
+    {
+      "source": 50,
+      "target": 31,
+      "weight": 0.7783
+    },
+    {
+      "source": 50,
+      "target": 59,
+      "weight": 0.6092
+    },
+    {
+      "source": 50,
+      "target": 33,
+      "weight": 0.7349
+    },
+    {
+      "source": 34,
+      "target": 22,
+      "weight": 0.7923
+    },
+    {
+      "source": 34,
+      "target": 55,
+      "weight": 0.7036
+    },
+    {
+      "source": 34,
+      "target": 65,
+      "weight": 0.6542
+    },
+    {
+      "source": 34,
+      "target": 66,
+      "weight": 0.6719
+    },
+    {
+      "source": 34,
+      "target": 46,
+      "weight": 0.7457
+    },
+    {
+      "source": 34,
+      "target": 31,
+      "weight": 0.6751
+    },
+    {
+      "source": 34,
+      "target": 58,
+      "weight": 0.6989
+    },
+    {
+      "source": 34,
+      "target": 59,
+      "weight": 0.7864
+    },
+    {
+      "source": 34,
+      "target": 52,
+      "weight": 0.6564
+    },
+    {
+      "source": 34,
+      "target": 68,
+      "weight": 0.6314
+    },
+    {
+      "source": 34,
+      "target": 38,
+      "weight": 0.7738
+    },
+    {
+      "source": 22,
+      "target": 65,
+      "weight": 0.7172
+    },
+    {
+      "source": 22,
+      "target": 66,
+      "weight": 0.6839
+    },
+    {
+      "source": 22,
+      "target": 46,
+      "weight": 0.6336
+    },
+    {
+      "source": 22,
+      "target": 31,
+      "weight": 0.7349
+    },
+    {
+      "source": 22,
+      "target": 58,
+      "weight": 0.7323
+    },
+    {
+      "source": 22,
+      "target": 59,
+      "weight": 0.8448
+    },
+    {
+      "source": 22,
+      "target": 68,
+      "weight": 0.6801
+    },
+    {
+      "source": 22,
+      "target": 33,
+      "weight": 0.6588
+    },
+    {
+      "source": 55,
+      "target": 46,
+      "weight": 0.7227
+    },
+    {
+      "source": 55,
+      "target": 52,
+      "weight": 0.7445
+    },
+    {
+      "source": 65,
+      "target": 66,
+      "weight": 0.8726
+    },
+    {
+      "source": 65,
+      "target": 46,
+      "weight": 0.6609
+    },
+    {
+      "source": 65,
+      "target": 31,
+      "weight": 0.7776
+    },
+    {
+      "source": 65,
+      "target": 58,
+      "weight": 0.7578
+    },
+    {
+      "source": 65,
+      "target": 59,
+      "weight": 0.7604
+    },
+    {
+      "source": 65,
+      "target": 68,
+      "weight": 0.8113
+    },
+    {
+      "source": 66,
+      "target": 46,
+      "weight": 0.7066
+    },
+    {
+      "source": 66,
+      "target": 31,
+      "weight": 0.6996
+    },
+    {
+      "source": 66,
+      "target": 58,
+      "weight": 0.8401
+    },
+    {
+      "source": 66,
+      "target": 59,
+      "weight": 0.8257
+    },
+    {
+      "source": 66,
+      "target": 68,
+      "weight": 0.7691
+    },
+    {
+      "source": 66,
+      "target": 38,
+      "weight": 0.694
+    },
+    {
+      "source": 46,
+      "target": 58,
+      "weight": 0.8045
+    },
+    {
+      "source": 46,
+      "target": 59,
+      "weight": 0.7702
+    },
+    {
+      "source": 46,
+      "target": 52,
+      "weight": 0.7235
+    },
+    {
+      "source": 46,
+      "target": 68,
+      "weight": 0.6957
+    },
+    {
+      "source": 46,
+      "target": 38,
+      "weight": 0.6775
+    },
+    {
+      "source": 31,
+      "target": 58,
+      "weight": 0.6603
+    },
+    {
+      "source": 31,
+      "target": 59,
+      "weight": 0.7071
+    },
+    {
+      "source": 31,
+      "target": 68,
+      "weight": 0.7346
+    },
+    {
+      "source": 31,
+      "target": 33,
+      "weight": 0.6426
+    },
+    {
+      "source": 58,
+      "target": 59,
+      "weight": 0.8812
+    },
+    {
+      "source": 58,
+      "target": 68,
+      "weight": 0.7611
+    },
+    {
+      "source": 58,
+      "target": 38,
+      "weight": 0.6171
+    },
+    {
+      "source": 59,
+      "target": 68,
+      "weight": 0.7132
+    },
+    {
+      "source": 59,
+      "target": 33,
+      "weight": 0.6342
+    },
+    {
+      "source": 59,
+      "target": 38,
+      "weight": 0.6682
+    }
+  ]
+}

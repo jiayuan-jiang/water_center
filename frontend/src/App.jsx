@@ -8,24 +8,40 @@ import PlatformSelect from './components/PlatformSelect'
 import ModeSelect from './components/ModeSelect'
 import OutlierTable from './components/OutlierTable'
 import OutlierDetail from './components/OutlierDetail'
+import NetworkGraph from './components/NetworkGraph'
+
+function ViewTabs({ view, onChange }) {
+  return (
+    <div className="view-tabs">
+      <button className={`view-tab${view === 'list' ? ' view-tab--active' : ''}`}
+              onClick={() => onChange('list')}>List</button>
+      <button className={`view-tab${view === 'network' ? ' view-tab--active' : ''}`}
+              onClick={() => onChange('network')}>Similarity Network</button>
+    </div>
+  )
+}
 
 export default function App() {
   const [platform, setPlatform]             = useState(null)   // null = landing page
   const [mode, setMode]                     = useState(null)   // null = mode selection
+  const [view, setView]                     = useState('list') // 'list' | 'network'
   const [meta, setMeta]                     = useState(null)
   const [topics, setTopics]                 = useState([])
   const [currentTopic, setCurrentTopic]     = useState(null)
   const [outlierMeta, setOutlierMeta]       = useState(null)
   const [currentCluster, setCurrentCluster] = useState(null)
+  const [network, setNetwork]               = useState(null)
 
   const resetAll = () => {
     setPlatform(null)
     setMode(null)
+    setView('list')
     setCurrentTopic(null)
     setCurrentCluster(null)
   }
   const backToMode = () => {
     setMode(null)
+    setView('list')
     setCurrentTopic(null)
     setCurrentCluster(null)
   }
@@ -51,6 +67,19 @@ export default function App() {
       .then(setOutlierMeta)
       .catch(() => setOutlierMeta({ clusters: [] }))
   }, [platform, mode])
+
+  useEffect(() => {
+    setView('list')
+  }, [platform, mode])
+
+  useEffect(() => {
+    if (!platform || !mode || mode === 'landing' || view !== 'network') return
+    setNetwork(null)
+    fetch(`data/network/${platform}/${mode}.json`)
+      .then(r => r.ok ? r.json() : null)
+      .then(setNetwork)
+      .catch(() => setNetwork(null))
+  }, [platform, mode, view])
 
   // ── Landing: platform selection ───────────────────────────────────────────
   if (!platform) {
@@ -107,7 +136,16 @@ export default function App() {
                 ranked by novelty × recency · generated {outlierMeta.generated}
               </p>
               <h2 className="section">Outlier Signals</h2>
-              <OutlierTable clusters={outlierMeta.clusters} onSelect={setCurrentCluster} />
+              <ViewTabs view={view} onChange={setView} />
+              {view === 'network' ? (
+                network ? (
+                  <NetworkGraph data={network} onSelectNode={() => {}} />
+                ) : (
+                  <p className="loading-state">Loading similarity network…</p>
+                )
+              ) : (
+                <OutlierTable clusters={outlierMeta.clusters} onSelect={setCurrentCluster} />
+              )}
             </>
           ) : (
             <p className="meta-bar">Loading outlier signals…</p>
@@ -141,7 +179,16 @@ export default function App() {
                     onPlatform={resetAll} onMode={backToMode} />
         <MetaBar topics={topics} generated={meta?.generated} platform={platform} />
         <h2 className="section">Topics</h2>
-        <TopicTable topics={topics} activeTopic={null} onSelect={setCurrentTopic} />
+        <ViewTabs view={view} onChange={setView} />
+        {view === 'network' ? (
+          network ? (
+            <NetworkGraph data={network} onSelectNode={() => {}} />
+          ) : (
+            <p className="loading-state">Loading similarity network…</p>
+          )
+        ) : (
+          <TopicTable topics={topics} activeTopic={null} onSelect={setCurrentTopic} />
+        )}
       </div>
     </>
   )

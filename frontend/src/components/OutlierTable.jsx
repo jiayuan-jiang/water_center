@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import { EmotionBadge } from '../emotions'
 
 function WaterBadge({ value }) {
   if (value === true) return <span className="water-badge water-badge--yes">water ✓</span>
@@ -55,6 +56,7 @@ export default function OutlierTable({ clusters, onSelect }) {
         <tr>
           <th>#</th>
           <th>Candidate · Keywords</th>
+          <th>Mood</th>
           <SortHeader label="Docs" field="docs" sort={sort} onSort={handleSort} />
           <SortHeader label="Novelty" field="novelty" sort={sort} onSort={handleSort} />
           <SortHeader label="Recency" field="recency" sort={sort} onSort={handleSort} />
@@ -72,6 +74,7 @@ export default function OutlierTable({ clusters, onSelect }) {
                 {c.keywords.slice(0, 6).map(k => <span key={k} className="kw">{k}</span>)}
               </div>
             </td>
+            <td><EmotionBadge emotion={c.emotion?.dominant} /></td>
             <td className="num-cell">{c.n_docs}</td>
             <td className="num-cell">{c.novelty.toFixed(2)}</td>
             <td className="num-cell">{Math.round(c.recency * 100)}%</td>
