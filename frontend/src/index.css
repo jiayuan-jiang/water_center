@@ -375,6 +375,18 @@ header p  { font-size: 0.85rem; margin-top: 6px; color: var(--header-subtitle); 
 }
 
 /* ── Outlier table ── */
+.outlier-table th.sortable-th {
+  cursor: pointer;
+  user-select: none;
+}
+.outlier-table th.sortable-th:hover { background: #013a63; }
+.sort-arrow {
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 0.7rem;
+  color: #7a97b8;
+}
+.sort-arrow--active { color: var(--um-maize); }
 .outlier-table td.num-cell {
   width: 70px;
   text-align: right;
