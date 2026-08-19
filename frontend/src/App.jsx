@@ -233,7 +233,7 @@ export default function App() {
         <ViewTabs view={view} onChange={setView} />
         {view === 'network' ? (
           network ? (
-            <NetworkGraph data={network} onSelectNode={() => {}} steepById={steepById} />
+            <NetworkGraph data={network} onOpenDetail={openNetworkDetail} steepById={steepById} />
           ) : (
             <p className="loading-state">Loading similarity network…</p>
           )
