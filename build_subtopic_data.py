@@ -46,6 +46,20 @@ def load_bluesky_authors(corpus_path):
     return authors
 
 
+def load_emotion_by_doc(platform):
+    """Per-comment emotion labels — same source build_docs_data.py joins in
+    for main topic comments (data/analysis/sentiment_docs_{platform}.csv).
+    Subtopic comment JSON was missing this field entirely."""
+    path = f"data/analysis/sentiment_docs_{platform}.csv"
+    if not os.path.exists(path):
+        return {}
+    emotion_by_doc = {}
+    with open(path, newline="", encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            emotion_by_doc[row["id"]] = row["emotion"]
+    return emotion_by_doc
+
+
 def make_reddit_url(cid, post_id, subreddit):
     if post_id and cid:
         return f"https://www.reddit.com/r/{subreddit}/comments/{post_id}/_/{cid}/"
@@ -76,6 +90,8 @@ def build_platform(platform):
     bsky_authors = {}
     if platform == "bluesky":
         bsky_authors = load_bluesky_authors(cfg["corpus"])
+
+    emotion_by_doc = load_emotion_by_doc(platform)
 
     for topic in summaries:
         tid = topic["topic_id"]
@@ -134,12 +150,13 @@ def build_platform(platform):
                     url = make_bluesky_url(cid, bsky_authors.get(cid, ""))
                     source = "bluesky"
                 comments.append({
-                    "id":     cid,
-                    "source": source,
-                    "score":  int(r["score"]),
-                    "date":   ts_to_date(r["created_utc"]),
-                    "text":   r["text"],
-                    "url":    url,
+                    "id":      cid,
+                    "source":  source,
+                    "score":   int(r["score"]),
+                    "date":    ts_to_date(r["created_utc"]),
+                    "text":    r["text"],
+                    "url":     url,
+                    "emotion": emotion_by_doc.get(cid),
                 })
             gen = st_info.get("generated", {})
             out = {
