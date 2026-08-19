@@ -46,7 +46,6 @@ export default function DetailPanel({ topic, platform }) {
   }, [platform])
 
   const handleSubtopicSelect = useCallback((subtopicId) => {
-    setActiveEmotion(null)
     if (subtopicId === activeSubtopic) {
       setActiveSubtopic(null)
       setSubtopicComments(null)
@@ -61,13 +60,7 @@ export default function DetailPanel({ topic, platform }) {
   }, [activeSubtopic, platform, topic.id])
 
   const handleEmotionSelect = useCallback((emotion) => {
-    if (emotion === activeEmotion) {
-      setActiveEmotion(null)
-      return
-    }
-    setActiveEmotion(emotion)
-    setActiveSubtopic(null)
-    setSubtopicComments(null)
+    setActiveEmotion(emotion === activeEmotion ? null : emotion)
   }, [activeEmotion])
 
   // Find which subtopic owns a given comment ID, then select it and scroll
@@ -106,13 +99,13 @@ export default function DetailPanel({ topic, platform }) {
     subtopicData?.subtopics.flatMap(st => st.key_quotes.map(q => q.id)) ?? []
   )
 
-  const emotionFilteredComments = activeEmotion
-    ? (data?.comments ?? []).filter(c => c.emotion === activeEmotion)
+  const baseComments = activeSubtopic !== null
+    ? (subtopicComments ?? [])
     : (data?.comments ?? [])
 
-  const displayedComments = activeSubtopic !== null
-    ? (subtopicComments ?? [])
-    : emotionFilteredComments
+  const displayedComments = activeEmotion
+    ? baseComments.filter(c => c.emotion === activeEmotion)
+    : baseComments
 
   const unit = platform === 'reddit' ? 'comments' : 'posts'
 
@@ -149,13 +142,13 @@ export default function DetailPanel({ topic, platform }) {
         <EmotionPieChart
           pct={data?.emotion?.pct}
           title="Emotion breakdown"
-          selected={activeSubtopic === null ? activeEmotion : null}
+          selected={activeEmotion}
           onSelect={handleEmotionSelect}
         />
 
         <div className="comment-section-header">
           <span className="comment-section-title">Comments</span>
-          {activeEmotion && activeSubtopic === null && (
+          {activeEmotion && (
             <button className="filter-pill filter-pill--active" onClick={() => setActiveEmotion(null)}>
               {activeEmotion} ✕
             </button>
@@ -188,7 +181,7 @@ export default function DetailPanel({ topic, platform }) {
             : !data && activeSubtopic === null
               ? <div className="loading-state">Loading…</div>
               : displayedComments.length === 0
-                ? <div className="loading-state">No comments tagged with this emotion.</div>
+                ? <div className="loading-state">No comments match the current filters.</div>
                 : displayedComments.map(c => (
                 <CommentCard
                   key={c.id}
