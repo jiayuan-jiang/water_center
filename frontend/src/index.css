@@ -784,6 +784,18 @@ h2.section {
   color: var(--text);
   display: inline-block;
 }
+.emotion-pie-legend-row--selected { background: var(--active-bg); font-weight: bold; }
+.emotion-pie-hint {
+  margin: 0 18px 12px;
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  font-family: "Courier New", monospace;
+}
+
+/* ── Emotion breakdown + Comments grouped together ── */
+.detail-comments-unit { border-top: 1px solid var(--border); }
+.detail-comments-unit .emotion-pie { border-top: none; border-bottom: none; }
+.detail-comments-unit .comment-section-header { border-top: 1px solid var(--border-light); }
 
 /* ── STEEP tags ── */
 .steep-badges {

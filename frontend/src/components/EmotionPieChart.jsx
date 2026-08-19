@@ -38,7 +38,7 @@ function arcPath(startDeg, endDeg) {
   return `M ${CX} ${CY} L ${x1} ${y1} A ${R} ${R} 0 ${large} 1 ${x2} ${y2} Z`
 }
 
-export default function EmotionPieChart({ pct, title }) {
+export default function EmotionPieChart({ pct, title, selected, onSelect }) {
   const [hovered, setHovered] = useState(null)
   if (!pct) return null
 
@@ -57,6 +57,13 @@ export default function EmotionPieChart({ pct, title }) {
   })
 
   const hoveredSlice = withAngles.find(s => s.key === hovered)
+  const clickable = typeof onSelect === 'function'
+  const isEmphasized = key => hovered === key || selected === key
+  const isDimmed = key => {
+    if (hovered) return hovered !== key
+    if (selected) return selected !== key
+    return false
+  }
 
   return (
     <div className="emotion-pie">
@@ -75,13 +82,14 @@ export default function EmotionPieChart({ pct, title }) {
               <g key={s.key}
                  onMouseEnter={() => setHovered(s.key)}
                  onMouseLeave={() => setHovered(null)}
-                 style={{ cursor: 'default' }}>
+                 onClick={() => onSelect?.(s.key)}
+                 style={{ cursor: clickable ? 'pointer' : 'default' }}>
                 <path
                   d={d}
                   fill={EMOTION_COLOR[s.key]}
-                  stroke={hovered === s.key ? '#fff' : 'none'}
-                  strokeWidth={hovered === s.key ? 2 : 0}
-                  opacity={hovered && hovered !== s.key ? 0.55 : 1}
+                  stroke={isEmphasized(s.key) ? '#fff' : 'none'}
+                  strokeWidth={isEmphasized(s.key) ? 2 : 0}
+                  opacity={isDimmed(s.key) ? 0.55 : 1}
                 />
                 <title>{`${s.key} ${s.value.toFixed(1)}%`}</title>
                 {showLabel && (
@@ -102,9 +110,11 @@ export default function EmotionPieChart({ pct, title }) {
           {withAngles.map(s => (
             <div
               key={s.key}
-              className={`emotion-pie-legend-row${hovered === s.key ? ' emotion-pie-legend-row--hover' : ''}`}
+              className={`emotion-pie-legend-row${hovered === s.key ? ' emotion-pie-legend-row--hover' : ''}${selected === s.key ? ' emotion-pie-legend-row--selected' : ''}`}
               onMouseEnter={() => setHovered(s.key)}
               onMouseLeave={() => setHovered(null)}
+              onClick={() => onSelect?.(s.key)}
+              style={{ cursor: clickable ? 'pointer' : 'default' }}
             >
               <span className="emotion-pie-swatch" style={{ background: EMOTION_COLOR[s.key] }} />
               <span className="emotion-pie-label">{EMOTION_EMOJI[s.key]} {s.key}</span>
@@ -116,6 +126,13 @@ export default function EmotionPieChart({ pct, title }) {
       {hoveredSlice && (
         <div className="emotion-pie-tooltip">
           {EMOTION_EMOJI[hoveredSlice.key]} <strong>{hoveredSlice.value.toFixed(1)}%</strong> {hoveredSlice.key}
+        </div>
+      )}
+      {clickable && (
+        <div className="emotion-pie-hint">
+          {selected
+            ? `Showing comments tagged ${EMOTION_EMOJI[selected]} ${selected} — click again to clear`
+            : 'Click a slice to filter the comments below'}
         </div>
       )}
     </div>

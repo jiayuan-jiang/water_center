@@ -12,6 +12,7 @@ export default function DetailPanel({ topic, platform }) {
   const [activeSubtopic, setActiveSubtopic]   = useState(null)
   const [subtopicComments, setSubtopicComments] = useState(null)
   const [subtopicLoading, setSubtopicLoading] = useState(false)
+  const [activeEmotion, setActiveEmotion]     = useState(null)
   const commentListRef = useRef(null)
 
   useEffect(() => {
@@ -19,6 +20,7 @@ export default function DetailPanel({ topic, platform }) {
     setSubtopicData(null)
     setActiveSubtopic(null)
     setSubtopicComments(null)
+    setActiveEmotion(null)
     const base = platform === 'reddit' ? 'data/topics' : `data/${platform}/topics`
     fetch(`${base}/t${topic.id}.json`)
       .then(r => r.json())
@@ -44,6 +46,7 @@ export default function DetailPanel({ topic, platform }) {
   }, [platform])
 
   const handleSubtopicSelect = useCallback((subtopicId) => {
+    setActiveEmotion(null)
     if (subtopicId === activeSubtopic) {
       setActiveSubtopic(null)
       setSubtopicComments(null)
@@ -56,6 +59,16 @@ export default function DetailPanel({ topic, platform }) {
       .then(d => { setSubtopicComments(d.comments); setSubtopicLoading(false) })
       .catch(() => setSubtopicLoading(false))
   }, [activeSubtopic, platform, topic.id])
+
+  const handleEmotionSelect = useCallback((emotion) => {
+    if (emotion === activeEmotion) {
+      setActiveEmotion(null)
+      return
+    }
+    setActiveEmotion(emotion)
+    setActiveSubtopic(null)
+    setSubtopicComments(null)
+  }, [activeEmotion])
 
   // Find which subtopic owns a given comment ID, then select it and scroll
   const handleCiteClick = useCallback((id) => {
@@ -74,6 +87,7 @@ export default function DetailPanel({ topic, platform }) {
     if (activeSubtopic === ownerSubtopic.subtopic_id) {
       doScroll()
     } else {
+      setActiveEmotion(null)
       setActiveSubtopic(ownerSubtopic.subtopic_id)
       setSubtopicLoading(true)
       fetch(`data/subtopics/${platform}/t${topic.id}_s${ownerSubtopic.subtopic_id}.json`)
@@ -92,9 +106,13 @@ export default function DetailPanel({ topic, platform }) {
     subtopicData?.subtopics.flatMap(st => st.key_quotes.map(q => q.id)) ?? []
   )
 
+  const emotionFilteredComments = activeEmotion
+    ? (data?.comments ?? []).filter(c => c.emotion === activeEmotion)
+    : (data?.comments ?? [])
+
   const displayedComments = activeSubtopic !== null
     ? (subtopicComments ?? [])
-    : (data?.comments ?? [])
+    : emotionFilteredComments
 
   const unit = platform === 'reddit' ? 'comments' : 'posts'
 
@@ -118,8 +136,6 @@ export default function DetailPanel({ topic, platform }) {
 
       <TrendChart trendData={trendData} topicId={topic.id} />
 
-      <EmotionPieChart pct={data?.emotion?.pct} title="Emotion breakdown" />
-
       {subtopicData && (
         <SubtopicPanel
           subtopics={subtopicData.subtopics}
@@ -129,36 +145,51 @@ export default function DetailPanel({ topic, platform }) {
         />
       )}
 
-      <div className="comment-section-header">
-        <span className="comment-section-title">Comments</span>
-        {subtopicData && (
-          <div className="subtopic-filter-bar">
-            <button
-              className={`filter-pill${activeSubtopic === null ? ' filter-pill--active' : ''}`}
-              onClick={() => { setActiveSubtopic(null); setSubtopicComments(null) }}
-            >
-              All
-            </button>
-            {subtopicData.subtopics.map(st => (
-              <button
-                key={st.subtopic_id}
-                className={`filter-pill${activeSubtopic === st.subtopic_id ? ' filter-pill--active' : ''}`}
-                onClick={() => handleSubtopicSelect(st.subtopic_id)}
-                title={st.label}
-              >
-                {st.label.length > 32 ? st.label.slice(0, 32) + '…' : st.label}
-              </button>
-            ))}
-          </div>
-        )}
-      </div>
+      <div className="detail-comments-unit">
+        <EmotionPieChart
+          pct={data?.emotion?.pct}
+          title="Emotion breakdown"
+          selected={activeSubtopic === null ? activeEmotion : null}
+          onSelect={handleEmotionSelect}
+        />
 
-      <div id="comment-list" ref={commentListRef}>
-        {subtopicLoading
-          ? <div className="loading-state">Loading…</div>
-          : !data && activeSubtopic === null
+        <div className="comment-section-header">
+          <span className="comment-section-title">Comments</span>
+          {activeEmotion && activeSubtopic === null && (
+            <button className="filter-pill filter-pill--active" onClick={() => setActiveEmotion(null)}>
+              {activeEmotion} ✕
+            </button>
+          )}
+          {subtopicData && (
+            <div className="subtopic-filter-bar">
+              <button
+                className={`filter-pill${activeSubtopic === null ? ' filter-pill--active' : ''}`}
+                onClick={() => { setActiveSubtopic(null); setSubtopicComments(null) }}
+              >
+                All
+              </button>
+              {subtopicData.subtopics.map(st => (
+                <button
+                  key={st.subtopic_id}
+                  className={`filter-pill${activeSubtopic === st.subtopic_id ? ' filter-pill--active' : ''}`}
+                  onClick={() => handleSubtopicSelect(st.subtopic_id)}
+                  title={st.label}
+                >
+                  {st.label.length > 32 ? st.label.slice(0, 32) + '…' : st.label}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+
+        <div id="comment-list" ref={commentListRef}>
+          {subtopicLoading
             ? <div className="loading-state">Loading…</div>
-            : displayedComments.map(c => (
+            : !data && activeSubtopic === null
+              ? <div className="loading-state">Loading…</div>
+              : displayedComments.length === 0
+                ? <div className="loading-state">No comments tagged with this emotion.</div>
+                : displayedComments.map(c => (
                 <CommentCard
                   key={c.id}
                   comment={c}
@@ -166,7 +197,8 @@ export default function DetailPanel({ topic, platform }) {
                   highlighted={citedIds.has(c.id)}
                 />
               ))
-        }
+          }
+        </div>
       </div>
     </div>
   )
