@@ -33,13 +33,13 @@
       "emotion": {
         "dominant": "neutral",
         "pct": {
-          "neutral": 58.6,
-          "fear": 6.8,
-          "joy": 21.6,
-          "surprise": 5.6,
-          "sadness": 4.0,
-          "anger": 1.2,
-          "disgust": 2.2
+          "neutral": 51.1,
+          "fear": 0.4,
+          "joy": 40.1,
+          "surprise": 3.6,
+          "sadness": 3.9,
+          "anger": 0.8,
+          "disgust": 0.3
         }
       },
       "steep": {
@@ -82,13 +82,13 @@
       "emotion": {
         "dominant": "neutral",
         "pct": {
-          "neutral": 60.5,
-          "fear": 27.4,
-          "joy": 0.5,
-          "surprise": 0.8,
-          "sadness": 9.3,
+          "neutral": 76.7,
+          "fear": 9.6,
+          "joy": 1.1,
+          "surprise": 1.1,
+          "sadness": 11.2,
           "anger": 0.3,
-          "disgust": 1.1
+          "disgust": 0.0
         }
       },
       "steep": {
@@ -132,13 +132,13 @@
       "emotion": {
         "dominant": "neutral",
         "pct": {
-          "neutral": 63.5,
-          "fear": 13.2,
-          "joy": 8.4,
-          "surprise": 1.7,
-          "sadness": 3.9,
-          "anger": 5.1,
-          "disgust": 4.2
+          "neutral": 51.1,
+          "fear": 2.8,
+          "joy": 19.9,
+          "surprise": 2.0,
+          "sadness": 7.0,
+          "anger": 16.0,
+          "disgust": 1.1
         }
       },
       "steep": {
@@ -178,13 +178,13 @@
       "emotion": {
         "dominant": "sadness",
         "pct": {
-          "neutral": 8.7,
-          "fear": 32.7,
-          "joy": 1.3,
+          "neutral": 34.0,
+          "fear": 1.3,
+          "joy": 4.0,
           "surprise": 0.0,
-          "sadness": 50.7,
-          "anger": 1.3,
-          "disgust": 5.3
+          "sadness": 60.0,
+          "anger": 0.7,
+          "disgust": 0.0
         }
       },
       "steep": {
@@ -228,13 +228,13 @@
       "emotion": {
         "dominant": "neutral",
         "pct": {
-          "neutral": 69.9,
-          "fear": 12.5,
-          "joy": 2.2,
-          "surprise": 3.7,
-          "sadness": 7.4,
+          "neutral": 69.1,
+          "fear": 2.2,
+          "joy": 8.8,
+          "surprise": 4.4,
+          "sadness": 13.2,
           "anger": 2.2,
-          "disgust": 2.2
+          "disgust": 0.0
         }
       },
       "steep": {
@@ -277,13 +277,13 @@
       "emotion": {
         "dominant": "neutral",
         "pct": {
-          "neutral": 45.1,
-          "fear": 25.4,
-          "joy": 18.9,
+          "neutral": 59.0,
+          "fear": 4.9,
+          "joy": 27.0,
           "surprise": 2.5,
-          "sadness": 2.5,
-          "anger": 0.8,
-          "disgust": 4.9
+          "sadness": 3.3,
+          "anger": 2.5,
+          "disgust": 0.8
         }
       },
       "steep": {
@@ -327,13 +327,13 @@
       "emotion": {
         "dominant": "neutral",
         "pct": {
-          "neutral": 51.5,
-          "fear": 10.1,
-          "joy": 2.0,
+          "neutral": 55.6,
+          "fear": 0.0,
+          "joy": 5.1,
           "surprise": 0.0,
-          "sadness": 2.0,
-          "anger": 27.3,
-          "disgust": 7.1
+          "sadness": 1.0,
+          "anger": 38.4,
+          "disgust": 0.0
         }
       },
       "steep": {
@@ -375,15 +375,15 @@
         ]
       },
       "emotion": {
-        "dominant": "disgust",
+        "dominant": "neutral",
         "pct": {
-          "neutral": 37.9,
-          "fear": 14.9,
-          "joy": 0.0,
-          "surprise": 0.0,
-          "sadness": 1.1,
-          "anger": 6.9,
-          "disgust": 39.1
+          "neutral": 50.6,
+          "fear": 5.7,
+          "joy": 3.4,
+          "surprise": 2.3,
+          "sadness": 16.1,
+          "anger": 19.5,
+          "disgust": 2.3
         }
       },
       "steep": {
@@ -426,13 +426,13 @@
       "emotion": {
         "dominant": "neutral",
         "pct": {
-          "neutral": 64.2,
-          "fear": 4.9,
-          "joy": 17.3,
-          "surprise": 2.5,
+          "neutral": 51.9,
+          "fear": 2.5,
+          "joy": 37.0,
+          "surprise": 0.0,
           "sadness": 2.5,
-          "anger": 2.5,
-          "disgust": 6.2
+          "anger": 4.9,
+          "disgust": 1.2
         }
       },
       "steep": {
@@ -473,15 +473,15 @@
         ]
       },
       "emotion": {
-        "dominant": "fear",
+        "dominant": "neutral",
         "pct": {
-          "neutral": 18.5,
-          "fear": 37.0,
-          "joy": 2.5,
+          "neutral": 40.7,
+          "fear": 13.6,
+          "joy": 4.9,
           "surprise": 0.0,
-          "sadness": 11.1,
-          "anger": 14.8,
-          "disgust": 16.0
+          "sadness": 22.2,
+          "anger": 16.0,
+          "disgust": 2.5
         }
       },
       "steep": {
@@ -520,13 +520,13 @@
       "emotion": {
         "dominant": "neutral",
         "pct": {
-          "neutral": 56.5,
-          "fear": 14.5,
-          "joy": 1.6,
-          "surprise": 3.2,
-          "sadness": 1.6,
+          "neutral": 59.7,
+          "fear": 6.5,
+          "joy": 16.1,
+          "surprise": 6.5,
+          "sadness": 6.5,
           "anger": 4.8,
-          "disgust": 17.7
+          "disgust": 0.0
         }
       },
       "steep": {
@@ -565,13 +565,13 @@
       "emotion": {
         "dominant": "neutral",
         "pct": {
-          "neutral": 66.7,
-          "fear": 13.3,
-          "joy": 3.3,
+          "neutral": 71.7,
+          "fear": 3.3,
+          "joy": 11.7,
           "surprise": 0.0,
-          "sadness": 1.7,
-          "anger": 0.0,
-          "disgust": 15.0
+          "sadness": 10.0,
+          "anger": 1.7,
+          "disgust": 1.7
         }
       },
       "steep": {
@@ -614,13 +614,13 @@
       "emotion": {
         "dominant": "neutral",
         "pct": {
-          "neutral": 62.1,
-          "fear": 10.3,
-          "joy": 3.4,
-          "surprise": 0.0,
-          "sadness": 1.7,
-          "anger": 15.5,
-          "disgust": 6.9
+          "neutral": 63.8,
+          "fear": 1.7,
+          "joy": 1.7,
+          "surprise": 1.7,
+          "sadness": 5.2,
+          "anger": 24.1,
+          "disgust": 1.7
         }
       },
       "steep": {
@@ -662,15 +662,15 @@
         ]
       },
       "emotion": {
-        "dominant": "neutral",
+        "dominant": "anger",
         "pct": {
-          "neutral": 38.9,
-          "fear": 16.7,
-          "joy": 0.0,
+          "neutral": 41.7,
+          "fear": 0.0,
+          "joy": 2.8,
           "surprise": 0.0,
-          "sadness": 2.8,
-          "anger": 38.9,
-          "disgust": 2.8
+          "sadness": 5.6,
+          "anger": 50.0,
+          "disgust": 0.0
         }
       },
       "steep": {
@@ -712,12 +712,12 @@
         ]
       },
       "emotion": {
-        "dominant": "joy",
+        "dominant": "neutral",
         "pct": {
-          "neutral": 38.2,
+          "neutral": 55.9,
           "fear": 0.0,
-          "joy": 52.9,
-          "surprise": 8.8,
+          "joy": 44.1,
+          "surprise": 0.0,
           "sadness": 0.0,
           "anger": 0.0,
           "disgust": 0.0
@@ -760,11 +760,11 @@
       "emotion": {
         "dominant": "neutral",
         "pct": {
-          "neutral": 65.6,
+          "neutral": 68.8,
           "fear": 0.0,
-          "joy": 25.0,
-          "surprise": 3.1,
-          "sadness": 6.2,
+          "joy": 28.1,
+          "surprise": 0.0,
+          "sadness": 3.1,
           "anger": 0.0,
           "disgust": 0.0
         }
