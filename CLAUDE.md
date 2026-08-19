@@ -16,6 +16,17 @@ Before touching any script, check `context/task-queue.md` for the current in-pro
 
 ---
 
+## Multi-Session Worktree Protocol
+
+**Every task runs in its own git worktree — never work directly on `main` in the primary checkout.** Multiple Claude Code sessions run in parallel on this project; without worktrees, sessions silently stomp on each other's edits to the same files (this happened — see `context/state.md` history around 2026-08-19).
+
+- At the start of any task, call `EnterWorktree` before editing anything (skip only for a pure read/research task that touches no files).
+- Give the worktree a name that reflects the task (e.g. `EnterWorktree({ name: "help-guide-comments-filter" })`).
+- When the task is done: commit inside the worktree, merge/push from there, then `ExitWorktree` — `action: "remove"` once merged, `action: "keep"` if the work should stay around for later.
+- This applies to every session, not just ones the user tags "worktree" — treat this file as the standing instruction that triggers `EnterWorktree`'s usage condition.
+
+---
+
 ## Project Structure
 
 ```
