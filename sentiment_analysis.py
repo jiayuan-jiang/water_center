@@ -24,7 +24,7 @@ from pathlib import Path
 from transformers import pipeline
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--platform", choices=["reddit", "bluesky"], default="reddit")
+parser.add_argument("--platform", choices=["reddit", "bluesky", "mastodon"], default="reddit")
 parser.add_argument("--batch-size", type=int, default=64)
 args = parser.parse_args()
 
@@ -36,6 +36,10 @@ if args.platform == "bluesky":
         0, 1, 4, 5, 10, 13, 15, 18, 19, 26, 27, 28, 29, 31,
         32, 33, 35, 36, 39, 41, 43, 45, 46, 48, 49, 50, 53, 59,
     }
+elif args.platform == "mastodon":
+    DOCS_FILE = Path("data/topics_mastodon/documents_with_topics.csv")
+    # Only the 16 labeled valid-signal topics (same set as subtopic_model.py)
+    VALID_TOPICS = {0, 1, 2, 4, 5, 6, 8, 10, 11, 12, 14, 15, 17, 21, 22, 24}
 else:
     DOCS_FILE = Path("data/topics/documents_with_topics.csv")
     VALID_TOPICS = None  # all 34 topics are labeled; only -1 is excluded

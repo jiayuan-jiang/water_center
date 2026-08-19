@@ -87,7 +87,7 @@ export default function OutlierDetail({ cluster, platform }) {
   }
 
   const citedIds = new Set(cluster.key_quotes?.map(q => q.id) ?? [])
-  const unit = platform === 'bluesky' ? 'posts' : 'comments'
+  const unit = platform === 'reddit' ? 'comments' : 'posts'
 
   return (
     <div id="detail">

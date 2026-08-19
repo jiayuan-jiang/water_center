@@ -1,0 +1,891 @@
+{
+  "platform": "mastodon",
+  "set": "outliers",
+  "threshold": 0.6,
+  "embedding_model": "all-MiniLM-L6-v2",
+  "generated": "2026-08-19",
+  "nodes": [
+    {
+      "id": 14,
+      "label": "Indigenous water and land connections under modernization",
+      "keywords": [
+        "indigenous",
+        "child",
+        "land",
+        "shores",
+        "edgar",
+        "women"
+      ],
+      "count": 11,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 36.4,
+          "fear": 9.1,
+          "joy": 18.2,
+          "surprise": 0.0,
+          "sadness": 9.1,
+          "anger": 27.3,
+          "disgust": 0.0
+        }
+      }
+    },
+    {
+      "id": 15,
+      "label": "Boil water advisories increase due to aging infrastructure",
+      "keywords": [
+        "water",
+        "boil",
+        "boil water",
+        "oakland",
+        "advisory",
+        "oakland county"
+      ],
+      "count": 16,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 62.5,
+          "fear": 18.8,
+          "joy": 0.0,
+          "surprise": 0.0,
+          "sadness": 6.2,
+          "anger": 6.2,
+          "disgust": 6.2
+        }
+      }
+    },
+    {
+      "id": 7,
+      "label": "Offshore wind development struggles under federal policy",
+      "keywords": [
+        "offshore wind",
+        "trump",
+        "offshore",
+        "wind",
+        "projects",
+        "approval"
+      ],
+      "count": 20,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 50.0,
+          "fear": 5.0,
+          "joy": 0.0,
+          "surprise": 0.0,
+          "sadness": 25.0,
+          "anger": 20.0,
+          "disgust": 0.0
+        }
+      }
+    },
+    {
+      "id": 30,
+      "label": "Flash drought threatens Ohio agriculture and water supply",
+      "keywords": [
+        "drought",
+        "ohio",
+        "climate",
+        "central ohio",
+        "climate change",
+        "flash"
+      ],
+      "count": 12,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 33.3,
+          "fear": 25.0,
+          "joy": 0.0,
+          "surprise": 16.7,
+          "sadness": 8.3,
+          "anger": 16.7,
+          "disgust": 0.0
+        }
+      }
+    },
+    {
+      "id": 17,
+      "label": "Political interference in water levels for personal recreation",
+      "keywords": [
+        "vance",
+        "jd",
+        "jd vance",
+        "river",
+        "level",
+        "water level"
+      ],
+      "count": 13,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 46.2,
+          "fear": 30.8,
+          "joy": 0.0,
+          "surprise": 0.0,
+          "sadness": 7.7,
+          "anger": 7.7,
+          "disgust": 7.7
+        }
+      }
+    },
+    {
+      "id": 10,
+      "label": "Increasing Muskegon River flood risks threaten communities",
+      "keywords": [
+        "muskegon",
+        "county",
+        "muskegon river",
+        "river",
+        "muskegon county",
+        "michigan"
+      ],
+      "count": 20,
+      "emotion": {
+        "dominant": "fear",
+        "pct": {
+          "neutral": 15.0,
+          "fear": 65.0,
+          "joy": 0.0,
+          "surprise": 0.0,
+          "sadness": 20.0,
+          "anger": 0.0,
+          "disgust": 0.0
+        }
+      }
+    },
+    {
+      "id": 27,
+      "label": "Upstream chemical dumping threatens creek ecosystems",
+      "keywords": [
+        "bees",
+        "creek",
+        "dead",
+        "year",
+        "fish",
+        "upstream"
+      ],
+      "count": 12,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 33.3,
+          "fear": 0.0,
+          "joy": 0.0,
+          "surprise": 0.0,
+          "sadness": 16.7,
+          "anger": 16.7,
+          "disgust": 33.3
+        }
+      }
+    },
+    {
+      "id": 22,
+      "label": "Lake Michigan beaches increasingly closed due to water quality",
+      "keywords": [
+        "michigan",
+        "beach",
+        "beaches",
+        "lake michigan",
+        "closed",
+        "michigan beach"
+      ],
+      "count": 25,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 36.0,
+          "fear": 16.0,
+          "joy": 4.0,
+          "surprise": 8.0,
+          "sadness": 32.0,
+          "anger": 4.0,
+          "disgust": 0.0
+        }
+      }
+    },
+    {
+      "id": 37,
+      "label": "Water infrastructure funding gaps threaten Great Lakes",
+      "keywords": [
+        "water",
+        "michigan",
+        "million",
+        "flint",
+        "infrastructure",
+        "mayor"
+      ],
+      "count": 24,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 62.5,
+          "fear": 12.5,
+          "joy": 8.3,
+          "surprise": 0.0,
+          "sadness": 12.5,
+          "anger": 4.2,
+          "disgust": 0.0
+        }
+      }
+    },
+    {
+      "id": 28,
+      "label": "Data center water demand strains municipal infrastructure",
+      "keywords": [
+        "data",
+        "data centers",
+        "centers",
+        "ypsilanti",
+        "moratorium",
+        "water"
+      ],
+      "count": 10,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 80.0,
+          "fear": 0.0,
+          "joy": 0.0,
+          "surprise": 0.0,
+          "sadness": 10.0,
+          "anger": 10.0,
+          "disgust": 0.0
+        }
+      }
+    },
+    {
+      "id": 20,
+      "label": "Lake Michigan water diversion to Wisconsin suburb",
+      "keywords": [
+        "river",
+        "rivers",
+        "bridge",
+        "michigan",
+        "book",
+        "detroit"
+      ],
+      "count": 22,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 59.1,
+          "fear": 13.6,
+          "joy": 9.1,
+          "surprise": 13.6,
+          "sadness": 4.5,
+          "anger": 0.0,
+          "disgust": 0.0
+        }
+      }
+    },
+    {
+      "id": 5,
+      "label": "Digital licensing of waterfront art",
+      "keywords": [
+        "prints",
+        "available",
+        "prints digital",
+        "digital",
+        "licensing",
+        "digital licensing"
+      ],
+      "count": 20,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 80.0,
+          "fear": 0.0,
+          "joy": 15.0,
+          "surprise": 0.0,
+          "sadness": 5.0,
+          "anger": 0.0,
+          "disgust": 0.0
+        }
+      }
+    },
+    {
+      "id": 19,
+      "label": "Shifting lakeshore tree ecosystems and community engagement",
+      "keywords": [
+        "trees",
+        "huron",
+        "lake huron",
+        "lake",
+        "lakeshore",
+        "inlet"
+      ],
+      "count": 12,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 41.7,
+          "fear": 25.0,
+          "joy": 16.7,
+          "surprise": 8.3,
+          "sadness": 8.3,
+          "anger": 0.0,
+          "disgust": 0.0
+        }
+      }
+    },
+    {
+      "id": 21,
+      "label": "Lakefront property rights and infrastructure disputes rising",
+      "keywords": [
+        "michigan",
+        "grand",
+        "township",
+        "pier",
+        "grand haven",
+        "haven"
+      ],
+      "count": 51,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 43.1,
+          "fear": 3.9,
+          "joy": 37.3,
+          "surprise": 5.9,
+          "sadness": 5.9,
+          "anger": 3.9,
+          "disgust": 0.0
+        }
+      }
+    },
+    {
+      "id": 23,
+      "label": "Unmarked waterfalls along Trans Canada Highway overlooked",
+      "keywords": [
+        "falls",
+        "mink",
+        "highway",
+        "waterfalls",
+        "canada highway",
+        "trans canada"
+      ],
+      "count": 21,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 52.4,
+          "fear": 14.3,
+          "joy": 14.3,
+          "surprise": 4.8,
+          "sadness": 9.5,
+          "anger": 0.0,
+          "disgust": 4.8
+        }
+      }
+    },
+    {
+      "id": 36,
+      "label": "Local opposition to AI data centers over water use",
+      "keywords": [
+        "water",
+        "energy",
+        "ford",
+        "wisconsin",
+        "massive",
+        "residents"
+      ],
+      "count": 30,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 43.3,
+          "fear": 10.0,
+          "joy": 10.0,
+          "surprise": 3.3,
+          "sadness": 0.0,
+          "anger": 26.7,
+          "disgust": 6.7
+        }
+      }
+    },
+    {
+      "id": 25,
+      "label": "Increased Great Lakes cruising and historic ship tourism",
+      "keywords": [
+        "michigan",
+        "island",
+        "mackinac",
+        "ferry",
+        "lake",
+        "lakes"
+      ],
+      "count": 87,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 59.8,
+          "fear": 8.0,
+          "joy": 23.0,
+          "surprise": 3.4,
+          "sadness": 3.4,
+          "anger": 2.3,
+          "disgust": 0.0
+        }
+      }
+    },
+    {
+      "id": 40,
+      "label": "Coalition mobilization for Great Lakes protection",
+      "keywords": [
+        "coalition",
+        "org",
+        "member",
+        "healthylakes",
+        "healthylakes org",
+        "spotlight"
+      ],
+      "count": 24,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 66.7,
+          "fear": 4.2,
+          "joy": 25.0,
+          "surprise": 0.0,
+          "sadness": 0.0,
+          "anger": 0.0,
+          "disgust": 4.2
+        }
+      }
+    },
+    {
+      "id": 32,
+      "label": "Lake aesthetics as community appreciation signal",
+      "keywords": [
+        "lake",
+        "big",
+        "today",
+        "color",
+        "day",
+        "blue"
+      ],
+      "count": 11,
+      "emotion": {
+        "dominant": "joy",
+        "pct": {
+          "neutral": 36.4,
+          "fear": 9.1,
+          "joy": 45.5,
+          "surprise": 9.1,
+          "sadness": 0.0,
+          "anger": 0.0,
+          "disgust": 0.0
+        }
+      }
+    },
+    {
+      "id": 33,
+      "label": "Shifting shorelines and inland lake dune dynamics",
+      "keywords": [
+        "water",
+        "lake",
+        "inland",
+        "dune",
+        "wake",
+        "walking"
+      ],
+      "count": 19,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 47.4,
+          "fear": 36.8,
+          "joy": 5.3,
+          "surprise": 5.3,
+          "sadness": 0.0,
+          "anger": 0.0,
+          "disgust": 5.3
+        }
+      }
+    },
+    {
+      "id": 12,
+      "label": "Aging research fleet limits Great Lakes monitoring",
+      "keywords": [
+        "sampling",
+        "monitoring",
+        "limnos",
+        "stations",
+        "research",
+        "ship"
+      ],
+      "count": 28,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 67.9,
+          "fear": 0.0,
+          "joy": 25.0,
+          "surprise": 3.6,
+          "sadness": 3.6,
+          "anger": 0.0,
+          "disgust": 0.0
+        }
+      }
+    },
+    {
+      "id": 31,
+      "label": "Celebrating and raising awareness of Great Lakes",
+      "keywords": [
+        "great",
+        "lakes",
+        "great lakes",
+        "lake",
+        "great lake",
+        "love"
+      ],
+      "count": 23,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 43.5,
+          "fear": 13.0,
+          "joy": 30.4,
+          "surprise": 4.3,
+          "sadness": 4.3,
+          "anger": 4.3,
+          "disgust": 0.0
+        }
+      }
+    },
+    {
+      "id": 26,
+      "label": "Lake Huron sunsets gain social media attention",
+      "keywords": [
+        "theme",
+        "today theme",
+        "today",
+        "icymi",
+        "lake huron",
+        "huron"
+      ],
+      "count": 38,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 47.4,
+          "fear": 7.9,
+          "joy": 36.8,
+          "surprise": 0.0,
+          "sadness": 0.0,
+          "anger": 5.3,
+          "disgust": 2.6
+        }
+      }
+    },
+    {
+      "id": 42,
+      "label": "Changing ice cover and cold-water recreation on Great Lakes",
+      "keywords": [
+        "lake",
+        "ice",
+        "cold",
+        "day",
+        "superior",
+        "lake superior"
+      ],
+      "count": 61,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 47.5,
+          "fear": 11.5,
+          "joy": 21.3,
+          "surprise": 9.8,
+          "sadness": 3.3,
+          "anger": 0.0,
+          "disgust": 6.6
+        }
+      }
+    },
+    {
+      "id": 35,
+      "label": "Continued GLRI funding needed for Great Lakes restoration",
+      "keywords": [
+        "glri",
+        "funding",
+        "federal funding",
+        "important",
+        "federal",
+        "restoring"
+      ],
+      "count": 10,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 80.0,
+          "fear": 0.0,
+          "joy": 10.0,
+          "surprise": 0.0,
+          "sadness": 0.0,
+          "anger": 0.0,
+          "disgust": 10.0
+        }
+      }
+    },
+    {
+      "id": 39,
+      "label": "Lake Superior sea smoke and changing winter conditions",
+      "keywords": [
+        "duluth",
+        "photo",
+        "superior",
+        "lake superior",
+        "sea smoke",
+        "sea"
+      ],
+      "count": 37,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 59.5,
+          "fear": 18.9,
+          "joy": 5.4,
+          "surprise": 5.4,
+          "sadness": 0.0,
+          "anger": 0.0,
+          "disgust": 10.8
+        }
+      }
+    },
+    {
+      "id": 29,
+      "label": "AOC delisting progress and remaining contamination concerns",
+      "keywords": [
+        "great lakes",
+        "great",
+        "lakes",
+        "concern",
+        "area concern",
+        "lakes water"
+      ],
+      "count": 18,
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 66.7,
+          "fear": 22.2,
+          "joy": 0.0,
+          "surprise": 0.0,
+          "sadness": 5.6,
+          "anger": 0.0,
+          "disgust": 5.6
+        }
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": 7,
+      "target": 36,
+      "weight": 0.6054
+    },
+    {
+      "source": 22,
+      "target": 21,
+      "weight": 0.7163
+    },
+    {
+      "source": 22,
+      "target": 25,
+      "weight": 0.6902
+    },
+    {
+      "source": 22,
+      "target": 33,
+      "weight": 0.6353
+    },
+    {
+      "source": 37,
+      "target": 21,
+      "weight": 0.6322
+    },
+    {
+      "source": 37,
+      "target": 36,
+      "weight": 0.6561
+    },
+    {
+      "source": 20,
+      "target": 21,
+      "weight": 0.6924
+    },
+    {
+      "source": 20,
+      "target": 25,
+      "weight": 0.7307
+    },
+    {
+      "source": 20,
+      "target": 32,
+      "weight": 0.6041
+    },
+    {
+      "source": 20,
+      "target": 33,
+      "weight": 0.6577
+    },
+    {
+      "source": 20,
+      "target": 31,
+      "weight": 0.6441
+    },
+    {
+      "source": 5,
+      "target": 26,
+      "weight": 0.602
+    },
+    {
+      "source": 19,
+      "target": 32,
+      "weight": 0.613
+    },
+    {
+      "source": 19,
+      "target": 33,
+      "weight": 0.6379
+    },
+    {
+      "source": 19,
+      "target": 31,
+      "weight": 0.6272
+    },
+    {
+      "source": 21,
+      "target": 25,
+      "weight": 0.7636
+    },
+    {
+      "source": 23,
+      "target": 33,
+      "weight": 0.6266
+    },
+    {
+      "source": 36,
+      "target": 29,
+      "weight": 0.6692
+    },
+    {
+      "source": 25,
+      "target": 32,
+      "weight": 0.6434
+    },
+    {
+      "source": 25,
+      "target": 33,
+      "weight": 0.6849
+    },
+    {
+      "source": 25,
+      "target": 12,
+      "weight": 0.6408
+    },
+    {
+      "source": 25,
+      "target": 31,
+      "weight": 0.6973
+    },
+    {
+      "source": 25,
+      "target": 39,
+      "weight": 0.7032
+    },
+    {
+      "source": 32,
+      "target": 33,
+      "weight": 0.7565
+    },
+    {
+      "source": 32,
+      "target": 31,
+      "weight": 0.8239
+    },
+    {
+      "source": 32,
+      "target": 26,
+      "weight": 0.6644
+    },
+    {
+      "source": 32,
+      "target": 42,
+      "weight": 0.7533
+    },
+    {
+      "source": 32,
+      "target": 39,
+      "weight": 0.7092
+    },
+    {
+      "source": 32,
+      "target": 29,
+      "weight": 0.6117
+    },
+    {
+      "source": 33,
+      "target": 12,
+      "weight": 0.6374
+    },
+    {
+      "source": 33,
+      "target": 31,
+      "weight": 0.6637
+    },
+    {
+      "source": 33,
+      "target": 42,
+      "weight": 0.6722
+    },
+    {
+      "source": 33,
+      "target": 39,
+      "weight": 0.711
+    },
+    {
+      "source": 12,
+      "target": 39,
+      "weight": 0.6352
+    },
+    {
+      "source": 31,
+      "target": 26,
+      "weight": 0.6248
+    },
+    {
+      "source": 31,
+      "target": 42,
+      "weight": 0.6921
+    },
+    {
+      "source": 31,
+      "target": 39,
+      "weight": 0.635
+    },
+    {
+      "source": 31,
+      "target": 29,
+      "weight": 0.7261
+    },
+    {
+      "source": 26,
+      "target": 42,
+      "weight": 0.6953
+    },
+    {
+      "source": 26,
+      "target": 39,
+      "weight": 0.668
+    },
+    {
+      "source": 42,
+      "target": 39,
+      "weight": 0.7329
+    }
+  ]
+}

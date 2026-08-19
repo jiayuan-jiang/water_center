@@ -1,5 +1,5 @@
 # Project State Snapshot
-_Last updated: 2026-07-30 (topic similarity network)_
+_Last updated: 2026-08-19 (Mastodon third platform)_
 
 ---
 
@@ -35,6 +35,28 @@ _Last updated: 2026-07-30 (topic similarity network)_
 Outlier rate: 53,826 / 125,226 = 43% (similar to Reddit's 44%)
 Notable noise topics: 9 (music), 11 (bsky artifacts), 16 (books), 34 (dogs)
 Topic 0 is anomalously large (33,659 docs = 27%) — catch-all general discussion
+
+---
+
+## Mastodon Data Inventory
+
+| File | Records | Notes |
+|------|---------|-------|
+| `data/mastodon_raw.jsonl` | 43,006 | 18 hashtags (6 lake names, 4 `greatlakes*`, 8 regional place-names), 2023-01 to 2026-07 |
+| `data/corpus_mastodon.jsonl` | 5,593 | After HTML-strip/lang/length/relevance/dedup filters |
+| `data/topics_mastodon/topic_summary.csv` | 26 rows | 25 topics + outlier cluster (-1) |
+| `data/topics_mastodon/documents_with_topics.csv` | 5,593 rows | Each doc with assigned topic |
+
+No full-text search exists on Mastodon (architecturally, unlike Bluesky — see
+`spec/mastodon-data.md`), so coverage comes from hashtag timelines only.
+`#ohio` (18,440) and `#michigan` (14,248) dominate raw volume but are mostly
+off-topic (sports/politics/local news) — the `KEEP_KEYWORDS` relevance filter
+in `preprocess_mastodon.py` is what actually makes the corpus usable (43,006 →
+5,593). Outlier rate 1,634/5,593 = 29%, residual noise within outliers 40%
+(comparable to Reddit's 41%). 9 of 25 topics excluded as noise (traffic
+crashes, road closures, a repeating news-bot byline artifact, restaurant
+openings, sponsor thank-you spam, Ohio state politics, garbled weather-bot
+text, political rally listings, Buckeyes sports).
 
 ---
 
@@ -192,6 +214,34 @@ plain SVG for rendering, no animation loop). Re-run `python topic_similarity_net
 - [x] Frontend outlier browser — platform → mode (Topics | Outlier Signals) → cluster detail
   with scores, monthly bars, grounded summary + cite-jump, full doc list
 - [x] `build_outlier_data.py` → `frontend/public/data/outliers/`; deployed via commit ff950dd
+
+### Done (Mastodon third platform, 2026-08-19)
+- [x] `scrape_mastodon.py` — hashtag-timeline scraper, checkpoint-resumable, 43,006 raw posts
+- [x] `preprocess_mastodon.py` — HTML-strip + relevance filter → 5,593 corpus docs
+- [x] BERTopic — 25 topics, 16 hand-labeled as signal (`spec/mastodon-data.md`)
+- [x] `build_docs_data.py` / `build_trend_data.py` / `subtopic_model.py` /
+  `build_subtopic_data.py` --platform mastodon
+- [x] Grounded sub-topic summaries — Gemini 2.5 Flash, 34/34, 0 errors
+- [x] Sentiment/emotion — RoBERTa (`sentiment_analysis.py`), feeds mood badges
+- [x] Outlier analysis — 46 micro-clusters, 27 pass relevance gate; emotion scored
+- [x] Similarity network (topics + outliers)
+- [x] Frontend: Mastodon as third platform card, `@handle@instance` comment
+  cards (brand purple `#6364FF`), all `platform === 'bluesky' ? A : B`
+  ternaries generalized to 3-way (Reddit is the no-prefix special case)
+- [x] Verified via Chrome: all views (Topics, Outlier Signals, Similarity
+  Network, deep links) render correctly, no console errors, Reddit/Bluesky
+  unaffected (regression-checked)
+- [x] LLM-judged steps (controversy_llm, steep_tag topics+outliers,
+  outlier_candidates) — OpenAI account hit its daily request quota
+  (10,000/10,000) mid-run; switched to **DeepSeek** (`DEEPSEEK_KEY` in `.env`,
+  OpenAI-compatible endpoint `https://api.deepseek.com`, model
+  `deepseek-chat`) via a new `--provider {openai,deepseek}` flag added to all
+  three scripts. 16/16 controversy scores, 16/16 + 27/27 STEEP tags, 27/27
+  grounded outlier candidates — all completed on DeepSeek. Re-ran
+  `build_steep_trend.py` / `build_docs_data.py` / `build_outlier_data.py` /
+  `topic_similarity_network.py` (both sets) to pick up the results;
+  re-verified in-browser (STEEP filter counts and controversy column now
+  populated, outlier clusters show grounded titles + water-related badge).
 
 ### In Progress
 - [ ] Team review of 497 outlier clusters on the website (E/K/N triage)

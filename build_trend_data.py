@@ -86,6 +86,25 @@ BLUESKY_TOPIC_LABELS = {
     59: "Coast Guard & Maritime Safety",
 }
 
+MASTODON_TOPIC_LABELS = {
+    0:  "General Great Lakes Discussion",
+    1:  "Flooding & Flood Warnings",
+    2:  "Great Lakes Restoration & Policy",
+    4:  "Lake Rescues & Boating Incidents",
+    5:  "Ice Cover & Winter Weather",
+    6:  "Beach Safety & Swim Advisories",
+    8:  "Environmental Policy & Regulation",
+    10: "PFAS & Chemical Contamination",
+    11: "Invasive Species & Wildlife",
+    12: "Wildfire Smoke & Air Quality",
+    14: "Fishing & Fish Populations",
+    15: "Algal Blooms",
+    17: "Data Centers & Water Consumption",
+    21: "Line 5 Pipeline & Litigation",
+    22: "Muskegon Waterfront Development",
+    24: "Grand River & Riverfront Projects",
+}
+
 PLATFORM_CONFIG = {
     "reddit": {
         "labels":      REDDIT_TOPIC_LABELS,
@@ -98,6 +117,12 @@ PLATFORM_CONFIG = {
         "docs_csv":    "data/topics_bluesky/documents_with_topics.csv",
         "out_path":    "docs/data/bluesky_topic_trends.json",
         "source":      "Bluesky via atproto searchPosts API",
+    },
+    "mastodon": {
+        "labels":      MASTODON_TOPIC_LABELS,
+        "docs_csv":    "data/topics_mastodon/documents_with_topics.csv",
+        "out_path":    "frontend/public/data/mastodon_topic_trends.json",
+        "source":      "Mastodon (mastodon.social) via hashtag timelines",
     },
 }
 
@@ -175,10 +200,10 @@ def build(platform: str):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--platform", choices=["reddit", "bluesky", "all"], default="reddit")
+    parser.add_argument("--platform", choices=["reddit", "bluesky", "mastodon", "all"], default="reddit")
     args = parser.parse_args()
 
-    platforms = ["reddit", "bluesky"] if args.platform == "all" else [args.platform]
+    platforms = ["reddit", "bluesky", "mastodon"] if args.platform == "all" else [args.platform]
     for p in platforms:
         build(p)
 

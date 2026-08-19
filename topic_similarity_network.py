@@ -32,18 +32,22 @@ SEED = 42
 TOPICS_JSON = {
     "reddit": Path("frontend/public/data/topics.json"),
     "bluesky": Path("frontend/public/data/bluesky/topics.json"),
+    "mastodon": Path("frontend/public/data/mastodon/topics.json"),
 }
 DOCS_WITH_TOPICS = {
     "reddit": Path("data/topics/documents_with_topics.csv"),
     "bluesky": Path("data/topics_bluesky/documents_with_topics.csv"),
+    "mastodon": Path("data/topics_mastodon/documents_with_topics.csv"),
 }
 OUTLIER_CLUSTERS_JSON = {
     "reddit": Path("frontend/public/data/outliers/reddit/clusters.json"),
     "bluesky": Path("frontend/public/data/outliers/bluesky/clusters.json"),
+    "mastodon": Path("frontend/public/data/outliers/mastodon/clusters.json"),
 }
 OUTLIER_DOCS_CSV = {
     "reddit": Path("data/analysis/outlier_docs_reddit.csv"),
     "bluesky": Path("data/analysis/outlier_docs_bluesky.csv"),
+    "mastodon": Path("data/analysis/outlier_docs_mastodon.csv"),
 }
 OUT_DIR = Path("frontend/public/data/network")
 
@@ -139,17 +143,17 @@ def build_graph(platform, node_set, threshold, model):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--platform", choices=["reddit", "bluesky"])
+    parser.add_argument("--platform", choices=["reddit", "bluesky", "mastodon"])
     parser.add_argument("--set", dest="node_set", choices=["topics", "outliers"])
     parser.add_argument("--threshold", type=float, default=0.6)
-    parser.add_argument("--all", action="store_true", help="run all 4 platform x set combos")
+    parser.add_argument("--all", action="store_true", help="run all platform x set combos")
     args = parser.parse_args()
 
     print("Loading embedding model...")
     model = SentenceTransformer("all-MiniLM-L6-v2")
 
     if args.all:
-        for platform in ("reddit", "bluesky"):
+        for platform in ("reddit", "bluesky", "mastodon"):
             for node_set in ("topics", "outliers"):
                 build_graph(platform, node_set, args.threshold, model)
     else:

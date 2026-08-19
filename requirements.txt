@@ -17,3 +17,9 @@ pandas>=2.0.0
 
 # Visualization
 plotly>=5.18.0
+
+# LLM APIs & analysis
+python-dotenv>=1.0.0
+openai>=1.30.0
+google-genai>=0.3.0
+statsmodels>=0.14.0

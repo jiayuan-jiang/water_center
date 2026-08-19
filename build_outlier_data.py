@@ -120,10 +120,10 @@ def build_platform(platform: str):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--platform", choices=["reddit", "bluesky", "all"],
+    parser.add_argument("--platform", choices=["reddit", "bluesky", "mastodon", "all"],
                         default="all")
     args = parser.parse_args()
-    platforms = ["reddit", "bluesky"] if args.platform == "all" else [args.platform]
+    platforms = ["reddit", "bluesky", "mastodon"] if args.platform == "all" else [args.platform]
     for p in platforms:
         build_platform(p)
 

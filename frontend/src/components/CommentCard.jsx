@@ -1,10 +1,12 @@
 import { EmotionBadge } from '../emotions'
 
 export default function CommentCard({ comment: c, platform, highlighted }) {
-  const isBluesky = platform === 'bluesky'
+  const sourceClass = platform === 'bluesky' ? 'source-bluesky'
+    : platform === 'mastodon' ? 'source-mastodon'
+    : 'sub'
 
-  const sourceLabel = isBluesky
-    ? 'Bluesky'
+  const sourceLabel = platform === 'bluesky' ? 'Bluesky'
+    : platform === 'mastodon' ? `@${c.source}`
     : `r/${c.source || c.subreddit}`
 
   return (
@@ -13,7 +15,7 @@ export default function CommentCard({ comment: c, platform, highlighted }) {
       className={`comment${highlighted ? ' comment--highlighted' : ''}`}
     >
       <div className="comment-meta">
-        <span className={isBluesky ? 'source-bluesky' : 'sub'}>{sourceLabel}</span>
+        <span className={sourceClass}>{sourceLabel}</span>
         <span className="score">↑ {c.score}</span>
         <span style={{ marginLeft: '10px' }}>{c.date}</span>
         {c.url && (

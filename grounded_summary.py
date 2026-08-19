@@ -26,8 +26,11 @@ import os
 import time
 from pathlib import Path
 
+from dotenv import load_dotenv
 from google import genai
 from google.genai import types
+
+load_dotenv()
 
 SYSTEM_PROMPT = """You are analyzing social media discussion about the Great Lakes for a university research project on environmental weak signals.
 
@@ -103,6 +106,10 @@ def process_platform(platform: str, client, model_name: str, dry_run: bool):
         overview_path = Path("data/subtopics/overview.json")
         output_path = Path("data/subtopics/grounded_summary.json")
         ckpt_path = Path("data/subtopics/.grounded_checkpoint.json")
+    elif platform == "mastodon":
+        overview_path = Path("data/subtopics_mastodon/overview.json")
+        output_path = Path("data/subtopics_mastodon/grounded_summary.json")
+        ckpt_path = Path("data/subtopics_mastodon/.grounded_checkpoint.json")
     else:
         overview_path = Path("data/subtopics_bluesky/overview.json")
         output_path = Path("data/subtopics_bluesky/grounded_summary.json")
@@ -175,7 +182,7 @@ def process_platform(platform: str, client, model_name: str, dry_run: bool):
 
 def main():
     parser = argparse.ArgumentParser(description="LLM-grounded sub-topic summaries")
-    parser.add_argument("--platform", choices=["reddit", "bluesky", "all"], default="reddit")
+    parser.add_argument("--platform", choices=["reddit", "bluesky", "mastodon", "all"], default="reddit")
     parser.add_argument(
         "--model",
         default="gemini-2.5-flash",
@@ -185,14 +192,14 @@ def main():
     args = parser.parse_args()
 
     if not args.dry_run:
-        api_key = os.environ.get("GEMINI_API_KEY")
+        api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GEMINI_KEY")
         if not api_key:
-            raise SystemExit("GEMINI_API_KEY is not set. Export it first:\n  export GEMINI_API_KEY=...")
+            raise SystemExit("GEMINI_API_KEY is not set. Export it, or add GEMINI_API_KEY=... / GEMINI_KEY=... to .env")
         client = genai.Client(api_key=api_key)
     else:
         client = None
 
-    platforms = ["reddit", "bluesky"] if args.platform == "all" else [args.platform]
+    platforms = ["reddit", "bluesky", "mastodon"] if args.platform == "all" else [args.platform]
     for p in platforms:
         print(f"\n=== {p} ===")
         process_platform(p, client, args.model, args.dry_run)

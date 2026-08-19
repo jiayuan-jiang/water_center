@@ -1,4 +1,4 @@
-const PLATFORM_LABEL = { reddit: 'Reddit', bluesky: 'Bluesky' }
+const PLATFORM_LABEL = { reddit: 'Reddit', bluesky: 'Bluesky', mastodon: 'Mastodon' }
 const MODE_LABEL = { topics: 'Topics', outliers: 'Outlier Signals' }
 
 export default function Breadcrumb({ platform, mode, current, onPlatform, onMode, onList }) {

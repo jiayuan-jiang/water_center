@@ -248,6 +248,7 @@ header p  { font-size: 0.85rem; margin-top: 6px; color: var(--header-subtitle); 
 }
 .comment-meta .sub { color: var(--um-blue); font-weight: bold; }
 .comment-meta .source-bluesky { color: #0085c7; font-weight: bold; }
+.comment-meta .source-mastodon { color: #6364FF; font-weight: bold; }
 .comment-meta .score { margin-left: 10px; }
 .comment-emotion { float: right; }
 .comment-text { font-size: 0.88rem; line-height: 1.65; color: #222; }

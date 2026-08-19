@@ -68,7 +68,7 @@ def parse_args():
         description="Outlier micro-clustering + relevance/novelty/recency scoring",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
-    p.add_argument("--platform", choices=["reddit", "bluesky"], default="reddit")
+    p.add_argument("--platform", choices=["reddit", "bluesky", "mastodon"], default="reddit")
 
     g = p.add_argument_group("clustering")
     g.add_argument("--min-cluster-size", type=int, default=10,
@@ -178,8 +178,11 @@ def main():
         "recency_weight": args.recency_weight,
     }
 
-    docs_csv = Path("data/topics/documents_with_topics.csv" if args.platform == "reddit"
-                    else "data/topics_bluesky/documents_with_topics.csv")
+    docs_csv = Path({
+        "reddit":   "data/topics/documents_with_topics.csv",
+        "bluesky":  "data/topics_bluesky/documents_with_topics.csv",
+        "mastodon": "data/topics_mastodon/documents_with_topics.csv",
+    }[args.platform])
     out_dir = Path("data/analysis")
     out_dir.mkdir(parents=True, exist_ok=True)
     csv_out = out_dir / f"outlier_subclusters_{args.platform}.csv"

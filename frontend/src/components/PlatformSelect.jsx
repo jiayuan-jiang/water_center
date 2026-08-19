@@ -11,6 +11,10 @@ export default function PlatformSelect({ onSelect }) {
           <div className="platform-card-name">Bluesky</div>
           <div className="platform-card-meta">125,226 posts · 28 topics · 2023–2026</div>
         </button>
+        <button className="platform-card" onClick={() => onSelect('mastodon')}>
+          <div className="platform-card-name">Mastodon</div>
+          <div className="platform-card-meta">5,593 posts · 16 topics · 2023–2026</div>
+        </button>
       </div>
     </div>
   )

@@ -111,7 +111,7 @@ def process_platform(platform: str, client, model_name: str, dry_run: bool):
                 else:
                     raise
 
-    source = "Reddit" if platform == "reddit" else "Bluesky"
+    source = {"reddit": "Reddit", "bluesky": "Bluesky", "mastodon": "Mastodon"}[platform]
     lines = [
         f"# Emerging Issue Candidates — {source} outlier analysis",
         "",
@@ -143,22 +143,32 @@ def process_platform(platform: str, client, model_name: str, dry_run: bool):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--platform", choices=["reddit", "bluesky", "all"],
+    parser.add_argument("--platform", choices=["reddit", "bluesky", "mastodon", "all"],
                         default="reddit")
-    parser.add_argument("--model", default="gpt-4o-mini")
+    parser.add_argument("--provider", choices=["openai", "deepseek"], default="openai")
+    parser.add_argument("--model", default=None, help="default: gpt-4o-mini (openai) / deepseek-chat (deepseek)")
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
+    if args.model is None:
+        args.model = "deepseek-chat" if args.provider == "deepseek" else "gpt-4o-mini"
+
     if not args.dry_run:
         load_dotenv()
-        api_key = os.environ.get("OPENAI_API_KEY")
-        if not api_key:
-            raise SystemExit("OPENAI_API_KEY is not set (env or .env)")
-        client = OpenAI(api_key=api_key)
+        if args.provider == "deepseek":
+            api_key = os.environ.get("DEEPSEEK_KEY") or os.environ.get("DEEPSEEK_API_KEY")
+            if not api_key:
+                raise SystemExit("DEEPSEEK_KEY is not set (env or .env)")
+            client = OpenAI(api_key=api_key, base_url="https://api.deepseek.com")
+        else:
+            api_key = os.environ.get("OPENAI_API_KEY")
+            if not api_key:
+                raise SystemExit("OPENAI_API_KEY is not set (env or .env)")
+            client = OpenAI(api_key=api_key)
     else:
         client = None
 
-    platforms = ["reddit", "bluesky"] if args.platform == "all" else [args.platform]
+    platforms = ["reddit", "bluesky", "mastodon"] if args.platform == "all" else [args.platform]
     for p in platforms:
         print(f"\n=== {p} ===")
         process_platform(p, client, args.model, args.dry_run)

@@ -1,0 +1,781 @@
+{
+  "generated": "2026-08-19",
+  "topics": [
+    {
+      "id": 0,
+      "label": "General Great Lakes Discussion",
+      "keywords": [
+        "lake superior",
+        "lake",
+        "lakes",
+        "lake michigan"
+      ],
+      "count": 1428,
+      "controversy": {
+        "score": 0.0,
+        "verdict": "heterogeneous_not_contentious",
+        "reasoning": "The comments cover a range of topics (environmental concerns, personal anecdotes, appreciation of scenery) but there is no common question or opposing positions being argued. Positive comments celebrate the lakes, while negative comments report separate issues, but no one disputes or responds to another's argument.",
+        "quotes": [
+          {
+            "id": "114471833302099170",
+            "quote": "Scientists suspect lethal virus behind countless fish washing up dead in Lake Huron"
+          },
+          {
+            "id": "109661431031473014",
+            "quote": "I had an amazing time in the Porkies this weekend before coming back to work."
+          },
+          {
+            "id": "116416121586015164",
+            "quote": "Protected fish caught on iconic lake was mutilated with profane carvings"
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 58.6,
+          "fear": 6.8,
+          "joy": 21.6,
+          "surprise": 5.6,
+          "sadness": 4.0,
+          "anger": 1.2,
+          "disgust": 2.2
+        }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "The core focus is on the Great Lakes themselves, which are primarily environmental systems, even though discussion may touch social or economic aspects.",
+        "human_confirmed": false
+      }
+    },
+    {
+      "id": 1,
+      "label": "Flooding & Flood Warnings",
+      "keywords": [
+        "county michigan",
+        "counties michigan",
+        "flooding",
+        "flood"
+      ],
+      "count": 365,
+      "controversy": {
+        "score": 0,
+        "verdict": "one_sided_consensus",
+        "reasoning": "The comments overwhelmingly express concerns about flooding across various regions, with no substantial opposing viewpoints or disagreement present. While some comments are positive about weather improvements or innovations like flood barriers, they don't address any conflicting policies or opinions regarding the flooding itself.",
+        "quotes": [
+          {
+            "id": "116680385437399606",
+            "quote": "High pressure settling over the Great Lakes will maintain clear skies and pleasant conditions through Thursday."
+          },
+          {
+            "id": "116534494040512001",
+            "quote": "These Michigan-made flood barriers grow stronger the wetter they get."
+          },
+          {
+            "id": "116487948230655819",
+            "quote": "Michigan’s disastrous floods are part of a pattern scientists say will only get worse."
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 60.5,
+          "fear": 27.4,
+          "joy": 0.5,
+          "surprise": 0.8,
+          "sadness": 9.3,
+          "anger": 0.3,
+          "disgust": 1.1
+        }
+      },
+      "steep": {
+        "tags": [
+          "Environmental",
+          "Political"
+        ],
+        "rationale": "The core issue is flooding as an environmental event, while flood warnings involve government/agency communications and policy responses.",
+        "human_confirmed": false
+      }
+    },
+    {
+      "id": 2,
+      "label": "Great Lakes Restoration & Policy",
+      "keywords": [
+        "lakes restoration",
+        "great lakes",
+        "lakes water",
+        "lakes"
+      ],
+      "count": 356,
+      "controversy": {
+        "score": 0.0,
+        "verdict": "one_sided_consensus",
+        "reasoning": "All negative comments criticize pollution, fracking, or policy threats, while all positive comments celebrate restoration efforts and funding; there is no argument between opposing sides. The negativity and positivity reflect different topics (threats vs. successes) rather than a debated issue.",
+        "quotes": [
+          {
+            "id": "112865664478843159",
+            "quote": "Factory Farms and their henchmen in Congress and the statehouse refuse to stop threatening the lives of millions along the Great Lakes."
+          },
+          {
+            "id": "115041977931914864",
+            "quote": "There is a risk to our water as well as making our county a dumping grounds for fracking waste."
+          },
+          {
+            "id": "111965193169387140",
+            "quote": "Reflecting on the incredible successes of the Coalition and Great Lakes advocates in 2023!"
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 63.5,
+          "fear": 13.2,
+          "joy": 8.4,
+          "surprise": 1.7,
+          "sadness": 3.9,
+          "anger": 5.1,
+          "disgust": 4.2
+        }
+      },
+      "steep": {
+        "tags": [
+          "Environmental",
+          "Political"
+        ],
+        "rationale": "The core driving force is restoring and preserving the Great Lakes ecosystem (Environmental), with policy and regulation (Political) being the primary mechanism for action.",
+        "human_confirmed": false
+      }
+    },
+    {
+      "id": 4,
+      "label": "Lake Rescues & Boating Incidents",
+      "keywords": [
+        "lake erie",
+        "waters lake",
+        "lake huron",
+        "lake"
+      ],
+      "count": 150,
+      "controversy": {
+        "score": 0.0,
+        "verdict": "heterogeneous_not_contentious",
+        "reasoning": "All negative-tone comments report separate tragic incidents without any disagreement, while positive comments highlight heroic or commendable acts; there is no shared issue being debated.",
+        "quotes": [
+          {
+            "id": "116943157038669062",
+            "quote": "Boat runs aground on Lake Erie rocks, killing one man"
+          },
+          {
+            "id": "116302452746566696",
+            "quote": "Kitchener woman receives Medal of Bravery for saving father and daughter from rip current in Lake Erie"
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "sadness",
+        "pct": {
+          "neutral": 8.7,
+          "fear": 32.7,
+          "joy": 1.3,
+          "surprise": 0.0,
+          "sadness": 50.7,
+          "anger": 1.3,
+          "disgust": 5.3
+        }
+      },
+      "steep": {
+        "tags": [
+          "Social",
+          "Environmental"
+        ],
+        "rationale": "The primary concern is public safety and behavior around lakes (Social), while the lakes' environmental conditions (e.g., weather, water quality) influence incidents (Environmental).",
+        "human_confirmed": false
+      }
+    },
+    {
+      "id": 5,
+      "label": "Ice Cover & Winter Weather",
+      "keywords": [
+        "great lakes",
+        "lakes",
+        "lake erie",
+        "snowfall"
+      ],
+      "count": 136,
+      "controversy": {
+        "score": 0.2,
+        "verdict": "heterogeneous_not_contentious",
+        "reasoning": "The comments cover a range of topics—ice hazards, shipping disruptions, winter recreation, science, and personal experiences—but there is no argument between opposing positions; they are diverse but not contentious. The negative comments mostly express concerns about ice/snow impacts, while positive comments share enjoyment or scientific interest, without disputing each other.",
+        "quotes": [
+          {
+            "id": "110487217213095326",
+            "quote": "Cold water is a huge hazard on the Great Lakes and can kill."
+          },
+          {
+            "id": "114090178743858901",
+            "quote": "This year’s winter has been a breath of fresh air for ice fishing enthusiasts and businesses around Lake Erie."
+          },
+          {
+            "id": "116676226726300833",
+            "quote": "the US Coast Guard failed to break enough ice."
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 69.9,
+          "fear": 12.5,
+          "joy": 2.2,
+          "surprise": 3.7,
+          "sadness": 7.4,
+          "anger": 2.2,
+          "disgust": 2.2
+        }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "The core topic is about physical ice cover and weather conditions on the Great Lakes, which directly relates to environmental processes.",
+        "human_confirmed": false
+      }
+    },
+    {
+      "id": 6,
+      "label": "Beach Safety & Swim Advisories",
+      "keywords": [
+        "beaches",
+        "beach",
+        "safety",
+        "nearshore"
+      ],
+      "count": 122,
+      "controversy": {
+        "score": 0.0,
+        "verdict": "heterogeneous_not_contentious",
+        "reasoning": "The comments cover varied topics (beach safety warnings, personal enjoyment, environmental issues, achievements) but show no one arguing against another's position; they are simply sharing different content or expressing consistent sentiments within their own themes.",
+        "quotes": [
+          {
+            "id": "114491338909541433",
+            "quote": "The service on the beach is terrible"
+          },
+          {
+            "id": "111115949143233783",
+            "quote": "Gorgeous 🌞 today"
+          },
+          {
+            "id": "116550883460546190",
+            "quote": "I've got the perfect YA Beach Read for this summer"
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 45.1,
+          "fear": 25.4,
+          "joy": 18.9,
+          "surprise": 2.5,
+          "sadness": 2.5,
+          "anger": 0.8,
+          "disgust": 4.9
+        }
+      },
+      "steep": {
+        "tags": [
+          "Social",
+          "Environmental"
+        ],
+        "rationale": "The core is about public safety and behavior at beaches (Social) tied to environmental water quality conditions (Environmental).",
+        "human_confirmed": false
+      }
+    },
+    {
+      "id": 8,
+      "label": "Environmental Policy & Regulation",
+      "keywords": [
+        "epa",
+        "environmental protection",
+        "climate change",
+        "trump administration"
+      ],
+      "count": 99,
+      "controversy": {
+        "score": 0.2,
+        "verdict": "heterogeneous_not_contentious",
+        "reasoning": "Comments express varied opinions on topics like budget cuts, pollution, and funding, but there is no direct argument between opposing sides on the same specific question. Positive comments support funding and policies, while negative comments criticize cuts and specific projects, but they are not engaging each other in debate.",
+        "quotes": [
+          {
+            "id": "114138494355986236",
+            "quote": "The GLRI is an important piece to rectifying environmental injustices across the region. We need this federal funding!"
+          },
+          {
+            "id": "116584631516741405",
+            "quote": "gutting environmental enforcement is not “efficiency”. It’s permission."
+          },
+          {
+            "id": "115657142029446015",
+            "quote": "Funding opportunity! The Coalition is opening a new Request for Proposals"
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 51.5,
+          "fear": 10.1,
+          "joy": 2.0,
+          "surprise": 0.0,
+          "sadness": 2.0,
+          "anger": 27.3,
+          "disgust": 7.1
+        }
+      },
+      "steep": {
+        "tags": [
+          "Political",
+          "Environmental"
+        ],
+        "rationale": "The core driver is policy and regulation by the EPA and administration, with environmental impacts being the subject matter.",
+        "human_confirmed": false
+      }
+    },
+    {
+      "id": 10,
+      "label": "PFAS & Chemical Contamination",
+      "keywords": [
+        "chemicals",
+        "pollution",
+        "great lakes",
+        "lakes"
+      ],
+      "count": 87,
+      "controversy": {
+        "score": 0.0,
+        "verdict": "heterogeneous_not_contentious",
+        "reasoning": "The comments cover various environmental contamination topics (PFAS, mercury, nitrates, microplastics, etc.) with mixed negative and positive tones, but no comment argues against another's position. Negative comments report pollution problems, while positive comments highlight cleanup efforts, but there is no debate over a shared question.",
+        "quotes": [
+          {
+            "id": "115997590972206576",
+            "quote": "PFAS are turning up in the Great Lakes, putting fish and water supplies at risk."
+          },
+          {
+            "id": "115384041031738493",
+            "quote": "Michigan has declared Oct. 19–26 as the first-ever Microplastics Awareness Week"
+          },
+          {
+            "id": "116244641228959440",
+            "quote": "reducing plastic pollution in Lake Ontario via litter catching devices"
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "disgust",
+        "pct": {
+          "neutral": 37.9,
+          "fear": 14.9,
+          "joy": 0.0,
+          "surprise": 0.0,
+          "sadness": 1.1,
+          "anger": 6.9,
+          "disgust": 39.1
+        }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "The core driving force is the contamination of ecosystems and water quality, making Environmental the primary category.",
+        "human_confirmed": false
+      }
+    },
+    {
+      "id": 11,
+      "label": "Invasive Species & Wildlife",
+      "keywords": [
+        "wildlife",
+        "invasive species",
+        "habitat",
+        "ecology"
+      ],
+      "count": 81,
+      "controversy": {
+        "score": 0.1,
+        "verdict": "one_sided_consensus",
+        "reasoning": "All negative comments decry invasive species, while positive comments celebrate conservation successes or opportunities, with no comment disputing the other side. The topic is not a debate but a shared concern for wildlife and ecosystems, with the only possible tension being the Enbridge pipeline comment, but it is not argued against.",
+        "quotes": [
+          {
+            "id": "115463344522938165",
+            "quote": "Phragmites australis is a monstrous invasive species"
+          },
+          {
+            "id": "116177054317282267",
+            "quote": "Healing is possible. Ecosystems can recover."
+          },
+          {
+            "id": "116760576003415523",
+            "quote": "Nobody seems happy with this outcome"
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 64.2,
+          "fear": 4.9,
+          "joy": 17.3,
+          "surprise": 2.5,
+          "sadness": 2.5,
+          "anger": 2.5,
+          "disgust": 6.2
+        }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "The core focus is on ecological systems and species management, which is fundamentally environmental despite potential political or social implications.",
+        "human_confirmed": false
+      }
+    },
+    {
+      "id": 12,
+      "label": "Wildfire Smoke & Air Quality",
+      "keywords": [
+        "wildfires",
+        "air quality",
+        "wildfire",
+        "pollution"
+      ],
+      "count": 81,
+      "controversy": {
+        "score": 0.0,
+        "verdict": "one_sided_consensus",
+        "reasoning": "All comments express negative sentiments about wildfire smoke and its impacts, with the only positive ones being a relief that air quality improved. There is no disagreement or debate on any specific question; everyone agrees the smoke is bad.",
+        "quotes": [
+          {
+            "id": "116924490769516982",
+            "quote": "We have the world's worst air quality right now."
+          },
+          {
+            "id": "110618705916236883",
+            "quote": "Worst air quality we've ever experienced."
+          },
+          {
+            "id": "116941490921481440",
+            "quote": "the air is considerably less chunky today"
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "fear",
+        "pct": {
+          "neutral": 18.5,
+          "fear": 37.0,
+          "joy": 2.5,
+          "surprise": 0.0,
+          "sadness": 11.1,
+          "anger": 14.8,
+          "disgust": 16.0
+        }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "The core issue is the environmental impact of wildfires on air quality in the Great Lakes region, despite potential social or health dimensions.",
+        "human_confirmed": false
+      }
+    },
+    {
+      "id": 14,
+      "label": "Fishing & Fish Populations",
+      "keywords": [
+        "lakes",
+        "great lakes",
+        "fishing",
+        "fish"
+      ],
+      "count": 62,
+      "controversy": {
+        "score": 0.2,
+        "verdict": "heterogeneous_not_contentious",
+        "reasoning": "The comments express strong negative sentiment about invasive species and positive sentiment about conservation efforts, but they do not debate each other. Negative comments lament the impact of invasives, while positive comments celebrate successes or share unrelated positive observations. No comment argues against another's position.",
+        "quotes": [
+          {
+            "id": "115406682526678083",
+            "quote": "lake whitefish are on the brink of collapse"
+          },
+          {
+            "id": "113511474431136352",
+            "quote": "It's great to hear that they've been successful in significantly reducing their populations"
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 56.5,
+          "fear": 14.5,
+          "joy": 1.6,
+          "surprise": 3.2,
+          "sadness": 1.6,
+          "anger": 4.8,
+          "disgust": 17.7
+        }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "The core focus is on fish populations and invasive species, which are ecosystem and water quality concerns.",
+        "human_confirmed": false
+      }
+    },
+    {
+      "id": 15,
+      "label": "Algal Blooms",
+      "keywords": [
+        "algal blooms",
+        "lake erie",
+        "lakes",
+        "algae"
+      ],
+      "count": 60,
+      "controversy": {
+        "score": 0.1,
+        "verdict": "heterogeneous_not_contentious",
+        "reasoning": "The comments are predominantly negative, discussing harmful algal blooms and their risks, with a few positive comments about research and documentaries. There is no active debate between opposing positions; rather, the comments are either informational or share personal perspectives.",
+        "quotes": [
+          {
+            "id": "116648541915318674",
+            "quote": "Harmful algal blooms pose health risks for people and pets"
+          },
+          {
+            "id": "112859060878610224",
+            "quote": "A huge shout out to my lab members working hard this weekend collecting water chem, phyto- and"
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 66.7,
+          "fear": 13.3,
+          "joy": 3.3,
+          "surprise": 0.0,
+          "sadness": 1.7,
+          "anger": 0.0,
+          "disgust": 15.0
+        }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "Algal blooms are primarily an environmental phenomenon driven by nutrient pollution and climate change, directly impacting water quality and ecosystems.",
+        "human_confirmed": false
+      }
+    },
+    {
+      "id": 17,
+      "label": "Data Centers & Water Consumption",
+      "keywords": [
+        "data centers",
+        "data center",
+        "data",
+        "ohio lawmakers"
+      ],
+      "count": 58,
+      "controversy": {
+        "score": 0.6,
+        "verdict": "genuine_debate",
+        "reasoning": "While the majority of comments are negative about data centers, there is a clear proponent side (e.g., [116685685431608510] highlighting Google's community grant, [116478684407417685] arguing data centers COULD benefit communities if done right, [115968450094364886] suggesting active engagement rather than outright opposition) that offers conditional support and counters the overwhelmingly negative consensus, indicating substantive disagreement on the value and impact of data centers.",
+        "quotes": [
+          {
+            "id": "116685685431608510",
+            "quote": "Google grants $250K to Huron River group amid Michigan data center plans"
+          },
+          {
+            "id": "116478684407417685",
+            "quote": "Data centers COULD be a benefit to communities if done right."
+          },
+          {
+            "id": "115968450094364886",
+            "quote": "Stopping secret data centers is a great reason to attend those village council meetings!"
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 62.1,
+          "fear": 10.3,
+          "joy": 3.4,
+          "surprise": 0.0,
+          "sadness": 1.7,
+          "anger": 15.5,
+          "disgust": 6.9
+        }
+      },
+      "steep": {
+        "tags": [
+          "Environmental",
+          "Technological"
+        ],
+        "rationale": "The core issue is the environmental impact of data center water consumption, driven by technological infrastructure.",
+        "human_confirmed": false
+      }
+    },
+    {
+      "id": 21,
+      "label": "Line 5 Pipeline & Litigation",
+      "keywords": [
+        "michigan department",
+        "lawsuit",
+        "court",
+        "lake michigan"
+      ],
+      "count": 36,
+      "controversy": {
+        "score": 0.1,
+        "verdict": "one_sided_consensus",
+        "reasoning": "All comments reflect consistent opposition to Line 5, focusing on environmental risks, treaty rights, and safety concerns, with no comment arguing in favor of the pipeline. The positive-toned comment still ends with 'FUCK Enbridge', reinforcing consensus.",
+        "quotes": [
+          {
+            "id": "116835300996454890",
+            "quote": "Lake Superior is not Enbridge’s construction sponge. Leave our water the hell alone."
+          },
+          {
+            "id": "109962552069344206",
+            "quote": "Line 5 is a 'ticking timebomb' because of the risk of an oil spill."
+          },
+          {
+            "id": "115448825992528891",
+            "quote": "BTW- FUCK Enbridge!"
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 38.9,
+          "fear": 16.7,
+          "joy": 0.0,
+          "surprise": 0.0,
+          "sadness": 2.8,
+          "anger": 38.9,
+          "disgust": 2.8
+        }
+      },
+      "steep": {
+        "tags": [
+          "Political",
+          "Environmental"
+        ],
+        "rationale": "The core driver is legal and regulatory action (lawsuit, court, state department) around an infrastructure project affecting the Great Lakes, making Political primary; the environmental impact on Lake Michigan and rivers is a key secondary concern.",
+        "human_confirmed": false
+      }
+    },
+    {
+      "id": 22,
+      "label": "Muskegon Waterfront Development",
+      "keywords": [
+        "muskegon county",
+        "muskegon",
+        "beach michigan",
+        "lakeshore"
+      ],
+      "count": 34,
+      "controversy": {
+        "score": 0,
+        "verdict": "one_sided_consensus",
+        "reasoning": "All comments simply announce and celebrate various Muskegon events and community developments (library cards, obstacle race, festival, boat show, archives, lighthouse tours, art festival, Dolly Parton event). No comment takes a critical or opposing stance, and there is no disagreement or debate over any policy or issue.",
+        "quotes": [
+          {
+            "id": "116805640437255973",
+            "quote": "This Muskegon lighthouse is offering free tours for kids every Wednesday this summer"
+          },
+          {
+            "id": "116596153487193811",
+            "quote": "Taste of Muskegon is back at Hackley Park June 12-13 with eight live acts"
+          },
+          {
+            "id": "116811258992220721",
+            "quote": "This Muskegon event brings Dolly Parton’s magic to life"
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "joy",
+        "pct": {
+          "neutral": 38.2,
+          "fear": 0.0,
+          "joy": 52.9,
+          "surprise": 8.8,
+          "sadness": 0.0,
+          "anger": 0.0,
+          "disgust": 0.0
+        }
+      },
+      "steep": {
+        "tags": [
+          "Economic",
+          "Political"
+        ],
+        "rationale": "Waterfront development projects are primarily driven by economic investment and growth, while also involving zoning, permits, and public funding decisions, making political factors a key secondary driver.",
+        "human_confirmed": false
+      }
+    },
+    {
+      "id": 24,
+      "label": "Grand River & Riverfront Projects",
+      "keywords": [
+        "grand river",
+        "grand rapids",
+        "river michigan",
+        "rapids"
+      ],
+      "count": 32,
+      "controversy": {
+        "score": 0.0,
+        "verdict": "one_sided_consensus",
+        "reasoning": "All comments express positive sentiment about riverfront and development projects, with no opposing viewpoints or arguments. The topic is uniformly celebratory, so there is no genuine debate.",
+        "quotes": [
+          {
+            "id": "116612799008523976",
+            "quote": "The new amphitheater is a gem"
+          },
+          {
+            "id": "116417324002427502",
+            "quote": "transforms an overgrown riverbank into accessible trails and outdoor learning spaces"
+          }
+        ]
+      },
+      "emotion": {
+        "dominant": "neutral",
+        "pct": {
+          "neutral": 65.6,
+          "fear": 0.0,
+          "joy": 25.0,
+          "surprise": 3.1,
+          "sadness": 6.2,
+          "anger": 0.0,
+          "disgust": 0.0
+        }
+      },
+      "steep": {
+        "tags": [
+          "Environmental"
+        ],
+        "rationale": "The core focus is on the Grand River ecosystem and riverfront projects, which primarily involve environmental restoration and waterway management.",
+        "human_confirmed": false
+      }
+    }
+  ]
+}

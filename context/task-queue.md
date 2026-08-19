@@ -1,11 +1,20 @@
 # Task Queue
-_Last updated: 2026-07-30_
+_Last updated: 2026-08-19_
 
 Format: `- [ ] Task title — [spec](../spec/filename.md)`
 
 ---
 
 ## In Progress
+
+- [x] **Mastodon third platform** — [spec](../spec/mastodon-data.md) — complete
+  - [x] Scrape, preprocess, topic model, label (16/25 topics), full frontend wiring
+  - [x] Grounded summaries (Gemini), sentiment/emotion (RoBERTa), outlier analysis,
+    similarity network — all built and verified in-browser
+  - [x] controversy_llm / steep_tag / outlier_candidates — OpenAI daily quota
+    was exhausted, switched to DeepSeek (`--provider deepseek`, see
+    `context/state.md`) and finished all three; all downstream JSON rebuilt
+    and re-verified in-browser
 
 - [ ] **Outlier / emerging issues extraction** — [spec](../spec/outlier-emerging-issues.md)
   - [x] Stage 1+2 Reddit: micro-clustering + relevance/novelty/recency scoring → `data/analysis/outlier_subclusters_reddit.csv`, `outlier_overview_reddit.json`

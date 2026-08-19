@@ -10,6 +10,12 @@ Usage (Bluesky):
         --corpus data/corpus_bluesky.jsonl \
         --topics-dir data/topics_bluesky \
         --out-dir docs/data/bluesky
+
+Usage (Mastodon):
+    python build_docs_data.py --platform mastodon \
+        --corpus data/corpus_mastodon.jsonl \
+        --topics-dir data/topics_mastodon \
+        --out-dir frontend/public/data/mastodon
 """
 
 import argparse
@@ -19,7 +25,7 @@ from pathlib import Path
 from datetime import datetime
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--platform",   default="reddit", choices=["reddit", "bluesky"])
+parser.add_argument("--platform",   default="reddit", choices=["reddit", "bluesky", "mastodon"])
 parser.add_argument("--corpus",     default="data/corpus.jsonl")
 parser.add_argument("--topics-dir", default="data/topics")
 parser.add_argument("--out-dir",    default="docs/data")
@@ -104,7 +110,31 @@ BLUESKY_TOPIC_LABELS = {
     59: "Coast Guard & Maritime Safety",
 }
 
-TOPIC_LABELS = BLUESKY_TOPIC_LABELS if args.platform == "bluesky" else REDDIT_TOPIC_LABELS
+# ── Mastodon topic labels (valid signal only; noise topics omitted) ───────────
+MASTODON_TOPIC_LABELS = {
+    0:  "General Great Lakes Discussion",
+    1:  "Flooding & Flood Warnings",
+    2:  "Great Lakes Restoration & Policy",
+    4:  "Lake Rescues & Boating Incidents",
+    5:  "Ice Cover & Winter Weather",
+    6:  "Beach Safety & Swim Advisories",
+    8:  "Environmental Policy & Regulation",
+    10: "PFAS & Chemical Contamination",
+    11: "Invasive Species & Wildlife",
+    12: "Wildfire Smoke & Air Quality",
+    14: "Fishing & Fish Populations",
+    15: "Algal Blooms",
+    17: "Data Centers & Water Consumption",
+    21: "Line 5 Pipeline & Litigation",
+    22: "Muskegon Waterfront Development",
+    24: "Grand River & Riverfront Projects",
+}
+
+TOPIC_LABELS = {
+    "reddit":   REDDIT_TOPIC_LABELS,
+    "bluesky":  BLUESKY_TOPIC_LABELS,
+    "mastodon": MASTODON_TOPIC_LABELS,
+}[args.platform]
 
 # ── Load data ─────────────────────────────────────────────────────────────────
 topic_info = pd.read_csv(TOPIC_CSV)
@@ -158,8 +188,8 @@ if STEEP_CSV.exists():
             "human_confirmed": not pd.isna(r.human_confirmed) and str(r.human_confirmed).strip() != "",
         }
 
-# for Bluesky: only keep labeled (valid signal) topics
-if args.platform == "bluesky":
+# for Bluesky/Mastodon: only keep labeled (valid signal) topics
+if args.platform in ("bluesky", "mastodon"):
     topic_info = topic_info[topic_info["Topic"].isin(TOPIC_LABELS)].copy()
 else:
     topic_info = topic_info[topic_info["Topic"] != -1].copy()
@@ -202,7 +232,10 @@ for entry in topics_index:
         cid = str(row.get("id", ""))
         raw = corpus.get(cid, {})
 
-        if args.platform == "bluesky":
+        if args.platform == "mastodon":
+            source  = str(row.get("author", raw.get("author", "")))
+            url     = str(raw.get("url", ""))
+        elif args.platform == "bluesky":
             author  = str(row.get("author", raw.get("author", "")))
             url     = f"https://bsky.app/profile/{author}/post/{cid}" if author and cid else ""
             source  = "bluesky"

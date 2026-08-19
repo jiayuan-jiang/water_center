@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import SteepTrendMini from './SteepTrendMini'
 
-const PLATFORM_LABEL = { reddit: 'Reddit', bluesky: 'Bluesky' }
+const PLATFORM_LABEL = { reddit: 'Reddit', bluesky: 'Bluesky', mastodon: 'Mastodon' }
 
 export default function ModeSelect({ platform, onSelect }) {
   const [topicCount, setTopicCount] = useState(null)
@@ -10,7 +10,7 @@ export default function ModeSelect({ platform, onSelect }) {
   useEffect(() => {
     setTopicCount(null)
     setOutlierMeta(null)
-    const topicsUrl = platform === 'bluesky' ? 'data/bluesky/topics.json' : 'data/topics.json'
+    const topicsUrl = platform === 'reddit' ? 'data/topics.json' : `data/${platform}/topics.json`
     fetch(topicsUrl)
       .then(r => r.json())
       .then(json => setTopicCount(json.topics.length))

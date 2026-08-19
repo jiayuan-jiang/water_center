@@ -25,6 +25,14 @@ PLATFORMS = {
         "id_col":   "id",
         "source_col": "source",
     },
+    "mastodon": {
+        "summary":  "data/subtopics_mastodon/grounded_summary.json",
+        "csv_dir":  "data/subtopics_mastodon",
+        "corpus":   "data/corpus_mastodon.jsonl",
+        "out_dirs": ["frontend/public/data/subtopics/mastodon"],
+        "id_col":   "id",
+        "source_col": "source",
+    },
 }
 
 
@@ -119,6 +127,9 @@ def build_platform(platform):
                 if platform == "reddit":
                     url = make_reddit_url(cid, r.get("post_id", ""), r.get("subreddit", ""))
                     source = r.get("subreddit", "")
+                elif platform == "mastodon":
+                    url = r.get("url", "")
+                    source = r.get("author", "")
                 else:
                     url = make_bluesky_url(cid, bsky_authors.get(cid, ""))
                     source = "bluesky"
@@ -147,10 +158,10 @@ def build_platform(platform):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--platform", choices=["reddit", "bluesky", "all"], default="all")
+    parser.add_argument("--platform", choices=["reddit", "bluesky", "mastodon", "all"], default="all")
     args = parser.parse_args()
 
-    targets = ["reddit", "bluesky"] if args.platform == "all" else [args.platform]
+    targets = ["reddit", "bluesky", "mastodon"] if args.platform == "all" else [args.platform]
     for p in targets:
         print(f"\n=== {p} ===")
         build_platform(p)

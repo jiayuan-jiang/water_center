@@ -66,6 +66,16 @@ BLUESKY_TOPIC_LABELS = {
     49: "Ice Cover Tracking", 50: "Wildfire Smoke & Air Quality", 53: "Climate Change & Seasonal Shifts",
     59: "Coast Guard & Maritime Safety",
 }
+MASTODON_TOPIC_LABELS = {
+    0: "General Great Lakes Discussion", 1: "Flooding & Flood Warnings",
+    2: "Great Lakes Restoration & Policy", 4: "Lake Rescues & Boating Incidents",
+    5: "Ice Cover & Winter Weather", 6: "Beach Safety & Swim Advisories",
+    8: "Environmental Policy & Regulation", 10: "PFAS & Chemical Contamination",
+    11: "Invasive Species & Wildlife", 12: "Wildfire Smoke & Air Quality",
+    14: "Fishing & Fish Populations", 15: "Algal Blooms",
+    17: "Data Centers & Water Consumption", 21: "Line 5 Pipeline & Litigation",
+    22: "Muskegon Waterfront Development", 24: "Grand River & Riverfront Projects",
+}
 
 SYSTEM_PROMPT = """You are analyzing social media discourse about the Great Lakes for a university Horizon Scan project.
 
@@ -101,8 +111,10 @@ def build_user_prompt(label: str, sample: pd.DataFrame) -> str:
 
 def sample_docs(platform: str, topic_id: int, n_per_side: int = 8) -> pd.DataFrame:
     sent = pd.read_csv(f"data/analysis/sentiment_docs_{platform}.csv")
-    docs_file = ("data/topics_bluesky/documents_with_topics.csv" if platform == "bluesky"
-                 else "data/topics/documents_with_topics.csv")
+    docs_file = {
+        "bluesky":  "data/topics_bluesky/documents_with_topics.csv",
+        "mastodon": "data/topics_mastodon/documents_with_topics.csv",
+    }.get(platform, "data/topics/documents_with_topics.csv")
     docs = pd.read_csv(docs_file)[["id", "text"]]
     merged = sent.merge(docs, on="id")
     sub = merged[merged["topic"] == topic_id]
@@ -112,7 +124,10 @@ def sample_docs(platform: str, topic_id: int, n_per_side: int = 8) -> pd.DataFra
 
 
 def process_platform(platform: str, client, model_name: str, dry_run: bool):
-    labels = BLUESKY_TOPIC_LABELS if platform == "bluesky" else REDDIT_TOPIC_LABELS
+    labels = {
+        "bluesky":  BLUESKY_TOPIC_LABELS,
+        "mastodon": MASTODON_TOPIC_LABELS,
+    }.get(platform, REDDIT_TOPIC_LABELS)
     ckpt_path = Path(f"data/analysis/.controversy_llm_checkpoint_{platform}.json")
     out_path = Path(f"data/analysis/controversy_llm_{platform}.csv")
     checkpoint = load_checkpoint(ckpt_path)
@@ -188,21 +203,31 @@ def process_platform(platform: str, client, model_name: str, dry_run: bool):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--platform", choices=["reddit", "bluesky", "all"], default="reddit")
-    parser.add_argument("--model", default="gpt-4o-mini")
+    parser.add_argument("--platform", choices=["reddit", "bluesky", "mastodon", "all"], default="reddit")
+    parser.add_argument("--provider", choices=["openai", "deepseek"], default="openai")
+    parser.add_argument("--model", default=None, help="default: gpt-4o-mini (openai) / deepseek-chat (deepseek)")
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
+    if args.model is None:
+        args.model = "deepseek-chat" if args.provider == "deepseek" else "gpt-4o-mini"
+
     if not args.dry_run:
         load_dotenv()
-        api_key = os.environ.get("OPENAI_API_KEY")
-        if not api_key:
-            raise SystemExit("OPENAI_API_KEY is not set (env or .env)")
-        client = OpenAI(api_key=api_key)
+        if args.provider == "deepseek":
+            api_key = os.environ.get("DEEPSEEK_KEY") or os.environ.get("DEEPSEEK_API_KEY")
+            if not api_key:
+                raise SystemExit("DEEPSEEK_KEY is not set (env or .env)")
+            client = OpenAI(api_key=api_key, base_url="https://api.deepseek.com")
+        else:
+            api_key = os.environ.get("OPENAI_API_KEY")
+            if not api_key:
+                raise SystemExit("OPENAI_API_KEY is not set (env or .env)")
+            client = OpenAI(api_key=api_key)
     else:
         client = None
 
-    platforms = ["reddit", "bluesky"] if args.platform == "all" else [args.platform]
+    platforms = ["reddit", "bluesky", "mastodon"] if args.platform == "all" else [args.platform]
     for p in platforms:
         print(f"\n=== {p} ===")
         process_platform(p, client, args.model, args.dry_run)

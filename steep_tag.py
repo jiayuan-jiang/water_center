@@ -145,8 +145,25 @@ BLUESKY_TOPIC_LABELS = {
     59: "Coast Guard & Maritime Safety",
 }
 
-TOPIC_LABELS_BY_PLATFORM = {"reddit": REDDIT_TOPIC_LABELS, "bluesky": BLUESKY_TOPIC_LABELS}
-TOPIC_DIR_BY_PLATFORM = {"reddit": "data/topics", "bluesky": "data/topics_bluesky"}
+MASTODON_TOPIC_LABELS = {
+    0: "General Great Lakes Discussion", 1: "Flooding & Flood Warnings",
+    2: "Great Lakes Restoration & Policy", 4: "Lake Rescues & Boating Incidents",
+    5: "Ice Cover & Winter Weather", 6: "Beach Safety & Swim Advisories",
+    8: "Environmental Policy & Regulation", 10: "PFAS & Chemical Contamination",
+    11: "Invasive Species & Wildlife", 12: "Wildfire Smoke & Air Quality",
+    14: "Fishing & Fish Populations", 15: "Algal Blooms",
+    17: "Data Centers & Water Consumption", 21: "Line 5 Pipeline & Litigation",
+    22: "Muskegon Waterfront Development", 24: "Grand River & Riverfront Projects",
+}
+
+TOPIC_LABELS_BY_PLATFORM = {
+    "reddit": REDDIT_TOPIC_LABELS, "bluesky": BLUESKY_TOPIC_LABELS,
+    "mastodon": MASTODON_TOPIC_LABELS,
+}
+TOPIC_DIR_BY_PLATFORM = {
+    "reddit": "data/topics", "bluesky": "data/topics_bluesky",
+    "mastodon": "data/topics_mastodon",
+}
 
 
 def collect_topic_rows(platform: str, client, model_name: str, dry_run: bool) -> list:
@@ -266,29 +283,39 @@ def write_outlier_csv(new_rows_by_platform: dict):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--target", choices=["topics", "outliers", "all"], default="all")
-    parser.add_argument("--platform", choices=["reddit", "bluesky", "all"], default="all")
-    parser.add_argument("--model", default="gpt-4o-mini")
+    parser.add_argument("--platform", choices=["reddit", "bluesky", "mastodon", "all"], default="all")
+    parser.add_argument("--provider", choices=["openai", "deepseek"], default="openai")
+    parser.add_argument("--model", default=None, help="default: gpt-4o-mini (openai) / deepseek-chat (deepseek)")
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
+    if args.model is None:
+        args.model = "deepseek-chat" if args.provider == "deepseek" else "gpt-4o-mini"
+
     if not args.dry_run:
         load_dotenv()
-        api_key = os.environ.get("OPENAI_API_KEY")
-        if not api_key:
-            raise SystemExit("OPENAI_API_KEY is not set (env or .env)")
-        client = OpenAI(api_key=api_key)
+        if args.provider == "deepseek":
+            api_key = os.environ.get("DEEPSEEK_KEY") or os.environ.get("DEEPSEEK_API_KEY")
+            if not api_key:
+                raise SystemExit("DEEPSEEK_KEY is not set (env or .env)")
+            client = OpenAI(api_key=api_key, base_url="https://api.deepseek.com")
+        else:
+            api_key = os.environ.get("OPENAI_API_KEY")
+            if not api_key:
+                raise SystemExit("OPENAI_API_KEY is not set (env or .env)")
+            client = OpenAI(api_key=api_key)
     else:
         client = None
 
     if args.target in ("topics", "all"):
-        platforms = ["reddit", "bluesky"] if args.platform == "all" else [args.platform]
+        platforms = ["reddit", "bluesky", "mastodon"] if args.platform == "all" else [args.platform]
         new_rows_by_platform = {
             p: collect_topic_rows(p, client, args.model, args.dry_run) for p in platforms
         }
         write_topic_csv(new_rows_by_platform)
 
     if args.target in ("outliers", "all"):
-        platforms = ["reddit", "bluesky"] if args.platform == "all" else [args.platform]
+        platforms = ["reddit", "bluesky", "mastodon"] if args.platform == "all" else [args.platform]
         new_rows_by_platform = {
             p: collect_outlier_rows(p, client, args.model, args.dry_run) for p in platforms
         }

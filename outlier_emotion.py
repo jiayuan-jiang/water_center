@@ -20,7 +20,7 @@ from pathlib import Path
 from transformers import pipeline
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--platform", choices=["reddit", "bluesky"], default="reddit")
+parser.add_argument("--platform", choices=["reddit", "bluesky", "mastodon"], default="reddit")
 parser.add_argument("--batch-size", type=int, default=64)
 args = parser.parse_args()
 

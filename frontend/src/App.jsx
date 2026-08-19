@@ -58,7 +58,7 @@ export default function App() {
     setMeta(null)
     setTopics([])
     setCurrentTopic(null)
-    const url = platform === 'bluesky' ? 'data/bluesky/topics.json' : 'data/topics.json'
+    const url = platform === 'reddit' ? 'data/topics.json' : `data/${platform}/topics.json`
     fetch(url).then(r => r.json()).then(json => {
       setTopics(json.topics)
       setMeta(json)

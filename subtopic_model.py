@@ -21,7 +21,7 @@ from sklearn.decomposition import NMF
 
 # ── CLI ───────────────────────────────────────────────────────────────────────
 parser = argparse.ArgumentParser()
-parser.add_argument("--platform", choices=["reddit", "bluesky"], default="reddit")
+parser.add_argument("--platform", choices=["reddit", "bluesky", "mastodon"], default="reddit")
 args = parser.parse_args()
 
 # ── Platform config ───────────────────────────────────────────────────────────
@@ -35,6 +35,13 @@ if args.platform == "bluesky":
         0, 1, 4, 5, 10, 13, 15, 18, 19, 26, 27, 28, 29, 31,
         32, 33, 35, 36, 39, 41, 43, 45, 46, 48, 49, 50, 53, 59,
     }
+elif args.platform == "mastodon":
+    DOCS_FILE    = Path("data/topics_mastodon/documents_with_topics.csv")
+    SUMMARY_FILE = Path("data/topics_mastodon/topic_summary.csv")
+    OUT_DIR      = Path("data/subtopics_mastodon")
+    SOURCE_COL   = "source"
+    # Only the 16 labeled valid-signal topics
+    VALID_TOPICS = {0, 1, 2, 4, 5, 6, 8, 10, 11, 12, 14, 15, 17, 21, 22, 24}
 else:
     DOCS_FILE    = Path("data/topics/documents_with_topics.csv")
     SUMMARY_FILE = Path("data/topics/topic_summary.csv")
@@ -132,6 +139,7 @@ for tid in topic_ids:
 
     save_cols = ["id", "post_id", SOURCE_COL, "score", "created_utc",
                  "text", "topic", "subtopic", "subtopic_score"]
+    save_cols += [c for c in ["url", "author"] if c in sub_df.columns and c not in save_cols]
     sub_df[save_cols].to_csv(OUT_DIR / f"topic_{tid:02d}.csv", index=False)
 
     counts     = [st["doc_count"] for st in subtopics]

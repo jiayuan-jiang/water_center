@@ -19,7 +19,7 @@ export default function DetailPanel({ topic, platform }) {
     setSubtopicData(null)
     setActiveSubtopic(null)
     setSubtopicComments(null)
-    const base = platform === 'bluesky' ? 'data/bluesky/topics' : 'data/topics'
+    const base = platform === 'reddit' ? 'data/topics' : `data/${platform}/topics`
     fetch(`${base}/t${topic.id}.json`)
       .then(r => r.json())
       .then(setData)
@@ -34,9 +34,9 @@ export default function DetailPanel({ topic, platform }) {
 
   useEffect(() => {
     setTrendData(null)
-    const file = platform === 'bluesky'
-      ? 'data/bluesky_topic_trends.json'
-      : 'data/reddit_topic_trends.json'
+    const file = platform === 'reddit'
+      ? 'data/reddit_topic_trends.json'
+      : `data/${platform}_topic_trends.json`
     fetch(file)
       .then(r => r.json())
       .then(setTrendData)
@@ -96,7 +96,7 @@ export default function DetailPanel({ topic, platform }) {
     ? (subtopicComments ?? [])
     : (data?.comments ?? [])
 
-  const unit = platform === 'bluesky' ? 'posts' : 'comments'
+  const unit = platform === 'reddit' ? 'comments' : 'posts'
 
   return (
     <div id="detail">
