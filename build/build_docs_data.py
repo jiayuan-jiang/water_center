@@ -1,6 +1,6 @@
 """
-Generate JSON data files for GitHub Pages topic browser.
-Output: docs/data/topics.json + docs/data/topics/t{id}.json
+Generate JSON data files for the topic browser.
+Output: frontend/public/data/topics.json + frontend/public/data/topics/t{id}.json
 
 Usage (Reddit, default):
     python build/build_docs_data.py
@@ -9,7 +9,7 @@ Usage (Bluesky):
     python build/build_docs_data.py --platform bluesky \
         --corpus data/corpus_bluesky.jsonl \
         --topics-dir data/topics_bluesky \
-        --out-dir docs/data/bluesky
+        --out-dir frontend/public/data/bluesky
 
 Usage (Mastodon):
     python build/build_docs_data.py --platform mastodon \
@@ -28,7 +28,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--platform",   default="reddit", choices=["reddit", "bluesky", "mastodon"])
 parser.add_argument("--corpus",     default="data/corpus.jsonl")
 parser.add_argument("--topics-dir", default="data/topics")
-parser.add_argument("--out-dir",    default="docs/data")
+parser.add_argument("--out-dir",    default="frontend/public/data")
 args = parser.parse_args()
 
 CORPUS      = Path(args.corpus)

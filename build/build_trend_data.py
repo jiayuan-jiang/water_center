@@ -1,5 +1,5 @@
 """
-Compute monthly trend data for BERTopic topics and write to docs/data/.
+Compute monthly trend data for BERTopic topics and write to frontend/public/data/.
 
 Usage (Reddit, default):
     python build/build_trend_data.py
@@ -109,13 +109,13 @@ PLATFORM_CONFIG = {
     "reddit": {
         "labels":      REDDIT_TOPIC_LABELS,
         "docs_csv":    "data/topics/documents_with_topics.csv",
-        "out_path":    "docs/data/reddit_topic_trends.json",
+        "out_path":    "frontend/public/data/reddit_topic_trends.json",
         "source":      "Reddit via Arctic Shift API",
     },
     "bluesky": {
         "labels":      BLUESKY_TOPIC_LABELS,
         "docs_csv":    "data/topics_bluesky/documents_with_topics.csv",
-        "out_path":    "docs/data/bluesky_topic_trends.json",
+        "out_path":    "frontend/public/data/bluesky_topic_trends.json",
         "source":      "Bluesky via atproto searchPosts API",
     },
     "mastodon": {

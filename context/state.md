@@ -19,7 +19,7 @@ _Last updated: 2026-08-19 (Mastodon third platform)_
 | Data format | JSONL (raw), CSV (topic outputs) |
 | Visualization | `plotly` (interactive), `wordcloud` + `matplotlib` (PNG) |
 | Trend smoothing | `statsmodels` (LOESS via `lowess`) |
-| Topic browser | React 18 + Vite 5 → builds to `docs/` (GitHub Pages) |
+| Topic browser | React 18 + Vite 5 → builds to `frontend/dist` (Vercel) |
 
 ---
 
@@ -118,9 +118,9 @@ Human-labeled in `build/build_docs_data.py`:
 
 | File | Contents |
 |------|----------|
-| `docs/data/reddit_topic_trends.json` | 34 topics × 41 months; arrays: count, total, share, loess |
-| `docs/data/bluesky_topic_trends.json` | 28 labeled topics × 42 months; same schema |
-| `docs/data/reddit_topic_trends.md` | Schema reference + rendering spec (bar + LOESS), applies to both files |
+| `frontend/public/data/reddit_topic_trends.json` | 34 topics × 41 months; arrays: count, total, share, loess |
+| `frontend/public/data/bluesky_topic_trends.json` | 28 labeled topics × 42 months; same schema |
+| `frontend/public/data/reddit_topic_trends.md` | Schema reference + rendering spec (bar + LOESS), applies to both files |
 | `build/build_trend_data.py` | Generator; `--platform reddit\|bluesky\|all` |
 
 Key observations (Data Centers topic):
@@ -194,13 +194,13 @@ plain SVG for rendering, no animation loop). Re-run `python analysis/topic_simil
 - [x] Preprocessing — cleaning, keyword filter, dedup → `corpus.jsonl`
 - [x] Guided BERTopic — 34 topics identified
 - [x] Word cloud visualizations (overall + 11 key topics)
-- [x] Topic browser (`docs/`) with per-topic comment viewer
+- [x] Topic browser (`frontend/`) with per-topic comment viewer
 - [x] Progress report (`progress_report.pdf`)
 - [x] Bluesky scraping — 258,069 raw posts via atproto searchPosts (12 queries × 42 months)
 - [x] Bluesky preprocessing — 125,226 corpus docs → `corpus_bluesky.jsonl`
 - [x] Bluesky BERTopic — 62 topics → `data/topics_bluesky/`
-- [x] Topic browser rewritten in React 18 + Vite 5 (`frontend/`) — builds to `docs/`; multi-platform toggle, breadcrumb nav, platform-aware comment cards
-- [x] Reddit temporal trend data — `docs/data/reddit_topic_trends.json` (all 34 topics, LOESS-smoothed, schema documented)
+- [x] Topic browser rewritten in React 18 + Vite 5 (`frontend/`) — builds to `frontend/dist` (Vercel); multi-platform toggle, breadcrumb nav, platform-aware comment cards
+- [x] Reddit temporal trend data — `frontend/public/data/reddit_topic_trends.json` (all 34 topics, LOESS-smoothed, schema documented)
 - [x] Topic similarity networks (both platforms x topics/outliers) — `analysis/topic_similarity_network.py` + frontend "Similarity Network" tab, see section above
 
 ### Done (continued)

@@ -354,5 +354,5 @@ python analysis/topic_model.py \
 # 4. 构建 topic browser 数据
 python build/build_docs_data.py \
     --topics-dir data/topics_bluesky \
-    --out-dir docs/bluesky
+    --out-dir frontend/public/data/bluesky
 ```

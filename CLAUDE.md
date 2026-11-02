@@ -53,7 +53,6 @@ Before touching any script, check `context/task-queue.md` for the current in-pro
 ├── build/                  # Analysis outputs → frontend/public/data/ JSON
 ├── experiments/            # API probes and pilots, not part of the pipeline
 ├── frontend/               # React 18 + Vite topic browser (deployed on Vercel)
-├── docs/                   # Submodule: GitHub Pages site
 ├── context/                # Session state + project plan (tracked)
 │   ├── state.md
 │   ├── task-queue.md
@@ -78,7 +77,7 @@ Before touching any script, check `context/task-queue.md` for the current in-pro
 ## Data Pipeline Order
 
 ```
-[scrape] → raw JSONL → [preprocess] → corpus.jsonl → [topic_model] → data/topics/ → [build_docs_data] → docs/data/
+[scrape] → raw JSONL → [preprocess] → corpus.jsonl → [topic_model] → data/topics/ → [build/build_docs_data] → frontend/public/data/
 ```
 
 When adding a new data source (e.g., Bluesky, GDELT):

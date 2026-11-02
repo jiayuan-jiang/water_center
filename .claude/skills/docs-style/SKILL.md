@@ -1,12 +1,12 @@
 ---
 name: docs-style
-description: Design style guide for the Great Lakes Horizon Scan topic browser (docs/index.html). Use whenever building or extending any page in the docs/ site.
+description: Design style guide for the Great Lakes Horizon Scan topic browser (frontend/). Use whenever building or extending any page in the docs/ site.
 user-invocable: true
 ---
 
 # Design Style Guide — Great Lakes Topic Browser
 
-Follow these rules when building or modifying pages in `docs/`.
+Follow these rules when building or modifying pages in `frontend/`.
 
 ## Color Palette
 

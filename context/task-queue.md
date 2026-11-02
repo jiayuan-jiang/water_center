@@ -49,7 +49,7 @@ Format: `- [ ] Task title — [spec](../spec/filename.md)`
 - [x] **Bluesky topic labeling** — [spec](../spec/bluesky-data.md)
   - 28 signal topics labeled in `BLUESKY_TOPIC_LABELS` (build/build_docs_data.py)
   - Noise excluded: topic 9 (music), 11 (bsky artifacts), 16 (books), 34 (dogs), etc.
-  - `docs/data/bluesky/topics.json` generated
+  - `frontend/public/data/bluesky/topics.json` generated
 
 - [ ] **GDELT news media scraping** — [spec](../spec/gdelt-scrape.md)
   - Free full-text search API, covers 1979–present
@@ -79,13 +79,13 @@ Format: `- [ ] Task title — [spec](../spec/filename.md)`
 _Full spec: [spec/reddit-further-analysis.md](../spec/reddit-further-analysis.md)_
 
 - [ ] **Temporal trend interpretation — narrative** ⭐ — [spec](../spec/reddit-further-analysis.md#analysis-1--temporal-trend-interpretation-high-priority)
-  - Data generation complete: `docs/data/reddit_topic_trends.json` (34 topics × 41 months, LOESS-smoothed)
-  - Rendering spec written: `docs/data/reddit_topic_trends.md`
+  - Data generation complete: `frontend/public/data/reddit_topic_trends.json` (34 topics × 41 months, LOESS-smoothed)
+  - Rendering spec written: `frontend/public/data/reddit_topic_trends.md`
   - **Blocked:** narrative interpretation pending feedback from Manja on which topics to highlight
 
 - [ ] **Temporal trend — frontend rendering**
   - Render `reddit_topic_trends.json` as bar + LOESS chart in topic browser
-  - Rendering spec: `docs/data/reddit_topic_trends.md`
+  - Rendering spec: `frontend/public/data/reddit_topic_trends.md`
   - No spec file yet; defer until narrative direction confirmed
 
 - [x] **Outlier cluster (-1) sub-clustering** ⭐ — superseded by [spec/outlier-emerging-issues.md](../spec/outlier-emerging-issues.md), see In Progress
@@ -134,7 +134,7 @@ _Full spec: [spec/reddit-further-analysis.md](../spec/reddit-further-analysis.md
 - [x] BERTopic topic modeling (`analysis/topic_model.py`) — 34 topics
 - [x] Word cloud visualizations (`analysis/wordcloud_viz.py`)
 - [x] Topic browser JSON build (`build/build_docs_data.py`)
-- [x] Static topic browser (`docs/index.html`) → rewritten as React app (`frontend/`)
+- [x] Static topic browser (formerly `docs/index.html`) → rewritten as React app (`frontend/`)
 - [x] Progress report (`progress_report.pdf`)
 - [x] Platform feasibility research (LinkedIn → ruled out; Twitter/X → ruled out; Bluesky → limited; GDELT → promising)
 - [x] Bluesky archive research (no Arctic Shift equivalent; leobalduf Firehose logs are best available option)
@@ -144,6 +144,6 @@ _Full spec: [spec/reddit-further-analysis.md](../spec/reddit-further-analysis.md
 - [x] Bluesky scraping (`scrapers/scrape_bluesky.py`) — 258,069 raw posts, 12 queries × 42 months
 - [x] Bluesky preprocessing (`preprocessing/preprocess_bluesky.py`) — 125,226 corpus docs
 - [x] Bluesky BERTopic (`analysis/topic_model.py --corpus ... --out-dir ...`) — 62 topics
-- [x] Bluesky topic labeling — 28 signal topics in `build/build_docs_data.py`, noise excluded, `docs/data/bluesky/` built
-- [x] Reddit temporal trend data generation (`build/build_trend_data.py`) — `docs/data/reddit_topic_trends.json`, 34 topics × 41 months, LOESS frac=0.35
-- [x] Bluesky temporal trend data generation (`build/build_trend_data.py --platform bluesky`) — `docs/data/bluesky_topic_trends.json`, 28 labeled topics × 42 months, LOESS frac=0.35
+- [x] Bluesky topic labeling — 28 signal topics in `build/build_docs_data.py`, noise excluded, `frontend/public/data/bluesky/` built
+- [x] Reddit temporal trend data generation (`build/build_trend_data.py`) — `frontend/public/data/reddit_topic_trends.json`, 34 topics × 41 months, LOESS frac=0.35
+- [x] Bluesky temporal trend data generation (`build/build_trend_data.py --platform bluesky`) — `frontend/public/data/bluesky_topic_trends.json`, 28 labeled topics × 42 months, LOESS frac=0.35

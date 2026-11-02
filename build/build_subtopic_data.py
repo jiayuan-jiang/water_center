@@ -1,5 +1,5 @@
 """
-Generate docs/data/subtopics/{reddit,bluesky}/t{N}.json and t{N}_s{M}.json
+Generate frontend/public/data/subtopics/{reddit,bluesky}/t{N}.json and t{N}_s{M}.json
 from grounded_summary.json + per-topic CSVs.
 """
 import argparse
@@ -13,7 +13,7 @@ PLATFORMS = {
         "summary":  "data/subtopics/grounded_summary.json",
         "csv_dir":  "data/subtopics",
         "corpus":   "data/corpus.jsonl",
-        "out_dirs": ["docs/data/subtopics/reddit", "frontend/public/data/subtopics/reddit"],
+        "out_dirs": ["frontend/public/data/subtopics/reddit"],
         "id_col":   "id",
         "source_col": "subreddit",
     },
@@ -21,7 +21,7 @@ PLATFORMS = {
         "summary":  "data/subtopics_bluesky/grounded_summary.json",
         "csv_dir":  "data/subtopics_bluesky",
         "corpus":   "data/corpus_bluesky.jsonl",
-        "out_dirs": ["docs/data/subtopics/bluesky", "frontend/public/data/subtopics/bluesky"],
+        "out_dirs": ["frontend/public/data/subtopics/bluesky"],
         "id_col":   "id",
         "source_col": "source",
     },
