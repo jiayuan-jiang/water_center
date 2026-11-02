@@ -23,8 +23,8 @@ Output: data/analysis/controversy_llm_{platform}.csv
 Reads OPENAI_API_KEY from environment or .env.
 
 Usage:
-    python controversy_llm.py --platform all
-    python controversy_llm.py --platform reddit --dry-run
+    python llm/controversy_llm.py --platform all
+    python llm/controversy_llm.py --platform reddit --dry-run
 """
 
 import argparse

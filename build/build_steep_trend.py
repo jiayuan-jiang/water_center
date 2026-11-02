@@ -25,8 +25,8 @@ Output: frontend/public/data/steep_trends/{platform}.json
     }
 
 Usage:
-    python build_steep_trend.py
-    python build_steep_trend.py --platform bluesky
+    python build/build_steep_trend.py
+    python build/build_steep_trend.py --platform bluesky
 """
 
 import argparse

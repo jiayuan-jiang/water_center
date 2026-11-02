@@ -3,7 +3,7 @@ Minimal test: can Bluesky searchPosts return results from 2023?
 Tests each keyword, prints oldest post date found.
 
 Usage:
-    BSKY_USER=you.bsky.social BSKY_PASS=yourpassword python test_bluesky.py
+    BSKY_USER=you.bsky.social BSKY_PASS=yourpassword python experiments/test_bluesky.py
 """
 
 import os

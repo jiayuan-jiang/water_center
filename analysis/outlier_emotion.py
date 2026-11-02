@@ -1,6 +1,6 @@
 """
 Emotion classification per outlier cluster (dominant emotion for the topic
-browser's outlier list — see sentiment_analysis.py for the same model applied
+browser's outlier list — see analysis/sentiment_analysis.py for the same model applied
 to main topics).
 
 Input:  data/analysis/outlier_docs_{platform}.csv (cluster, text, ...)
@@ -8,8 +8,8 @@ Output: data/analysis/outlier_emotion_{platform}.csv (per-cluster dominant_emoti
         data/analysis/outlier_doc_emotion_{platform}.csv (per-document emotion label)
 
 Usage:
-    python outlier_emotion.py --platform reddit
-    python outlier_emotion.py --platform bluesky
+    python analysis/outlier_emotion.py --platform reddit
+    python analysis/outlier_emotion.py --platform bluesky
 """
 
 import argparse

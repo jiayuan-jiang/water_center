@@ -43,10 +43,10 @@ For each sub-topic cluster identified by NMF (see `spec/subtopic-analysis.md`), 
 
 ## Script
 
-`grounded_summary.py`
+`llm/grounded_summary.py`
 
 ```
-usage: python grounded_summary.py [--platform reddit|bluesky|all] [--model MODEL] [--dry-run]
+usage: python llm/grounded_summary.py [--platform reddit|bluesky|all] [--model MODEL] [--dry-run]
 
 options:
   --platform   Which dataset to process (default: reddit)
@@ -102,7 +102,7 @@ If subtopic analysis is re-run (e.g., new corpus data), delete both checkpoint f
 rm data/subtopics/.grounded_checkpoint.json
 rm data/subtopics_bluesky/.grounded_checkpoint.json
 export GEMINI_API_KEY=...
-python grounded_summary.py --platform all
+python llm/grounded_summary.py --platform all
 ```
 
 ---

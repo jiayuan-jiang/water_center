@@ -3,16 +3,16 @@ Generate JSON data files for GitHub Pages topic browser.
 Output: docs/data/topics.json + docs/data/topics/t{id}.json
 
 Usage (Reddit, default):
-    python build_docs_data.py
+    python build/build_docs_data.py
 
 Usage (Bluesky):
-    python build_docs_data.py --platform bluesky \
+    python build/build_docs_data.py --platform bluesky \
         --corpus data/corpus_bluesky.jsonl \
         --topics-dir data/topics_bluesky \
         --out-dir docs/data/bluesky
 
 Usage (Mastodon):
-    python build_docs_data.py --platform mastodon \
+    python build/build_docs_data.py --platform mastodon \
         --corpus data/corpus_mastodon.jsonl \
         --topics-dir data/topics_mastodon \
         --out-dir frontend/public/data/mastodon
@@ -156,8 +156,8 @@ if CONTROVERSY_CKPT.exists():
             "quotes":    gen.get("supporting_quotes", []),
         }
 
-# Emotion breakdown per topic — see emotion_llm.py (LLM-based, replaces the
-# j-hartmann distilroberta classifier in sentiment_analysis.py)
+# Emotion breakdown per topic — see llm/emotion_llm.py (LLM-based, replaces the
+# j-hartmann distilroberta classifier in analysis/sentiment_analysis.py)
 SENTIMENT_CSV = Path(f"data/analysis/emotion_llm_by_topic_{args.platform}.csv")
 emotion_by_topic = {}
 EMOTION_KEYS = ["neutral", "fear", "joy", "surprise", "sadness", "anger", "disgust"]
@@ -169,9 +169,9 @@ if SENTIMENT_CSV.exists():
                     for k in EMOTION_KEYS},
         }
 
-# Per-comment sentiment + emotion — see sentiment_llm.py / emotion_llm.py
+# Per-comment sentiment + emotion — see llm/sentiment_llm.py / llm/emotion_llm.py
 # (LLM-based, replace the cardiffnlp/j-hartmann RoBERTa classifiers in
-# sentiment_analysis.py after manual review found they miss sarcasm/irony)
+# analysis/sentiment_analysis.py after manual review found they miss sarcasm/irony)
 SENTIMENT_DOCS_CSV = Path(f"data/analysis/sentiment_llm_docs_{args.platform}.csv")
 EMOTION_DOCS_CSV = Path(f"data/analysis/emotion_llm_docs_{args.platform}.csv")
 emotion_by_doc = {}
@@ -182,7 +182,7 @@ if EMOTION_DOCS_CSV.exists():
     for r in pd.read_csv(EMOTION_DOCS_CSV).itertuples():
         emotion_by_doc.setdefault(str(r.id), {})["emotion"] = r.emotion
 
-# STEEP tags per topic — see steep_tag.py, spec/reddit-further-analysis.md#analysis-7
+# STEEP tags per topic — see llm/steep_tag.py, spec/reddit-further-analysis.md#analysis-7
 STEEP_CSV = Path("data/analysis/topic_steep.csv")
 steep_by_topic = {}
 if STEEP_CSV.exists():

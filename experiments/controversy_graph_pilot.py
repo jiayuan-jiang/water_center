@@ -15,7 +15,7 @@ Method:
    (~1 = the two sides rarely talk to each other; ~0 = they freely mix)
 
 Usage:
-    python controversy_graph_pilot.py --topics 10,15,3
+    python experiments/controversy_graph_pilot.py --topics 10,15,3
 """
 
 import argparse

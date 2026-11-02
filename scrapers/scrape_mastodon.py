@@ -2,10 +2,10 @@
 Scrape Mastodon (mastodon.social) hashtag timelines for Great Lakes horizon scan.
 
 Strategy:
-- No global full-text search exists on Mastodon (see scrape_mastodon_test.py
+- No global full-text search exists on Mastodon (see experiments/scrape_mastodon_test.py
   findings) - the only public, unauthenticated way to find relevant posts is
   hashtag timelines, which also surface federated posts from other instances.
-- Time range: past 3 years, same cutoff as scrape_reddit.py / scrape_bluesky.py
+- Time range: past 3 years, same cutoff as scrapers/scrape_reddit.py / scrapers/scrape_bluesky.py
 - Pagination: ID-based (max_id), walking backwards in time, since Mastodon
   timelines have no since/until timestamp params like Arctic Shift.
 - Output: data/mastodon_raw.jsonl (one JSON object per line, raw API objects)

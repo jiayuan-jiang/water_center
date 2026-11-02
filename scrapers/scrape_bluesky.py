@@ -10,7 +10,7 @@ Strategy:
 Usage:
     export BSKY_USER=jiayuanj@umich.edu
     export BSKY_PASS=<app-password>
-    python scrape_bluesky.py
+    python scrapers/scrape_bluesky.py
 """
 
 import json
@@ -24,7 +24,7 @@ from atproto import Client
 from atproto_client.exceptions import BadRequestError, NetworkError
 
 # load .env if present
-_env = Path(__file__).parent / ".env"
+_env = Path(__file__).resolve().parent.parent / ".env"
 if _env.exists():
     for _line in _env.read_text().splitlines():
         if "=" in _line and not _line.startswith("#"):

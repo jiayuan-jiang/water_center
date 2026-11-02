@@ -104,7 +104,7 @@ low-confidence.
 
 `data/comments_raw.jsonl` carries Reddit's own per-comment `controversiality`
 flag (platform-computed, formula not published, dropped during
-`preprocess.py`). Joined back in via `sentiment_analysis.py` as
+`preprocessing/preprocess_reddit.py`). Joined back in via `analysis/sentiment_analysis.py` as
 `pct_reddit_controversial` in `sentiment_by_topic_reddit.csv` (Reddit only — no
 Bluesky equivalent exists).
 
@@ -121,7 +121,7 @@ correlate weakly — confirmed empirically here, not just cited from elsewhere.
 
 ## Graph-based pilot (Garimella RWC) — result: not usable as-is
 
-Piloted on 3 Reddit topics with the most thread-concentrated docs (`controversy_graph_pilot.py`):
+Piloted on 3 Reddit topics with the most thread-concentrated docs (`experiments/controversy_graph_pilot.py`):
 Data Centers (T10), Offshore Wind (T15), Waterfront & Tourism (T3). For each,
 pulled *all* raw comments (not just topic-filtered ones) from the topic's
 threads, built an author-reply graph, bisected the giant component

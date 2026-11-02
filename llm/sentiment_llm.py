@@ -1,13 +1,13 @@
 """
 LLM-based sentiment classification — replaces the cardiffnlp RoBERTa classifier
-in sentiment_analysis.py after manual review (2026-07-31) found it misses
+in analysis/sentiment_analysis.py after manual review (2026-07-31) found it misses
 sarcasm, irony, and implied meaning on many comments. Full corpus: ~54,310 docs
 across both platforms (Reddit 4,724 + Bluesky 49,586, same topic-filtered set
-as sentiment_analysis.py).
+as analysis/sentiment_analysis.py).
 
 Cost: ~$1.23 total estimated at gpt-4o-mini rates (precise tiktoken count on a
 sample — see conversation). Concurrency, not cost, is the real constraint here:
-54K+ calls is too many to run serially like the 62-call controversy_llm.py, so
+54K+ calls is too many to run serially like the 62-call llm/controversy_llm.py, so
 this uses a thread pool, and checkpoints every FLUSH_EVERY completions (not
 every single one — rewriting a 54K-entry JSON file per completion would make
 the I/O itself the bottleneck) so a crash or Ctrl-C loses at most one flush
@@ -18,15 +18,15 @@ Output: data/analysis/sentiment_llm_docs_{platform}.csv       (id, sentiment)
         data/analysis/sentiment_llm_by_topic_{platform}.csv   (per-topic % breakdown)
         data/analysis/.sentiment_llm_checkpoint_{platform}.json
 
-Kept separate from sentiment_analysis.py's RoBERTa-based output files for
+Kept separate from analysis/sentiment_analysis.py's RoBERTa-based output files for
 comparison, not overwritten.
 
 Reads OPENAI_API_KEY from environment or .env.
 
 Usage:
-    python sentiment_llm.py --platform reddit
-    python sentiment_llm.py --platform all --workers 20
-    python sentiment_llm.py --platform reddit --limit 100   # pilot run
+    python llm/sentiment_llm.py --platform reddit
+    python llm/sentiment_llm.py --platform all --workers 20
+    python llm/sentiment_llm.py --platform reddit --limit 100   # pilot run
 """
 
 import argparse

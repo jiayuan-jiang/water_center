@@ -32,3 +32,22 @@ frontend/dist/
 
 # Playwright MCP logs
 .playwright-mcp/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+
+# Personal notes, reports and slides (not part of the codebase)
+progress_report*
+*.pptx
+*.tex
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.xdv
+memory/sessions/
+Meeting*.md

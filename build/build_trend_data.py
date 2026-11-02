@@ -2,10 +2,10 @@
 Compute monthly trend data for BERTopic topics and write to docs/data/.
 
 Usage (Reddit, default):
-    python build_trend_data.py
+    python build/build_trend_data.py
 
 Usage (Bluesky):
-    python build_trend_data.py --platform bluesky
+    python build/build_trend_data.py --platform bluesky
 """
 
 import argparse

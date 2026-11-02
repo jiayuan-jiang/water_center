@@ -13,9 +13,9 @@ different clustering/scoring params skip the encoding step (~seconds instead of
 minutes). Cache invalidates automatically when the input doc set changes.
 
 Usage:
-    python outlier_analysis.py --platform reddit
-    python outlier_analysis.py --platform bluesky --min-relevance 0.35
-    python outlier_analysis.py --platform reddit --min-cluster-size 8 \\
+    python analysis/outlier_analysis.py --platform reddit
+    python analysis/outlier_analysis.py --platform bluesky --min-relevance 0.35
+    python analysis/outlier_analysis.py --platform reddit --min-cluster-size 8 \\
         --recency-months 18 --novelty-weight 2.0
 """
 

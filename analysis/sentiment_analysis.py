@@ -6,13 +6,13 @@ Output: data/analysis/sentiment_docs_{platform}.csv
         data/analysis/sentiment_by_topic_{platform}.csv
 
 Reddit only: also joins in Reddit's own per-comment `controversiality` flag
-(present in data/comments_raw.jsonl, dropped during preprocess.py) as a
+(present in data/comments_raw.jsonl, dropped during preprocessing/preprocess_reddit.py) as a
 platform-sourced complement to our own sentiment-based controversy_score —
 see spec/controversy-score.md.
 
 Usage:
-    python sentiment_analysis.py                   # Reddit
-    python sentiment_analysis.py --platform bluesky
+    python analysis/sentiment_analysis.py                   # Reddit
+    python analysis/sentiment_analysis.py --platform bluesky
 """
 
 import argparse
@@ -31,14 +31,14 @@ args = parser.parse_args()
 # ── Platform config ───────────────────────────────────────────────────────────
 if args.platform == "bluesky":
     DOCS_FILE = Path("data/topics_bluesky/documents_with_topics.csv")
-    # Only the 28 labeled valid-signal topics (same set as subtopic_model.py)
+    # Only the 28 labeled valid-signal topics (same set as analysis/subtopic_model.py)
     VALID_TOPICS = {
         0, 1, 4, 5, 10, 13, 15, 18, 19, 26, 27, 28, 29, 31,
         32, 33, 35, 36, 39, 41, 43, 45, 46, 48, 49, 50, 53, 59,
     }
 elif args.platform == "mastodon":
     DOCS_FILE = Path("data/topics_mastodon/documents_with_topics.csv")
-    # Only the 16 labeled valid-signal topics (same set as subtopic_model.py)
+    # Only the 16 labeled valid-signal topics (same set as analysis/subtopic_model.py)
     VALID_TOPICS = {0, 1, 2, 4, 5, 6, 8, 10, 11, 12, 14, 15, 17, 21, 22, 24}
 else:
     DOCS_FILE = Path("data/topics/documents_with_topics.csv")

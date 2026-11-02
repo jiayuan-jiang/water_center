@@ -1,8 +1,8 @@
 """
 LLM-based emotion classification — replaces the j-hartmann distilroberta
-classifier in sentiment_analysis.py, same motivation as sentiment_llm.py
+classifier in analysis/sentiment_analysis.py, same motivation as llm/sentiment_llm.py
 (manual review found the small RoBERTa models miss sarcasm/irony/implied
-meaning). Companion to sentiment_llm.py: same doc scope, same checkpoint/
+meaning). Companion to llm/sentiment_llm.py: same doc scope, same checkpoint/
 provider pattern, separate output files so the RoBERTa-based emotion data
 isn't overwritten until the LLM version is verified.
 
@@ -12,8 +12,8 @@ Output: data/analysis/emotion_llm_docs_{platform}.csv       (id, topic, emotion)
         data/analysis/.emotion_llm_checkpoint_{platform}.json
 
 Usage:
-    python emotion_llm.py --platform mastodon --provider deepseek
-    python emotion_llm.py --platform all --provider deepseek --workers 20
+    python llm/emotion_llm.py --platform mastodon --provider deepseek
+    python llm/emotion_llm.py --platform all --provider deepseek --workers 20
 """
 
 import argparse

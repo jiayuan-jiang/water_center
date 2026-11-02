@@ -18,9 +18,9 @@ Format: `- [ ] Task title — [spec](../spec/filename.md)`
 
 - [ ] **Outlier / emerging issues extraction** — [spec](../spec/outlier-emerging-issues.md)
   - [x] Stage 1+2 Reddit: micro-clustering + relevance/novelty/recency scoring → `data/analysis/outlier_subclusters_reddit.csv`, `outlier_overview_reddit.json`
-  - [ ] Stage 3 Reddit: grounded candidate list (`outlier_candidates.py`) — needs `GEMINI_API_KEY`
+  - [ ] Stage 3 Reddit: grounded candidate list (`llm/outlier_candidates.py`) — needs `GEMINI_API_KEY`
   - [x] Bluesky run — expanded bot/africa/dedup filters, 431 passing clusters → `outlier_review_bluesky.md`
-  - [x] Frontend outlier browser — platform → mode (Topics | Outlier Signals) → cluster detail; `build_outlier_data.py` → `frontend/public/data/outliers/`
+  - [x] Frontend outlier browser — platform → mode (Topics | Outlier Signals) → cluster detail; `build/build_outlier_data.py` → `frontend/public/data/outliers/`
   - [x] Stage 3 grounded summaries — all 497 clusters via OpenAI gpt-4o-mini (0 errors, 9 flagged off-topic); switched from Gemini to OpenAI (`OPENAI_API_KEY` in `.env`)
   - [x] Deploy — commit ff950dd pushed, Vercel auto-deploy
   - [ ] Team review on the website (E/K/N triage)
@@ -38,7 +38,7 @@ Format: `- [ ] Task title — [spec](../spec/filename.md)`
 - [x] **Grounded generation per sub-topic** — [spec](../spec/grounded-summary.md)
   - Reddit 58/58 + Bluesky 120/120 subtopics, 0 errors
   - Output: `data/subtopics/grounded_summary.json`, `data/subtopics_bluesky/grounded_summary.json`
-  - Model: Gemini 2.5 Flash via `grounded_summary.py`
+  - Model: Gemini 2.5 Flash via `llm/grounded_summary.py`
 
 - [x] **Outlier / weak signal analysis** — moved to In Progress with dedicated [spec](../spec/outlier-emerging-issues.md)
 
@@ -47,7 +47,7 @@ Format: `- [ ] Task title — [spec](../spec/filename.md)`
 ### Data Expansion
 
 - [x] **Bluesky topic labeling** — [spec](../spec/bluesky-data.md)
-  - 28 signal topics labeled in `BLUESKY_TOPIC_LABELS` (build_docs_data.py)
+  - 28 signal topics labeled in `BLUESKY_TOPIC_LABELS` (build/build_docs_data.py)
   - Noise excluded: topic 9 (music), 11 (bsky artifacts), 16 (books), 34 (dogs), etc.
   - `docs/data/bluesky/topics.json` generated
 
@@ -70,7 +70,7 @@ Format: `- [ ] Task title — [spec](../spec/filename.md)`
 - [ ] **Bluesky: filter weather-forecast bot accounts from corpus** — no spec yet
   - Topics 5, 27, 48, 49 are dominated by automated NOAA/NWS bot posts, not public discourse
   - Known bot authors: `mqt.weather.im`, `mqt.nws-bot.us`, `onwxalerts.bsky.social`, `wpc.weather.im`, `grr.nws-bot.us`, `chi.nws-bot.us`, `dlh.nws-bot.us`, `skeetbot.watchedsky.social`, `amtrak-status.paxex.aero`, `weather-alerts-ca.bsky.social`, `advanceweather.bsky.social`, `cle.nws-bot.us`, `iwx.nws-bot.us`
-  - Fix: add bot account blocklist to `preprocess_bluesky.py`, re-run pipeline from preprocessing onward
+  - Fix: add bot account blocklist to `preprocessing/preprocess_bluesky.py`, re-run pipeline from preprocessing onward
 
 ---
 
@@ -104,7 +104,7 @@ _Full spec: [spec/reddit-further-analysis.md](../spec/reddit-further-analysis.md
 
 - [x] **Topic semantic similarity network** — [spec](../spec/reddit-further-analysis.md#analysis-6--topic-semantic-similarity-network-low-priority)
   - Extended beyond original scope: both platforms x topics/outliers = 4 graphs
-  - `topic_similarity_network.py` → `frontend/public/data/network/{platform}/{topics|outliers}.json`
+  - `analysis/topic_similarity_network.py` → `frontend/public/data/network/{platform}/{topics|outliers}.json`
   - Rendered as interactive "Similarity Network" tab (force-directed, d3-force) alongside
     List tab on Topics and Outlier Signals pages
 
@@ -115,7 +115,7 @@ _Full spec: [spec/reddit-further-analysis.md](../spec/reddit-further-analysis.md
 - [ ] **Multi-platform corpus merge** — no spec yet
   - Merge Reddit + Bluesky (if obtained) + GDELT into unified `corpus.jsonl`
   - Add `source` field to schema
-  - Re-run topic_model.py on merged corpus
+  - Re-run analysis/topic_model.py on merged corpus
 
 ### Deliverables
 
@@ -128,12 +128,12 @@ _Full spec: [spec/reddit-further-analysis.md](../spec/reddit-further-analysis.md
 
 ## Done
 
-- [x] Reddit posts scraping (`scrape_reddit.py`) — 2,179 posts
-- [x] Reddit comments scraping (`scrape_comments.py`) — 42,500 comments
-- [x] Preprocessing pipeline (`preprocess.py`) — 8,441 corpus docs
-- [x] BERTopic topic modeling (`topic_model.py`) — 34 topics
-- [x] Word cloud visualizations (`wordcloud_viz.py`)
-- [x] Topic browser JSON build (`build_docs_data.py`)
+- [x] Reddit posts scraping (`scrapers/scrape_reddit.py`) — 2,179 posts
+- [x] Reddit comments scraping (`scrapers/scrape_comments.py`) — 42,500 comments
+- [x] Preprocessing pipeline (`preprocessing/preprocess_reddit.py`) — 8,441 corpus docs
+- [x] BERTopic topic modeling (`analysis/topic_model.py`) — 34 topics
+- [x] Word cloud visualizations (`analysis/wordcloud_viz.py`)
+- [x] Topic browser JSON build (`build/build_docs_data.py`)
 - [x] Static topic browser (`docs/index.html`) → rewritten as React app (`frontend/`)
 - [x] Progress report (`progress_report.pdf`)
 - [x] Platform feasibility research (LinkedIn → ruled out; Twitter/X → ruled out; Bluesky → limited; GDELT → promising)
@@ -141,9 +141,9 @@ _Full spec: [spec/reddit-further-analysis.md](../spec/reddit-further-analysis.md
 - [x] Email sent to leobalduf (Leonhard Balduf, TU Darmstadt) — 2026-06-24
 - [x] Bluesky API live test — since/until params work, 2023 data accessible, auth required
 - [x] Context management system created (CLAUDE.md, context/, spec/, memory/)
-- [x] Bluesky scraping (`scrape_bluesky.py`) — 258,069 raw posts, 12 queries × 42 months
-- [x] Bluesky preprocessing (`preprocess_bluesky.py`) — 125,226 corpus docs
-- [x] Bluesky BERTopic (`topic_model.py --corpus ... --out-dir ...`) — 62 topics
-- [x] Bluesky topic labeling — 28 signal topics in `build_docs_data.py`, noise excluded, `docs/data/bluesky/` built
-- [x] Reddit temporal trend data generation (`build_trend_data.py`) — `docs/data/reddit_topic_trends.json`, 34 topics × 41 months, LOESS frac=0.35
-- [x] Bluesky temporal trend data generation (`build_trend_data.py --platform bluesky`) — `docs/data/bluesky_topic_trends.json`, 28 labeled topics × 42 months, LOESS frac=0.35
+- [x] Bluesky scraping (`scrapers/scrape_bluesky.py`) — 258,069 raw posts, 12 queries × 42 months
+- [x] Bluesky preprocessing (`preprocessing/preprocess_bluesky.py`) — 125,226 corpus docs
+- [x] Bluesky BERTopic (`analysis/topic_model.py --corpus ... --out-dir ...`) — 62 topics
+- [x] Bluesky topic labeling — 28 signal topics in `build/build_docs_data.py`, noise excluded, `docs/data/bluesky/` built
+- [x] Reddit temporal trend data generation (`build/build_trend_data.py`) — `docs/data/reddit_topic_trends.json`, 34 topics × 41 months, LOESS frac=0.35
+- [x] Bluesky temporal trend data generation (`build/build_trend_data.py --platform bluesky`) — `docs/data/bluesky_topic_trends.json`, 28 labeled topics × 42 months, LOESS frac=0.35

@@ -51,7 +51,7 @@ No full-text search exists on Mastodon (architecturally, unlike Bluesky — see
 `spec/mastodon-data.md`), so coverage comes from hashtag timelines only.
 `#ohio` (18,440) and `#michigan` (14,248) dominate raw volume but are mostly
 off-topic (sports/politics/local news) — the `KEEP_KEYWORDS` relevance filter
-in `preprocess_mastodon.py` is what actually makes the corpus usable (43,006 →
+in `preprocessing/preprocess_mastodon.py` is what actually makes the corpus usable (43,006 →
 5,593). Outlier rate 1,634/5,593 = 29%, residual noise within outliers 40%
 (comparable to Reddit's 41%). 9 of 25 topics excluded as noise (traffic
 crashes, road closures, a repeating news-bot byline artifact, restaurant
@@ -78,7 +78,7 @@ r/Michigan 756 · r/ontario 235 · r/chicago 225 · r/minnesota 214 · r/wiscons
 
 ## Topics Identified (34)
 
-Human-labeled in `build_docs_data.py`:
+Human-labeled in `build/build_docs_data.py`:
 
 | ID | Label |
 |----|-------|
@@ -94,7 +94,7 @@ Human-labeled in `build_docs_data.py`:
 | 17 | Lake Water Levels |
 | 29 | Algal Blooms |
 | 32 | Water Privatization (Nestlé) |
-| … | (34 total, see `build_docs_data.py` TOPIC_LABELS) |
+| … | (34 total, see `build/build_docs_data.py` TOPIC_LABELS) |
 
 ---
 
@@ -106,7 +106,7 @@ Human-labeled in `build_docs_data.py`:
 | `data/subtopics/topic_{N:02d}.csv` | Per-topic doc assignments with `subtopic` + `subtopic_score` |
 | `data/subtopics_bluesky/overview.json` | Bluesky: 28 labeled topics, same schema |
 | `data/subtopics_bluesky/topic_{N:02d}.csv` | Per-topic Bluesky doc assignments |
-| `subtopic_model.py` | Generator; `--platform reddit\|bluesky` |
+| `analysis/subtopic_model.py` | Generator; `--platform reddit\|bluesky` |
 | `spec/subtopic-analysis.md` | Method, parameters, quality review |
 
 `auto_k` formula: `max(2, min(6, n_docs // 80))` — one sub-topic per ~80 docs.
@@ -121,7 +121,7 @@ Human-labeled in `build_docs_data.py`:
 | `docs/data/reddit_topic_trends.json` | 34 topics × 41 months; arrays: count, total, share, loess |
 | `docs/data/bluesky_topic_trends.json` | 28 labeled topics × 42 months; same schema |
 | `docs/data/reddit_topic_trends.md` | Schema reference + rendering spec (bar + LOESS), applies to both files |
-| `build_trend_data.py` | Generator; `--platform reddit\|bluesky\|all` |
+| `build/build_trend_data.py` | Generator; `--platform reddit\|bluesky\|all` |
 
 Key observations (Data Centers topic):
 - Reddit T10: zero activity 2023-06 through 2025-07, sudden emergence 2025-08, peak 2025-12 (64 docs)
@@ -138,8 +138,8 @@ Spec: `spec/outlier-emerging-issues.md` — operationalizes the meeting definiti
 
 | File | Contents |
 |------|----------|
-| `outlier_analysis.py` | Stage 1+2: re-cluster topic -1 docs (HDBSCAN 10/5), score clusters |
-| `outlier_candidates.py` | Stage 3: Gemini grounded candidate list (Greta-compatible md table) |
+| `analysis/outlier_analysis.py` | Stage 1+2: re-cluster topic -1 docs (HDBSCAN 10/5), score clusters |
+| `llm/outlier_candidates.py` | Stage 3: Gemini grounded candidate list (Greta-compatible md table) |
 | `data/analysis/outlier_subclusters_reddit.csv` | 78 micro-clusters with scores |
 | `data/analysis/outlier_overview_reddit.json` | 66 relevance-passing clusters + repr docs |
 
@@ -165,7 +165,7 @@ Reddit pilot results (2026-07-22):
 
 ## Topic Similarity Networks
 
-`topic_similarity_network.py` — re-embeds each topic/outlier-cluster's actual assigned
+`analysis/topic_similarity_network.py` — re-embeds each topic/outlier-cluster's actual assigned
 docs (sampled up to 80/node) with `all-MiniLM-L6-v2`, mean-pools into a centroid,
 computes pairwise cosine similarity, keeps edges >= threshold (default 0.6, no node
 filtering — full node sets kept per Manja/team review need to see everything).
@@ -182,7 +182,7 @@ similarity" slider (0.6-0.95) so the graph can be decluttered interactively with
 re-fetching data. Rendered via a new "Similarity Network" tab embedded alongside the
 existing List tab on both the Topics and Outlier Signals pages
 (`frontend/src/components/NetworkGraph.jsx`, uses `d3-force` for one-shot layout +
-plain SVG for rendering, no animation loop). Re-run `python topic_similarity_network.py
+plain SVG for rendering, no animation loop). Re-run `python analysis/topic_similarity_network.py
 --all` after any topic/outlier re-labeling to refresh.
 
 ---
@@ -201,7 +201,7 @@ plain SVG for rendering, no animation loop). Re-run `python topic_similarity_net
 - [x] Bluesky BERTopic — 62 topics → `data/topics_bluesky/`
 - [x] Topic browser rewritten in React 18 + Vite 5 (`frontend/`) — builds to `docs/`; multi-platform toggle, breadcrumb nav, platform-aware comment cards
 - [x] Reddit temporal trend data — `docs/data/reddit_topic_trends.json` (all 34 topics, LOESS-smoothed, schema documented)
-- [x] Topic similarity networks (both platforms x topics/outliers) — `topic_similarity_network.py` + frontend "Similarity Network" tab, see section above
+- [x] Topic similarity networks (both platforms x topics/outliers) — `analysis/topic_similarity_network.py` + frontend "Similarity Network" tab, see section above
 
 ### Done (continued)
 - [x] Sub-topic analysis — NMF on TF-IDF; Reddit 25 topics + Bluesky 28 topics → `data/subtopics*/overview.json`
@@ -213,16 +213,16 @@ plain SVG for rendering, no animation loop). Re-run `python topic_similarity_net
 - [x] Stage 3 grounded summaries — OpenAI gpt-4o-mini (not Gemini; key in `.env`), 497/497, 0 errors
 - [x] Frontend outlier browser — platform → mode (Topics | Outlier Signals) → cluster detail
   with scores, monthly bars, grounded summary + cite-jump, full doc list
-- [x] `build_outlier_data.py` → `frontend/public/data/outliers/`; deployed via commit ff950dd
+- [x] `build/build_outlier_data.py` → `frontend/public/data/outliers/`; deployed via commit ff950dd
 
 ### Done (Mastodon third platform, 2026-08-19)
-- [x] `scrape_mastodon.py` — hashtag-timeline scraper, checkpoint-resumable, 43,006 raw posts
-- [x] `preprocess_mastodon.py` — HTML-strip + relevance filter → 5,593 corpus docs
+- [x] `scrapers/scrape_mastodon.py` — hashtag-timeline scraper, checkpoint-resumable, 43,006 raw posts
+- [x] `preprocessing/preprocess_mastodon.py` — HTML-strip + relevance filter → 5,593 corpus docs
 - [x] BERTopic — 25 topics, 16 hand-labeled as signal (`spec/mastodon-data.md`)
-- [x] `build_docs_data.py` / `build_trend_data.py` / `subtopic_model.py` /
-  `build_subtopic_data.py` --platform mastodon
+- [x] `build/build_docs_data.py` / `build/build_trend_data.py` / `analysis/subtopic_model.py` /
+  `build/build_subtopic_data.py` --platform mastodon
 - [x] Grounded sub-topic summaries — Gemini 2.5 Flash, 34/34, 0 errors
-- [x] Sentiment/emotion — RoBERTa (`sentiment_analysis.py`), feeds mood badges
+- [x] Sentiment/emotion — RoBERTa (`analysis/sentiment_analysis.py`), feeds mood badges
 - [x] Outlier analysis — 46 micro-clusters, 27 pass relevance gate; emotion scored
 - [x] Similarity network (topics + outliers)
 - [x] Frontend: Mastodon as third platform card, `@handle@instance` comment
@@ -238,8 +238,8 @@ plain SVG for rendering, no animation loop). Re-run `python topic_similarity_net
   `deepseek-chat`) via a new `--provider {openai,deepseek}` flag added to all
   three scripts. 16/16 controversy scores, 16/16 + 27/27 STEEP tags, 27/27
   grounded outlier candidates — all completed on DeepSeek. Re-ran
-  `build_steep_trend.py` / `build_docs_data.py` / `build_outlier_data.py` /
-  `topic_similarity_network.py` (both sets) to pick up the results;
+  `build/build_steep_trend.py` / `build/build_docs_data.py` / `build/build_outlier_data.py` /
+  `analysis/topic_similarity_network.py` (both sets) to pick up the results;
   re-verified in-browser (STEEP filter counts and controversy column now
   populated, outlier clusters show grounded titles + water-related badge).
 
@@ -257,18 +257,18 @@ plain SVG for rendering, no animation loop). Re-run `python topic_similarity_net
 ## Key Configuration
 
 ```python
-# Time range (scrape_reddit.py)
+# Time range (scrapers/scrape_reddit.py)
 THREE_YEARS_AGO = int(datetime(2023, 1, 1, tzinfo=timezone.utc).timestamp())
 
-# BERTopic (topic_model.py)
+# BERTopic (analysis/topic_model.py)
 UMAP:   n_neighbors=15, n_components=5, min_dist=0.0, metric="cosine", random_state=42
 HDBSCAN: min_cluster_size=30, min_samples=10
 Vectorizer: ngram_range=(1,2), stop_words="english", min_df=5
 
-# Corpus filter (preprocess.py)
+# Corpus filter (preprocessing/preprocess_reddit.py)
 MIN_WORDS = 15
 
-# Trend smoothing (build_trend_data.py)
+# Trend smoothing (build/build_trend_data.py)
 LOESS_FRAC = 0.35
 ```
 

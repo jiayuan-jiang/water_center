@@ -31,7 +31,7 @@ relevance gate and let novelty × recency drive the ordering, not exclusion.
 
 ## Method
 
-### Tunable parameters (`outlier_analysis.py` CLI)
+### Tunable parameters (`analysis/outlier_analysis.py` CLI)
 
 | Flag | Default | Controls |
 |------|---------|----------|
@@ -48,18 +48,18 @@ Embeddings are cached (`data/analysis/.emb_cache_*.npz`, auto-invalidated when t
 input doc set changes), so param sweeps rerun in seconds. The human review sheet
 `data/analysis/outlier_review_{platform}.md` is regenerated on every run.
 
-### Stage 1 — micro-clustering (`outlier_analysis.py`)
+### Stage 1 — micro-clustering (`analysis/outlier_analysis.py`)
 - Input: `data/topics{,_bluesky}/documents_with_topics.csv`, rows with `topic == -1`
 - Bluesky only: drop docs from known weather/status bot authors (blocklist from
   task-queue) before clustering — input filter only, main pipeline untouched
 - Re-embed with `all-MiniLM-L6-v2` (main model was not saved; re-encoding is cheap)
-- UMAP: same params as `topic_model.py` (n_neighbors=15, n_components=5, min_dist=0.0,
+- UMAP: same params as `analysis/topic_model.py` (n_neighbors=15, n_components=5, min_dist=0.0,
   cosine, random_state=42)
 - HDBSCAN: `min_cluster_size=10, min_samples=5` (main model: 30, 10)
 
 ### Stage 2 — scoring per micro-cluster
 - `relevance` = cos(cluster centroid, anchor), anchor = mean embedding of the
-  SEED_TOPICS keyword phrases from `topic_model.py`. Clusters below
+  SEED_TOPICS keyword phrases from `analysis/topic_model.py`. Clusters below
   `--min-relevance` (default 0.3, tune after first run) are dropped as off-topic.
 - `novelty` = 1 − max cos(cluster centroid, existing topic centroids). Topic centroids
   are mean embeddings of non-outlier docs grouped by assigned topic. Low novelty is
@@ -75,9 +75,9 @@ Outputs:
   keywords (per-cluster mean TF-IDF top terms), scores, monthly counts, and top-3
   representative docs (closest to centroid)
 
-### Stage 3 — grounded candidate list (`outlier_candidates.py`)
+### Stage 3 — grounded candidate list (`llm/outlier_candidates.py`)
 - For each cluster in the overview JSON, call Gemini 2.5 Flash (same pattern as
-  `grounded_summary.py`: checkpointed, cited to doc IDs) to produce an issue title +
+  `llm/grounded_summary.py`: checkpointed, cited to doc IDs) to produce an issue title +
   2–3 sentence description + key quotes.
 - Output `data/analysis/emerging_issues_candidates_{platform}.md`: table with
   issue / description / source / n_docs / date range / novelty / example quotes —

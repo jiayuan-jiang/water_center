@@ -9,7 +9,7 @@ this conversation (see spec/controversy-score.md). Compares stance-based
 balance ratio against those ratings, alongside the two existing metrics.
 
 Usage:
-    python stance_pilot.py
+    python experiments/stance_pilot.py
 """
 
 import pandas as pd

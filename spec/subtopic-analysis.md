@@ -16,9 +16,9 @@ Sub-topic splitting breaks each main topic into coherent chunks, so that the nex
 
 ```
 corpus.jsonl
-    ↓ topic_model.py
+    ↓ analysis/topic_model.py
 data/topics/documents_with_topics.csv
-    ↓ subtopic_model.py          ← this spec
+    ↓ analysis/subtopic_model.py          ← this spec
 data/subtopics/overview.json
     ↓ grounded_generation.py     ← next step (see below)
 per-subtopic: label + summary + attitude + key quotes
@@ -28,11 +28,11 @@ per-subtopic: label + summary + attitude + key quotes
 
 ## Script
 
-`subtopic_model.py`
+`analysis/subtopic_model.py`
 
 ```bash
-python subtopic_model.py                    # Reddit
-python subtopic_model.py --platform bluesky # Bluesky (28 labeled topics only)
+python analysis/subtopic_model.py                    # Reddit
+python analysis/subtopic_model.py --platform bluesky # Bluesky (28 labeled topics only)
 ```
 
 ---
@@ -135,7 +135,7 @@ Notable splits:
 Known quality issues:
 - Topics 5, 27, 48, 49 dominated by automated NOAA weather bot posts → sub-topics reflect geography of weather stations, not discourse. See [known issue in task-queue](../context/task-queue.md#known-issues).
 - Some residual URL fragments in keywords (minor, does not affect sub-topic coherence).
-- Topic 35 label corrected from "Environmental Advocacy" to "UFO/UAP Sightings Over Great Lakes" in `build_docs_data.py`.
+- Topic 35 label corrected from "Environmental Advocacy" to "UFO/UAP Sightings Over Great Lakes" in `build/build_docs_data.py`.
 
 ---
 

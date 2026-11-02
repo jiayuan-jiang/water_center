@@ -40,7 +40,7 @@ status["in_reply_to_id"]        # 回复目标，无则为 None
 
 ---
 
-## 爬取策略（`scrape_mastodon.py`）
+## 爬取策略（`scrapers/scrape_mastodon.py`）
 
 ### Hashtag 列表
 
@@ -55,7 +55,7 @@ HASHTAGS = [
 ]
 ```
 
-湖名 + `greatlakes*` 前缀标签地域限定明确。后 8 个地名标签（`michigan`/`ohio` 等）用量很大但混杂大量无关内容（体育、政治、日常生活）——刻意保留，靠 `preprocess_mastodon.py` 的关键词相关性过滤器挡掉，而不是从源头排除（按用户决定：先拿全量数据，后续过滤）。
+湖名 + `greatlakes*` 前缀标签地域限定明确。后 8 个地名标签（`michigan`/`ohio` 等）用量很大但混杂大量无关内容（体育、政治、日常生活）——刻意保留，靠 `preprocessing/preprocess_mastodon.py` 的关键词相关性过滤器挡掉，而不是从源头排除（按用户决定：先拿全量数据，后续过滤）。
 
 被明确排除、未采用的通用词标签：`pfas`、`algae`、`waterquality`、`invasivespecies` 等——这些是全球通用词，会抓到欧洲/澳洲等无关地区的同名话题，与"五大湖"这个地域限定不匹配。
 
@@ -72,11 +72,11 @@ HASHTAGS = [
 
 ---
 
-## 预处理（`preprocess_mastodon.py`）
+## 预处理（`preprocessing/preprocess_mastodon.py`）
 
 输入 `data/mastodon_raw.jsonl` → 输出 `data/corpus_mastodon.jsonl`（不合并进 `corpus.jsonl`）。
 
-步骤（对照 `preprocess_bluesky.py`）：
+步骤（对照 `preprocessing/preprocess_bluesky.py`）：
 1. 按 `id` 去重
 2. 语言过滤：`language` 字段为 `None` 或 `"en"` 则保留
 3. **HTML 转纯文本**（Mastodon 特有步骤）：`<br>`/`</p>` → 空格，剩余标签整体去掉，`html.unescape()` 解码实体
@@ -129,35 +129,35 @@ MASTODON_TOPIC_LABELS = {
 }
 ```
 
-（此 dict 按现有代码库惯例独立复制进了 `build_docs_data.py` / `build_trend_data.py` / `controversy_llm.py` / `steep_tag.py` / `subtopic_model.py`（作为 `VALID_TOPICS` 集合）——不是共享模块，是有意保持与 Reddit/Bluesky 现状一致的重复。）
+（此 dict 按现有代码库惯例独立复制进了 `build/build_docs_data.py` / `build/build_trend_data.py` / `llm/controversy_llm.py` / `llm/steep_tag.py` / `analysis/subtopic_model.py`（作为 `VALID_TOPICS` 集合）——不是共享模块，是有意保持与 Reddit/Bluesky 现状一致的重复。）
 
 ---
 
 ## 执行顺序
 
 ```bash
-python scrape_mastodon.py                          # → data/mastodon_raw.jsonl
-python preprocess_mastodon.py                       # → data/corpus_mastodon.jsonl
-python topic_model.py --corpus data/corpus_mastodon.jsonl --out-dir data/topics_mastodon
-python build_docs_data.py --platform mastodon --corpus data/corpus_mastodon.jsonl \
+python scrapers/scrape_mastodon.py                          # → data/mastodon_raw.jsonl
+python preprocessing/preprocess_mastodon.py                       # → data/corpus_mastodon.jsonl
+python analysis/topic_model.py --corpus data/corpus_mastodon.jsonl --out-dir data/topics_mastodon
+python build/build_docs_data.py --platform mastodon --corpus data/corpus_mastodon.jsonl \
     --topics-dir data/topics_mastodon --out-dir frontend/public/data/mastodon
-python build_trend_data.py --platform mastodon
-python subtopic_model.py --platform mastodon
-python grounded_summary.py --platform mastodon       # 需要 GEMINI_API_KEY
-python build_subtopic_data.py --platform mastodon
-python sentiment_analysis.py --platform mastodon      # RoBERTa，接入前端 mood 徽章
-python outlier_analysis.py --platform mastodon
-python outlier_emotion.py --platform mastodon
-python build_outlier_data.py --platform mastodon
-python topic_similarity_network.py --platform mastodon --set topics
-python topic_similarity_network.py --platform mastodon --set outliers
+python build/build_trend_data.py --platform mastodon
+python analysis/subtopic_model.py --platform mastodon
+python llm/grounded_summary.py --platform mastodon       # 需要 GEMINI_API_KEY
+python build/build_subtopic_data.py --platform mastodon
+python analysis/sentiment_analysis.py --platform mastodon      # RoBERTa，接入前端 mood 徽章
+python analysis/outlier_analysis.py --platform mastodon
+python analysis/outlier_emotion.py --platform mastodon
+python build/build_outlier_data.py --platform mastodon
+python analysis/topic_similarity_network.py --platform mastodon --set topics
+python analysis/topic_similarity_network.py --platform mastodon --set outliers
 
 # 以下步骤因 OpenAI 账号日请求配额耗尽（10000/10000）中断，待配额恢复后续跑：
-python controversy_llm.py --platform mastodon         # 16/16 topics，仅完成 1 个
-python steep_tag.py --target topics --platform mastodon
-python steep_tag.py --target outliers --platform mastodon
-python outlier_candidates.py --platform mastodon
-python build_steep_trend.py --platform mastodon       # 依赖上面两步的 CSV
+python llm/controversy_llm.py --platform mastodon         # 16/16 topics，仅完成 1 个
+python llm/steep_tag.py --target topics --platform mastodon
+python llm/steep_tag.py --target outliers --platform mastodon
+python llm/outlier_candidates.py --platform mastodon
+python build/build_steep_trend.py --platform mastodon       # 依赖上面两步的 CSV
 ```
 
 ---

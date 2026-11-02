@@ -2,15 +2,15 @@
 Grounded emerging-issue candidate list from outlier micro-clusters.
 Spec: spec/outlier-emerging-issues.md (Stage 3)
 
-Input:  data/analysis/outlier_overview_{platform}.json  (from outlier_analysis.py)
+Input:  data/analysis/outlier_overview_{platform}.json  (from analysis/outlier_analysis.py)
 Output: data/analysis/emerging_issues_candidates_{platform}.md
-        data/analysis/.candidates_checkpoint_{platform}.json  (read by build_outlier_data.py)
+        data/analysis/.candidates_checkpoint_{platform}.json  (read by build/build_outlier_data.py)
 
 Reads OPENAI_API_KEY from environment or .env.
 
 Usage:
-    python outlier_candidates.py --platform all
-    python outlier_candidates.py --platform bluesky --dry-run
+    python llm/outlier_candidates.py --platform all
+    python llm/outlier_candidates.py --platform bluesky --dry-run
 """
 
 import argparse

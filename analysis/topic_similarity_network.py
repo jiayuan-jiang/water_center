@@ -13,9 +13,9 @@ Node sets:
   outliers -> frontend/public/data/outliers/{platform}/clusters.json (passing micro-clusters)
 
 Usage:
-    python topic_similarity_network.py --platform reddit --set topics
-    python topic_similarity_network.py --platform bluesky --set outliers
-    python topic_similarity_network.py --all   # runs all 4 combos
+    python analysis/topic_similarity_network.py --platform reddit --set topics
+    python analysis/topic_similarity_network.py --platform bluesky --set outliers
+    python analysis/topic_similarity_network.py --all   # runs all 4 combos
 """
 
 import argparse
@@ -67,7 +67,7 @@ def load_topic_nodes(platform):
 def load_outlier_nodes(platform):
     meta = json.loads(OUTLIER_CLUSTERS_JSON[platform].read_text())
     # No LLM controversy score exists for outlier clusters (only run on labeled
-    # topics) — emotion is available since outlier_emotion.py covers all clusters.
+    # topics) — emotion is available since analysis/outlier_emotion.py covers all clusters.
     nodes = [{"id": c["id"], "label": c["label"], "keywords": c["keywords"], "count": c["n_docs"],
               "emotion": c.get("emotion")}
               for c in meta["clusters"]]

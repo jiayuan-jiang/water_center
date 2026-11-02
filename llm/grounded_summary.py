@@ -1,5 +1,5 @@
 """
-grounded_summary.py — LLM-grounded summaries for each sub-topic.
+llm/grounded_summary.py — LLM-grounded summaries for each sub-topic.
 
 For each subtopic in data/subtopics/overview.json (or bluesky variant),
 calls Gemini with the subtopic's keywords + repr_docs to generate:
@@ -14,10 +14,10 @@ Output: data/subtopics/grounded_summary.json
 
 Usage:
     export GEMINI_API_KEY=...
-    python grounded_summary.py                    # reddit
-    python grounded_summary.py --platform bluesky
-    python grounded_summary.py --platform all
-    python grounded_summary.py --dry-run          # no API calls, verify logic
+    python llm/grounded_summary.py                    # reddit
+    python llm/grounded_summary.py --platform bluesky
+    python llm/grounded_summary.py --platform all
+    python llm/grounded_summary.py --dry-run          # no API calls, verify logic
 """
 
 import argparse

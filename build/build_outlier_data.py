@@ -9,8 +9,8 @@ Output: frontend/public/data/outliers/{platform}/clusters.json
         frontend/public/data/outliers/{platform}/c{id}.json
 
 Usage:
-    python build_outlier_data.py                  # both platforms
-    python build_outlier_data.py --platform reddit
+    python build/build_outlier_data.py                  # both platforms
+    python build/build_outlier_data.py --platform reddit
 """
 
 import argparse

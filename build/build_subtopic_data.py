@@ -47,7 +47,7 @@ def load_bluesky_authors(corpus_path):
 
 
 def load_emotion_by_doc(platform):
-    """Per-comment emotion labels — same source build_docs_data.py joins in
+    """Per-comment emotion labels — same source build/build_docs_data.py joins in
     for main topic comments (data/analysis/sentiment_docs_{platform}.csv).
     Subtopic comment JSON was missing this field entirely."""
     path = f"data/analysis/sentiment_docs_{platform}.csv"

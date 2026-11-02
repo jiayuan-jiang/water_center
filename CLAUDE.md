@@ -30,28 +30,37 @@ Before touching any script, check `context/task-queue.md` for the current in-pro
 ## Project Structure
 
 ```
-├── scrape_reddit.py        # Arctic Shift API → posts_raw.jsonl
-├── scrape_comments.py      # Arctic Shift API → comments_raw.jsonl
-├── preprocess.py           # comments_raw → corpus.jsonl
-├── topic_model.py          # corpus.jsonl → data/topics/
-├── wordcloud_viz.py        # data/topics/ → PNG word clouds
-├── build_docs_data.py      # data/topics/ → docs/data/ (topic browser JSON)
-├── requirements.txt
-├── data/                   # NOT in git — raw + processed data
-│   ├── posts_raw.jsonl
-│   ├── comments_raw.jsonl
-│   ├── corpus.jsonl
-│   └── topics/
-├── docs/                   # GitHub Pages topic browser
-│   ├── index.html
-│   └── data/
-├── context/                # Session state (tracked in git)
+├── scrapers/               # Raw collection → data/*_raw.jsonl
+│   ├── scrape_reddit.py        # Arctic Shift API → posts_raw.jsonl
+│   ├── scrape_comments.py      # Arctic Shift API → comments_raw.jsonl
+│   ├── scrape_bluesky.py       # atproto searchPosts → bluesky_raw.jsonl
+│   └── scrape_mastodon.py      # hashtag timelines → mastodon_raw.jsonl
+├── preprocessing/          # raw JSONL → corpus*.jsonl
+│   ├── preprocess_reddit.py
+│   ├── preprocess_bluesky.py
+│   └── preprocess_mastodon.py
+├── analysis/               # Local modeling (no LLM calls)
+│   ├── topic_model.py          # BERTopic
+│   ├── subtopic_model.py       # NMF sub-topics
+│   ├── outlier_analysis.py     # outlier micro-clusters + emerging-issue scoring
+│   ├── topic_similarity_network.py
+│   ├── sentiment_analysis.py, outlier_emotion.py   # RoBERTa sentiment/emotion
+│   └── wordcloud_viz.py
+├── llm/                    # LLM-backed steps (grounded_summary.py holds shared helpers)
+│   ├── grounded_summary.py, outlier_candidates.py
+│   ├── controversy_llm.py, steep_tag.py
+│   └── sentiment_llm.py, emotion_llm.py
+├── build/                  # Analysis outputs → frontend/public/data/ JSON
+├── experiments/            # API probes and pilots, not part of the pipeline
+├── frontend/               # React 18 + Vite topic browser (deployed on Vercel)
+├── docs/                   # Submodule: GitHub Pages site
+├── context/                # Session state + project plan (tracked)
 │   ├── state.md
-│   └── task-queue.md
+│   ├── task-queue.md
+│   └── project-plan.md
 ├── spec/                   # One file per task, linked from task-queue
-└── memory/
-    ├── modules/            # Reusable knowledge fragments
-    └── sessions/           # Per-session logs (optional)
+├── data/                   # NOT in repo — raw + processed data
+└── requirements.txt
 ```
 
 ---
@@ -60,7 +69,7 @@ Before touching any script, check `context/task-queue.md` for the current in-pro
 
 - **Python 3.11**, conda env `watercenter`
 - All data files go under `data/` — never commit them (already in .gitignore)
-- New platform scrapers follow the same pattern as `scrape_reddit.py`: paginate to JSONL, resumable via checkpoint, respect rate limits with `time.sleep`
+- New platform scrapers follow the same pattern as `scrapers/scrape_reddit.py`: paginate to JSONL, resumable via checkpoint, respect rate limits with `time.sleep`
 - New corpus sources must merge into `data/corpus.jsonl` with the same schema: `{id, post_id, subreddit/source, author, score, created_utc, text}`
 - No comments in code unless the WHY is non-obvious
 
@@ -75,8 +84,8 @@ Before touching any script, check `context/task-queue.md` for the current in-pro
 When adding a new data source (e.g., Bluesky, GDELT):
 1. Write a dedicated scraper → `data/<source>_raw.jsonl`
 2. Write or extend preprocess to filter/clean → append to `data/corpus.jsonl`
-3. Re-run `topic_model.py` on merged corpus
-4. Re-run `build_docs_data.py`
+3. Re-run `analysis/topic_model.py` on merged corpus
+4. Re-run `build/build_docs_data.py`
 
 ---
 

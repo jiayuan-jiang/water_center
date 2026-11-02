@@ -7,8 +7,8 @@ Output: data/subtopics/overview.json
         (or data/subtopics_bluesky/ for bluesky)
 
 Usage:
-    python subtopic_model.py                   # Reddit
-    python subtopic_model.py --platform bluesky
+    python analysis/subtopic_model.py                   # Reddit
+    python analysis/subtopic_model.py --platform bluesky
 """
 
 import argparse

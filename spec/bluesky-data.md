@@ -239,7 +239,7 @@ Schema 映射：
 
 ---
 
-## `scrape_bluesky.py` 算法（伪代码）
+## `scrapers/scrape_bluesky.py` 算法（伪代码）
 
 ```python
 CHECKPOINT_FILE = "data/bluesky_checkpoint.json"
@@ -283,9 +283,9 @@ for keyword in KEYWORDS:
 
 ---
 
-## `preprocess_bluesky.py` 规格
+## `preprocessing/preprocess_bluesky.py` 规格
 
-文件：`preprocess_bluesky.py`（独立于 `preprocess.py`，不修改现有 Reddit 预处理逻辑）
+文件：`preprocessing/preprocess_bluesky.py`（独立于 `preprocessing/preprocess_reddit.py`，不修改现有 Reddit 预处理逻辑）
 
 **输入**：`data/bluesky_raw.jsonl`
 **输出**：`data/corpus_bluesky.jsonl`（独立语料库，**不合并进** `corpus.jsonl`）
@@ -330,7 +330,7 @@ Bluesky 使用与 Reddit **完全相同的分析方法**，但在独立的数据
 | 词云 | `data/wordclouds/` | `data/wordclouds_bluesky/` |
 | Topic browser | `docs/` | `docs/bluesky/`（或同一 browser 加 platform 切换） |
 
-`topic_model.py` 和 `build_docs_data.py` 需支持 `--corpus` / `--out-dir` 参数（或通过环境变量），以便复用同一套代码跑两个平台。
+`analysis/topic_model.py` 和 `build/build_docs_data.py` 需支持 `--corpus` / `--out-dir` 参数（或通过环境变量），以便复用同一套代码跑两个平台。
 
 ---
 
@@ -341,18 +341,18 @@ export BSKY_USER=jiayuanj@umich.edu
 export BSKY_PASS=<password>
 
 # 1. 爬取
-python scrape_bluesky.py                          # → data/bluesky_raw.jsonl
+python scrapers/scrape_bluesky.py                          # → data/bluesky_raw.jsonl
 
 # 2. 预处理
-python preprocess_bluesky.py                      # → data/corpus_bluesky.jsonl
+python preprocessing/preprocess_bluesky.py                      # → data/corpus_bluesky.jsonl
 
 # 3. 建模（独立于 Reddit，不合并）
-python topic_model.py \
+python analysis/topic_model.py \
     --corpus data/corpus_bluesky.jsonl \
     --out-dir data/topics_bluesky
 
 # 4. 构建 topic browser 数据
-python build_docs_data.py \
+python build/build_docs_data.py \
     --topics-dir data/topics_bluesky \
     --out-dir docs/bluesky
 ```

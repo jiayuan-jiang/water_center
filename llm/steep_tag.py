@@ -21,9 +21,9 @@ empty `human_confirmed` column left for manual review.
 Reads OPENAI_API_KEY from environment or .env.
 
 Usage:
-    python steep_tag.py --target topics --platform all
-    python steep_tag.py --target outliers --platform all
-    python steep_tag.py --target all --dry-run
+    python llm/steep_tag.py --target topics --platform all
+    python llm/steep_tag.py --target outliers --platform all
+    python llm/steep_tag.py --target all --dry-run
 """
 
 import argparse
@@ -108,7 +108,7 @@ def tag_items(items: dict, ckpt_path: Path, client, model_name: str, dry_run: bo
     return checkpoint
 
 
-# ── Topic labels (mirrors build_docs_data.py REDDIT_TOPIC_LABELS / BLUESKY_TOPIC_LABELS) ──
+# ── Topic labels (mirrors build/build_docs_data.py REDDIT_TOPIC_LABELS / BLUESKY_TOPIC_LABELS) ──
 REDDIT_TOPIC_LABELS = {
     0:  "General Great Lakes Discussion", 1:  "Great Lakes Regional Overview",
     2:  "Invasive Species", 3:  "Waterfront & Tourism", 4:  "Swimming & Recreation",

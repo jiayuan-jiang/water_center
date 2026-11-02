@@ -3,7 +3,7 @@ Feasibility probe for Mastodon (mastodon.social) as a third data source.
 
 Not a production scraper - just checks how much Great Lakes-relevant content
 is reachable via public hashtag timelines, and confirms the search API's
-auth requirement, before deciding whether to build scrape_mastodon.py.
+auth requirement, before deciding whether to build scrapers/scrape_mastodon.py.
 
 Output: data/mastodon_test_raw.jsonl (throwaway, not wired into corpus.jsonl)
 """
