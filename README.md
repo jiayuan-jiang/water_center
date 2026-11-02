@@ -86,6 +86,8 @@ python analysis/topic_similarity_network.py --all
 
 Method details for each step are in [spec/](spec/); current status is in [context/state.md](context/state.md).
 
+The sentiment and emotion scripts (`analysis/sentiment_analysis.py`, `analysis/outlier_emotion.py`, `llm/sentiment_llm.py`, `llm/emotion_llm.py`) and the controversy scoring (`llm/controversy_llm.py`) are outside the scope of the Horizon Scan report.
+
 ## Topic browser
 
 ```bash
