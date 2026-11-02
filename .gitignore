@@ -10,6 +10,9 @@ meetings/
 # personal notes (untracked, not project docs)
 notes/
 
+# local reference material (papers, methodology docs)
+references/
+
 # documents
 *.pdf
 *.docx
